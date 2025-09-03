@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cold Call X</title>
+  <meta name="description" content="Transform your cold calling process with this powerful mobile dialer and CRM, designed for sales professionals, entrepreneurs, and business development teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { 
+      --brand: #00AEEF; 
+      --ink: #0F172A; 
+      --muted: #64748B;
+      --surface: rgba(255,255,255,0.8);
+    }
+    
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Enhanced animated background */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      filter: hue-rotate(0deg);
+      animation: hue 60s linear infinite;
+    }
+    
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.4;
+      mix-blend-mode: multiply;
+    }
+    
+    .blob.b1 {
+      width: 80vw;
+      height: 80vw;
+      left: -20vw;
+      top: -25vh;
+      background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.6), rgba(0,174,239,0) 70%);
+      animation: move1 40s ease-in-out infinite alternate;
+    }
+    
+    .blob.b2 {
+      width: 70vw;
+      height: 70vw;
+      right: -25vw;
+      top: -20vh;
+      background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.5), rgba(139,92,246,0) 70%);
+      animation: move2 45s ease-in-out infinite alternate;
+    }
+    
+    .blob.b3 {
+      width: 90vw;
+      height: 90vw;
+      left: -10vw;
+      bottom: -35vh;
+      background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.4), rgba(6,182,212,0) 70%);
+      animation: move3 50s ease-in-out infinite alternate;
+    }
+
+    /* Super modern glass effect */
+    .glass {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: 
+        0 25px 50px -12px rgba(0,0,0,0.1),
+        0 0 0 1px rgba(255,255,255,0.5) inset;
+    }
+    
+    .neo-glass {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 
+        0 32px 64px -12px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.6) inset,
+        0 2px 4px rgba(0,0,0,0.05) inset;
+    }
+
+    /* Enhanced animations */
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg) brightness(1.02); }
+      33% { filter: hue-rotate(15deg) brightness(1.05); }
+      66% { filter: hue-rotate(-10deg) brightness(1.03); }
+      100% { filter: hue-rotate(0deg) brightness(1.02); }
+    }
+    
+    @keyframes move1 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(12vw,15vh,0) scale(1.15) rotate(8deg); }
+    }
+    
+    @keyframes move2 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(-15vw,12vh,0) scale(1.12) rotate(-6deg); }
+    }
+    
+    @keyframes move3 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(8vw,-12vh,0) scale(1.18) rotate(4deg); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(2deg); }
+    }
+    
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 40px rgba(0,174,239,0.3); }
+      50% { box-shadow: 0 0 80px rgba(0,174,239,0.5); }
+    }
+
+    /* Text effects */
+    .text-shimmer {
+      background: linear-gradient(45deg, #1e293b, #0ea5e9, #8b5cf6, #06b6d4, #1e293b);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmer 8s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Liquid Glass Badge */
+    .liquid-glass-badge {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: linear-gradient(135deg, 
+        rgba(255,255,255,0.25) 0%, 
+        rgba(255,255,255,0.1) 50%, 
+        rgba(255,255,255,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 
+        0 8px 32px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.4),
+        inset 0 -1px 0 rgba(255,255,255,0.2);
+      position: relative;
+    }
+
+    .liquid-displacement {
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(0,174,239,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139,92,246,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(6,182,212,0.05) 0%, transparent 50%);
+      filter: blur(40px);
+      animation: liquid-flow 12s ease-in-out infinite;
+    }
+
+    .liquid-glass-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(45deg, 
+        rgba(255,255,255,0.6), 
+        rgba(255,255,255,0.2), 
+        rgba(0,174,239,0.3), 
+        rgba(255,255,255,0.4));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: subtract;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: subtract;
+      z-index: -1;
+    }
+
+    @keyframes liquid-flow {
+      0%, 100% { 
+        background-position: 20% 80%, 80% 20%, 40% 40%;
+        filter: blur(40px) hue-rotate(0deg);
+      }
+      25% { 
+        background-position: 30% 70%, 70% 30%, 60% 60%;
+        filter: blur(35px) hue-rotate(15deg);
+      }
+      50% { 
+        background-position: 80% 20%, 20% 80%, 80% 20%;
+        filter: blur(45px) hue-rotate(30deg);
+      }
+      75% { 
+        background-position: 70% 30%, 30% 70%, 20% 80%;
+        filter: blur(38px) hue-rotate(15deg);
+      }
+    }
+
+    /* Organic gradient animations */
+    .organic-morph {
+      animation: organic-morph 25s ease-in-out infinite;
+    }
+    
+    .organic-flow {
+      animation: organic-flow 30s ease-in-out infinite;
+    }
+    
+    .organic-pulse {
+      animation: organic-pulse 20s ease-in-out infinite;
+    }
+    
+    @keyframes organic-morph {
+      0% { 
+        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
+        transform: scale(1) rotate(0deg);
+        filter: blur(100px) hue-rotate(0deg) brightness(1);
+      }
+      20% {
+        background: radial-gradient(ellipse 90% 120% at 70% 40%, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.25) 30%, rgba(236,72,153,0.15) 65%, transparent 100%);
+        transform: scale(1.1) rotate(8deg);
+        filter: blur(80px) hue-rotate(20deg) brightness(1.1);
+      }
+      40% {
+        background: radial-gradient(ellipse 140% 90% at 20% 80%, rgba(6,182,212,0.3) 0%, rgba(16,185,129,0.18) 40%, rgba(0,174,239,0.12) 75%, transparent 100%);
+        transform: scale(0.95) rotate(-5deg);
+        filter: blur(120px) hue-rotate(40deg) brightness(0.9);
+      }
+      60% {
+        background: radial-gradient(ellipse 100% 130% at 80% 30%, rgba(236,72,153,0.22) 0%, rgba(168,85,247,0.28) 25%, rgba(59,130,246,0.16) 60%, transparent 100%);
+        transform: scale(1.15) rotate(12deg);
+        filter: blur(90px) hue-rotate(-15deg) brightness(1.05);
+      }
+      80% {
+        background: radial-gradient(ellipse 110% 95% at 40% 70%, rgba(16,185,129,0.2) 0%, rgba(0,174,239,0.3) 45%, rgba(139,92,246,0.18) 80%, transparent 100%);
+        transform: scale(1.05) rotate(-10deg);
+        filter: blur(110px) hue-rotate(35deg) brightness(0.95);
+      }
+      100% { 
+        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
+        transform: scale(1) rotate(0deg);
+        filter: blur(100px) hue-rotate(0deg) brightness(1);
+      }
+    }
+    
+    @keyframes organic-flow {
+      0% { 
+        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
+        transform: translate(0,0) scale(1) skew(0deg);
+        filter: blur(60px) saturate(1.2);
+      }
+      25% {
+        background: radial-gradient(ellipse 120% 140% at 30% 70%, rgba(168,85,247,0.15) 0%, rgba(236,72,153,0.1) 35%, transparent 75%);
+        transform: translate(15px,-10px) scale(1.2) skew(3deg);
+        filter: blur(45px) saturate(1.4);
+      }
+      50% {
+        background: radial-gradient(ellipse 100% 120% at 80% 30%, rgba(236,72,153,0.18) 0%, rgba(16,185,129,0.12) 50%, transparent 85%);
+        transform: translate(-8px,12px) scale(0.9) skew(-2deg);
+        filter: blur(70px) saturate(1.1);
+      }
+      75% {
+        background: radial-gradient(ellipse 130% 90% at 20% 60%, rgba(16,185,129,0.14) 0%, rgba(59,130,246,0.16) 45%, transparent 80%);
+        transform: translate(20px,5px) scale(1.1) skew(4deg);
+        filter: blur(55px) saturate(1.3);
+      }
+      100% { 
+        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
+        transform: translate(0,0) scale(1) skew(0deg);
+        filter: blur(60px) saturate(1.2);
+      }
+    }
+    
+    @keyframes organic-pulse {
+      0% { 
+        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+      }
+      15% {
+        background: radial-gradient(circle at 40% 60%, rgba(34,197,94,0.12) 0%, rgba(168,85,247,0.1) 35%, rgba(59,130,246,0.07) 65%, transparent 100%);
+        transform: scale(1.3) rotate(15deg);
+        opacity: 0.6;
+      }
+      30% {
+        background: radial-gradient(circle at 80% 20%, rgba(168,85,247,0.18) 0%, rgba(236,72,153,0.06) 40%, rgba(6,182,212,0.09) 75%, transparent 100%);
+        transform: scale(0.8) rotate(-8deg);
+        opacity: 0.9;
+      }
+      45% {
+        background: radial-gradient(circle at 20% 80%, rgba(236,72,153,0.1) 0%, rgba(6,182,212,0.14) 25%, rgba(34,197,94,0.11) 60%, transparent 100%);
+        transform: scale(1.4) rotate(22deg);
+        opacity: 0.5;
+      }
+      60% {
+        background: radial-gradient(circle at 70% 70%, rgba(59,130,246,0.16) 0%, rgba(34,197,94,0.12) 45%, rgba(168,85,247,0.08) 80%, transparent 100%);
+        transform: scale(0.9) rotate(-12deg);
+        opacity: 0.8;
+      }
+      75% {
+        background: radial-gradient(circle at 30% 30%, rgba(34,197,94,0.13) 0%, rgba(59,130,246,0.09) 50%, rgba(236,72,153,0.06) 85%, transparent 100%);
+        transform: scale(1.2) rotate(18deg);
+        opacity: 0.7;
+      }
+      90% {
+        background: radial-gradient(circle at 90% 50%, rgba(6,182,212,0.11) 0%, rgba(168,85,247,0.15) 30%, rgba(34,197,94,0.08) 70%, transparent 100%);
+        transform: scale(1.1) rotate(-5deg);
+        opacity: 0.85;
+      }
+      100% { 
+        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+      }
+    }
+
+    /* Neomorphic Buttons */
+    .neomorphic-btn {
+      background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
+      box-shadow: 
+        6px 6px 12px rgba(0,0,0,0.06),
+        -3px -3px 8px rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .neomorphic-btn:hover {
+      background: linear-gradient(145deg, #e0f2fe, #bae6fd);
+      box-shadow: 
+        3px 3px 6px rgba(0,0,0,0.08),
+        -2px -2px 4px rgba(255,255,255,0.2),
+        inset 1px 1px 2px rgba(0,174,239,0.05);
+      transform: translateY(-1px);
+    }
+
+    .neomorphic-btn:active {
+      background: linear-gradient(145deg, #bae6fd, #e0f2fe);
+      box-shadow: 
+        inset 3px 3px 6px rgba(0,0,0,0.08),
+        inset -1px -1px 2px rgba(255,255,255,0.2);
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="text-[var(--ink)] antialiased">
+  <div class="bg-anim">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Hero -->
+  <main class="h-screen flex items-center justify-center relative overflow-hidden">
+    <section class="relative w-full">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center h-full">
+        <div class="space-y-10">
+          <div class="space-y-8">
+            <h1 class="text-6xl lg:text-8xl font-black tracking-tight leading-[0.85]">
+              <span class="block text-shimmer">Cold calling,</span>
+              <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span>
+            </h1>
+            
+            <p class="text-xl lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light">
+              Transform your cold calling process with a powerful mobile dialer and CRM for sales professionals, entrepreneurs, and business development teams.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 pt-6">
+              <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300">
+                <span class="text-base">Privacy Policy</span>
+              </a>
+              <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300">
+                <span class="text-base">Contact Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative flex items-center justify-center">
+          <div class="absolute -inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph"></div>
+          <div class="absolute -inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow"></div>
+          <div class="absolute -inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse"></div>
+          
+          <div class="relative p-12 rounded-[3rem] neo-glass shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-all duration-700 hover:rotate-1 group">
+            <div class="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60"></div>
+            <div class="absolute inset-0 rounded-[3rem] bg-gradient-to-tl from-blue-500/5 to-purple-500/5"></div>
+            
+            <div class="relative">
+              <img src="logo.png" alt="Cold Call X" class="w-full h-auto rounded-3xl filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
+              <div class="absolute -inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-[3rem] blur-3xl -z-10"></div>
+            </div>
+            
+          </div>
+          
+          <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s]"></div>
+          <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="absolute bottom-4 left-0 right-0">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-[var(--muted)] font-light text-sm">© 2025 Berberian Enterprises Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>

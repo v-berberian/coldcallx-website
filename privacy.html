@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Cold Call X</title>
+  <meta name="description" content="Privacy Policy for Cold Call X - Auto Dialer and Mobile CRM application" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { 
+      --brand: #00AEEF; 
+      --ink: #0F172A; 
+      --muted: #64748B;
+      --surface: rgba(255,255,255,0.8);
+    }
+    
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Enhanced animated background */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      filter: hue-rotate(0deg);
+      animation: hue 60s linear infinite;
+    }
+    
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+    }
+    
+    .blob.b1 {
+      width: 60vw;
+      height: 60vw;
+      left: -15vw;
+      top: -20vh;
+      background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.4), rgba(0,174,239,0) 70%);
+      animation: move1 40s ease-in-out infinite alternate;
+    }
+    
+    .blob.b2 {
+      width: 50vw;
+      height: 50vw;
+      right: -20vw;
+      top: 20vh;
+      background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.3), rgba(139,92,246,0) 70%);
+      animation: move2 45s ease-in-out infinite alternate;
+    }
+    
+    .blob.b3 {
+      width: 70vw;
+      height: 70vw;
+      left: -5vw;
+      bottom: -30vh;
+      background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.25), rgba(6,182,212,0) 70%);
+      animation: move3 50s ease-in-out infinite alternate;
+    }
+
+    .neo-glass {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 
+        0 32px 64px -12px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.6) inset,
+        0 2px 4px rgba(0,0,0,0.05) inset;
+    }
+
+    /* Enhanced animations */
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg) brightness(1.02); }
+      33% { filter: hue-rotate(15deg) brightness(1.05); }
+      66% { filter: hue-rotate(-10deg) brightness(1.03); }
+      100% { filter: hue-rotate(0deg) brightness(1.02); }
+    }
+    
+    @keyframes move1 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(8vw,10vh,0) scale(1.1) rotate(5deg); }
+    }
+    
+    @keyframes move2 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(-10vw,8vh,0) scale(1.08) rotate(-4deg); }
+    }
+    
+    @keyframes move3 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(5vw,-8vh,0) scale(1.12) rotate(3deg); }
+    }
+
+    /* Modern section cards */
+    .section-card {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow: 
+        0 25px 50px -12px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(255,255,255,0.7) inset;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+  </style>
+</head>
+<body class="text-[var(--ink)] antialiased">
+  <div class="bg-anim">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="min-h-screen py-12 relative">
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- Header with back button -->
+      <div class="text-center mb-16">
+        <a href="index.html" class="inline-flex items-center gap-3 px-8 py-4 neo-glass rounded-3xl text-[var(--muted)] hover:text-[var(--ink)] transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-2xl mb-12 group">
+          <span class="font-semibold">← Back to Home</span>
+        </a>
+        
+        <h1 class="text-5xl lg:text-7xl font-black tracking-tight mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">Privacy Policy</h1>
+        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Last updated: September 3, 2025</p>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">1. Information We Collect</h2>
+        <p class="text-lg text-[var(--muted)] leading-relaxed mb-6">Cold Call X does not send any personal data to external servers. All information stays on your device. We do not track you across apps or websites, and no data is linked to your identity. The app only accesses data that you choose to provide:</p>
+        <div class="space-y-4">
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Contacts/Leads</strong>: Imported from your CSV files (names, phone numbers, emails, tags, notes, call index), stored locally for in‑app use</p>
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Calendar Events</strong>: If you opt to add an event, the app requests calendar permission to create it on your device. If permission is denied, an iCal file export is offered instead</p>
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Diagnostics</strong>: Lightweight logs are kept locally for troubleshooting and are never transmitted</p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">2. How We Use Information</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Imported leads and your in-app activity (tags, notes, call counts) are used solely to manage your call workflow. Calendar access is used only to create events you explicitly request. No information is sold, rented, or shared with third parties.</p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. Data Storage & Retention</h2>
+        <p class="text-[var(--muted)] leading-relaxed">All data is stored on-device using local storage mechanisms (Capacitor Preferences/localStorage). We never upload it to remote servers. Your data remains until you delete it or uninstall the app.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">4. Permissions & Integrations</h2>
+        <div class="space-y-4">
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Calendar</strong>: Needed only when you create follow‑up events</p>
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Phone/Messages/WhatsApp</strong>: When you initiate a call or message, the app opens the respective system app or WhatsApp via its URL scheme; their own privacy policies apply</p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">5. Third‑Party Sharing</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Cold Call X includes no analytics SDKs, ad networks, or server endpoints. Standard OS integrations (Phone, Messages, WhatsApp, Calendar) are invoked only at your request and are not controlled by this app.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section-card p-8 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">6. Your Rights & Choices</h2>
+        <p class="text-[var(--muted)] leading-relaxed">You can delete lists or clear all in-app data through the app's options. Uninstalling the app removes all stored information.</p>
+      </div>
+
+      <!-- Sections 7-9 in Grid -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="section-card p-6 lg:p-8">
+          <h2 class="text-xl font-bold text-[var(--ink)] mb-4">7. Children's Privacy</h2>
+          <p class="text-[var(--muted)] leading-relaxed">This app is not directed toward children under 13. We knowingly collect no information from children.</p>
+        </div>
+
+        <div class="section-card p-6 lg:p-8">
+          <h2 class="text-xl font-bold text-[var(--ink)] mb-4">8. Changes to This Policy</h2>
+          <p class="text-[var(--muted)] leading-relaxed">We may update this policy periodically. Material changes will be noted in the app or on our support page.</p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="section-card p-8 lg:p-12 text-center">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">9. Contact Us</h2>
+        <p class="text-lg text-[var(--muted)] leading-relaxed mb-8">If you have questions or concerns about this policy, please reach out via e-mail:</p>
+        <a href="mailto:support@coldcallx.app" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 text-white font-semibold rounded-3xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 hover:scale-105">
+          support@coldcallx.app
+        </a>
+      </div>
+
+      <!-- Agreement Note -->
+      <div class="neo-glass rounded-3xl p-8 lg:p-12 text-center shadow-2xl">
+        <p class="text-lg text-[var(--muted)] leading-relaxed max-w-3xl mx-auto">
+          By using Cold Call X, you agree to this privacy policy. If you do not agree, please do not use the app.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
