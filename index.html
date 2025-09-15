@@ -345,6 +345,39 @@
         inset -1px -1px 2px rgba(255,255,255,0.2);
       transform: translateY(0);
     }
+
+    .liquid-glass-btn {
+      position: relative;
+      border-radius: 1rem;
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: url(#liquid-glass-filter);
+      -webkit-backdrop-filter: url(#liquid-glass-filter);
+      padding: 0.75rem 2rem;
+      color: var(--ink);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      z-index: 1;
+      border: 1px solid transparent;
+    }
+
+    .liquid-glass-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(315deg, rgba(120, 120, 120, 0.7) 0%, rgba(120, 120, 120, 0) 30%, rgba(120, 120, 120, 0) 70%, rgba(120, 120, 120, 0.7) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    .liquid-glass-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body class="text-[var(--ink)] antialiased">
@@ -373,7 +406,7 @@
               <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300">
                 <span class="text-base">Privacy Policy</span>
               </a>
-              <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300">
+              <a href="mailto:support@coldcallx.app" class="liquid-glass-btn font-medium">
                 <span class="text-base">Contact Us</span>
               </a>
             </div>
@@ -409,5 +442,27 @@
       <p class="text-[var(--muted)] font-light text-sm">© 2025 Berberian Enterprises Inc.</p>
     </div>
   </footer>
+
+  <svg class="absolute w-0 h-0">
+    <defs>
+      <filter id="liquid-glass-filter" color-interpolation-filters="sRGB">
+        <feImage href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2080%2048%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22red%22%20x1%3D%22100%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%220%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22red%22/%3E%3C/linearGradient%3E%3ClinearGradient%20id%3D%22blue%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230000%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22blue%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2280%22%20height%3D%2248%22%20fill%3D%22black%22/%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2280%22%20height%3D%2248%22%20rx%3D%2216%22%20fill%3D%22url(%23red)%22%20/%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%2280%22%20height%3D%2248%22%20rx%3D%2216%22%20fill%3D%22url(%23blue)%22%20style%3D%22mix-blend-mode%3A%20difference%22%20/%3E%3Crect%20x%3D%220.6%22%20y%3D%220.6%22%20width%3D%2278.8%22%20height%3D%2246.8%22%20rx%3D%2216%22%20fill%3D%22hsl(0%200%25%2053%25%20/%200.9)%22%20style%3D%22filter%3Ablur(5px)%22%20/%3E%3C/svg%3E" x="0" y="0" width="100%" height="100%" result="map"/>
+
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="210" xChannelSelector="R" yChannelSelector="B" result="dispRed"/>
+        <feColorMatrix in="dispRed" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="red"/>
+
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="210" xChannelSelector="R" yChannelSelector="B" result="dispGreen"/>
+        <feColorMatrix in="dispGreen" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="green"/>
+
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="210" xChannelSelector="R" yChannelSelector="B" result="dispBlue"/>
+        <feColorMatrix in="dispBlue" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="blue"/>
+
+        <feBlend in="red" in2="green" mode="screen" result="rg"/>
+        <feBlend in="rg" in2="blue" mode="screen" result="output"/>
+
+        <feGaussianBlur in="output" stdDeviation="0.38"/>
+      </filter>
+    </defs>
+  </svg>
 </body>
 </html>
