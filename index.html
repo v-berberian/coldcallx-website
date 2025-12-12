@@ -12,6 +12,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light">
   <title>Cold Call X</title>
   <meta name="description" content="Transform your cold calling process with this powerful mobile dialer and CRM, designed for sales professionals, entrepreneurs, and business development teams." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,10 @@
     }
     
     html, body { height: 100%; margin: 0; }
+    html {
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+    }
+
     body {
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
@@ -36,6 +41,15 @@
       display: flex;
       flex-direction: column;
       color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body, html {
+        background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      }
+      body {
+        color: var(--ink);
+      }
     }
 
     /* Enhanced animated background */
@@ -359,20 +373,6 @@
       transform: translateY(0);
     }
 
-    footer.site-footer {
-      padding: 1.25rem 0 1.25rem;
-      padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-      padding-bottom: calc(1.25rem + constant(safe-area-inset-bottom, 0px));
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 2rem;
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-      padding-bottom: constant(safe-area-inset-bottom, 0px);
-    }
   </style>
 </head>
 <body class="text-[var(--ink)] antialiased">
@@ -455,10 +455,8 @@
   </main>
 
 
-  <footer class="site-footer">
-    <div class="footer-inner max-w-7xl mx-auto px-6 text-center">
-      <p class="text-[var(--muted)] font-light text-sm">© 2025 Berberian Enterprises Inc.</p>
-    </div>
+  <footer class="px-6 py-4 text-center" style="padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));">
+    <p class="text-[var(--muted)] font-light text-sm">© 2025 Berberian Enterprises Inc.</p>
   </footer>
 </body>
 </html>
