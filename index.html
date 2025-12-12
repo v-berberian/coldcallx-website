@@ -360,16 +360,18 @@
     }
 
     footer.site-footer {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+      padding: 1.25rem 0 1.25rem;
+      padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+      padding-bottom: calc(1.25rem + constant(safe-area-inset-bottom, 0px));
     }
 
     .footer-inner {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 1.5rem;
+      min-height: 2rem;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      padding-bottom: constant(safe-area-inset-bottom, 0px);
     }
   </style>
 </head>
