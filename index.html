@@ -32,6 +32,9 @@
       background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
       position: relative;
       overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Enhanced animated background */
@@ -364,32 +367,48 @@
   </div>
 
   <!-- Hero -->
-  <main class="min-h-screen min-h-[100svh] flex items-center justify-center relative overflow-x-hidden overflow-y-visible md:overflow-hidden">
+  <main class="flex-1 flex items-center justify-center relative overflow-x-hidden overflow-y-visible md:overflow-hidden py-8">
     <section class="relative w-full">
       <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center h-full pt-10 md:pt-0">
         <div class="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <div class="space-y-8">
-            <h1 class="text-4xl sm:text-6xl lg:text-8xl font-black tracking-tight leading-[0.9]">
-              <span class="block text-shimmer">Cold calling,</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-center lg:text-left">
+              <span class="block text-shimmer">Cold&nbsp;calling,</span>
               <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span>
             </h1>
+
+            <div class="lg:hidden flex justify-center">
+              <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Open Cold Call X in the App Store">
+                <img src="logo.jpg" alt="Cold Call X" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
+              </a>
+            </div>
             
-            <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light">
+            <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
               Transform your cold calling process with a powerful mobile dialer and CRM for sales professionals, entrepreneurs, and business development teams.
             </p>
             
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-6 justify-center lg:justify-start">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 justify-center lg:justify-start">
               <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
                 <span class="text-base">Privacy Policy</span>
               </a>
               <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
                 <span class="text-base">Contact Us</span>
               </a>
+              <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="hidden sm:inline-flex lg:hidden items-center justify-center">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-11 w-auto">
+              </a>
             </div>
           </div>
         </div>
         
-        <div class="relative flex items-center justify-center w-full">
+        <div class="sm:hidden mt-3 flex justify-center w-full">
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex items-center justify-center w-full max-w-xs">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="w-full h-12 object-contain">
+          </a>
+        </div>
+        
+        <div class="relative hidden lg:flex flex-col items-center justify-center w-full">
           <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph"></div>
           <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow"></div>
           <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse"></div>
@@ -400,11 +419,16 @@
             
             <div class="relative">
               <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer">
-                <img src="logo.png" alt="Cold Call X" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
+                <img src="logo.jpg" alt="Cold Call X" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
               </a>
               <div class="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-3xl sm:rounded-[3rem] blur-3xl -z-10"></div>
             </div>
-            
+          </div>
+
+          <div class="hidden lg:flex mt-8 justify-center">
+            <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex items-center justify-center">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 xl:h-14 w-auto">
+            </a>
           </div>
           
           <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block"></div>
