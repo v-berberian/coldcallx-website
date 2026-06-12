@@ -14,8 +14,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light">
-  <title>Cold Call X</title>
-  <meta name="description" content="Transform your cold calling process with this powerful mobile dialer and CRM, designed for sales professionals, entrepreneurs, and business development teams." />
+  <meta name="theme-color" content="#f0f9ff">
+
+  <!-- Primary SEO -->
+  <title>Cold Call X — Auto Dialer & Cold Calling App for iPhone</title>
+  <meta name="description" content="The cold calling app for iPhone: auto dialer + private CRM. Import leads from CSV or Google Sheets, power dial in one tap, track follow-ups. $7.99 once — no subscription." />
+  <meta name="keywords" content="cold calling app, auto dialer iPhone, iOS dialer app, power dialer, sales dialer, mobile CRM, cold call app, phone dialer for sales, CSV dialer, Google Sheets dialer" />
+  <link rel="canonical" href="https://coldcallx.app/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Berberian Enterprises Inc." />
+
+  <!-- iOS / App Store -->
+  <meta name="apple-itunes-app" content="app-id=6751245004">
+  <meta name="apple-mobile-web-app-title" content="Cold Call X">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/" />
+  <meta property="og:title" content="Cold Call X — Auto Dialer & Cold Calling App for iPhone" />
+  <meta property="og:description" content="Power dial your lead list from your iPhone. CSV & Google Sheets import, Hot/Warm/Cold tags, follow-up reminders, and a private on-device CRM. $7.99 once — no subscription." />
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="Cold Call X app icon — auto dialer and CRM for iPhone" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cold Call X — Auto Dialer & Cold Calling App for iPhone" />
+  <meta name="twitter:description" content="Power dial your lead list from your iPhone. CSV & Google Sheets import, lead tags, follow-ups, and a private on-device CRM. $7.99 once — no subscription." />
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+  <meta name="twitter:image:alt" content="Cold Call X app icon" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -59,6 +93,8 @@
       padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
       padding-bottom: calc(1rem + constant(safe-area-inset-bottom, 0px));
       display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -384,13 +420,125 @@
 
     .neomorphic-btn:active {
       background: linear-gradient(145deg, #bae6fd, #e0f2fe);
-      box-shadow: 
+      box-shadow:
         inset 3px 3px 6px rgba(0,0,0,0.08),
         inset -1px -1px 2px rgba(255,255,255,0.2);
       transform: translateY(0);
     }
 
+    /* Smooth anchor scrolling for in-page nav */
+    html { scroll-behavior: smooth; }
+
+    /* Full-viewport hero now that the page scrolls */
+    .hero-viewport {
+      min-height: calc(100vh - 6.5rem);
+      min-height: calc(100svh - 6.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* FAQ accordion */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+
   </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://coldcallx.app/#organization",
+        "name": "Berberian Enterprises Inc.",
+        "url": "https://coldcallx.app/",
+        "logo": { "@type": "ImageObject", "url": "https://coldcallx.app/logo.png", "width": 1024, "height": 1024 },
+        "email": "support@coldcallx.app",
+        "sameAs": ["https://apps.apple.com/us/app/cold-call-x/id6751245004"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://coldcallx.app/#website",
+        "url": "https://coldcallx.app/",
+        "name": "Cold Call X",
+        "alternateName": "ColdCallX",
+        "publisher": { "@id": "https://coldcallx.app/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://coldcallx.app/#webpage",
+        "url": "https://coldcallx.app/",
+        "name": "Cold Call X — Auto Dialer & Cold Calling App for iPhone",
+        "description": "The cold calling app for iPhone: auto dialer + private CRM. Import leads from CSV or Google Sheets, power dial in one tap, track follow-ups.",
+        "isPartOf": { "@id": "https://coldcallx.app/#website" },
+        "about": { "@id": "https://coldcallx.app/#app" },
+        "primaryImageOfPage": "https://coldcallx.app/logo.png"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://coldcallx.app/#app",
+        "name": "Cold Call X",
+        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "description": "Cold Call X is a fast auto dialer and private mobile CRM for iPhone. Import leads from CSV or Google Sheets, power dial with one-tap or hands-free auto-call modes, tag leads Hot/Warm/Cold, send text, WhatsApp, and email follow-ups, and keep every note on-device.",
+        "operatingSystem": "iOS 17.6 or later",
+        "applicationCategory": "BusinessApplication",
+        "image": "https://coldcallx.app/logo.png",
+        "url": "https://coldcallx.app/",
+        "installUrl": "https://apps.apple.com/us/app/cold-call-x/id6751245004",
+        "offers": { "@type": "Offer", "price": "7.99", "priceCurrency": "USD" },
+        "author": { "@id": "https://coldcallx.app/#organization" },
+        "featureList": [
+          "Auto-call modes from manual one-tap to 0-second Rocket mode",
+          "CSV and Google Sheets lead import with auto-mapped columns",
+          "Hot / Warm / Cold lead tagging with notes and last-called tracking",
+          "Timezone, called/uncalled, and lead-temperature filters",
+          "Follow-up scheduling with native iOS calendar events",
+          "Text, WhatsApp, and email templates",
+          "Multiple call lists with pinned favorites and shuffle mode",
+          "100% on-device storage — no account, no cloud"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://coldcallx.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Cold Call X an auto dialer for iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer built for iOS. It dials through your call list using your iPhone's native phone app — choose manual one-tap dialing, timed auto-call delays, or 0-second Rocket mode." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I import my call list?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Import leads from any CSV file or directly from Google Sheets. Columns like name, phone number, email, and notes are auto-mapped, and large lists are supported." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Cold Call X require a subscription?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Cold Call X is a one-time purchase of $7.99 on the App Store. There are no subscriptions, seats, or hidden fees, and no account is required." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my lead data private?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Completely. All leads, notes, tags, and call activity stay on your device. Nothing is uploaded to external servers, there is no tracking, and no data is linked to your identity." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I send follow-up messages from the app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — send texts, WhatsApp messages, or emails with customizable templates, and schedule callback reminders as iOS calendar events." }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need to run Cold Call X?",
+            "acceptedAnswer": { "@type": "Answer", "text": "An iPhone running iOS 17.6 or later. Download Cold Call X from the App Store and import your first list in under a minute." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="text-[var(--ink)] antialiased">
   <div class="bg-anim">
@@ -400,8 +548,8 @@
   </div>
 
   <!-- Hero -->
-  <main class="flex-1 flex items-center justify-center relative overflow-x-hidden overflow-y-visible md:overflow-hidden py-8">
-    <section class="relative w-full">
+  <main class="flex-1 relative overflow-x-hidden">
+    <section class="hero-viewport relative w-full py-8" aria-label="Cold Call X — auto dialer for iPhone">
       <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center h-full pt-10 md:pt-0">
         <div class="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <div class="space-y-8">
@@ -412,13 +560,13 @@
 
             <div class="lg:hidden flex justify-center">
               <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Open Cold Call X in the App Store">
-                <img src="logo.jpg" alt="Cold Call X" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
+                <img src="logo.jpg" alt="Cold Call X — cold calling auto dialer app for iPhone" width="1924" height="1924" fetchpriority="high" decoding="async" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
                 <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
               </a>
             </div>
             
             <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
-              Transform your cold calling process with a powerful mobile dialer and CRM for sales professionals, entrepreneurs, and business development teams.
+              The cold calling app for iPhone — a fast auto dialer and private CRM built for sales professionals, entrepreneurs, and business development teams.
             </p>
             
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 justify-center lg:justify-start">
@@ -452,7 +600,7 @@
             
             <div class="relative">
               <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer">
-                <img src="logo.jpg" alt="Cold Call X" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
+                <img src="logo.jpg" alt="Cold Call X app icon — iPhone power dialer and mobile CRM" width="1924" height="1924" decoding="async" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
               </a>
               <div class="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-3xl sm:rounded-[3rem] blur-3xl -z-10"></div>
             </div>
@@ -469,11 +617,113 @@
         </div>
       </div>
     </section>
+
+    <!-- Features -->
+    <section id="features" class="relative max-w-7xl mx-auto px-6 py-14 lg:py-20" aria-label="Cold Call X features">
+      <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-14 space-y-4">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">A power dialer built <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">for iPhone</span></h2>
+        <p class="text-lg lg:text-xl text-[var(--muted)] font-light leading-relaxed">Everything you need to get through a call list fast — auto dialing, lead tracking, and follow-ups — in one iOS app.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">Auto-call modes, up to Rocket speed</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Dial through your list hands-free. Choose manual one-tap calling, timed delays for prep between calls, or 0-second Rocket mode — the fastest way to power dial on an iPhone.</p>
+        </article>
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">CSV &amp; Google Sheets import</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Bring your call list with you. Columns are auto-mapped, large lists load fast, and you can keep multiple lists with pinned favorites and quick switching.</p>
+        </article>
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">A private mobile CRM</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Tag leads Hot, Warm, or Cold, keep notes, track last-called dates, and handle multi-number leads — your entire pipeline in your pocket, stored only on your device.</p>
+        </article>
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">Smart filters &amp; shuffle</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Filter by timezone (EST/CST), called or uncalled, and lead temperature so you always dial the right leads at the right time. Shuffle mode randomizes your order.</p>
+        </article>
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">Follow-ups on your calendar</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Schedule callbacks as native iOS calendar events the moment you hang up, so a hot lead never slips through the cracks.</p>
+        </article>
+        <article class="neo-glass rounded-3xl p-8 space-y-3">
+          <h3 class="text-xl font-bold text-[var(--ink)]">Text, WhatsApp &amp; email templates</h3>
+          <p class="text-[var(--muted)] leading-relaxed">Send a follow-up message in one tap with customizable templates for SMS, WhatsApp, and email — no copy-paste between apps.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Cold Call X -->
+    <section id="why" class="relative max-w-5xl mx-auto px-6 py-6 lg:py-10" aria-label="Why choose Cold Call X">
+      <div class="neo-glass rounded-3xl sm:rounded-[3rem] p-8 lg:p-14 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-center">Why sales pros pick Cold Call X as their <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">iOS dialer</span></h2>
+        <p class="text-[var(--muted)] leading-relaxed text-lg">Cold Call X is a cold calling app built around the iPhone's native dialer. Calls go out from your own number through the system phone app — no VoIP line to rent, no per-minute fees, and your caller ID stays yours.</p>
+        <p class="text-[var(--muted)] leading-relaxed text-lg">Pay once, dial forever. Cold Call X is a one-time purchase — no subscription, no seat licenses, and no account to create. Everything stays on your device: your leads, notes, and call activity are never uploaded to anyone's server, including ours.</p>
+        <p class="text-[var(--muted)] leading-relaxed text-lg">From real estate wholesaling and recruiting to insurance, solar, and B2B sales development — if your day involves a call list and an iPhone, Cold Call X gets you through it faster.</p>
+        <div class="flex flex-wrap justify-center gap-3 pt-2">
+          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">$7.99 once</span>
+          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">No subscription</span>
+          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">No account needed</span>
+          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">On-device &amp; private</span>
+          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">iOS 17.6+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="relative max-w-4xl mx-auto px-6 py-14 lg:py-20" aria-label="Frequently asked questions">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-center mb-10 lg:mb-14">Cold calling on iPhone, <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">answered</span></h2>
+      <div class="space-y-4">
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is Cold Call X an auto dialer for iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer built for iOS. It dials through your call list using your iPhone's native phone app — choose manual one-tap dialing, timed auto-call delays, or 0-second Rocket mode.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I import my call list?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Import leads from any CSV file or directly from Google Sheets. Columns like name, phone number, email, and notes are auto-mapped, and large lists are supported.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X require a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Cold Call X is a one-time purchase of $7.99 on the App Store. There are no subscriptions, seats, or hidden fees, and no account is required.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is my lead data private?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Completely. All leads, notes, tags, and call activity stay on your device. Nothing is uploaded to external servers, there is no tracking, and no data is linked to your identity.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I send follow-up messages from the app?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes — send texts, WhatsApp messages, or emails with customizable templates, and schedule callback reminders as iOS calendar events.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What do I need to run Cold Call X?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">An iPhone running iOS 17.6 or later. Download Cold Call X from the App Store and import your first list in under a minute.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="relative max-w-4xl mx-auto px-6 pb-16 lg:pb-24 text-center" aria-label="Download Cold Call X on the App Store">
+      <div class="neo-glass rounded-3xl sm:rounded-[3rem] p-10 lg:p-14 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Start power dialing on your <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">iPhone today</span></h2>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed">Download Cold Call X on the App Store and get through your first call list in minutes. One-time purchase — yours forever.</p>
+        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
+        </a>
+        <p class="text-sm text-[var(--muted)]">$7.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+      </div>
+    </section>
   </main>
 
 
   <footer class="px-6 text-center">
-    <p class="text-[var(--muted)] font-light text-sm">© 2025 Berberian Enterprises Inc.</p>
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
+      <a href="#features" class="hover:text-[var(--ink)] transition-colors">Features</a>
+      <a href="#faq" class="hover:text-[var(--ink)] transition-colors">FAQ</a>
+      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
+      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Support</a>
+      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--ink)] transition-colors">App Store</a>
+    </nav>
+    <p class="text-[var(--muted)] font-light text-sm">Cold Call X — the cold calling auto dialer &amp; mobile CRM for iPhone.</p>
+    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
   </footer>
 </body>
 </html>
