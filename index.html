@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Redeploy: enable GitHub Pages -->
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -14,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#f0f9ff">
+  <meta name="theme-color" content="#FAF7F2">
 
   <!-- Primary SEO -->
   <title>Cold Call X — Auto Dialer & Cold Calling App for iPhone</title>
@@ -52,397 +51,365 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root { 
-      --brand: #00AEEF; 
-      --ink: #0F172A; 
-      --muted: #64748B;
-      --surface: rgba(255,255,255,0.8);
-    }
-    
-    html, body { margin: 0; }
-    html { height: 100%; }
-    html {
-      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+    :root {
+      --paper: #FAF7F2;
+      --card: #FFFDF9;
+      --ink: #16140F;
+      --muted: #6F6A60;
+      --line: #E3DDD1;
+      --orange: #F7941E;
+      --cyan: #00AEEF;
     }
 
+    * { box-sizing: border-box; }
+    html { height: 100%; scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
-      position: relative;
-      overflow-x: hidden;
+      margin: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      color-scheme: light;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body, html {
-        background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
-      }
-      body {
-        color: var(--ink);
-      }
+    ::selection { background: var(--orange); color: var(--paper); }
+
+    /* Film grain */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
-    footer {
-      margin-top: auto;
-      padding: 1rem 0;
-      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-      padding-bottom: calc(1rem + constant(safe-area-inset-bottom, 0px));
+    .display { font-family: 'Bricolage Grotesque', 'Instrument Sans', sans-serif; }
+    .serif { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; }
+    .mono {
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    a { color: inherit; }
+
+    /* ---------- Nav ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 247, 242, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-row {
       display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+    .nav-brand img { width: 28px; height: 28px; border-radius: 7px; border: 1px solid var(--line); }
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-meta { color: var(--muted); }
+    .btn-ink {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      transition: background-color .25s ease;
+    }
+    .btn-ink:hover { background: var(--orange); }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 84px 0 72px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--orange);
+      display: inline-block;
+    }
+    h1 {
+      margin: 0 0 26px;
+      font-size: clamp(46px, 7.2vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
+    h1 .serif { letter-spacing: -0.02em; }
+    .hero-sub {
+      max-width: 50ch;
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 36px;
+    }
+    .hero-sub strong { color: var(--ink); font-weight: 600; }
+    .hero-cta { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+    .hero-cta img.badge { height: 52px; width: auto; display: block; }
+    .hero-link { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+    .hero-link:hover { color: var(--ink); border-color: var(--orange); }
+
+    .hero-art { position: relative; justify-self: center; }
+    .icon-tile {
+      display: block;
+      width: min(300px, 70vw);
+      transform: rotate(-2deg);
+    }
+    .icon-tile img {
+      width: 100%;
+      height: auto;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      display: block;
+    }
+    .icon-caption { margin-top: 14px; color: var(--muted); text-align: center; }
+    .sticker {
+      position: absolute;
+      top: -26px;
+      right: -22px;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--ink);
+      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      transform: rotate(8deg);
+      font-weight: 500;
+      line-height: 1.35;
+      z-index: 2;
     }
 
-    footer p {
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    /* Enhanced animated background */
-    .bg-anim {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      filter: hue-rotate(0deg);
-      animation: hue 60s linear infinite;
-    }
-    
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      opacity: 0.4;
-      mix-blend-mode: multiply;
-    }
-    
-    .blob.b1 {
-      width: 80vw;
-      height: 80vw;
-      left: -20vw;
-      top: -25vh;
-      background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.6), rgba(0,174,239,0) 70%);
-      animation: move1 40s ease-in-out infinite alternate;
-    }
-    
-    .blob.b2 {
-      width: 70vw;
-      height: 70vw;
-      right: -25vw;
-      top: -20vh;
-      background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.5), rgba(139,92,246,0) 70%);
-      animation: move2 45s ease-in-out infinite alternate;
-    }
-    
-    .blob.b3 {
-      width: 90vw;
-      height: 90vw;
-      left: -10vw;
-      bottom: -35vh;
-      background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.4), rgba(6,182,212,0) 70%);
-      animation: move3 50s ease-in-out infinite alternate;
-    }
-
-    /* Super modern glass effect */
-    .glass {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.6);
-      box-shadow: 
-        0 25px 50px -12px rgba(0,0,0,0.1),
-        0 0 0 1px rgba(255,255,255,0.5) inset;
-    }
-    
-    .neo-glass {
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
-      border: 1px solid rgba(255,255,255,0.7);
-      box-shadow: 
-        0 32px 64px -12px rgba(0,0,0,0.12),
-        0 0 0 1px rgba(255,255,255,0.6) inset,
-        0 2px 4px rgba(0,0,0,0.05) inset;
-    }
-
-    /* Enhanced animations */
-    @keyframes hue {
-      0% { filter: hue-rotate(0deg) brightness(1.02); }
-      33% { filter: hue-rotate(15deg) brightness(1.05); }
-      66% { filter: hue-rotate(-10deg) brightness(1.03); }
-      100% { filter: hue-rotate(0deg) brightness(1.02); }
-    }
-    
-    @keyframes move1 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(12vw,15vh,0) scale(1.15) rotate(8deg); }
-    }
-    
-    @keyframes move2 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(-15vw,12vh,0) scale(1.12) rotate(-6deg); }
-    }
-    
-    @keyframes move3 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(8vw,-12vh,0) scale(1.18) rotate(4deg); }
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(2deg); }
-    }
-    
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 40px rgba(0,174,239,0.3); }
-      50% { box-shadow: 0 0 80px rgba(0,174,239,0.5); }
-    }
-
-    /* Text effects */
-    .text-shimmer {
-      background: linear-gradient(45deg, #1e293b, #0ea5e9, #8b5cf6, #06b6d4, #1e293b);
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: shimmer 8s ease-in-out infinite;
-    }
-    
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    /* Liquid Glass Badge */
-    .liquid-glass-badge {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: linear-gradient(135deg, 
-        rgba(255,255,255,0.25) 0%, 
-        rgba(255,255,255,0.1) 50%, 
-        rgba(255,255,255,0.05) 100%);
-      border: 1px solid rgba(255,255,255,0.3);
-      box-shadow: 
-        0 8px 32px rgba(0,0,0,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.4),
-        inset 0 -1px 0 rgba(255,255,255,0.2);
-      position: relative;
-    }
-
-    .liquid-displacement {
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(0,174,239,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139,92,246,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(6,182,212,0.05) 0%, transparent 50%);
-      filter: blur(40px);
-      animation: liquid-flow 12s ease-in-out infinite;
-    }
-
-    .liquid-glass-badge::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(45deg, 
-        rgba(255,255,255,0.6), 
-        rgba(255,255,255,0.2), 
-        rgba(0,174,239,0.3), 
-        rgba(255,255,255,0.4));
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: subtract;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: subtract;
-      z-index: -1;
-    }
-
-    @keyframes liquid-flow {
-      0%, 100% { 
-        background-position: 20% 80%, 80% 20%, 40% 40%;
-        filter: blur(40px) hue-rotate(0deg);
-      }
-      25% { 
-        background-position: 30% 70%, 70% 30%, 60% 60%;
-        filter: blur(35px) hue-rotate(15deg);
-      }
-      50% { 
-        background-position: 80% 20%, 20% 80%, 80% 20%;
-        filter: blur(45px) hue-rotate(30deg);
-      }
-      75% { 
-        background-position: 70% 30%, 30% 70%, 20% 80%;
-        filter: blur(38px) hue-rotate(15deg);
-      }
-    }
-
-    /* Organic gradient animations */
-    .organic-morph {
-      animation: organic-morph 25s ease-in-out infinite;
-    }
-    
-    .organic-flow {
-      animation: organic-flow 30s ease-in-out infinite;
-    }
-    
-    .organic-pulse {
-      animation: organic-pulse 20s ease-in-out infinite;
-    }
-    
-    @keyframes organic-morph {
-      0% { 
-        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        filter: blur(100px) hue-rotate(0deg) brightness(1);
-      }
-      20% {
-        background: radial-gradient(ellipse 90% 120% at 70% 40%, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.25) 30%, rgba(236,72,153,0.15) 65%, transparent 100%);
-        transform: scale(1.1) rotate(8deg);
-        filter: blur(80px) hue-rotate(20deg) brightness(1.1);
-      }
-      40% {
-        background: radial-gradient(ellipse 140% 90% at 20% 80%, rgba(6,182,212,0.3) 0%, rgba(16,185,129,0.18) 40%, rgba(0,174,239,0.12) 75%, transparent 100%);
-        transform: scale(0.95) rotate(-5deg);
-        filter: blur(120px) hue-rotate(40deg) brightness(0.9);
-      }
-      60% {
-        background: radial-gradient(ellipse 100% 130% at 80% 30%, rgba(236,72,153,0.22) 0%, rgba(168,85,247,0.28) 25%, rgba(59,130,246,0.16) 60%, transparent 100%);
-        transform: scale(1.15) rotate(12deg);
-        filter: blur(90px) hue-rotate(-15deg) brightness(1.05);
-      }
-      80% {
-        background: radial-gradient(ellipse 110% 95% at 40% 70%, rgba(16,185,129,0.2) 0%, rgba(0,174,239,0.3) 45%, rgba(139,92,246,0.18) 80%, transparent 100%);
-        transform: scale(1.05) rotate(-10deg);
-        filter: blur(110px) hue-rotate(35deg) brightness(0.95);
-      }
-      100% { 
-        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        filter: blur(100px) hue-rotate(0deg) brightness(1);
-      }
-    }
-    
-    @keyframes organic-flow {
-      0% { 
-        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
-        transform: translate(0,0) scale(1) skew(0deg);
-        filter: blur(60px) saturate(1.2);
-      }
-      25% {
-        background: radial-gradient(ellipse 120% 140% at 30% 70%, rgba(168,85,247,0.15) 0%, rgba(236,72,153,0.1) 35%, transparent 75%);
-        transform: translate(15px,-10px) scale(1.2) skew(3deg);
-        filter: blur(45px) saturate(1.4);
-      }
-      50% {
-        background: radial-gradient(ellipse 100% 120% at 80% 30%, rgba(236,72,153,0.18) 0%, rgba(16,185,129,0.12) 50%, transparent 85%);
-        transform: translate(-8px,12px) scale(0.9) skew(-2deg);
-        filter: blur(70px) saturate(1.1);
-      }
-      75% {
-        background: radial-gradient(ellipse 130% 90% at 20% 60%, rgba(16,185,129,0.14) 0%, rgba(59,130,246,0.16) 45%, transparent 80%);
-        transform: translate(20px,5px) scale(1.1) skew(4deg);
-        filter: blur(55px) saturate(1.3);
-      }
-      100% { 
-        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
-        transform: translate(0,0) scale(1) skew(0deg);
-        filter: blur(60px) saturate(1.2);
-      }
-    }
-    
-    @keyframes organic-pulse {
-      0% { 
-        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        opacity: 0.8;
-      }
-      15% {
-        background: radial-gradient(circle at 40% 60%, rgba(34,197,94,0.12) 0%, rgba(168,85,247,0.1) 35%, rgba(59,130,246,0.07) 65%, transparent 100%);
-        transform: scale(1.3) rotate(15deg);
-        opacity: 0.6;
-      }
-      30% {
-        background: radial-gradient(circle at 80% 20%, rgba(168,85,247,0.18) 0%, rgba(236,72,153,0.06) 40%, rgba(6,182,212,0.09) 75%, transparent 100%);
-        transform: scale(0.8) rotate(-8deg);
-        opacity: 0.9;
-      }
-      45% {
-        background: radial-gradient(circle at 20% 80%, rgba(236,72,153,0.1) 0%, rgba(6,182,212,0.14) 25%, rgba(34,197,94,0.11) 60%, transparent 100%);
-        transform: scale(1.4) rotate(22deg);
-        opacity: 0.5;
-      }
-      60% {
-        background: radial-gradient(circle at 70% 70%, rgba(59,130,246,0.16) 0%, rgba(34,197,94,0.12) 45%, rgba(168,85,247,0.08) 80%, transparent 100%);
-        transform: scale(0.9) rotate(-12deg);
-        opacity: 0.8;
-      }
-      75% {
-        background: radial-gradient(circle at 30% 30%, rgba(34,197,94,0.13) 0%, rgba(59,130,246,0.09) 50%, rgba(236,72,153,0.06) 85%, transparent 100%);
-        transform: scale(1.2) rotate(18deg);
-        opacity: 0.7;
-      }
-      90% {
-        background: radial-gradient(circle at 90% 50%, rgba(6,182,212,0.11) 0%, rgba(168,85,247,0.15) 30%, rgba(34,197,94,0.08) 70%, transparent 100%);
-        transform: scale(1.1) rotate(-5deg);
-        opacity: 0.85;
-      }
-      100% { 
-        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        opacity: 0.8;
-      }
-    }
-
-    /* Neomorphic Buttons */
-    .neomorphic-btn {
-      background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
-      box-shadow: 
-        6px 6px 12px rgba(0,0,0,0.06),
-        -3px -3px 8px rgba(255,255,255,0.3);
-      border: 1px solid rgba(255,255,255,0.1);
-      position: relative;
+    /* ---------- Ticker ---------- */
+    .ticker {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       overflow: hidden;
+      padding: 13px 0;
+      background: var(--card);
+    }
+    .ticker-track {
+      display: flex;
+      gap: 44px;
+      width: max-content;
+      animation: tick 36s linear infinite;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .ticker-track .x { color: var(--orange); }
+    @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ---------- Sections ---------- */
+    section { padding: 88px 0 0; }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+    .sec-head::after { content: ''; flex: 1; height: 1px; background: var(--line); align-self: center; }
+    h2 {
+      margin: 0 0 44px;
+      font-size: clamp(34px, 4.6vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      max-width: 18ch;
     }
 
-    .neomorphic-btn:hover {
-      background: linear-gradient(145deg, #e0f2fe, #bae6fd);
-      box-shadow: 
-        3px 3px 6px rgba(0,0,0,0.08),
-        -2px -2px 4px rgba(255,255,255,0.2),
-        inset 1px 1px 2px rgba(0,174,239,0.05);
-      transform: translateY(-1px);
+    /* ---------- Bento ---------- */
+    .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .cell {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px;
+      transition: border-color .25s ease;
     }
-
-    .neomorphic-btn:active {
-      background: linear-gradient(145deg, #bae6fd, #e0f2fe);
-      box-shadow:
-        inset 3px 3px 6px rgba(0,0,0,0.08),
-        inset -1px -1px 2px rgba(255,255,255,0.2);
-      transform: translateY(0);
+    .cell:hover { border-color: var(--orange); }
+    .cell .num { color: var(--muted); display: block; margin-bottom: 18px; }
+    .cell .num b { color: var(--orange); font-weight: 500; }
+    .cell h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      font-family: 'Bricolage Grotesque', sans-serif;
     }
+    .cell p { margin: 0; color: var(--muted); font-size: 16px; }
+    .cell-big { grid-column: span 2; display: flex; gap: 28px; align-items: center; justify-content: space-between; }
+    .cell-big > div:first-child { max-width: 46ch; }
+    .rocket { text-align: center; flex-shrink: 0; padding-right: 8px; }
+    .rocket .zero {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(64px, 7vw, 104px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      display: block;
+    }
+    .rocket .zero em { font-style: normal; color: var(--orange); }
+    .rocket .mono { color: var(--muted); }
+    .cell-wide { grid-column: span 3; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; color: var(--ink); background: var(--paper); }
 
-    /* Smooth anchor scrolling for in-page nav */
-    html { scroll-behavior: smooth; }
+    /* ---------- Why ---------- */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .why-grid h2 { max-width: 12ch; }
+    .why-copy p { margin: 0; padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 18px; }
+    .why-copy p:last-child { border-bottom: 1px solid var(--line); }
+    .why-copy strong { color: var(--ink); font-weight: 600; }
 
-    /* Full-viewport hero now that the page scrolls */
-    .hero-viewport {
-      min-height: calc(100vh - 6.5rem);
-      min-height: calc(100svh - 6.5rem);
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 56px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--card); }
+    .stat { padding: 24px 22px; border-left: 1px solid var(--line); }
+    .stat:first-child { border-left: none; }
+    .stat .v {
+      display: block;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .stat .mono { color: var(--muted); }
+
+    /* ---------- FAQ ---------- */
+    .faq details { border-top: 1px solid var(--line); }
+    .faq details:last-child { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 21px 0;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .plus {
+      color: var(--orange);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      line-height: 1;
+      transition: transform .25s ease;
+      flex-shrink: 0;
+    }
+    .faq details[open] summary .plus { transform: rotate(45deg); }
+    .faq details p { margin: 0; padding: 0 0 22px; color: var(--muted); max-width: 70ch; }
+
+    /* ---------- CTA ---------- */
+    .cta-block {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 22px;
+      padding: 72px 32px;
+      text-align: center;
+    }
+    .cta-block h2 { max-width: none; margin-bottom: 14px; }
+    .cta-block .serif { color: var(--orange); }
+    .cta-block p { color: rgba(250,247,242,0.65); margin: 0 0 34px; }
+    .cta-block img.badge { height: 54px; width: auto; display: inline-block; }
+    .cta-note { margin-top: 26px !important; color: rgba(250,247,242,0.5) !important; }
+
+    /* ---------- Footer ---------- */
+    footer { margin-top: 96px; border-top: 1px solid var(--line); overflow: hidden; }
+    .foot-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 26px 0;
+    }
+    .foot-nav { display: flex; flex-wrap: wrap; gap: 20px; }
+    .foot-nav a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .foot-nav a:hover { color: var(--ink); }
+    .foot-tag { color: var(--muted); }
+    .foot-mark {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: clamp(58px, 12.5vw, 184px);
+      line-height: 0.8;
+      letter-spacing: -0.045em;
+      text-align: center;
+      white-space: nowrap;
+      margin-bottom: -0.16em;
+      user-select: none;
+    }
+    .foot-mark span { color: var(--orange); }
+
+    /* ---------- Reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
     }
 
-    /* FAQ accordion */
-    details > summary { list-style: none; }
-    details > summary::-webkit-details-marker { display: none; }
-
+    /* ---------- Mobile ---------- */
+    @media (max-width: 900px) {
+      .hero { padding: 56px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-art { justify-self: center; }
+      .bento { grid-template-columns: 1fr; }
+      .cell-big { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+      .rocket { align-self: center; padding: 8px 0 0; }
+      .cell-wide { grid-column: span 1; }
+      .why-grid { grid-template-columns: 1fr; gap: 8px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat:nth-child(3) { border-left: none; }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .nav-meta { display: none; }
+      section { padding-top: 64px; }
+    }
   </style>
 
   <!-- Structured data -->
@@ -541,190 +508,225 @@
   }
   </script>
 </head>
-<body class="text-[var(--ink)] antialiased">
-  <div class="bg-anim">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-  </div>
+<body>
 
-  <!-- Hero -->
-  <main class="flex-1 relative">
-    <section class="hero-viewport relative w-full py-8" aria-label="Cold Call X — auto dialer for iPhone">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center h-full pt-10 md:pt-0">
-        <div class="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-          <div class="space-y-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-center lg:text-left">
-              <span class="block text-shimmer">Cold&nbsp;calling,</span>
-              <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span>
-            </h1>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="wrap nav-row">
+      <a href="/" class="nav-brand display">
+        <img src="/icon-192.png" alt="" width="192" height="192">
+        Cold Call X
+      </a>
+      <div class="nav-right">
+        <span class="mono nav-meta">$12.99 once &middot; iOS 17.6+</span>
+        <a class="btn-ink" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer">Get the app</a>
+      </div>
+    </div>
+  </header>
 
-            <div class="lg:hidden flex justify-center">
-              <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Open Cold Call X in the App Store">
-                <img src="logo.jpg" alt="Cold Call X — cold calling auto dialer app for iPhone" width="1924" height="1924" fetchpriority="high" decoding="async" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
-              </a>
-            </div>
-            
-            <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
-              The cold calling app for iPhone — a fast auto dialer and private CRM built for sales professionals, entrepreneurs, and business development teams.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 justify-center lg:justify-start">
-              <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Privacy Policy</span>
-              </a>
-              <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Contact Us</span>
-              </a>
-              <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="hidden sm:inline-flex lg:hidden items-center justify-center">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-11 w-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="sm:hidden mt-3 flex justify-center w-full">
-          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex items-center justify-center w-full max-w-xs">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="w-full h-12 object-contain">
-          </a>
-        </div>
-        
-        <div class="relative hidden lg:flex flex-col items-center justify-center w-full">
-          <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph"></div>
-          <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow"></div>
-          <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse"></div>
-          
-          <div class="relative p-8 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[3rem] neo-glass shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-all duration-700 hover:rotate-1 group mt-6 sm:mt-8 lg:mt-0 z-10">
-            <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60"></div>
-            <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-tl from-blue-500/5 to-purple-500/5"></div>
-            
-            <div class="relative">
-              <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer">
-                <img src="logo.jpg" alt="Cold Call X app icon — iPhone power dialer and mobile CRM" width="1924" height="1924" decoding="async" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
-              </a>
-              <div class="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-3xl sm:rounded-[3rem] blur-3xl -z-10"></div>
-            </div>
-          </div>
-
-          <div class="hidden lg:flex mt-8 justify-center">
-            <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" class="inline-flex items-center justify-center">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 xl:h-14 w-auto">
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Cold Call X — auto dialer for iPhone">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="mono eyebrow">Auto dialer + private CRM for iPhone</p>
+          <h1 class="display">Dial 200 leads <span class="serif">before lunch.</span></h1>
+          <p class="hero-sub">Cold Call X is the cold calling app for iPhone. Import a CSV or Google Sheet, hit start, and power through your list <strong>from your own number</strong>. No VoIP fees. No subscription. Nothing leaves your phone.</p>
+          <div class="hero-cta">
+            <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
+              <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" width="120" height="40" fetchpriority="high">
             </a>
+            <a class="hero-link" href="/privacy">Nothing leaves your phone — read why</a>
           </div>
-          
-          <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block"></div>
-          <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000 hidden md:block"></div>
+        </div>
+        <div class="hero-art">
+          <span class="sticker mono">Pay once<br>$12.99</span>
+          <span class="icon-tile">
+            <img src="logo.jpg" alt="Cold Call X — cold calling auto dialer app for iPhone" width="1924" height="1924" fetchpriority="high" decoding="async">
+          </span>
+          <p class="mono icon-caption">Cold Call X &middot; iOS 17.6+</p>
         </div>
       </div>
     </section>
+
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track mono">
+        <span>CSV import</span><span class="x">&#10038;</span>
+        <span>Google Sheets</span><span class="x">&#10038;</span>
+        <span>Rocket mode</span><span class="x">&#10038;</span>
+        <span>Hot / Warm / Cold tags</span><span class="x">&#10038;</span>
+        <span>Timezone filters</span><span class="x">&#10038;</span>
+        <span>Calendar follow-ups</span><span class="x">&#10038;</span>
+        <span>WhatsApp templates</span><span class="x">&#10038;</span>
+        <span>Multi-number leads</span><span class="x">&#10038;</span>
+        <span>On-device &amp; private</span><span class="x">&#10038;</span>
+        <span>CSV import</span><span class="x">&#10038;</span>
+        <span>Google Sheets</span><span class="x">&#10038;</span>
+        <span>Rocket mode</span><span class="x">&#10038;</span>
+        <span>Hot / Warm / Cold tags</span><span class="x">&#10038;</span>
+        <span>Timezone filters</span><span class="x">&#10038;</span>
+        <span>Calendar follow-ups</span><span class="x">&#10038;</span>
+        <span>WhatsApp templates</span><span class="x">&#10038;</span>
+        <span>Multi-number leads</span><span class="x">&#10038;</span>
+        <span>On-device &amp; private</span><span class="x">&#10038;</span>
+      </div>
+    </div>
 
     <!-- Features -->
-    <section id="features" class="relative max-w-7xl mx-auto px-6 py-14 lg:py-20" aria-label="Cold Call X features">
-      <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-14 space-y-4">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">A power dialer built <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">for iPhone</span></h2>
-        <p class="text-lg lg:text-xl text-[var(--muted)] font-light leading-relaxed">Everything you need to get through a call list fast — auto dialing, lead tracking, and follow-ups — in one iOS app.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">Auto-call modes, up to Rocket speed</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Dial through your list hands-free. Choose manual one-tap calling, timed delays for prep between calls, or 0-second Rocket mode — the fastest way to power dial on an iPhone.</p>
-        </article>
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">CSV &amp; Google Sheets import</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Bring your call list with you. Columns are auto-mapped, large lists load fast, and you can keep multiple lists with pinned favorites and quick switching.</p>
-        </article>
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">A private mobile CRM</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Tag leads Hot, Warm, or Cold, keep notes, track last-called dates, and handle multi-number leads — your entire pipeline in your pocket, stored only on your device.</p>
-        </article>
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">Smart filters &amp; shuffle</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Filter by timezone (EST/CST), called or uncalled, and lead temperature so you always dial the right leads at the right time. Shuffle mode randomizes your order.</p>
-        </article>
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">Follow-ups on your calendar</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Schedule callbacks as native iOS calendar events the moment you hang up, so a hot lead never slips through the cracks.</p>
-        </article>
-        <article class="neo-glass rounded-3xl p-8 space-y-3">
-          <h3 class="text-xl font-bold text-[var(--ink)]">Text, WhatsApp &amp; email templates</h3>
-          <p class="text-[var(--muted)] leading-relaxed">Send a follow-up message in one tap with customizable templates for SMS, WhatsApp, and email — no copy-paste between apps.</p>
-        </article>
+    <section id="features" aria-label="Cold Call X features">
+      <div class="wrap">
+        <p class="mono sec-head reveal">What it does &mdash; iPhone auto dialer</p>
+        <h2 class="display reveal">Built to clear a call list.</h2>
+        <div class="bento">
+          <article class="cell cell-big reveal">
+            <div>
+              <span class="mono num"><b>01</b> &mdash; Dial</span>
+              <h3>Auto-call, up to Rocket speed</h3>
+              <p>Three speeds: tap each call yourself, set a countdown between calls for prep time, or run Rocket mode and dial the next lead with zero delay. All through your iPhone's native dialer.</p>
+            </div>
+            <div class="rocket">
+              <span class="zero">0<em>s</em></span>
+              <span class="mono">Rocket mode delay</span>
+            </div>
+          </article>
+          <article class="cell reveal">
+            <span class="mono num"><b>02</b> &mdash; Import</span>
+            <h3>CSV &amp; Google Sheets in</h3>
+            <p>Columns auto-map. Big lists load fast. Keep separate lists per campaign and pin the ones you work daily.</p>
+          </article>
+          <article class="cell reveal">
+            <span class="mono num"><b>03</b> &mdash; Track</span>
+            <h3>A CRM that fits in a call</h3>
+            <p>Tag leads Hot, Warm or Cold, drop notes, see when you last called. Multi-number leads handled.</p>
+          </article>
+          <article class="cell reveal">
+            <span class="mono num"><b>04</b> &mdash; Filter</span>
+            <h3>Call the right timezone</h3>
+            <p>Filter EST or CST, called or uncalled, hot or cold &mdash; the next number is always worth dialing. Shuffle when order stops mattering.</p>
+          </article>
+          <article class="cell reveal">
+            <span class="mono num"><b>05</b> &mdash; Follow up</span>
+            <h3>Booked before you hang up</h3>
+            <p>Callbacks land on your iOS calendar as real events, so a hot lead never slips.</p>
+          </article>
+          <article class="cell cell-wide reveal">
+            <div>
+              <span class="mono num"><b>06</b> &mdash; Message</span>
+              <h3>Follow-up templates, one tap</h3>
+              <p>Templates fill themselves out. No copy-paste between apps.</p>
+            </div>
+            <div class="chips">
+              <span class="chip mono">Text</span>
+              <span class="chip mono">WhatsApp</span>
+              <span class="chip mono">Email</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- Why Cold Call X -->
-    <section id="why" class="relative max-w-5xl mx-auto px-6 py-6 lg:py-10" aria-label="Why choose Cold Call X">
-      <div class="neo-glass rounded-3xl sm:rounded-[3rem] p-8 lg:p-14 space-y-6">
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-center">Why sales pros pick Cold Call X as their <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">iOS dialer</span></h2>
-        <p class="text-[var(--muted)] leading-relaxed text-lg">Cold Call X is a cold calling app built around the iPhone's native dialer. Calls go out from your own number through the system phone app — no VoIP line to rent, no per-minute fees, and your caller ID stays yours.</p>
-        <p class="text-[var(--muted)] leading-relaxed text-lg">Pay once, dial forever. Cold Call X is a one-time purchase — no subscription, no seat licenses, and no account to create. Everything stays on your device: your leads, notes, and call activity are never uploaded to anyone's server, including ours.</p>
-        <p class="text-[var(--muted)] leading-relaxed text-lg">From real estate wholesaling and recruiting to insurance, solar, and B2B sales development — if your day involves a call list and an iPhone, Cold Call X gets you through it faster.</p>
-        <div class="flex flex-wrap justify-center gap-3 pt-2">
-          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">$12.99 once</span>
-          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">No subscription</span>
-          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">No account needed</span>
-          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">On-device &amp; private</span>
-          <span class="liquid-glass-badge px-4 py-2 rounded-full text-sm font-semibold text-[var(--ink)]">iOS 17.6+</span>
+    <!-- Why -->
+    <section id="why" aria-label="Why choose Cold Call X">
+      <div class="wrap">
+        <p class="mono sec-head reveal">Why this one &mdash; iOS dialer, done right</p>
+        <div class="why-grid">
+          <h2 class="display reveal">No VoIP. No seats. <span class="serif">No servers.</span></h2>
+          <div class="why-copy reveal">
+            <p>Cold Call X is a cold calling app built around the iPhone's native dialer. Calls go out from <strong>your own number</strong> through the system phone app. No VoIP line to rent, no per-minute fees, and your caller ID stays yours.</p>
+            <p><strong>Pay once, dial forever.</strong> One purchase, no subscription, no seat licenses, no account to create. Your leads, notes, and call activity are never uploaded to anyone's server &mdash; including ours.</p>
+            <p>Real estate wholesaling, recruiting, insurance, solar, B2B sales &mdash; if your day involves a call list and an iPhone, this gets you through it faster.</p>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="v display">$12.99</span><span class="mono">Once. Not monthly.</span></div>
+          <div class="stat"><span class="v display">0</span><span class="mono">Subscriptions &amp; seats</span></div>
+          <div class="stat"><span class="v display">100%</span><span class="mono">Stored on your iPhone</span></div>
+          <div class="stat"><span class="v display">17.6+</span><span class="mono">Minimum iOS</span></div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="relative max-w-4xl mx-auto px-6 py-14 lg:py-20" aria-label="Frequently asked questions">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-center mb-10 lg:mb-14">Cold calling on iPhone, <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">answered</span></h2>
-      <div class="space-y-4">
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is Cold Call X an auto dialer for iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is an auto dialer built for iOS. It dials through your call list using your iPhone's native phone app — choose manual one-tap dialing, timed auto-call delays, or 0-second Rocket mode.</p>
-        </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I import my call list?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Import leads from any CSV file or directly from Google Sheets. Columns like name, phone number, email, and notes are auto-mapped, and large lists are supported.</p>
-        </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X require a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Cold Call X is a one-time purchase of $12.99 on the App Store. There are no subscriptions, seats, or hidden fees, and no account is required.</p>
-        </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is my lead data private?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Completely. All leads, notes, tags, and call activity stay on your device. Nothing is uploaded to external servers, there is no tracking, and no data is linked to your identity.</p>
-        </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I send follow-up messages from the app?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes — send texts, WhatsApp messages, or emails with customizable templates, and schedule callback reminders as iOS calendar events.</p>
-        </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What do I need to run Cold Call X?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">An iPhone running iOS 17.6 or later. Download Cold Call X from the App Store and import your first list in under a minute.</p>
-        </details>
+    <section id="faq" aria-label="Frequently asked questions">
+      <div class="wrap">
+        <p class="mono sec-head reveal">FAQ &mdash; cold calling on iPhone</p>
+        <h2 class="display reveal">Questions, answered straight.</h2>
+        <div class="faq reveal">
+          <details>
+            <summary>Is Cold Call X an auto dialer for iPhone?<span class="plus">+</span></summary>
+            <p>Yes. Cold Call X is an auto dialer built for iOS. It dials through your call list using your iPhone's native phone app — choose manual one-tap dialing, timed auto-call delays, or 0-second Rocket mode.</p>
+          </details>
+          <details>
+            <summary>How do I import my call list?<span class="plus">+</span></summary>
+            <p>Import leads from any CSV file or directly from Google Sheets. Columns like name, phone number, email, and notes are auto-mapped, and large lists are supported.</p>
+          </details>
+          <details>
+            <summary>Does Cold Call X require a subscription?<span class="plus">+</span></summary>
+            <p>No. Cold Call X is a one-time purchase of $12.99 on the App Store. There are no subscriptions, seats, or hidden fees, and no account is required.</p>
+          </details>
+          <details>
+            <summary>Is my lead data private?<span class="plus">+</span></summary>
+            <p>Completely. All leads, notes, tags, and call activity stay on your device. Nothing is uploaded to external servers, there is no tracking, and no data is linked to your identity.</p>
+          </details>
+          <details>
+            <summary>Can I send follow-up messages from the app?<span class="plus">+</span></summary>
+            <p>Yes — send texts, WhatsApp messages, or emails with customizable templates, and schedule callback reminders as iOS calendar events.</p>
+          </details>
+          <details>
+            <summary>What do I need to run Cold Call X?<span class="plus">+</span></summary>
+            <p>An iPhone running iOS 17.6 or later. Download Cold Call X from the App Store and import your first list in under a minute.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <!-- Download CTA -->
-    <section class="relative max-w-4xl mx-auto px-6 pb-16 lg:pb-24 text-center" aria-label="Download Cold Call X on the App Store">
-      <div class="neo-glass rounded-3xl sm:rounded-[3rem] p-10 lg:p-14 space-y-6">
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Start power dialing on your <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">iPhone today</span></h2>
-        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed">Download Cold Call X on the App Store and get through your first call list in minutes. One-time purchase — yours forever.</p>
-        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
-        </a>
-        <p class="text-sm text-[var(--muted)]">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+    <!-- CTA -->
+    <section aria-label="Download Cold Call X on the App Store">
+      <div class="wrap">
+        <div class="cta-block reveal">
+          <h2 class="display">Your list is <span class="serif">waiting.</span></h2>
+          <p>Download Cold Call X and get through your first hundred dials today.</p>
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
+            <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" width="120" height="40" loading="lazy">
+          </a>
+          <p class="mono cta-note">$12.99 one-time &middot; no subscription &middot; iOS 17.6+</p>
+        </div>
       </div>
     </section>
   </main>
 
-
-  <footer class="px-6 text-center">
-    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
-      <a href="#features" class="hover:text-[var(--ink)] transition-colors">Features</a>
-      <a href="#faq" class="hover:text-[var(--ink)] transition-colors">FAQ</a>
-      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
-      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Support</a>
-      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--ink)] transition-colors">App Store</a>
-    </nav>
-    <p class="text-[var(--muted)] font-light text-sm">Cold Call X — the cold calling auto dialer &amp; mobile CRM for iPhone.</p>
-    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
+  <footer>
+    <div class="wrap">
+      <div class="foot-row">
+        <nav class="foot-nav mono" aria-label="Footer">
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="/privacy">Privacy</a>
+          <a href="mailto:support@coldcallx.app">Support</a>
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer">App Store</a>
+        </nav>
+        <p class="foot-tag mono">The cold calling auto dialer &amp; mobile CRM for iPhone &middot; &copy; 2026 Berberian Enterprises Inc.</p>
+      </div>
+      <div class="foot-mark display" aria-hidden="true">COLD CALL <span>X</span></div>
+    </div>
   </footer>
+
+  <script>
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
