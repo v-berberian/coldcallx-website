@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CKNY5PSV1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0CKNY5PSV1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f0f9ff">
+
+  <title>How to Build a Cold Calling List (CSV &amp; Google Sheets) | Cold Call X</title>
+  <meta name="description" content="Build a cold calling list that's actually dialable: where to source numbers, how to structure your CSV or Google Sheet, cleaning tips, and importing into a dialer." />
+  <link rel="canonical" href="https://coldcallx.app/blog/how-to-build-a-cold-calling-list" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Berberian Enterprises Inc." />
+
+  <meta name="apple-itunes-app" content="app-id=6751245004">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/blog/how-to-build-a-cold-calling-list" />
+  <meta property="og:title" content="How to Build a Cold Calling List (CSV &amp; Google Sheets)" />
+  <meta property="og:description" content="Where to source numbers, how to structure your sheet, and how to import it without a mess." />
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="How to Build a Cold Calling List" />
+  <meta name="twitter:description" content="Source, structure, clean, and import a dialable call list." />
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    :root { --brand:#00AEEF; --ink:#0F172A; --muted:#64748B; }
+    html,body{margin:0;}
+    html{height:100%;scroll-behavior:smooth;background:radial-gradient(ellipse at top,#f0f9ff 0%,#e0f2fe 35%,#bae6fd 100%);}
+    body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(ellipse at top,#f0f9ff 0%,#e0f2fe 35%,#bae6fd 100%);position:relative;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;color-scheme:light;}
+    footer{margin-top:auto;padding:1rem 0;padding-bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:.4rem;align-items:center;justify-content:center;text-align:center;}
+    footer p{margin:0;line-height:1.4;}
+    .bg-anim{position:fixed;inset:0;z-index:-1;pointer-events:none;animation:hue 60s linear infinite;}
+    .blob{position:absolute;border-radius:50%;filter:blur(120px);opacity:.3;mix-blend-mode:multiply;}
+    .blob.b1{width:60vw;height:60vw;left:-15vw;top:-20vh;background:radial-gradient(circle at 30% 30%,rgba(0,174,239,.4),rgba(0,174,239,0) 70%);animation:move1 40s ease-in-out infinite alternate;}
+    .blob.b2{width:50vw;height:50vw;right:-20vw;top:20vh;background:radial-gradient(circle at 70% 40%,rgba(139,92,246,.3),rgba(139,92,246,0) 70%);animation:move2 45s ease-in-out infinite alternate;}
+    .blob.b3{width:70vw;height:70vw;left:-5vw;bottom:-30vh;background:radial-gradient(circle at 40% 60%,rgba(6,182,212,.25),rgba(6,182,212,0) 70%);animation:move3 50s ease-in-out infinite alternate;}
+    @keyframes hue{0%{filter:hue-rotate(0deg) brightness(1.02);}33%{filter:hue-rotate(15deg) brightness(1.05);}66%{filter:hue-rotate(-10deg) brightness(1.03);}100%{filter:hue-rotate(0deg) brightness(1.02);}}
+    @keyframes move1{0%{transform:translate3d(0,0,0) scale(1);}100%{transform:translate3d(8vw,10vh,0) scale(1.1);}}
+    @keyframes move2{0%{transform:translate3d(0,0,0) scale(1);}100%{transform:translate3d(-10vw,8vh,0) scale(1.08);}}
+    @keyframes move3{0%{transform:translate3d(0,0,0) scale(1);}100%{transform:translate3d(5vw,-8vh,0) scale(1.12);}}
+    .neo-glass{backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:linear-gradient(135deg,rgba(255,255,255,.8) 0%,rgba(255,255,255,.4) 100%);border:1px solid rgba(255,255,255,.7);box-shadow:0 32px 64px -12px rgba(0,0,0,.12),0 0 0 1px rgba(255,255,255,.6) inset,0 2px 4px rgba(0,0,0,.05) inset;}
+    .article-card{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:linear-gradient(135deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.7) 100%);border:1px solid rgba(255,255,255,.8);box-shadow:0 25px 50px -12px rgba(0,0,0,.08),0 0 0 1px rgba(255,255,255,.7) inset;border-radius:2rem;}
+    .article h2{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:2.2rem 0 .9rem;}
+    .article p{color:var(--muted);line-height:1.75;margin:0 0 1.1rem;}
+    .article ul{color:var(--muted);line-height:1.75;margin:0 0 1.2rem;padding-left:1.2rem;}
+    .article li{margin-bottom:.5rem;}
+    .article strong{color:var(--ink);font-weight:600;}
+    .article a{color:#2563eb;text-decoration:underline;text-underline-offset:2px;}
+    .article a:hover{color:var(--ink);}
+    .article code{background:rgba(15,23,42,.06);padding:.1rem .4rem;border-radius:.3rem;font-size:.9em;color:var(--ink);}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How to Build a Cold Calling List (CSV & Google Sheets)",
+        "description": "Where to source numbers, how to structure your sheet, and how to import it without a mess.",
+        "image": "https://coldcallx.app/logo.png",
+        "datePublished": "2026-06-16",
+        "dateModified": "2026-06-16",
+        "author": { "@id": "https://coldcallx.app/#organization" },
+        "publisher": { "@id": "https://coldcallx.app/#organization" },
+        "mainEntityOfPage": "https://coldcallx.app/blog/how-to-build-a-cold-calling-list",
+        "isPartOf": { "@id": "https://coldcallx.app/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Cold Call X", "item": "https://coldcallx.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://coldcallx.app/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "How to build a cold calling list", "item": "https://coldcallx.app/blog/how-to-build-a-cold-calling-list" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="text-[var(--ink)] antialiased">
+  <div class="bg-anim"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <main class="flex-1 relative">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
+
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">How to build a cold calling list</h1>
+      <p class="text-[var(--muted)] text-sm mb-10">Cold Call X &middot; Updated June 2026 &middot; 5 min read</p>
+
+      <article class="article article-card p-7 sm:p-10">
+        <p class="text-lg">A great calling block starts the night before — with a list that's <strong>clean, segmented, and ready to dial</strong>. Spend thirty minutes here and you'll save hours of dead dials. Here's how to build one in a spreadsheet and get it into your phone.</p>
+
+        <h2>1. Source the right numbers</h2>
+        <p>Where you pull data depends on who you sell to:</p>
+        <ul>
+          <li><strong>Real estate:</strong> skip-tracing tools (PropStream, BatchLeads, DealMachine), county records, FSBO/expired feeds.</li>
+          <li><strong>B2B:</strong> data providers like Apollo or ZoomInfo, LinkedIn exports, event and webinar lists.</li>
+          <li><strong>Insurance &amp; local services:</strong> aged-lead vendors, referral lists, past-quote follow-ups.</li>
+        </ul>
+        <p>Whatever the source, you're responsible for compliance — scrub against the Do Not Call registry and follow the rules for your region and industry before you dial.</p>
+
+        <h2>2. Structure the sheet for dialing</h2>
+        <p>One row per lead, clear headers in the first row. A dialer-friendly layout looks like:</p>
+        <ul>
+          <li><code>Name</code> — first name at minimum; a real name makes openers warmer.</li>
+          <li><code>Phone</code> — the primary number. Add <code>Phone 2</code>, <code>Phone 3</code> for extra numbers rather than stacking them in one cell.</li>
+          <li><code>Email</code> — for one-tap follow-ups.</li>
+          <li><code>Notes</code> — source, address, or context you'll want on the call.</li>
+          <li><code>Tag</code> — optional starting temperature or segment.</li>
+        </ul>
+        <p>Keep numbers in a consistent format. Including the country/area code (e.g. <code>+1 512 555 0142</code>) avoids dialing errors when you import.</p>
+
+        <h2>3. Clean before you call</h2>
+        <p>Five minutes of cleanup pays off all session:</p>
+        <ul>
+          <li>Remove duplicates and blank-number rows.</li>
+          <li>Standardize phone formatting so nothing fails to dial.</li>
+          <li>Split obviously different segments into separate lists (by market, product, or source) so you can work one at a time.</li>
+        </ul>
+
+        <h2>4. Import it into your dialer</h2>
+        <p>Manually typing a list into your phone defeats the purpose. A good cold calling app imports your CSV or Google Sheet and <strong>auto-maps the columns</strong>, so <code>Name</code>, <code>Phone</code>, and <code>Notes</code> land in the right place. In <a href="/">Cold Call X</a> you import a CSV or pull straight from Google Sheets, keep multiple lists with pinned favorites, and it handles multi-number leads — so an owner with three numbers stays one entry. From there you tap (or auto-dial) down the list.</p>
+
+        <h2>5. Segment and prioritize</h2>
+        <p>Before you start, decide the order. Filter to uncalled leads first, work the right <a href="/blog/best-time-to-cold-call">timezone for the hour</a>, and tag as you go so callbacks float to the top tomorrow. A list you can filter is a list you'll actually finish.</p>
+
+        <h2>Takeaways</h2>
+        <ul>
+          <li>One row per lead; clean headers; extra numbers in their own columns.</li>
+          <li>Consistent phone formatting with country/area codes.</li>
+          <li>De-dupe and split into focused lists before you dial.</li>
+          <li>Import (don't retype) so columns auto-map — then filter and work it.</li>
+        </ul>
+      </article>
+
+      <div class="neo-glass rounded-3xl p-7 sm:p-10 text-center mt-10">
+        <h2 class="text-2xl font-black tracking-tight mb-3">Import your list in under a minute</h2>
+        <p class="text-[var(--muted)] font-light max-w-xl mx-auto leading-relaxed mb-6">Cold Call X imports CSV and Google Sheets with auto-mapped columns, handles multi-number leads, and auto-dials — so your list is ready the moment you are.</p>
+        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 w-auto">
+        </a>
+        <p class="text-sm text-[var(--muted)] mt-4">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="px-6 text-center">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
+      <a href="/" class="hover:text-[var(--ink)] transition-colors">Home</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
+      <a href="/cold-calling-apps" class="hover:text-[var(--ink)] transition-colors">Cold Calling Apps</a>
+      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
+      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--ink)] transition-colors">App Store</a>
+    </nav>
+    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
+  </footer>
+</body>
+</html>

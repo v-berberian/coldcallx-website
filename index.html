@@ -53,7 +53,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" as="image" href="/logo.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="/styles.css">
   <style>
     :root { 
       --brand: #00AEEF; 
@@ -719,6 +720,7 @@
     <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
       <a href="#features" class="hover:text-[var(--ink)] transition-colors">Features</a>
       <a href="#faq" class="hover:text-[var(--ink)] transition-colors">FAQ</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
       <a href="/cold-calling-apps" class="hover:text-[var(--ink)] transition-colors">Cold Calling Apps</a>
       <a href="/real-estate" class="hover:text-[var(--ink)] transition-colors">For Real Estate</a>
       <a href="/recruiters" class="hover:text-[var(--ink)] transition-colors">For Recruiters</a>
