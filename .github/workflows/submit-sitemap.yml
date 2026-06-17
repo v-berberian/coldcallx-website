@@ -1,0 +1,59 @@
+name: Submit sitemap to Google
+
+# Automatically pings Google Search Console with the sitemap so new/updated
+# pages get crawled without anyone opening the GSC dashboard.
+#
+# ONE-TIME SETUP (until this is done, the job safely skips itself):
+#   1. Google Cloud Console -> create a project (or reuse one) ->
+#      enable the "Google Search Console API".
+#   2. Create a Service Account, then create a JSON key for it. Download the key.
+#   3. In Search Console (https://search.google.com/search-console) open the
+#      coldcallx.app property -> Settings -> Users and permissions ->
+#      Add user -> paste the service account's email -> permission: Full.
+#      (If submission is ever rejected with a permission error, promote it to Owner.)
+#   4. In this repo: Settings -> Secrets and variables -> Actions ->
+#      New repository secret -> name: GSC_SA_KEY -> value: paste the whole JSON key.
+#   5. (Optional) If your property is a URL-prefix property rather than a domain
+#      property, add a repository VARIABLE named GSC_SITE_URL with the value
+#      https://coldcallx.app/  (default is sc-domain:coldcallx.app).
+#
+# After that it runs weekly, on every successful Pages deploy, and on demand.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * 1'   # every Monday 14:00 UTC
+  workflow_run:
+    workflows: ["Deploy static content to Pages"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: submit-sitemap
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    # For the post-deploy trigger, only run when the deploy actually succeeded.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install --quiet google-auth requests
+
+      - name: Submit sitemap
+        env:
+          GSC_SA_KEY: ${{ secrets.GSC_SA_KEY }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || 'sc-domain:coldcallx.app' }}
+          SITEMAP_URL: 'https://coldcallx.app/sitemap.xml'
+        run: python .github/scripts/submit_sitemap.py
