@@ -191,16 +191,17 @@
         </a>
         
         <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">Privacy Policy</h1>
-        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Last updated: September 18, 2025</p>
+        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Last updated: August 3, 2026</p>
       </div>
 
       <!-- Section 1 -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">1. Information We Collect</h2>
-        <p class="text-lg text-[var(--muted)] leading-relaxed mb-6">Cold Call X does not send any personal data to external servers. All information stays on your device. We do not track you across apps or websites, and no data is linked to your identity. The app only accesses data that you choose to provide:</p>
+        <p class="text-lg text-[var(--muted)] leading-relaxed mb-6">Cold Call X does not send any personal data to our servers. Your information stays on your device unless you turn on the optional iCloud backup described in Section 3, which stores encrypted copies in your own Apple iCloud account. We do not track you across apps or websites, and no data is linked to your identity. The app only accesses data that you choose to provide:</p>
         <div class="space-y-4">
           <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Contacts/Leads</strong>: Imported from your CSV files (names, phone numbers, emails, tags, notes, call index), stored locally for in‑app use</p>
           <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Calendar Events</strong>: If you opt to add an event, the app requests calendar permission to create it on your device. If permission is denied, an iCal file export is offered instead</p>
+          <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Call State</strong>: To support assisted and continuous dialing, the app observes whether a call is in progress, whether it connected, and when it started and ended. This comes from iOS, stays on your device, and is never transmitted. The app cannot access the phone numbers of calls, call audio, or call content, and does not record calls</p>
           <p class="text-[var(--muted)] leading-relaxed">• <strong class="text-[var(--ink)]">Diagnostics</strong>: Lightweight logs are kept locally for troubleshooting and are never transmitted</p>
         </div>
       </div>
@@ -214,7 +215,11 @@
       <!-- Section 3 -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. Data Storage & Retention</h2>
-        <p class="text-[var(--muted)] leading-relaxed">All data is stored on-device using local storage mechanisms (Capacitor Preferences/localStorage). We never upload it to remote servers. Your data remains until you delete it or uninstall the app.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-6">By default, your data is stored on-device using local storage mechanisms (Capacitor Preferences/localStorage). We never upload it to our servers, and it remains until you delete it or uninstall the app. Backups kept only on your device are removed when you delete the app.</p>
+        <h3 class="text-lg font-bold text-[var(--ink)] mb-3">Optional iCloud Backup</h3>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Cold Call X offers an optional iCloud backup feature, which is off unless you turn it on. When enabled, the app encrypts your data on your device and stores the encrypted copies in your own Apple iCloud account, using an encryption key held in your iCloud Keychain.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">We have no access to your iCloud account, to the stored copies, or to the encryption key. We cannot read, recover, restore, or delete them. Your use of iCloud is between you and Apple and is governed by Apple’s terms and privacy policy. If the encryption key becomes unavailable — for example if iCloud Keychain is reset, or has not finished syncing to a new device — backups stored in iCloud may become permanently unreadable.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Turning the feature off does not delete copies already stored in your iCloud account, and neither does deleting the app; you can remove those through your Apple account. You are responsible for ensuring that storing your lead information — which may include other people’s personal information — in your iCloud account is permitted under the privacy laws that apply to you.</p>
       </div>
 
       <!-- Section 4 -->
@@ -259,13 +264,13 @@
       <!-- Section 7 -->
       <div class="section-card p-8 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">7. Third‑Party Sharing</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Cold Call X includes no analytics SDKs, ad networks, or server endpoints. Standard OS integrations (Phone, Messages, WhatsApp, Calendar) are invoked only at your request and are not controlled by this app.</p>
+        <p class="text-[var(--muted)] leading-relaxed">The Cold Call X app includes no analytics SDKs, ad networks, or server endpoints. Standard OS integrations (Phone, Messages, WhatsApp, Calendar) are invoked only at your request and are not controlled by this app. This website (coldcallx.app) uses Google Analytics to measure visits; that applies to the website only, not to the app, and is unrelated to any data in the app.</p>
       </div>
 
       <!-- Section 8 -->
       <div class="section-card p-8 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">8. Your Rights & Choices</h2>
-        <p class="text-[var(--muted)] leading-relaxed">You can delete lists or clear all in-app data through the app's options. Uninstalling the app removes all stored information.</p>
+        <p class="text-[var(--muted)] leading-relaxed">You can delete lists or clear all in-app data through the app’s options. Uninstalling the app removes the information stored on your device, including any backups held only on the device. If you enabled iCloud backup, copies remain in your Apple account until you remove them there.</p>
       </div>
 
       <!-- Section 9: Deletion & Revocation -->
