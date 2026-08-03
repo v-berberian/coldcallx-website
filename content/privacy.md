@@ -80,7 +80,4 @@ We may update this policy as the App or law changes. We will update the effectiv
 ## Contact
 
 Berberian Enterprises Inc.<br>
-Attn: Privacy<br>
-649 E 9th St, Apt 4B<br>
-New York, NY 10009<br>
 support@coldcallx.app
