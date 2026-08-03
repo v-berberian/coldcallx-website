@@ -31,6 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # privacy.html is GENERATED from content/privacy.md, not hand-edited.
+      # Editing the HTML directly is how this page silently drifted ~13 months
+      # behind the app and ended up publishing claims that were no longer true.
+      - name: Verify privacy.html matches content/privacy.md
+        run: node scripts/generate-privacy.mjs --check
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
