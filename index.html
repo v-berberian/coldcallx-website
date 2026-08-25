@@ -288,6 +288,16 @@
     }
 
     /* Organic gradient animations */
+    .organic-morph,
+    .organic-flow,
+    .organic-pulse {
+      pointer-events: none;
+    }
+
+    .pointer-events-auto {
+      pointer-events: auto;
+    }
+
     .organic-morph {
       animation: organic-morph 25s ease-in-out infinite;
     }
@@ -620,9 +630,9 @@
         </div>
         
         <div class="relative hidden lg:flex flex-col items-center justify-center w-full">
-          <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph"></div>
-          <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow"></div>
-          <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse"></div>
+          <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph pointer-events-none"></div>
+          <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow pointer-events-none"></div>
+          <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse pointer-events-none"></div>
           
           <div class="relative p-8 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[3rem] neo-glass shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-all duration-700 hover:rotate-1 group mt-6 sm:mt-8 lg:mt-0 z-10">
             <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60"></div>
@@ -637,13 +647,13 @@
           </div>
 
           <div class="hidden lg:flex mt-8 justify-center">
-            <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="inline-flex items-center justify-center">
+            <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="relative z-10 inline-flex items-center justify-center pointer-events-auto">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 xl:h-14 w-auto">
             </a>
           </div>
           
-          <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block"></div>
-          <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000 hidden md:block"></div>
+          <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block pointer-events-none"></div>
+          <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000 hidden md:block pointer-events-none"></div>
         </div>
       </div>
     </section>
