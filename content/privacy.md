@@ -1,6 +1,6 @@
 # Privacy Policy – Cold Call X
 
-Effective August 3, 2026 · Version 2026-08-03
+Effective August 25, 2026 · Version 2026-08-25
 
 This Privacy Policy explains how Berberian Enterprises Inc. (“Cold Call X,” “we,” “us,” or “our”) handles information when you use Cold Call X.
 
@@ -71,7 +71,7 @@ Cold Call X is not directed to children. You must be at least 18 years old to us
 
 ## Availability and international processing
 
-The App is currently offered for use in the United States and Canada. The Local Number service is currently offered for U.S. use. Our providers may process information in the United States and other locations where they operate, subject to applicable safeguards.
+The App is offered for use in the United States, Canada, and the United Kingdom. The Local Number service is currently offered for U.S. use. Our providers may process information in the United States and other locations where they operate, subject to applicable safeguards.
 
 ## Changes
 
