@@ -21,7 +21,7 @@
 
   <!-- Primary SEO -->
   <title>Cold Call X — Auto Dialer & Cold Calling App for iPhone</title>
-  <meta name="description" content="The cold calling app for iPhone: auto dialer + private CRM. Import leads from CSV or Google Sheets, power dial in one tap, track follow-ups. $12.99 once — no subscription." />
+  <meta name="description" content="The cold calling app for iPhone: a power dialer and on-device CRM. $12.99 once, your number, list stays on the phone. No subscription, no account." />
   <meta name="keywords" content="cold calling apps, apps for cold calling, cold calling app, auto dialer iPhone, iOS dialer app, power dialer, sales dialer, mobile CRM, cold call app, cold calling app no subscription, phone dialer for sales, CSV dialer, Google Sheets dialer" />
   <link rel="canonical" href="https://coldcallx.app/" />
   <link rel="alternate" type="text/plain" href="https://coldcallx.app/llms.txt" title="Cold Call X for language models" />
@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="Cold Call X" />
   <meta property="og:url" content="https://coldcallx.app/" />
   <meta property="og:title" content="Cold Call X — Auto Dialer & Cold Calling App for iPhone" />
-  <meta property="og:description" content="Power dial your lead list from your iPhone. CSV & Google Sheets import, Hot/Warm/Cold tags, follow-up reminders, and a private on-device CRM. $12.99 once — no subscription." />
+  <meta property="og:description" content="iPhone auto dialer and on-device CRM. $12.99 once, your number, list stays on the phone. No subscription, no account." />
   <meta property="og:image" content="https://coldcallx.app/logo.png" />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -50,7 +50,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Cold Call X — Auto Dialer & Cold Calling App for iPhone" />
-  <meta name="twitter:description" content="Power dial your lead list from your iPhone. CSV & Google Sheets import, lead tags, follow-ups, and a private on-device CRM. $12.99 once — no subscription." />
+  <meta name="twitter:description" content="iPhone auto dialer and on-device CRM. $12.99 once, your number, list stays on the phone. No subscription, no account." />
   <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
   <meta name="twitter:image:alt" content="Cold Call X app icon" />
 
@@ -448,17 +448,14 @@
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
 
-    /* Phone layout: let content determine height and keep controls thumb-friendly. */
+    /* Phone layout: let content determine height and keep the App Store tap first. */
     @media (max-width: 639px) {
-      .hero-viewport { min-height: auto !important; align-items: flex-start; padding-top: 1rem !important; padding-bottom: 2rem !important; }
-      .hero-viewport > div { padding-top: 1rem !important; gap: 1.5rem !important; }
+      .hero-viewport { min-height: auto !important; align-items: flex-start; padding-top: 0.5rem !important; padding-bottom: 1.5rem !important; }
+      .hero-viewport > div { padding-top: 0.75rem !important; gap: 1.25rem !important; }
       .hero-viewport h1 { font-size: clamp(2.25rem, 11vw, 3rem); line-height: 1; }
-      .hero-viewport .space-y-8 { gap: 1.5rem; }
-      .hero-viewport p { font-size: 1.0625rem; line-height: 1.55; }
-      .hero-viewport .neomorphic-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-      details > summary { min-height: 44px; display: flex; align-items: center; }
-      section[aria-label="Frequently asked questions"] { padding-top: 3rem; padding-bottom: 3rem; }
-      section[aria-label="Frequently asked questions"] h2 { margin-bottom: 2rem; font-size: 2rem; line-height: 1.08; }
+      .hero-viewport .space-y-8 { gap: 1.25rem; }
+      .hero-viewport p, .hero-viewport li { font-size: 1.0625rem; line-height: 1.55; }
+      .hero-viewport .app-store-cta img { height: 3.25rem; width: auto; }
       footer nav { row-gap: .75rem; }
     }
 
@@ -491,7 +488,7 @@
         "@id": "https://coldcallx.app/#webpage",
         "url": "https://coldcallx.app/",
         "name": "Cold Call X — Auto Dialer & Cold Calling App for iPhone",
-        "description": "The cold calling app for iPhone: auto dialer + private CRM. Import leads from CSV or Google Sheets, power dial in one tap, track follow-ups.",
+        "description": "The cold calling app for iPhone: a power dialer and on-device CRM. $12.99 once, your number, list stays on the phone.",
         "isPartOf": { "@id": "https://coldcallx.app/#website" },
         "about": { "@id": "https://coldcallx.app/#app" },
         "primaryImageOfPage": "https://coldcallx.app/logo.png"
@@ -578,58 +575,61 @@
     <div class="blob b3"></div>
   </div>
 
+  <header class="relative z-10 px-6 pt-4">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Site">
+      <a href="/real-estate" class="hover:text-[var(--ink)] transition-colors">Real Estate</a>
+      <a href="/auto-dialer-iphone" class="hover:text-[var(--ink)] transition-colors">Auto Dialer</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
+    </nav>
+  </header>
+
   <main class="flex-1 relative">
-    <section class="hero-viewport relative w-full py-8" aria-label="Cold Call X">
+    <section class="hero-viewport relative w-full py-8" aria-label="Cold Call X — auto dialer for iPhone">
       <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center h-full pt-10 md:pt-0">
         <div class="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <div class="space-y-8">
             <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-center lg:text-left">
-              <span class="block text-shimmer">Cold&nbsp;calling,</span>
-              <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span>
+              <span class="block text-shimmer">Cold&nbsp;calling</span>
+              <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">from your iPhone.</span>
             </h1>
 
             <div class="lg:hidden flex justify-center">
-              <a href="https://apps.apple.com/app/id6751245004" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Open Cold Call X in the App Store">
+              <a href="https://apps.apple.com/app/id6751245004" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Download Cold Call X on the App Store">
                 <img src="logo.jpg" alt="Cold Call X — cold calling auto dialer app for iPhone" width="1024" height="1024" fetchpriority="high" decoding="async" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
                 <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
               </a>
             </div>
-            
-            <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
-              The cold calling app for iPhone — a fast auto dialer and private CRM built for sales professionals, entrepreneurs, and business development teams.
+
+            <ul class="space-y-2 text-lg lg:text-2xl text-[var(--ink)] font-semibold max-w-2xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
+              <li>$12.99 once.</li>
+              <li>Your number.</li>
+              <li>List stays on the phone.</li>
+            </ul>
+
+            <p class="text-base lg:text-xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
+              An iPhone power dialer and on-device CRM. No monthly bill. No account.
             </p>
-            
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 justify-center lg:justify-start">
-              <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Privacy Policy</span>
+
+            <div class="pt-4 flex flex-col items-center lg:items-start gap-3">
+              <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="app-store-cta inline-flex items-center justify-center">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 sm:h-14 w-auto">
               </a>
-              <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Contact Us</span>
-              </a>
-              <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="hidden sm:inline-flex lg:hidden items-center justify-center">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-11 w-auto">
-              </a>
+              <p class="text-sm text-[var(--muted)]">4.8★ · 54 ratings · iOS 17.6+</p>
             </div>
           </div>
         </div>
-        
-        <div class="sm:hidden mt-3 flex justify-center w-full">
-          <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="inline-flex items-center justify-center w-full max-w-xs">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="w-full h-12 object-contain">
-          </a>
-        </div>
-        
+
         <div class="relative hidden lg:flex flex-col items-center justify-center w-full">
           <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph"></div>
           <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow"></div>
           <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse"></div>
-          
+
           <div class="relative p-8 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[3rem] neo-glass shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-all duration-700 hover:rotate-1 group mt-6 sm:mt-8 lg:mt-0 z-10">
             <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60"></div>
             <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-tl from-blue-500/5 to-purple-500/5"></div>
-            
+
             <div class="relative">
-              <a href="https://apps.apple.com/app/id6751245004">
+              <a href="https://apps.apple.com/app/id6751245004" aria-label="Download Cold Call X on the App Store">
                 <img src="logo.jpg" alt="Cold Call X app icon — iPhone power dialer and mobile CRM" width="1024" height="1024" decoding="async" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
               </a>
               <div class="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-3xl sm:rounded-[3rem] blur-3xl -z-10"></div>
@@ -637,19 +637,30 @@
           </div>
 
           <div class="hidden lg:flex mt-8 justify-center">
-            <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="inline-flex items-center justify-center">
+            <a href="https://apps.apple.com/app/id6751245004" aria-label="Download on the App Store" class="app-store-cta inline-flex items-center justify-center">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 xl:h-14 w-auto">
             </a>
           </div>
-          
+
           <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block"></div>
           <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000 hidden md:block"></div>
         </div>
       </div>
     </section>
-
   </main>
 
-
+  <footer class="px-6 text-center">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
+      <a href="/real-estate" class="hover:text-[var(--ink)] transition-colors">Real Estate</a>
+      <a href="/auto-dialer-iphone" class="hover:text-[var(--ink)] transition-colors">Auto Dialer</a>
+      <a href="/mojo-dialer-alternative" class="hover:text-[var(--ink)] transition-colors">Mojo Alternative</a>
+      <a href="/phoneburner-alternative" class="hover:text-[var(--ink)] transition-colors">PhoneBurner Alternative</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
+      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
+      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Contact Us</a>
+    </nav>
+    <p class="text-[var(--muted)] font-light text-sm">Cold Call X — the cold calling auto dialer &amp; mobile CRM for iPhone.</p>
+    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
+  </footer>
 </body>
 </html>
