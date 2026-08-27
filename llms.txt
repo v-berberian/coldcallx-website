@@ -24,6 +24,12 @@
 - [Auto dialer for iPhone](https://coldcallx.app/auto-dialer-iphone)
 - [Cold calling apps guide](https://coldcallx.app/cold-calling-apps)
 - [Real estate guide](https://coldcallx.app/real-estate)
+- [Recruiter guide](https://coldcallx.app/recruiters)
+- [Insurance guide](https://coldcallx.app/insurance)
+- [Mojo Dialer alternative](https://coldcallx.app/mojo-dialer-alternative)
+- [PhoneBurner alternative](https://coldcallx.app/phoneburner-alternative)
+- [SwiftCall alternative](https://coldcallx.app/swiftcall-alternative)
+- [Mojo vs PhoneBurner vs Cold Call X](https://coldcallx.app/mojo-vs-phoneburner)
 - [Blog and guides](https://coldcallx.app/blog/)
 - [Privacy policy](https://coldcallx.app/privacy)
 
