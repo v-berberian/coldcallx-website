@@ -18,8 +18,8 @@
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f0f9ff">
 
-  <title>Recruiter Cold Calling App for iPhone | Cold Call X</title>
-  <meta name="description" content="Call candidate lists straight from Google Sheets on your iPhone. Auto dial, take notes between screens, book interviews to your calendar. $12.99 once, no subscription." />
+  <title>Recruiter Power Dialer &amp; Cold Calling App | Cold Call X</title>
+  <meta name="description" content="A power dialer for recruiters on your iPhone: import shortlists from Sheets or CSV, tag hot/warm/cold, and fire follow-up texts between calls. $12.99 once." />
   <link rel="canonical" href="https://coldcallx.app/recruiters" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="author" content="Berberian Enterprises Inc." />
@@ -34,15 +34,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Cold Call X" />
   <meta property="og:url" content="https://coldcallx.app/recruiters" />
-  <meta property="og:title" content="Recruiter Cold Calling App for iPhone | Cold Call X" />
-  <meta property="og:description" content="Call candidate lists straight from Google Sheets on your iPhone. Auto dial, take notes between screens, book interviews to your calendar. $12.99 once." />
+  <meta property="og:title" content="Recruiter Power Dialer &amp; Cold Calling App | Cold Call X" />
+  <meta property="og:description" content="Import candidate shortlists from Sheets or CSV, dial straight through from your own number, tag hot/warm/cold, book screens. $12.99 once." />
   <meta property="og:image" content="https://coldcallx.app/logo.png" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Recruiter Cold Calling App for iPhone | Cold Call X" />
-  <meta name="twitter:description" content="Call candidate lists straight from Google Sheets on your iPhone. $12.99 once, no subscription." />
+  <meta name="twitter:title" content="Recruiter Power Dialer &amp; Cold Calling App | Cold Call X" />
+  <meta name="twitter:description" content="Import shortlists from Sheets or CSV, dial from your own number, tag hot/warm/cold. $12.99 once, no subscription." />
   <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,6 +132,19 @@
       border-radius: 2rem;
     }
 
+    .cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.6); }
+    .cmp-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 0.95rem; }
+    .cmp-table th, .cmp-table td { padding: 0.9rem 1rem; text-align: left; vertical-align: top; border-top: 1px solid rgba(15,23,42,0.08); }
+    .cmp-table thead th { border-top: none; background: rgba(255,255,255,0.45); color: var(--ink); font-weight: 700; }
+    .cmp-table tbody th { color: var(--muted); font-weight: 600; }
+    .cmp-table td { color: var(--muted); }
+    .cmp-table td.hi { color: var(--ink); font-weight: 600; }
+    .cmp-table caption { caption-side: top; text-align: left; padding: 0 0 0.85rem 0; color: var(--muted); font-size: 0.9rem; }
+    @media (max-width: 640px) {
+      .cmp-table { min-width: 560px; font-size: 0.85rem; }
+      .cmp-table th, .cmp-table td { padding: 0.7rem 0.65rem; }
+    }
+
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
   </style>
@@ -145,8 +158,8 @@
         "@type": "WebPage",
         "@id": "https://coldcallx.app/recruiters#webpage",
         "url": "https://coldcallx.app/recruiters",
-        "name": "Recruiter Cold Calling App for iPhone | Cold Call X",
-        "description": "Call candidate lists straight from Google Sheets on your iPhone with Cold Call X — auto dial, notes between screens, calendar booking, and one-time pricing.",
+        "name": "Recruiter Power Dialer & Cold Calling App | Cold Call X",
+        "description": "Cold Call X is a power dialer for recruiters that runs on your iPhone — import candidate shortlists from Sheets or CSV, tag hot/warm/cold, fire follow-ups, and book phone screens from the call.",
         "isPartOf": { "@id": "https://coldcallx.app/#website" },
         "about": { "@id": "https://coldcallx.app/#app" },
         "breadcrumb": {
@@ -164,7 +177,17 @@
           {
             "@type": "Question",
             "name": "Can I import candidates from Google Sheets?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Import your sourcing sheet directly from Google Sheets or as a CSV — names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Import your sourcing sheet directly from Google Sheets or as a CSV — names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign, and refresh the Sheets import anytime." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Cold Call X a power dialer or a predictive dialer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A power dialer. It works one imported list, one call at a time: you hang up and the next lead is ready. There is no predictive or parallel dialing, no voicemail drop — candidates pick up to a real person calling from your own number through your own carrier." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Cold Call X integrate with my ATS?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No, and that is deliberate — it is a personal dialer, not an ATS sync layer. You export any list with your notes via the iOS share sheet and paste records back where your pipeline lives. If your team needs native ATS logging across every rep, a cloud team dialer is the better tool." }
           },
           {
             "@type": "Question",
@@ -173,8 +196,13 @@
           },
           {
             "@type": "Question",
+            "name": "Will candidates see my own phone number?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Calls go out from your own number through your own carrier, so candidates see a real caller — and callbacks land on the phone in your hand. Version 1.6.2 also shows the candidate's name on incoming calls when they ring you back." }
+          },
+          {
+            "@type": "Question",
             "name": "Where is candidate data stored?",
-            "acceptedAnswer": { "@type": "Answer", "text": "On your device only. Cold Call X uploads nothing to external servers — candidate names, numbers, and notes never sit in a third-party dialer's database." }
+            "acceptedAnswer": { "@type": "Answer", "text": "On your device only. Cold Call X carries Apple's Data Not Collected privacy label — candidate names, numbers, and notes never sit in a third-party dialer's database, and there is no account to create." }
           }
         ]
       }
@@ -198,40 +226,122 @@
           <span class="font-semibold">← Cold Call X Home</span>
         </a>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02] mb-6">Recruiting cold calls, <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span></h1>
-        <p class="text-lg lg:text-xl text-[var(--muted)] font-light max-w-3xl mx-auto leading-relaxed">Cold Call X is the cold calling app for recruiters — an iPhone auto dialer for agency recruiters, executive search, and staffing desks running candidate and business-development call lists.</p>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02] mb-6">The <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">power dialer</span> for recruiters, on your iPhone.</h1>
+        <p class="text-lg lg:text-xl text-[var(--muted)] font-light max-w-3xl mx-auto leading-relaxed">Cold Call X turns a candidate shortlist into a call block. Import from Google Sheets or CSV, dial straight through from your own number, and keep hot, warm, and cold notes where you'll actually use them — on the phone in your hand.</p>
         <div class="mt-9 flex flex-col items-center gap-3">
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (56 ratings, checked August 27, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
         </div>
       </div>
 
-      <!-- Use-case cards -->
+      <!-- What a power dialer does -->
       <div class="section-card p-6 lg:p-12 mb-8">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Your sourcing sheet is the dialer</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Most desks live in spreadsheets. Import candidate lists straight from Google Sheets or CSV — names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign, and pin the one you're working today.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">What a power dialer does for a desk</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">A power dialer works through an imported list one call at a time: you finish a conversation, hang up, and the next lead is already on screen. Cold Call X gives you the pace controls — <strong class="text-[var(--ink)]">Manual</strong> for full control, <strong class="text-[var(--ink)]">Rocket</strong> to burn through a callback list with no delay, <strong class="text-[var(--ink)]">5s / 10s</strong> for a fixed breather to write notes, and <strong class="text-[var(--ink)]">Timer</strong> for randomized, natural-sounding gaps.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Just as important is what it doesn't do: no predictive dialing, no parallel lines, no answer-dead-air. In recruiting that's not a limitation — a candidate's first impression of your agency <em>is</em> the call, and it lands better when a real person dials from a real number.</p>
+        <p class="text-[var(--muted)] leading-relaxed">One more desk-specific detail: since v1.6.2, when a candidate calls you back, their name pops up from your imported list — even if they were never saved as a contact. No more answering "hi, you called me earlier?" blind.</p>
       </div>
 
+      <!-- Workflow: shortlist to call list -->
       <div class="section-card p-6 lg:p-12 mb-8">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Notes that survive back-to-back screens</h2>
-        <p class="text-[var(--muted)] leading-relaxed">After ten screens, calls blur together. Drop a note on each candidate as you hang up, tag them <strong class="text-[var(--ink)]">Hot</strong>, <strong class="text-[var(--ink)]">Warm</strong>, or <strong class="text-[var(--ink)]">Cold</strong>, and see when you last spoke. Next time the req reopens, your shortlist is already built.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Your sourcing sheet is the call list</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Most desks already live in a spreadsheet, so Cold Call X doesn't ask you to rebuild it. Import your shortlist straight from <strong class="text-[var(--ink)]">Google Sheets or CSV</strong> — names, numbers, emails, and notes auto-map to the right fields, large lists are fine, and you can refresh a Sheets import anytime the req changes.</p>
+        <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
+          <li><strong class="text-[var(--ink)]">One list per req, client, or market</strong> — keep progress separately, pin the one you're working today, and switch fast between them.</li>
+          <li><strong class="text-[var(--ink)]">Smart filters</strong> — work only uncalled numbers, review who you've already spoken to, or sort by temperature; the timezone filter keeps you from calling Austin at 7 AM Eastern.</li>
+          <li><strong class="text-[var(--ink)]">Multi-number leads</strong> — store a mobile and a desk line on the same candidate and choose which to dial.</li>
+          <li><strong class="text-[var(--ink)]">Shuffle mode</strong> — randomize the call order so you're not dialing the same block of numbers in the same sequence every week.</li>
+        </ul>
       </div>
 
+      <!-- Tags, notes, follow-ups -->
       <div class="section-card p-6 lg:p-12 mb-8">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Book the screen before you hang up</h2>
-        <p class="text-[var(--muted)] leading-relaxed">A candidate says "Thursday afternoon works" — create the iOS calendar event right from the app. No answer? Fire a one-tap text, WhatsApp message, or email from a template instead of typing the same follow-up forty times a day.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Tags, notes, and follow-ups that happen before the next ring</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">After ten screens, candidates blur together. Drop a note on each one as you hang up, tag them <strong class="text-[var(--ink)]">Hot</strong>, <strong class="text-[var(--ink)]">Warm</strong>, or <strong class="text-[var(--ink)]">Cold</strong>, and let last-called timestamps tell you who's aging out. When a req reopens in three months, the shortlist is already built — filter by Hot and start there.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Follow-up without the typing: templates for <strong class="text-[var(--ink)]">text, WhatsApp, and email</strong> auto-fill name, company, and phone fields, so "great talking today — here's the job description" is one tap instead of forty re-typed messages a day. And when a candidate says "Thursday afternoon works," you create the calendar event from inside the app before you hang up, so the phone screen is booked while it's real.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Not interested? One tap adds them to the built-in Do Not Call list, and they're suppressed across every list and every future import.</p>
       </div>
 
+      <!-- Honest fit -->
       <div class="section-card p-6 lg:p-12 mb-8">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Pace your call block</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Set a countdown between calls to leave time for ATS updates, or run Rocket mode through a callback list. Calls come from your own number, so candidates see a real person — and callbacks land on the phone that's actually in your hand.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Honest fit: what Cold Call X is — and isn't</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-6">Most "recruiter dialer" pages sell you a team platform. Cold Call X is a personal tool, and pretending otherwise would waste your time. Here's the straight answer.</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="neo-glass rounded-3xl p-6">
+            <h3 class="font-bold text-[var(--ink)] mb-3">It is</h3>
+            <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
+              <li>A power dialer for a <strong class="text-[var(--ink)]">solo recruiter or a desk of one</strong> — 360 recruiters, executive search researchers, boutique staffing shops.</li>
+              <li>Fully functional at $12.99 once — every feature, no seats, no tier to unlock.</li>
+              <li>On your personal iPhone, so callbacks hit the number candidates already have.</li>
+            </ul>
+          </div>
+          <div class="neo-glass rounded-3xl p-6">
+            <h3 class="font-bold text-[var(--ink)] mb-3">It is not</h3>
+            <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
+              <li>An <strong class="text-[var(--ink)]">ATS</strong> — no req pipelines, no resume database, no native sync. Lists export with notes via the iOS share sheet.</li>
+              <li>A team dashboard — no call recordings, leaderboards, or live listen-in for a manager.</li>
+              <li>A predictive or parallel dialer, and there's no voicemail drop. One line, live voice, your number.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-[var(--muted)] leading-relaxed">If you need team-wide ATS logging, admin oversight, or coaching QA across a whole floor, a cloud recruiting platform is genuinely the right buy — that's a different product category. If you're comparing the big team dialers on subscription math, our <a href="/mojo-vs-phoneburner" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">Mojo vs PhoneBurner vs Cold Call X comparison</a> lays out the annual cost honestly.</p>
       </div>
 
-      <div class="section-card p-6 lg:p-12 mb-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Candidate data stays on your phone</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Everything is stored on-device. No cloud account, no server, no candidate data sitting in a third-party dialer's database — a clean answer when clients ask how you handle personal data.</p>
+      <!-- Comparison table -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Cold Call X vs the typical cloud recruiting dialer</h2>
+        <div class="cmp-wrap"><table class="cmp-table">
+          <caption>Category-level comparison, August 27, 2026. Team platforms vary in exactly what they include — check each vendor before deciding.</caption>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Cold Call X</th>
+              <th scope="col">Typical cloud recruiting dialer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Where it runs</th>
+              <td class="hi">Your iPhone, your carrier, your own number</td>
+              <td>Browser dashboard with a softphone</td>
+            </tr>
+            <tr>
+              <th scope="row">Cost model</th>
+              <td class="hi">$12.99 one-time</td>
+              <td>Per-seat monthly subscription</td>
+            </tr>
+            <tr>
+              <th scope="row">Candidate data</th>
+              <td class="hi">On-device only; Apple privacy label: Data Not Collected</td>
+              <td>Stored in the vendor's cloud</td>
+            </tr>
+            <tr>
+              <th scope="row">ATS integration</th>
+              <td class="hi">None — export lists + notes via share sheet</td>
+              <td>Native ATS sync (the reason teams buy them)</td>
+            </tr>
+            <tr>
+              <th scope="row">Dialing</th>
+              <td class="hi">Single line, one call at a time, live voice</td>
+              <td>Power, parallel, and predictive modes</td>
+            </tr>
+            <tr>
+              <th scope="row">Best fit</th>
+              <td class="hi">Solo recruiters, exec search, boutique desks</td>
+              <td>Staffing teams that need oversight and logging</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <!-- Privacy & compliance -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Candidate data, handled the way candidates ask about</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Candidate phone numbers are personal data, and clients increasingly ask where they live. With Cold Call X the answer is simple: <strong class="text-[var(--ink)]">on your device</strong>. No cloud account, no vendor database holding your sourcing lists, and Apple's privacy label for the app reads Data Not Collected. Backups go through encrypted iCloud in <em>your own</em> iCloud account, not ours.</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">On compliance, the honest framing: Cold Call X dials only numbers you imported, in the order you set, one call at a time, as live voice from your own carrier — the cautious end of the dialing spectrum. The in-app Do Not Call list is a personal suppression tool; it does not scrub the National Do Not Call Registry, and staying compliant is your responsibility. The rules around dialers shifted in 2025–2026, so read our <a href="/blog/auto-dialer-laws" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">guide to auto dialer laws</a> before high-volume calling (it's not legal advice).</p>
+        <p class="text-[var(--muted)] leading-relaxed">Want the full feature walkthrough first? It's all covered on the <a href="/auto-dialer-iphone" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">iPhone auto dialer</a> page.</p>
       </div>
 
       <!-- FAQ -->
@@ -239,15 +349,27 @@
       <div class="space-y-4 mb-12">
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I import candidates from Google Sheets?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Import your sourcing sheet directly from Google Sheets or as a CSV — names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Import your sourcing sheet directly from Google Sheets or as a CSV — names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign, and refresh the Sheets import anytime.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is Cold Call X a power dialer or a predictive dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">A power dialer. It works one imported list, one call at a time: you hang up and the next lead is ready. There is no predictive or parallel dialing, no voicemail drop — candidates pick up to a real person calling from your own number through your own carrier.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X integrate with my ATS?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No, and that is deliberate — it is a personal dialer, not an ATS sync layer. You export any list with your notes via the iOS share sheet and paste records back where your pipeline lives. If your team needs native ATS logging across every rep, a cloud team dialer is the better tool.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I schedule phone screens from the app?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. When a candidate picks a time, create the iOS calendar event right from Cold Call X before you hang up.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Will candidates see my own phone number?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Calls go out from your own number through your own carrier, so candidates see a real caller — and callbacks land on the phone in your hand. Version 1.6.2 also shows the candidate's name on incoming calls when they ring you back.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Where is candidate data stored?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">On your device only. Cold Call X uploads nothing to external servers — candidate names, numbers, and notes never sit in a third-party dialer's database.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">On your device only. Cold Call X carries Apple's Data Not Collected privacy label — candidate names, numbers, and notes never sit in a third-party dialer's database, and there is no account to create.</p>
         </details>
       </div>
 
@@ -258,7 +380,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.7★ on the App Store (56 ratings, checked August 27, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
       </div>
 
     </div>
