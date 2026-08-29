@@ -4,7 +4,7 @@
 
 ## Product
 
-- Cold Call X helps sales professionals, real-estate investors, recruiters, insurance agents, and small business owners work through imported phone lists on iPhone.
+- Cold Call X helps sales professionals, real-estate investors, recruiters, insurance agents, loan officers, and small business owners work through imported phone lists on iPhone.
 - Core workflow: import a CSV or Google Sheet, filter and organize leads, dial one at a time or with timed/Rocket auto-call modes, record notes and temperature, and schedule follow-ups.
 - Calls use the iPhone's native phone app and the user's own number. Cold Call X is not a VoIP number provider.
 - Lead lists, notes, tags, and call activity are stored on-device. Review the [privacy policy](https://coldcallx.app/privacy) for current details.
@@ -27,6 +27,7 @@
 - [Best real estate dialers comparison](https://coldcallx.app/blog/best-real-estate-dialer)
 - [Recruiter guide](https://coldcallx.app/recruiters)
 - [Insurance guide](https://coldcallx.app/insurance)
+- [Loan officer guide](https://coldcallx.app/loan-officers)
 - [Mojo Dialer alternative](https://coldcallx.app/mojo-dialer-alternative)
 - [PhoneBurner alternative](https://coldcallx.app/phoneburner-alternative)
 - [SwiftCall alternative](https://coldcallx.app/swiftcall-alternative)

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Cookie consent. MUST stay above gtag.js: it seeds the Consent Mode
+       defaults the tag reads on boot. -->
+  <script src="/consent.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CKNY5PSV1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0CKNY5PSV1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f0f9ff">
+
+  <title>Power Dialer for Loan Officers on iPhone | Cold Call X</title>
+  <meta name="description" content="A power dialer for loan officers on iPhone: dial realtor partners and past clients from your own number, track callbacks, no CRM required. $12.99 once." />
+  <link rel="canonical" href="https://coldcallx.app/loan-officers" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Berberian Enterprises Inc." />
+
+  <!-- iOS / App Store -->
+  <meta name="apple-itunes-app" content="app-id=6751245004">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/loan-officers" />
+  <meta property="og:title" content="Power Dialer for Loan Officers on iPhone | Cold Call X" />
+  <meta property="og:description" content="A power dialer for loan officers on iPhone: dial realtor partners and past clients from your own number, track callbacks, no CRM required. $12.99 once." />
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Power Dialer for Loan Officers on iPhone | Cold Call X" />
+  <meta name="twitter:description" content="Dial realtor partners and past clients from your own number on iPhone. $12.99 once — no per-seat fees." />
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    :root {
+      --brand: #00AEEF;
+      --ink: #0F172A;
+      --muted: #64748B;
+      --surface: rgba(255,255,255,0.8);
+    }
+
+    html, body { margin: 0; }
+    html {
+      height: 100%;
+      scroll-behavior: smooth;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color-scheme: light;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    footer p { margin: 0; line-height: 1.4; }
+
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      animation: hue 60s linear infinite;
+    }
+    .blob { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.3; mix-blend-mode: multiply; }
+    .blob.b1 { width: 60vw; height: 60vw; left: -15vw; top: -20vh; background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.4), rgba(0,174,239,0) 70%); animation: move1 40s ease-in-out infinite alternate; }
+    .blob.b2 { width: 50vw; height: 50vw; right: -20vw; top: 20vh; background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.3), rgba(139,92,246,0) 70%); animation: move2 45s ease-in-out infinite alternate; }
+    .blob.b3 { width: 70vw; height: 70vw; left: -5vw; bottom: -30vh; background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.25), rgba(6,182,212,0) 70%); animation: move3 50s ease-in-out infinite alternate; }
+
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg) brightness(1.02); }
+      33% { filter: hue-rotate(15deg) brightness(1.05); }
+      66% { filter: hue-rotate(-10deg) brightness(1.03); }
+      100% { filter: hue-rotate(0deg) brightness(1.02); }
+    }
+    @keyframes move1 { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(8vw,10vh,0) scale(1.1); } }
+    @keyframes move2 { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(-10vw,8vh,0) scale(1.08); } }
+    @keyframes move3 { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(5vw,-8vh,0) scale(1.12); } }
+
+    .neo-glass {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow:
+        0 32px 64px -12px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.6) inset,
+        0 2px 4px rgba(0,0,0,0.05) inset;
+    }
+
+    .section-card {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow:
+        0 25px 50px -12px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(255,255,255,0.7) inset;
+      border-radius: 2rem;
+    }
+
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://coldcallx.app/loan-officers#webpage",
+        "url": "https://coldcallx.app/loan-officers",
+        "name": "Power Dialer for Loan Officers on iPhone | Cold Call X",
+        "description": "A power dialer for loan officers on iPhone: dial realtor partner lists and past-client databases from your own number, track callbacks, and import CSVs — one-time pricing, no CRM required.",
+        "isPartOf": { "@id": "https://coldcallx.app/#website" },
+        "about": { "@id": "https://coldcallx.app/#app" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Cold Call X", "item": "https://coldcallx.app/" },
+            { "@type": "ListItem", "position": 2, "name": "For Loan Officers", "item": "https://coldcallx.app/loan-officers" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://coldcallx.app/loan-officers#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I import my lists from a CSV export?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Export your realtor partners, past clients, or aged lead batch to CSV or Google Sheet, import, and columns auto-map. Keep separate lists per source — partners, past clients, purchased batches — and pin the one you're working." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Cold Call X dial from my own number?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Calls go through your iPhone's native phone app from your own number — the same one realtors and clients already have. There is no VoIP line and no per-minute cost, and call-backs ring the phone in your pocket." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a monthly fee or per-seat license?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Cold Call X is a one-time purchase of $12.99 on the App Store — no subscription, no per-seat licensing, and no account required." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is cold calling mortgage leads compliant?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Cold Call X dials one lead at a time from your own number through the iPhone's native phone app — no recorded messages, no number generation. The rest — consent for your list, Do-Not-Call scrubbing, calling hours by state, and the rules that differ between consumer lead calls and business-to-business calls to realtor partners — depends on your list and how you call it. Read our plain-English TCPA auto dialer guide, and treat your compliance officer as the final word." }
+          },
+          {
+            "@type": "Question",
+            "name": "Will it replace my mortgage CRM?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No — and it doesn't try to. Cold Call X is the dialing layer: lists, notes, tags, and follow-ups live on your device and export via the iOS share sheet. Keep your loan pipeline where it is; bring the call list into Cold Call X." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can multiple loan officers on my team use it?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Each loan officer installs their own copy on their iPhone — one-time purchase per install, no per-seat subscriptions to manage. Lists, notes, and follow-ups stay on each person's device, so nothing client-related syncs to a shared server." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="text-[var(--ink)] antialiased">
+  <div class="bg-anim">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <main class="flex-1 relative">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+
+      <!-- Header -->
+      <div class="text-center mb-14">
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 neo-glass rounded-3xl text-[var(--muted)] hover:text-[var(--ink)] transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-2xl mb-12">
+          <span class="font-semibold">← Cold Call X Home</span>
+        </a>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02] mb-6">The <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">power dialer</span> for loan officers, on your iPhone.</h1>
+        <p class="text-lg lg:text-xl text-[var(--muted)] font-light max-w-3xl mx-auto leading-relaxed">Cold Call X is a power dialer for loan officers and mortgage brokers — work your realtor partner list, past-client database, and aged leads from your own cell number. No CRM required, no monthly seat.</p>
+        <div class="mt-9 flex flex-col items-center gap-3">
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
+          </a>
+          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (59 ratings, checked August 29, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        </div>
+      </div>
+
+      <!-- Use-case cards -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Your realtor partner list, actually dialed</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Every loan officer has the list: agents who promised to send business, agents who used to, agents you met at the networking event. Export it to CSV or Google Sheet, import, and tag each partner <strong class="text-[var(--ink)]">Hot</strong>, <strong class="text-[var(--ink)]">Warm</strong>, or <strong class="text-[var(--ink)]">Cold</strong>. Last-called dates keep you honest about who's gone three months without a check-in.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Dial from the number realtors already have</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Calls go through your iPhone from your own number — the one on your business card and your NMLS profile. No VoIP line that agents screen out, no per-minute meter, and when a partner calls back, it rings the phone in your pocket.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Past-client check-ins that actually happen</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Rate-drop call to the 2024 buyers, refi check on the anniversary crowd — import your past-client database and work it in batches. The moment someone says "call me this spring," set the callback reminder as an iOS calendar event, and send the follow-up text or email from a one-tap template. No copy-paste between apps.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Aged lead batches, worked properly</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Bought a batch of internet leads? Import the whole file at once — large lists load fast and columns auto-map. Scrub your Do-Not-Calls <em>before</em> import, keep one list per lead vendor, and use the timezone filter so you're never dialing a borrower at 9pm their time. Our <a href="/blog/auto-dialer-laws" class="text-blue-600 underline">plain-English TCPA auto dialer guide</a> covers the rules in plain terms.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Multi-state pipeline? Mind the clock.</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Filter by timezone (EST/CST) before you dial. Filter to uncalled leads to work fresh names, or shuffle the order to give a stale list another pass without always starting at the top.</p>
+      </div>
+
+      <!-- Honest fit -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Honest fit: what Cold Call X is — and isn't</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-6">Most "mortgage dialer" pages sell you a call-center platform wired into a CRM. Cold Call X is a personal tool for a desk of one, and pretending otherwise would waste your time. Here's the straight answer.</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="neo-glass rounded-3xl p-6">
+            <h3 class="font-bold text-[var(--ink)] mb-3">It is</h3>
+            <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
+              <li>Built for <strong class="text-[var(--ink)]">solo loan officers and independent brokers</strong> working partner lists, past-client databases, and aged lead batches from an iPhone.</li>
+              <li>Fully functional at $12.99 once — every feature, no seats, no tier to unlock.</li>
+              <li>Dialing from your own carrier number, so partner call-backs hit the phone they already have.</li>
+            </ul>
+          </div>
+          <div class="neo-glass rounded-3xl p-6">
+            <h3 class="font-bold text-[var(--ink)] mb-3">It is not</h3>
+            <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
+              <li>A <strong class="text-[var(--ink)]">mortgage CRM or LOS</strong> — no loan pipelines, pre-qual tracking, or document collection. Lists export with notes via the iOS share sheet.</li>
+              <li>A call-center floor — no predictive dialing, agent leaderboards, or speed-to-lead automation.</li>
+              <li>A VoIP line or lead vendor. One line, live voice, your number — and you bring the leads.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-[var(--muted)] leading-relaxed">If you need a team dialer with predictive pacing, CRM sync, and speed-to-lead routing, a cloud platform is genuinely the right category — that's a different product. If you're weighing the big team dialers on subscription math, our <a href="/mojo-vs-phoneburner" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">Mojo vs PhoneBurner vs Cold Call X comparison</a> lays out the annual cost honestly.</p>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-center mb-8">Loan officer dialing, <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">answered</span></h2>
+      <div class="space-y-4 mb-12">
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I import my lists from a CSV export?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Export your realtor partners, past clients, or aged lead batch to CSV or Google Sheet, import, and columns auto-map. Keep separate lists per source — partners, past clients, purchased batches — and pin the one you're working.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X dial from my own number?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Calls go through your iPhone's native phone app from your own number — the same one realtors and clients already have. There is no VoIP line and no per-minute cost, and call-backs ring the phone in your pocket.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a monthly fee or per-seat license?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Cold Call X is a one-time purchase of $12.99 on the App Store — no subscription, no per-seat licensing, and no account required.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is cold calling mortgage leads compliant?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Cold Call X dials one lead at a time from your own number through the iPhone's native phone app — no recorded messages, no number generation. The rest — consent for your list, Do-Not-Call scrubbing, calling hours by state, and the rules that differ between consumer lead calls and business-to-business calls to realtor partners — depends on your list and how you call it. Read our <a href="/blog/auto-dialer-laws" class="text-blue-600 underline">plain-English TCPA auto dialer guide</a>, and treat your compliance officer as the final word.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Will it replace my mortgage CRM?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No — and it doesn't try to. Cold Call X is the dialing layer: lists, notes, tags, and follow-ups live on your device and export via the iOS share sheet. Keep your loan pipeline where it is; bring the call list into Cold Call X.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can multiple loan officers on my team use it?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Each loan officer installs their own copy on their iPhone — one-time purchase per install, no per-seat subscriptions to manage. Lists, notes, and follow-ups stay on each person's device, so nothing client-related syncs to a shared server.</p>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="section-card p-8 lg:p-14 text-center">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">Work the lists you <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">already own</span></h2>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Download Cold Call X, import your partner list, and start dialing in minutes.</p>
+        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
+        </a>
+        <p class="text-sm text-[var(--muted)] mt-5">4.7★ on the App Store (59 ratings, checked August 29, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="px-6 text-center">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
+      <a href="/" class="hover:text-[var(--ink)] transition-colors">Home</a>
+      <a href="/auto-dialer-iphone" class="hover:text-[var(--ink)] transition-colors">Auto Dialer</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
+      <a href="/real-estate" class="hover:text-[var(--ink)] transition-colors">For Real Estate</a>
+      <a href="/recruiters" class="hover:text-[var(--ink)] transition-colors">For Recruiters</a>
+      <a href="/insurance" class="hover:text-[var(--ink)] transition-colors">For Insurance</a>
+      <a href="/loan-officers" class="hover:text-[var(--ink)] transition-colors">For Loan Officers</a>
+      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
+      <a href="/cookies" class="hover:text-[var(--ink)] transition-colors">Cookies</a>
+      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Support</a>
+      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--ink)] transition-colors">App Store</a>
+    </nav>
+    <p class="text-[var(--muted)] font-light text-sm">Cold Call X — the cold calling auto dialer &amp; mobile CRM for iPhone.</p>
+    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
+  </footer>
+</body>
+</html>
