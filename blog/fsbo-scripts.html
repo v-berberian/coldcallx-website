@@ -70,6 +70,23 @@
     .article a{color:#2563eb;text-decoration:underline;text-underline-offset:2px;}
     .article a:hover{color:var(--ink);}
     .script{background:rgba(0,174,239,.06);border-left:3px solid var(--brand);border-radius:.5rem;padding:1rem 1.2rem;margin:0 0 1.2rem;color:var(--ink);font-style:italic;line-height:1.7;}
+    .cheat-sheet{border:1.5px solid rgba(15,23,42,.18);border-radius:.75rem;padding:1.25rem 1.4rem;background:#fff;}
+    .cheat-sheet h3{margin-top:1rem;}
+    .cheat-sheet ul{margin-bottom:.8rem;padding-left:1.2rem;color:var(--muted);line-height:1.6;font-size:.92rem;}
+    .cheat-sheet li{margin-bottom:.35rem;}
+    .cheat-sheet strong{color:var(--ink);font-weight:600;}
+    .print-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:#2563eb;border:1px solid rgba(37,99,235,.35);border-radius:.6rem;padding:.45rem .9rem;background:rgba(255,255,255,.6);cursor:pointer;}
+    .print-btn:hover{color:var(--ink);border-color:var(--ink);}
+    @media print{
+      body{background:#fff !important;}
+      .bg-anim,header,footer,nav,.print-btn{display:none !important;}
+      .article-card{box-shadow:none !important;background:#fff !important;border:none !important;padding:0 !important;}
+      .article p,.article ul,.article li{color:#111 !important;}
+      .article a{color:#111 !important;text-decoration:none !important;}
+      .script{background:#f4f4f5 !important;border-left:2px solid #333 !important;color:#111 !important;}
+      .cheat-sheet{border:1.5px solid #333 !important;background:#fff !important;break-inside:avoid;page-break-inside:avoid;}
+      .neo-glass{box-shadow:none !important;background:#fff !important;border:1px solid #333 !important;}
+    }
   </style>
 
   <script type="application/ld+json">
@@ -82,7 +99,7 @@
         "description": "Six FSBO cold calling scripts for fresh and aged for-sale-by-owner leads, real objection handling, and the follow-up cadence that turns FSBOs into listings.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-08-06",
-        "dateModified": "2026-08-26",
+        "dateModified": "2026-08-30",
         "author": { "@id": "https://coldcallx.app/#organization" },
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/fsbo-scripts",
@@ -124,6 +141,16 @@
             "@type": "Question",
             "name": "When is the best time to call FSBO sellers?",
             "acceptedAnswer": { "@type": "Answer", "text": "FSBO owners are easiest to reach outside working hours, which is why late afternoon and early evening on weekdays tend to beat mid-morning, and why weekend mornings around open house time work well. Always call in the property owner time zone and stay inside the calling hours your state allows." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I get a FSBO script PDF?",
+            "acceptedAnswer": { "@type": "Answer", "text": "This guide doubles as one: use the print button and choose Save as PDF in the print dialog. The page is formatted to strip navigation and backgrounds, so the six openers, eight word-for-word objection responses, and the eight-week follow-up cadence print clean on one card." }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I say when a FSBO says call me in the spring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Treat it as a scheduled follow-up, not a rejection. Ask what price range they are thinking, commit to one check-in before spring with anything that affects their number, and log the exact month. When you call back, lead with a comparable sale on their street rather than asking whether they have changed their mind." }
           }
         ]
       }
@@ -139,7 +166,8 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">FSBO scripts that actually work</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">Cold Call X &middot; Updated August 2026 &middot; 8 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-4">Cold Call X &middot; Updated August 2026 &middot; 9 min read</p>
+      <button type="button" class="print-btn mb-10" onclick="window.print()" aria-label="Print this FSBO script pack or save it as a PDF">🖨️ Print or save as PDF</button>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Every FSBO you dial has already made one decision about you: they don't want an agent. That's the whole list, and it's why most <strong>FSBO scripts</strong> fail in the first five seconds. The scripts below are built for that reality — useful first, pitch later, and structured so the seller keeps talking instead of hanging up.</p>
@@ -210,6 +238,18 @@
         <div class="script">"Smart to have a backup plan. Is that someone you've already signed with, or someone you'd call if the solo thing doesn't pan out? … Got it. Well, if that changes I'd love a shot at it — can I keep you on my check-in list either way?"</div>
         <p><strong>The reasoning:</strong> "lined up" is almost never "signed" — usually it's a cousin, a friend from church, or an agent they spoke to once. Signed versus considered is the whole ballgame, and asking directly is neither rude nor pushy. If they really are signed, thank them and move on.</p>
 
+        <h3>"I'm going to try it solo for 30 days first."</h3>
+        <div class="script">"Honestly, that's a reasonable plan — the first month is exactly when a well-priced place should move. Can I ask what you're asking? … Okay. Here's what I'll do: I'll check back right at your 30-day mark, and if it's gone, congratulations, nobody will be happier. If it's not, you'll want the comp data and I'll already have it. Fair?"</div>
+        <p><strong>The reasoning:</strong> don't argue with the 30 days — endorse it. You look confident instead of needy, and "right at your 30-day mark" is a concrete, agreed callback that turns a rejection into a scheduled appointment. When you call back, lead with the comp data you promised, not with "so, changed your mind?"</p>
+
+        <h3>"Not right now — call me in the spring."</h3>
+        <div class="script">"Spring works — a lot of sellers get better prices then anyway. Two quick things so I'm useful when I call back: what price range were you thinking? … And are you doing any prep before then, or keeping it simple? … Got it. I'll check in once before spring with anything that affects your number — sales on your street, rate moves. If something big happens sooner, I'll call. Deal?"</div>
+        <p><strong>The reasoning:</strong> a deferred seller is a follow-up lead, not a dead one. Asking for the price range gives you a number to track comps against — every comp that beats it is a reason to call. "Once before spring" shrinks the commitment to a single touch, which is nearly always accepted. Write the month down and honor it; FSBO callers lose more listings to broken callback promises than to bad scripts.</p>
+
+        <h3>"We're getting plenty of showings — we're fine."</h3>
+        <div class="script">"That's genuinely good news — traffic is the hard part. Quick question though: how many of those showings have turned into a second visit or an offer conversation? … If it's more showings but no offers, that's usually a condition or terms thing, not a price thing — and that's fixable before you burn the summer traffic window. Want me to tell you the three things buyers say after they leave?"</div>
+        <p><strong>The reasoning:</strong> this seller thinks success equals traffic, and most don't know the showings-to-offers ratio is the real metric. You're not telling them they're failing — you're giving them a diagnostic they've never heard, positioned as fixable. This is the single best objection to hit on the second or third call, once the first wave of showings has passed.</p>
+
         <h2>The cadence: where FSBO listings actually come from</h2>
         <p>Here's the pattern every experienced FSBO caller learns eventually: <strong>most for-sale-by-owner sellers who don't sell solo end up listing with an agent</strong>, and the agent they pick is usually just the one who was still calling in week seven. So your first call is not a closing attempt — it's the price of admission to a follow-up sequence. A cadence that holds up in practice:</p>
         <ul>
@@ -221,6 +261,28 @@
         </ul>
         <p>The hard part isn't the scripts. It's remembering that {First Name} on {Street} said "call me after Labor Day" and actually doing it eleven weeks later — a record-keeping problem, not a sales problem. Log the outcome, the asking price, the showing count, and the exact callback date before you dial the next number; the note you don't write in the ten seconds after hanging up is the note that never exists. It also helps to call when people answer — see <a href="/blog/best-time-to-cold-call">the best time to cold call</a>, and remember most FSBO owners work a day job, so evenings and weekend mornings beat mid-morning.</p>
         <p>Work the neighboring list in the same block of time. <a href="/blog/expired-listing-scripts">Expired listing scripts</a> cover the seller who already tried an agent and got burned, and the broader <a href="/blog/cold-calling-scripts-real-estate">real estate cold calling scripts</a> guide covers motivated-seller and absentee-owner openers. FSBO and expired leads overlap constantly: a FSBO that stalls often becomes an expired six months later, and an expired frequently relists itself as a FSBO out of frustration.</p>
+
+        <h2>The one-page objection cheat sheet</h2>
+        <p>Everything above, condensed to a single card. Print it (button at the top of this guide) and keep it next to the phone — each line is the first sentence out of your mouth when the objection lands.</p>
+        <div class="cheat-sheet" id="fsbo-cheat-sheet">
+          <h3 style="margin-top:0">FSBO cold call cheat sheet — objections</h3>
+          <ul>
+            <li><strong>"I'm not paying a commission."</strong> — "If a buyer came in at a number that put more in your pocket after commission, would you still say no?"</li>
+            <li><strong>"I'm not interested."</strong> — "Not interested in agents in general, or not right now while you're giving it a shot yourself?"</li>
+            <li><strong>"I'll call you when I need an agent."</strong> — "Deal — I check in every couple weeks, no pitch, so when you're ready you already know who I am."</li>
+            <li><strong>"How did you get my number?"</strong> — "Your listing — it's posted publicly. If you'd rather I didn't call again, say so and you're off my list for good."</li>
+            <li><strong>"I've already got an agent lined up."</strong> — "Signed with them, or someone you'd call if the solo thing doesn't pan out?"</li>
+            <li><strong>"Trying it solo for 30 days first."</strong> — "Reasonable. I'll check back right at your 30-day mark — if it's gone, nobody will be happier. Fair?"</li>
+            <li><strong>"Call me in the spring."</strong> — "Spring works. I'll check in once before then with anything that affects your number. Deal?"</li>
+            <li><strong>"We're getting showings — we're fine."</strong> — "How many turned into second visits or offers? If it's showings but no offers, that's condition or terms — fixable."</li>
+          </ul>
+          <h3>Follow-up cadence</h3>
+          <ul>
+            <li><strong>Day 1</strong> — opener (buyer-first or straight-shooter) · <strong>Day 4</strong> — deliver the promised value · <strong>Day 10–14</strong> — how's-it-going check-in</li>
+            <li><strong>Every 7–10 days</strong> — 30-second call, rotate the reason · <strong>Week 4–8</strong> — diagnostic + appointment ask</li>
+            <li>Log after every call: outcome, asking price, showing count, exact callback date.</li>
+          </ul>
+        </div>
 
         <h2>Before you dial</h2>
         <p>Scrub your list against the national Do Not Call registry and your own internal do-not-call list, honor removal requests immediately and permanently, and stay inside the calling hours your state allows — several states are stricter than the federal window, and the hours follow the number's time zone, not yours. Some states and local boards add rules around calling for-sale-by-owner numbers and using automated dialing. Check the current rules where you call, and talk to your broker or an attorney about your own obligations.</p>
@@ -241,6 +303,12 @@
 
         <h3>When is the best time to call FSBO sellers?</h3>
         <p>FSBO owners are easiest to reach outside working hours, which is why late afternoon and early evening on weekdays tend to beat mid-morning, and why weekend mornings around open house time work well. Always call in the property owner time zone and stay inside the calling hours your state allows.</p>
+
+        <h3>Where can I get a FSBO script PDF?</h3>
+        <p>This guide doubles as one: use the print button at the top and choose "Save as PDF" in the print dialog — the page is formatted to strip navigation and backgrounds so the scripts and the objection cheat sheet come out clean. It covers eight word-for-word objection responses, six openers, and the eight-week follow-up cadence on one card.</p>
+
+        <h3>What should I say when a FSBO says "call me in the spring"?</h3>
+        <p>Treat it as a scheduled follow-up, not a rejection. Ask what price range they are thinking, commit to one check-in before spring with anything that affects their number, and log the exact month. When you call back, lead with a comparable sale on their street rather than asking whether they have changed their mind.</p>
 
         <h2>The script is the easy part</h2>
         <p>Any agent can read six openers. The ones who list FSBOs still have the week-one names in front of them in week seven, with the asking price, the showing count, and the callback date attached. That's the whole edge, and it's a system problem. <a href="/real-estate">Cold Call X for real estate</a> is built for exactly this loop: import your FSBO list, tag each owner Hot, Warm, or Cold, keep notes and multiple numbers on one lead, set the callback as a calendar event before you hang up, and dial from your own number so your caller ID stays the same across all eight weeks.</p>
