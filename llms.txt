@@ -23,6 +23,7 @@
 - [API and automation status](https://coldcallx.app/api)
 - [Auto dialer for iPhone](https://coldcallx.app/auto-dialer-iphone)
 - [Cold calling apps guide](https://coldcallx.app/cold-calling-apps)
+- [Auto dialer for small business](https://coldcallx.app/auto-dialer-small-business)
 - [Real estate guide](https://coldcallx.app/real-estate)
 - [Best real estate dialers comparison](https://coldcallx.app/blog/best-real-estate-dialer)
 - [Recruiter guide](https://coldcallx.app/recruiters)
