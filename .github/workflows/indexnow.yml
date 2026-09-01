@@ -1,0 +1,66 @@
+name: IndexNow ping
+
+# Pushes the current sitemap URL set to IndexNow (api.indexnow.org), which
+# distributes it to Bing, Seznam, Yandex, Naver and other participating
+# engines. Bing's index feeds DuckDuckGo, Yahoo, Ecosia, ChatGPT Search and
+# Copilot, so this accelerates discovery on engines that accept push
+# notifications without requiring any Webmaster account or stored secret.
+#
+# The IndexNow key is NOT a secret: it is a public proof-of-site-control
+# token, hosted at https://coldcallx.app/<key>.txt (file lives in the
+# repository root).
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy static content to Pages"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    # For the post-deploy trigger, only run when the deploy actually succeeded.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          KEY: "b4817af99c8647949106f79c01ac3aee"
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.request
+          from urllib.error import HTTPError
+
+          key = os.environ["KEY"]
+          host = "coldcallx.app"
+          xml = urllib.request.urlopen(
+              f"https://{host}/sitemap.xml", timeout=30
+          ).read().decode()
+          urls = re.findall(r"<loc>(.*?)</loc>", xml)
+          if not urls:
+              raise SystemExit("no URLs found in live sitemap")
+          payload = json.dumps({
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+          )
+          try:
+              r = urllib.request.urlopen(req, timeout=30)
+              print("IndexNow status:", r.status)
+          except HTTPError as e:
+              print("IndexNow status:", e.code, e.read(200).decode(errors="replace"))
+              raise SystemExit(f"IndexNow submission failed: {e.code}")
+          print(f"Submitted {len(urls)} URLs to IndexNow")
+          PY
