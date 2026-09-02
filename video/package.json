@@ -1,0 +1,28 @@
+{
+  "name": "video",
+  "version": "1.0.0",
+  "description": "Remotion video project for ColdCallX marketing assets",
+  "main": "index.js",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render Promo out/promo.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.520",
+    "@remotion/player": "^4.0.520",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "remotion": "^4.0.520",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
