@@ -34,6 +34,11 @@
 - [SwiftCall alternative](https://coldcallx.app/swiftcall-alternative)
 - [Mojo vs PhoneBurner vs Cold Call X](https://coldcallx.app/mojo-vs-phoneburner)
 - [Blog and guides](https://coldcallx.app/blog/)
+- [Auto dialer laws and TCPA compliance guide](https://coldcallx.app/blog/auto-dialer-laws)
+- [Power dialer vs parallel vs predictive, explained for solo agents](https://coldcallx.app/blog/power-dialer-for-real-estate-agents)
+- [Expired listing phone scripts (with door-knock and email follow-up)](https://coldcallx.app/blog/expired-listing-scripts)
+- [FSBO scripts and objection-handling cheat sheet](https://coldcallx.app/blog/fsbo-scripts)
+- [Insurance cold calling scripts and workflow](https://coldcallx.app/blog/insurance-cold-calling-scripts)
 - [Privacy policy](https://coldcallx.app/privacy)
 
 ## Support
