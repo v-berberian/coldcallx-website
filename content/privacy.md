@@ -1,6 +1,6 @@
 # Privacy Policy – Cold Call X
 
-Effective August 25, 2026 · Version 2026-08-25
+Effective August 31, 2026 · Version 2026-08-31
 
 This Privacy Policy explains how Berberian Enterprises Inc. (“Cold Call X,” “we,” “us,” or “our”) handles information when you use Cold Call X.
 
@@ -61,6 +61,12 @@ On-device information remains until you delete it, clear the App's data, or unin
 
 You can delete your Local Number account and associated Local Number data from the Local Number Plan screen. Deletion releases the assigned number and deletes or de-identifies account data under our control, subject to records we must retain by law or for legitimate transaction/security purposes. Account deletion does not cancel an App Store subscription; subscriptions are managed in Apple's subscription settings. You can delete local lead lists and disconnect Google separately.
 
+## Australian privacy rights
+
+If you are in Australia, you may ask us to give you access to, or correct, personal information about you that we hold, subject to any exceptions under applicable law. You may also complain about how we have handled your personal information. Contact us at support@coldcallx.app; we will respond within a reasonable period and explain any refusal where required. If you are not satisfied with our response, you may be able to complain to the Office of the Australian Information Commissioner at [oaic.gov.au](https://www.oaic.gov.au/).
+
+Lead and calling data that remains only on your device or in your own iCloud account is not accessible to us. Requests concerning that data must be managed using the App, your device, or your Apple account.
+
 ## Security
 
 We use platform attestation, server-side authorization, encrypted network transport, provider access controls, usage limits, and other safeguards designed to protect the service. No system is completely secure, and we cannot guarantee absolute security.
@@ -71,7 +77,7 @@ Cold Call X is not directed to children. You must be at least 18 years old to us
 
 ## Availability and international processing
 
-The App is offered for use in the United States, Canada, and the United Kingdom. The Local Number service is currently offered for U.S. use. Our providers may process information in the United States and other locations where they operate, subject to applicable safeguards.
+The App is offered for use in the United States, Canada, the United Kingdom, and Australia. The Local Number service is currently offered for U.S. use. We are established in the United States, and our providers may process information in the United States and other locations where they operate. Where applicable, we take reasonable steps designed to ensure overseas recipients handle personal information consistently with applicable privacy requirements; however, overseas processing may be subject to the laws of those locations.
 
 ## Changes
 
