@@ -194,86 +194,79 @@
         </a>
         
         <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">Privacy Policy</h1>
-        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Effective August 25, 2026 · Version 2026-08-25</p>
+        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Effective September 3, 2026 · Version 2026-09-03</p>
       </div>
 
-      <!-- 1. Information stored on your device -->
+      <!-- 1. The short version -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">1. Information stored on your device</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Lead lists, contact details imported by you, notes, tags, your in-app Do Not Call suppression list, message templates, preferences, and most workflow state are stored locally on your device. We do not upload your complete lead database to our Local Number service. You control the lead data you import and must have the right to use it.</p>
-        <p class="text-[var(--muted)] leading-relaxed">The App keeps automatic daily backups of that on-device data so you can restore it if something goes wrong. Backups stay on your device unless you turn on iCloud Backup in Settings. If you do, the App also writes an encrypted copy to your own iCloud Drive so you can restore it on another device. Those backups are encrypted on your device with a key stored in your device keychain, are held in your Apple account rather than ours, and are not readable by us or by Apple. iCloud Backup is off unless you turn it on, and you can turn it off or delete your backups in Settings at any time. Your account, subscription, sign-in credentials, and Local Number identity are deliberately excluded from backups.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">1. The short version</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Cold Call X works on your iPhone, not on our servers. There is no account to create and no server of ours behind the App, and we do not collect, receive, or store your lead lists, notes, call history, or any other information you put into it. The App contains no analytics, advertising, or tracking code.</p>
       </div>
 
-      <!-- 2. Optional Google integration -->
+      <!-- 2. Information stored on your device -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">2. Optional Google integration</h2>
-        <p class="text-[var(--muted)] leading-relaxed">If you choose Google Sheets import, the App connects directly to Google using OAuth and retrieves the spreadsheet data you select. Google identity and access-token information is used only for that optional integration and is separate from Local Number identity, entitlement, and billing. Google's handling of information is governed by Google's policies. You can disconnect Google in Settings.</p>
-        <p class="text-[var(--muted)] leading-relaxed">Cold Call X's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-blue-600 hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">2. Information stored on your device</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Lead lists, contact details you import, notes, tags, call outcomes, follow-ups, your in-app Do Not Call suppression list, message templates, call scripts, statistics, and preferences are stored locally on your device. Nothing in that data is uploaded to us. You control the lead data you import and must have the right to use it.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Follow-up reminders are scheduled as local notifications on your device. They are not sent through any server. If you choose to add a follow-up to your calendar, the App asks for calendar access and creates or updates that event in the calendar app; it does not read your other events. When you export a list, the App creates a CSV file and hands it to the iOS share sheet, and you choose where it goes.</p>
+        <p class="text-[var(--muted)] leading-relaxed">If you turn on Inbound Caller ID, the App gives iOS the phone numbers, names, and companies in your lists, together with the outcome and date of your last call to each, so that an incoming call from one of them can be labelled. That list stays on your device and is managed by iOS.</p>
+        <p class="text-[var(--muted)] leading-relaxed">The App keeps automatic daily backups of your on-device data so you can restore it if something goes wrong. By default the App also writes an encrypted copy of each backup to your own iCloud Drive so you can restore it on another device. Those backups are encrypted on your device with a key stored in your iCloud Keychain, are held in your Apple account rather than ours, and are not readable by us or by Apple. The App tells you about iCloud Backup the first time you open it and does not upload anything until you have seen that notice and accepted the Terms. You can turn iCloud Backup off, or delete your backups, in Settings at any time; if you turn it off, backups stay on your device only. If your device is signed out of iCloud or iCloud Drive is off, nothing is uploaded. Your Google sign-in credential is deliberately excluded from backups.</p>
       </div>
 
-      <!-- 3. Local Number service information -->
+      <!-- 3. Calls, texts, and email -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. Local Number service information</h2>
-        <p class="text-[var(--muted)] leading-relaxed">When you use Local Numbers, we and our service providers process information needed to authenticate the installation, recover your account, provide a telephone number, place and settle calls, enforce plan limits, prevent abuse, support purchases, and delete the account. This can include:</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. Calls, texts, and email</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Calls are placed by your iPhone's Phone app through your carrier. Texts, WhatsApp messages, and emails are handed to the messaging or mail app you choose. The App does not carry, record, or store call audio or message content. To tell whether a call you placed connected, the App observes only what iOS reports on the device: that a call is in progress, and when it started and ended. It never receives the number, the other party, or any audio, and it does not read your call history. Your carrier and the apps you hand off to process that traffic under their own policies.</p>
+      </div>
+
+      <!-- 4. Optional Google integration -->
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">4. Optional Google integration</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Google Sheets import is optional. If you turn it on, you sign in to Google with OAuth and the App accesses the following Google user data, and nothing else:</p>
         <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
-          <li>an Apple account-specific identifier and App Attest/DeviceCheck security identifiers;</li>
-          <li>the local number assigned to the account;</li>
-          <li>subscription, entitlement, product, and transaction status;</li>
-          <li>call destination, carrier call identifiers, timestamps, connection/answer status, duration, rate and credit reservations, final usage, and fraud/security signals; and</li>
-          <li>technical request information such as IP address and diagnostic/error metadata processed by our infrastructure providers.</li>
+          <li><strong class="text-[var(--ink)]">Your Google account name and email address</strong>, so the App can show which account is connected.</li>
+          <li><strong class="text-[var(--ink)]">The names and IDs of the spreadsheets in your Google Drive</strong>, so the App can show you a list to choose from. Google's consent screen describes this permission as access to your Drive files; the App uses it only to list spreadsheets by name and never opens or reads any file you do not select.</li>
+          <li><strong class="text-[var(--ink)]">The cell contents of the spreadsheet tab you select</strong>, which the App reads to build your calling list and, when you choose Refresh, to update it.</li>
+          <li><strong class="text-[var(--ink)]">Notes sync</strong>, a feature we are preparing that writes your call notes into the Notes column of the spreadsheet you selected. It is off in the current version. The App asks Google for write access only if you turn it on, and when on it writes nothing else and edits no other file.</li>
         </ul>
-        <p class="text-[var(--muted)] leading-relaxed">We do not use Google identity as the identity or billing authority for Local Numbers.</p>
-      </div>
-
-      <!-- 4. Call audio -->
-      <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">4. Call audio</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Local Number calls use Telnyx and telecommunications networks. Call audio and signaling necessarily pass through those providers to complete the call. Cold Call X does not provide call recording and does not intentionally record or store call audio. Your carrier and service providers may process call data under their own policies and legal obligations.</p>
+        <p class="text-[var(--muted)] leading-relaxed">This data is used only to provide the import and notes-sync features you asked for. It is stored only on your device, is never sent to us or to any third party, is not used for advertising, and is not sold. Your Google access token is stored in your device's keychain only and is excluded from backups. You can disconnect Google at any time in Settings, which removes the token from the App. Disconnecting does not withdraw the permission recorded in your Google account; you can revoke it at myaccount.google.com/permissions. Removing a list deletes the imported spreadsheet contents from the App.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Cold Call X's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-blue-600 hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
       </div>
 
       <!-- 5. Purchases -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">5. Purchases</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Apple processes App Store payments. RevenueCat processes subscription and in-app-purchase entitlement information so the App and our server can determine which features and credits are active. We do not receive your full payment-card number.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Apple processes App Store purchases. We do not receive your name, Apple ID, or payment details.</p>
       </div>
 
-      <!-- 6. Service providers -->
+      <!-- 6. Support -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">6. Service providers</h2>
-        <p class="text-[var(--muted)] leading-relaxed">We use:</p>
-        <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
-          <li>Apple for App Store payments, Sign in with Apple, and installation attestation;</li>
-          <li>RevenueCat for purchase entitlements;</li>
-          <li>Cloudflare for API execution and security;</li>
-          <li>Supabase for authoritative Local Number account, number, wallet, order, and call-settlement records;</li>
-          <li>Telnyx for telephone numbers and calling; and</li>
-          <li>Google only when you choose its integration outside Local Numbers.</li>
-        </ul>
-        <p class="text-[var(--muted)] leading-relaxed">These providers process information as needed to provide their respective services and under their own contractual and legal obligations.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">6. Support</h2>
+        <p class="text-[var(--muted)] leading-relaxed">If you write to us at <a href="mailto:support@coldcallx.app" class="text-blue-600 hover:underline">support@coldcallx.app</a>, we use your message and email address to respond. That correspondence is the only personal information about you that we hold, and we keep it only as long as needed to help you and to keep a record of the request.</p>
       </div>
 
-      <!-- 7. How we use information -->
+      <!-- 7. Retention -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">7. How we use information</h2>
-        <p class="text-[var(--muted)] leading-relaxed">We use information to provide and secure the App, authenticate accounts and installations, recover purchases and numbers across reinstalls, route and settle calls, apply plan limits, prevent fraud and abuse, provide support, reconcile provider records, comply with law, and protect users and the service. We do not sell personal information and do not use it for cross-app advertising or tracking.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">7. Retention</h2>
+        <p class="text-[var(--muted)] leading-relaxed">On-device information remains until you delete it, clear the App's data, or uninstall the App, subject to iOS backup behavior. While iCloud Backup is on, encrypted copies remain in your iCloud Drive until you delete them in Settings or remove them yourself from the Files app. Turning iCloud Backup off stops new uploads but keeps the copies already there until you delete them.</p>
       </div>
 
-      <!-- 8. Retention -->
+      <!-- 8. Deletion and choices -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">8. Retention</h2>
-        <p class="text-[var(--muted)] leading-relaxed">On-device information remains until you delete it, clear the App's data, or uninstall the App, subject to iOS backup behavior. If you turned on iCloud Backup, encrypted copies remain in your iCloud Drive until you delete them in Settings or remove them yourself from the Files app. Local Number records are retained while needed to provide and secure the service and to meet fraud-prevention, transaction, tax, accounting, dispute, and legal obligations. After account deletion, we may retain a pseudonymous billing-continuity record of the current paid period's remaining allowances, purchase/settlement deduplication markers, and anti-fraud counters so deleting and recreating an account cannot duplicate paid credits. We also retain indefinitely, for fraud prevention, a pseudonymous lifetime claim and related records used to enforce the one included first phone-number benefit across deletion, reinstall, and account linking. These records can include an SHA-256 hash of the internal account identifier, claim timestamp and source, an internal order reference when available, hashed legacy-to-account transfer bindings, and a consumed, unused, or manual-review status with review timestamps and a non-identifying evidence category. These retained records do not contain the released phone number, call destinations, calling credentials, raw Sign in with Apple subject, or Sign in with Apple token. Provider records may be retained under the provider's policies and applicable law.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">8. Deletion and choices</h2>
+        <p class="text-[var(--muted)] leading-relaxed">You can delete lead lists, notes, follow-ups, and your Do Not Call list in the App, disconnect Google in Settings, and turn off or delete backups in Settings. Uninstalling the App removes its on-device data; encrypted backups already in your iCloud Drive remain until you delete them in Settings before uninstalling or remove them from the Files app.</p>
       </div>
 
-      <!-- 9. Deletion and choices -->
+      <!-- 9. Australian privacy rights -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">9. Deletion and choices</h2>
-        <p class="text-[var(--muted)] leading-relaxed">You can delete your Local Number account and associated Local Number data from the Local Number Plan screen. Deletion releases the assigned number and deletes or de-identifies account data under our control, subject to records we must retain by law or for legitimate transaction/security purposes. Account deletion does not cancel an App Store subscription; subscriptions are managed in Apple's subscription settings. You can delete local lead lists and disconnect Google separately.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">9. Australian privacy rights</h2>
+        <p class="text-[var(--muted)] leading-relaxed">If you are in Australia, you may ask us to give you access to, or correct, personal information about you that we hold, subject to any exceptions under applicable law. You may also complain about how we have handled your personal information. Contact us at <a href="mailto:support@coldcallx.app" class="text-blue-600 hover:underline">support@coldcallx.app</a>; we will respond within a reasonable period and explain any refusal where required. If you are not satisfied with our response, you may be able to complain to the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/" class="text-blue-600 hover:underline">oaic.gov.au</a>.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Lead and calling data that remains only on your device or in your own iCloud account is not accessible to us. Requests concerning that data must be managed using the App, your device, or your Apple account.</p>
       </div>
 
       <!-- 10. Security -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">10. Security</h2>
-        <p class="text-[var(--muted)] leading-relaxed">We use platform attestation, server-side authorization, encrypted network transport, provider access controls, usage limits, and other safeguards designed to protect the service. No system is completely secure, and we cannot guarantee absolute security.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Your data is protected by iOS device security and, for backups, by encryption with a key held in your keychain. No system is completely secure, and we cannot guarantee absolute security.</p>
       </div>
 
       <!-- 11. Children -->
@@ -285,7 +278,7 @@
       <!-- 12. Availability and international processing -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">12. Availability and international processing</h2>
-        <p class="text-[var(--muted)] leading-relaxed">The App is offered for use in the United States, Canada, and the United Kingdom. The Local Number service is currently offered for U.S. use. Our providers may process information in the United States and other locations where they operate, subject to applicable safeguards.</p>
+        <p class="text-[var(--muted)] leading-relaxed">The App is offered for use in the United States, Canada, the United Kingdom, and Australia. We are established in the United States. Because the App does not send your information to us, the only information that can leave your country is support correspondence you choose to send, which we read and store in the United States.</p>
       </div>
 
       <!-- 13. Changes -->
