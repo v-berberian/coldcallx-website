@@ -6,7 +6,7 @@ This Privacy Policy explains how Berberian Enterprises Inc. (“Cold Call X,” 
 
 ## The short version
 
-Cold Call X works on your iPhone, not on our servers. There is no account to create and no server of ours behind the App, and we do not collect, receive, or store your lead lists, notes, call history, or any other information you put into it. The App contains no analytics, advertising, or tracking code.
+Cold Call X works on your iPhone, not on our servers. There is no account to create, and we do not collect, receive, or store your lead lists, notes, call history, or any other information you put into it. The one server we operate exists only to complete the optional HubSpot sign-in handshake and never sees your contacts. The App contains no analytics, advertising, or tracking code.
 
 ## Information stored on your device
 
@@ -16,7 +16,7 @@ Follow-up reminders are scheduled as local notifications on your device. They ar
 
 If you turn on Inbound Caller ID, the App gives iOS the phone numbers, names, and companies in your lists, together with the outcome and date of your last call to each, so that an incoming call from one of them can be labelled. That list stays on your device and is managed by iOS.
 
-The App keeps automatic daily backups of your on-device data so you can restore it if something goes wrong. By default the App also writes an encrypted copy of each backup to your own iCloud Drive so you can restore it on another device. Those backups are encrypted on your device with a key stored in your iCloud Keychain, are held in your Apple account rather than ours, and are not readable by us or by Apple. The App tells you about iCloud Backup the first time you open it and does not upload anything until you have seen that notice and accepted the Terms. You can turn iCloud Backup off, or delete your backups, in Settings at any time; if you turn it off, backups stay on your device only. If your device is signed out of iCloud or iCloud Drive is off, nothing is uploaded. Your Google sign-in credential is deliberately excluded from backups.
+The App keeps automatic daily backups of your on-device data so you can restore it if something goes wrong. By default the App also writes an encrypted copy of each backup to your own iCloud Drive so you can restore it on another device. Those backups are encrypted on your device with a key stored in your iCloud Keychain, are held in your Apple account rather than ours, and are not readable by us or by Apple. The App tells you about iCloud Backup the first time you open it and does not upload anything until you have seen that notice and accepted the Terms. You can turn iCloud Backup off, or delete your backups, in Settings at any time; if you turn it off, backups stay on your device only. If your device is signed out of iCloud or iCloud Drive is off, nothing is uploaded. Your Google and HubSpot sign-in credentials are deliberately excluded from backups.
 
 ## Calls, texts, and email
 
@@ -35,6 +35,16 @@ This data is used only to provide the import and notes-sync features you asked f
 
 Cold Call X's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
+## Optional HubSpot integration
+
+HubSpot import is optional. If you use it, you connect your HubSpot account by signing in with HubSpot (OAuth). The App then reads the HubSpot contacts you choose to import, every contact, only the ones assigned to you, or one of your HubSpot lists, and only these fields for each: first name, last name, phone, mobile phone, company, email, and the HubSpot record ID. To offer those choices it also reads the names and sizes of your contact lists and the record that identifies you as an owner.
+
+The integration also writes to your HubSpot account, and only what you do in the App: each call outcome you record is logged on the contact as a call with the outcome you chose, the contact's lead status may move between HubSpot's standard statuses as a result (never over a status a person set, and you can turn this off), and the notes you type on a contact are saved as notes on that contact. Notes written on the contact in HubSpot are shown in the App. Clearing an outcome or deleting a note in the App removes the call or note the App created; the App never deletes anything it did not create. Nothing else in your HubSpot account is read or changed.
+
+HubSpot's sign-in can only return to a web address, not directly to an app. So, when you sign in with HubSpot, a small server we operate (a Cloudflare Worker) receives the sign-in code from HubSpot, exchanges it for your access token using our app's credentials, and passes the token to the App on your device. The server does the same when the token needs renewing. It passes the tokens to the App and does not retain them, and it never receives your contacts or any other information from your HubSpot account. Like any web request, that handshake exposes your device's IP address to our server for the moment it takes. Everything else, reading contacts and logging calls and notes, goes directly between your device and HubSpot.
+
+The imported contacts are stored on your device like any other list, and your HubSpot token is stored in your device's keychain only and is excluded from backups. You can log out of HubSpot at any time in Settings, which removes the token from the App; lists you imported stay on your device until you delete them. Logging out does not withdraw the permission recorded in your HubSpot account; you can remove it under Connected Apps in HubSpot.
+
 ## Purchases
 
 Apple processes App Store purchases. We do not receive your name, Apple ID, or payment details.
@@ -49,7 +59,7 @@ On-device information remains until you delete it, clear the App's data, or unin
 
 ## Deletion and choices
 
-You can delete lead lists, notes, follow-ups, and your Do Not Call list in the App, disconnect Google in Settings, and turn off or delete backups in Settings. Uninstalling the App removes its on-device data; encrypted backups already in your iCloud Drive remain until you delete them in Settings before uninstalling or remove them from the Files app.
+You can delete lead lists, notes, follow-ups, and your Do Not Call list in the App, disconnect Google or log out of HubSpot in Settings, and turn off or delete backups in Settings. Uninstalling the App removes its on-device data; encrypted backups already in your iCloud Drive remain until you delete them in Settings before uninstalling or remove them from the Files app.
 
 ## Australian privacy rights
 
@@ -67,7 +77,7 @@ Cold Call X is not directed to children. You must be at least 18 years old to us
 
 ## Availability and international processing
 
-The App is offered for use in the United States, Canada, the United Kingdom, and Australia. We are established in the United States. Because the App does not send your information to us, the only information that can leave your country is support correspondence you choose to send, which we read and store in the United States.
+The App is offered for use in the United States, Canada, the United Kingdom, and Australia. We are established in the United States. Because the App does not send your information to us, the only information that can leave your country is support correspondence you choose to send, which we read and store in the United States, and, if you sign in with HubSpot, the sign-in handshake described above, which passes through our server in the United States.
 
 ## Changes
 
