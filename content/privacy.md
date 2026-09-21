@@ -79,7 +79,7 @@ If you write to us at support@coldcallx.app, we use your message and email addre
 
 ## Retention
 
-On-device information remains until you delete it, clear the App's data, or uninstall the App, subject to iOS backup behavior. While iCloud Backup is on, encrypted copies remain in your iCloud Drive until you delete them in Settings or remove them yourself from the Files app. Turning iCloud Backup off stops new uploads but keeps the copies already there until you delete them. App-only usage statistics are kept by our analytics provider for as long as they are useful for product decisions; they contain no lead data or account identity, but events from the same installation can be associated using its random identifier.
+On-device information remains until you delete it, clear the App's data, or uninstall the App, subject to iOS backup behavior. While iCloud Backup is on, encrypted copies remain in your iCloud Drive until you delete them in Settings or remove them yourself from the Files app. Turning iCloud Backup off stops new uploads but keeps the copies already there until you delete them. App-only usage statistics are kept by our analytics provider for as long as they are useful for product decisions. They contain no lead data and no account identity, and because every report carries the same fixed label there is nothing in them that ties one report to another, to a device, or to you.
 
 ## Deletion and choices
 
