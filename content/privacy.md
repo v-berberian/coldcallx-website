@@ -57,7 +57,7 @@ The imported records are stored on your device like any other list, and your Sal
 
 ## Usage statistics
 
-The App reports app-only usage statistics by default so we can see which features are used and which are not. You can turn this off at any time in Settings → Data → Share Analytics, and collection stops immediately. Unsent events are discarded and active upload requests are aborted; this cannot recall events the service has already received. Your choice is preserved when you restore a backup.
+The App reports app-only usage statistics by default so we can see which features are used and which are not. You can turn this off at any time in Settings → Data → Analytics & Improvement → Share Analytics, and collection stops immediately. Unsent events are discarded and active upload requests are aborted; this cannot recall events the service has already received. Your choice is preserved when you restore a backup.
 
 **What is sent.** Product-interaction events — which controls and screens are used, onboarding steps, settings changes, and whether operations such as imports, messages, connections, and backups complete, fail, or are cancelled — together with the state of your settings and a few counts (how many lists you have, how many message templates you have edited, your daily dial goal), and the size of an imported list as a band rather than an exact number. Errors are reported as a fixed code identifying what failed, such as "a refresh was refused" — never the error message itself.
 
@@ -83,7 +83,7 @@ On-device information remains until you delete it, clear the App's data, or unin
 
 ## Deletion and choices
 
-You can delete lead lists, notes, follow-ups, and your Do Not Call list in the App, disconnect Google or log out of HubSpot or Salesforce in Settings, turn off or delete backups in Settings, and turn off Share Analytics in Settings → Data. Uninstalling the App removes its on-device data; encrypted backups already in your iCloud Drive remain until you delete them in Settings before uninstalling or remove them from the Files app.
+You can delete lead lists, notes, follow-ups, and your Do Not Call list in the App, disconnect Google or log out of HubSpot or Salesforce in Settings, turn off or delete backups in Settings, and turn off Share Analytics in Settings → Data → Analytics & Improvement. Uninstalling the App removes its on-device data; encrypted backups already in your iCloud Drive remain until you delete them in Settings before uninstalling or remove them from the Files app.
 
 ## Australian privacy rights
 
