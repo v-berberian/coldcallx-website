@@ -4,60 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#fafafc">
   <title>Page Not Found | Cold Call X</title>
   <meta name="apple-itunes-app" content="app-id=6751245004">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap"></noscript>
+  <style>
+    :root { --ink: #0F172A; --muted: #64748B; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+    .card {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 32px 64px -12px rgba(0,0,0,0.12);
+      border-radius: 2rem;
+      padding: 3rem 2rem;
+      max-width: 28rem;
+    }
+    .card img { width: 6rem; height: 6rem; border-radius: 1.25rem; }
+    h1 { font-weight: 900; font-size: 2rem; margin: 1.25rem 0 0.5rem; letter-spacing: -0.02em; }
+    p { color: var(--muted); line-height: 1.6; margin: 0 0 1.5rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    .links a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
+      box-shadow: 6px 6px 12px rgba(0,0,0,0.06), -3px -3px 8px rgba(255,255,255,0.3);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
-<body class="site">
-  <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="nav__brand" href="/">
-        <img src="/icon-192.png" alt="" width="28" height="28">
-        Cold Call X
-      </a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="/#tutorials">Tutorials</a>
-        <a class="nav__cta" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-404&pt=128076300&mt=8">Download</a>
-      </nav>
+<body>
+  <div class="card">
+    <img src="/icon-192.png" alt="Cold Call X app icon" width="192" height="192">
+    <h1>Page not found</h1>
+    <p>This page doesn't exist, but the auto dialer for iPhone does.</p>
+    <div class="links">
+      <a href="/">Back to Home</a>
+      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-404&pt=128076300&mt=8" rel="noopener noreferrer">Get the App</a>
     </div>
-  </header>
-
-  <main>
-    <section class="notfound wrap">
-      <img class="hero__icon" src="/icon-192.png" alt="" width="88" height="88">
-      <h1 class="notfound__title">Page not found</h1>
-      <p class="notfound__text">This page doesn't exist, but the auto dialer for iPhone does.</p>
-      <div class="notfound__links">
-        <a class="btn btn--dark" href="/">Back to Home</a>
-        <a class="btn" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-404&pt=128076300&mt=8">Get the App</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="foot">
-    <div class="wrap foot__inner">
-      <nav class="foot__links" aria-label="Guides">
-        <a href="/auto-dialer-iphone">Auto Dialer for iPhone</a>
-        <a href="/cold-calling-apps">Cold Calling Apps</a>
-        <a href="/real-estate">Real Estate</a>
-        <a href="/recruiters">Recruiters</a>
-        <a href="/insurance">Insurance</a>
-        <a href="/loan-officers">Loan Officers</a>
-        <a href="/blog/">All Guides</a>
-      </nav>
-      <div class="foot__legal">
-        <p>Copyright © 2026 Berberian Enterprises Inc.</p>
-        <nav aria-label="Legal">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/cookies">Cookies</a>
-          <a href="mailto:support@coldcallx.app">Support</a>
-          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-404&pt=128076300&mt=8">App Store</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
+  </div>
 </body>
 </html>

@@ -15,7 +15,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#fafafc">
+  <meta name="theme-color" content="#f0f9ff">
 
   <title>Cookies | Cold Call X</title>
   <meta name="description" content="What coldcallx.app stores on your device: one optional Google Analytics cookie, nothing for advertising, and how to change or withdraw your choice at any time." />
@@ -42,9 +42,156 @@
   <meta name="twitter:title" content="Cookies, Cold Call X" />
   <meta name="twitter:description" content="What coldcallx.app stores on your device: one optional Google Analytics cookie, nothing for advertising, and how to change or withdraw your choice at any time." />
   <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/site.css">
+  <style>
+    :root { 
+      --brand: #00AEEF; 
+      --ink: #0F172A; 
+      --muted: #64748B;
+      --surface: rgba(255,255,255,0.8);
+    }
+    
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
 
+    /* Enhanced animated background */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      filter: hue-rotate(0deg);
+      animation: hue 60s linear infinite;
+    }
+    
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+    }
+    
+    .blob.b1 {
+      width: 60vw;
+      height: 60vw;
+      left: -15vw;
+      top: -20vh;
+      background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.4), rgba(0,174,239,0) 70%);
+      animation: move1 40s ease-in-out infinite alternate;
+    }
+    
+    .blob.b2 {
+      width: 50vw;
+      height: 50vw;
+      right: -20vw;
+      top: 20vh;
+      background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.3), rgba(139,92,246,0) 70%);
+      animation: move2 45s ease-in-out infinite alternate;
+    }
+    
+    .blob.b3 {
+      width: 70vw;
+      height: 70vw;
+      left: -5vw;
+      bottom: -30vh;
+      background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.25), rgba(6,182,212,0) 70%);
+      animation: move3 50s ease-in-out infinite alternate;
+    }
+
+    .neo-glass {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 
+        0 32px 64px -12px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(255,255,255,0.6) inset,
+        0 2px 4px rgba(0,0,0,0.05) inset;
+    }
+
+    /* Enhanced animations */
+    @keyframes hue {
+      0% { filter: hue-rotate(0deg) brightness(1.02); }
+      33% { filter: hue-rotate(15deg) brightness(1.05); }
+      66% { filter: hue-rotate(-10deg) brightness(1.03); }
+      100% { filter: hue-rotate(0deg) brightness(1.02); }
+    }
+    
+    @keyframes move1 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(8vw,10vh,0) scale(1.1) rotate(5deg); }
+    }
+    
+    @keyframes move2 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(-10vw,8vh,0) scale(1.08) rotate(-4deg); }
+    }
+    
+    @keyframes move3 {
+      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+      100% { transform: translate3d(5vw,-8vh,0) scale(1.12) rotate(3deg); }
+    }
+
+    /* Modern section cards */
+    .section-card {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow: 
+        0 25px 50px -12px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(255,255,255,0.7) inset;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+  </style>
+
+  <style>
+    /* Tailwind's `hover:underline` was never compiled into styles.css, so the
+       in-copy links would not underline on hover. Do it here rather than
+       rebuilding the whole bundle for one rule. */
+    .section-card a:hover { text-decoration: underline; }
+
+    .ck-table-wrap { overflow-x: auto; margin: 1.5rem 0 0; }
+    .ck-table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: 0.9375rem; }
+    .ck-table th, .ck-table td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; }
+    .ck-table thead th {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); border-bottom: 1px solid rgba(100,116,139,0.25);
+    }
+    .ck-table tbody tr + tr td { border-top: 1px solid rgba(100,116,139,0.15); }
+    .ck-table td { color: var(--muted); line-height: 1.6; }
+    .ck-table td:first-child {
+      color: var(--ink); font-weight: 600;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.875rem; white-space: nowrap;
+    }
+    .ck-button {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 1.75rem; border-radius: 0.875rem;
+      background: #00AEEF; color: #fff; border: 1px solid #00AEEF;
+      font-family: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 10px 24px -8px rgba(0,174,239,0.65);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    .ck-button:hover { background: #009fdb; transform: translateY(-1px); }
+    .ck-button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .ck-state { margin-top: 0.875rem; font-size: 0.875rem; color: var(--muted); }
+    @media (prefers-reduced-motion: reduce) { .ck-button:hover { transform: none; } }
+  </style>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -66,35 +213,30 @@
   }
   </script>
 </head>
-<body class="site">
-  <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="nav__brand" href="/">
-        <img src="/icon-192.png" alt="" width="28" height="28">
-        Cold Call X
-      </a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="/#tutorials">Tutorials</a>
-        <a class="nav__cta" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-cookies&pt=128076300&mt=8">Download</a>
-      </nav>
-    </div>
-  </header>
+<body class="text-[var(--ink)] antialiased">
+  <div class="bg-anim">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
 
-  <main class="flex-1 relative">
-    <div class="max-w-4xl mx-auto px-6 py-12">
-      <!-- Header -->
+  <div class="min-h-screen py-12 relative">
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- Header with back button -->
       <div class="text-center mb-16">
+        <a href="/" class="inline-flex items-center gap-3 px-8 py-4 neo-glass rounded-3xl text-[var(--muted)] hover:text-[var(--ink)] transition-all duration-500 hover:scale-105 hover:-translate-y-1 shadow-2xl mb-12 group">
+          <span class="font-semibold">← Back to Home</span>
+        </a>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6">Cookies</h1>
-        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Effective September 24, 2026 · Version 2026-09-24</p>
+        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">Cookies</h1>
+        <p class="text-xl text-[var(--muted)] font-light max-w-2xl mx-auto">Effective August 25, 2026 · Version 2026-08-25</p>
       </div>
 
       <!-- 1. The short version -->
       <div class="section-card p-6 lg:p-12">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">1. The short version</h2>
         <p class="text-[var(--muted)] leading-relaxed">This website uses <strong class="text-[var(--ink)]">one optional analytics cookie set</strong>, Google Analytics, so we can see which pages people actually read. There is no advertising, no remarketing, and nothing that follows you to other sites.</p>
-        <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">Where you are changes the default.</strong> If you are in the UK or the EEA, the analytics cookie is not set unless you press Accept. Everywhere else it runs by default, and you can turn it off at any time using the button in section 6.</p>
-        <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">The tutorial videos come from YouTube,</strong> and only once you press play. Until then nothing is requested from YouTube at all. Section 3 explains what changes when you do.</p>
+        <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">Where you are changes the default.</strong> If you are in the UK or the EEA, the analytics cookie is not set unless you press Accept. Everywhere else it runs by default, and you can turn it off at any time using the button in section 5.</p>
         <p class="text-[var(--muted)] leading-relaxed">The <strong class="text-[var(--ink)]">Cold Call X iPhone app</strong> does not use cookies at all. This notice is about coldcallx.app, the website. What the app does with your information is covered by the <a href="/privacy" class="text-blue-600 hover:underline">Privacy Policy</a>.</p>
       </div>
 
@@ -132,24 +274,16 @@
         <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">The last row is not optional:</strong> the choice you made is the only thing we can keep, and we have to keep it in order to honour it. It contains your answer and the date you gave it, and nothing else, no identifier, and nothing that says who you are.</p>
       </div>
 
-      <!-- 3. Tutorial videos -->
-      <div class="section-card p-6 lg:p-12" id="videos">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. Tutorial videos</h2>
-        <p class="text-[var(--muted)] leading-relaxed">The tutorials on the home page are hosted on YouTube. Until you press play, the player and the list of films are only pictures served from this site: <strong class="text-[var(--ink)]">nothing is requested from YouTube and nothing is stored</strong>.</p>
-        <p class="text-[var(--muted)] leading-relaxed">Pressing play loads YouTube’s player from youtube-nocookie.com, its privacy-enhanced mode. From that point your browser is talking to YouTube directly: it receives your IP address and browser details, as any site you visit does, and its player may store cookies or local storage of its own, to play the video, remember your settings and guard against abuse. What it stores is Google’s decision, described in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Google’s Privacy Policy</a>, not ours, and it is not covered by the analytics choice above.</p>
-        <p class="text-[var(--muted)] leading-relaxed">Pressing play is the choice. If you would rather YouTube never hears from your browser, leave the video alone: the rest of the site does not depend on it.</p>
-      </div>
-
-      <!-- 4. What happens when you say no -->
+      <!-- 3. What happens when you say no -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">4. What happens when you say no</h2>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">3. What happens when you say no</h2>
         <p class="text-[var(--muted)] leading-relaxed">Rejecting is a real rejection. We use <strong class="text-[var(--ink)]">Google Consent Mode v2</strong>, which is the mechanism Google provides for exactly this: the analytics cookies above are never written, and no identifier for you is stored or read.</p>
         <p class="text-[var(--muted)] leading-relaxed">One thing worth being straight about: with analytics denied, the Google tag still sends a <strong class="text-[var(--ink)]">cookieless ping</strong>, a request carrying your IP address and browser type, with no identifier attached and nothing stored on your device. Google uses those to estimate totals. If you would rather block that too, a tracker-blocking extension or your browser’s built-in protection will stop the tag loading at all, and this site works perfectly well without it.</p>
       </div>
 
-      <!-- 5. What we do not do -->
+      <!-- 4. What we do not do -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">5. What we do not do</h2>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">4. What we do not do</h2>
         <p class="text-[var(--muted)] leading-relaxed">So that this is on the record rather than implied:</p>
         <ul class="list-disc pl-6 text-[var(--muted)] leading-relaxed space-y-2">
           <li>No advertising or remarketing cookies. The advertising categories in Consent Mode are set to denied for everyone, in every country, whether or not you accept, because this site carries no ad tags.</li>
@@ -160,58 +294,45 @@
         </ul>
       </div>
 
-      <!-- 6. Change your mind -->
+      <!-- 5. Change your mind -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">6. Change your mind</h2>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">5. Change your mind</h2>
         <p class="text-[var(--muted)] leading-relaxed">Withdrawing is as easy as agreeing, one button, no account, no email. It clears the choice we stored and asks you again, and until you answer, analytics stays off.</p>
         <p><button type="button" class="ck-button" id="ck-open">Change cookie choice</button></p>
         <p class="ck-state" id="ck-state"></p>
         <p class="text-[var(--muted)] leading-relaxed">You can also clear cookies and site data for coldcallx.app in your browser’s settings, which removes everything in the table above including our record of your choice. The banner will then ask you again on your next visit.</p>
       </div>
 
-      <!-- 7. Where the data goes -->
+      <!-- 6. Where the data goes -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">7. Where the data goes</h2>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">6. Where the data goes</h2>
         <p class="text-[var(--muted)] leading-relaxed">Google Analytics is provided by Google. When analytics is on, Google processes the data on our behalf and may do so outside the UK and the EEA, under the transfer terms in its <a href="https://business.safety.google/adsprocessorterms/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Ads Data Processing Terms</a>. Google’s own description of how it uses the information is in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">How Google uses information from sites that use its services</a>.</p>
         <p class="text-[var(--muted)] leading-relaxed">We do not receive your name, email address, or anything you typed. What we see is aggregate: which pages were read, roughly where in the world the visitor was, and which site sent them.</p>
       </div>
 
-      <!-- 8. Questions and complaints -->
+      <!-- 7. Questions and complaints -->
       <div class="section-card p-6 lg:p-12">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">8. Questions and complaints</h2>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">7. Questions and complaints</h2>
         <p class="text-[var(--muted)] leading-relaxed">Berberian Enterprises Inc. is responsible for this website. Write to <a href="mailto:support@coldcallx.app" class="text-blue-600 hover:underline">support@coldcallx.app</a> about anything on this page, including asking us to confirm what has been stored about you.</p>
         <p class="text-[var(--muted)] leading-relaxed">If you are in the United Kingdom and you are not satisfied with our answer, you can complain to the <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Information Commissioner’s Office</a>, the UK supervisory authority, at ico.org.uk or on 0303 123 1113. We would ask you to come to us first so we have the chance to put it right.</p>
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer class="foot">
-    <div class="wrap foot__inner">
-      <nav class="foot__links" aria-label="Guides">
-        <a href="/auto-dialer-iphone">Auto Dialer for iPhone</a>
-        <a href="/cold-calling-apps">Cold Calling Apps</a>
-        <a href="/real-estate">Real Estate</a>
-        <a href="/recruiters">Recruiters</a>
-        <a href="/insurance">Insurance</a>
-        <a href="/loan-officers">Loan Officers</a>
-        <a href="/blog/">All Guides</a>
-      </nav>
-      <div class="foot__legal">
-        <p>Copyright © 2026 Berberian Enterprises Inc.</p>
-        <nav aria-label="Legal">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/cookies">Cookies</a>
-          <a href="mailto:support@coldcallx.app">Support</a>
-          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-cookies&pt=128076300&mt=8">App Store</a>
-        </nav>
-      </div>
-    </div>
+  <footer class="px-6 text-center">
+    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
+      <a href="/" class="hover:text-[var(--ink)] transition-colors">Home</a>
+      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
+      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
+      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Support</a>
+    </nav>
+    <p class="text-[var(--muted)] font-light text-sm">© 2026 Berberian Enterprises Inc.</p>
   </footer>
 
   <script>
     // Progressive enhancement: consent.js owns the state, this only drives the
     // button. If the script were blocked, the page still reads correctly and
-    // the browser-settings route in section 6 still works.
+    // the browser-settings route in section 5 still works.
     (function () {
       var button = document.getElementById('ck-open');
       var state = document.getElementById('ck-state');
