@@ -44,6 +44,7 @@
 - [Blog and guides](https://coldcallx.app/blog/)
 - [Auto dialer laws and TCPA compliance guide](https://coldcallx.app/blog/auto-dialer-laws)
 - [Legal calling hours: US, Canada, UK and Australia](https://coldcallx.app/blog/calling-hours)
+- [Cold calling in the UK: TPS, CTPS and PECR rules](https://coldcallx.app/blog/cold-calling-uk)
 - [HubSpot dialer for iPhone](https://coldcallx.app/blog/hubspot-dialer-iphone)
 - [Salesforce dialer for iPhone](https://coldcallx.app/blog/salesforce-dialer-iphone)
 - [Google Sheets dialer for iPhone](https://coldcallx.app/blog/google-sheets-dialer)
