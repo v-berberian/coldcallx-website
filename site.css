@@ -1045,7 +1045,7 @@ body.site {
    pink wash, the icon's blue to orange, a serif for reading, and call
    scripts that look like one side of a phone call. */
 body.site--read {
-  --paper: #fbf8f4;
+  --paper: #fff;
   --ink: #1f1b17;
   --body: #3f3a34;
   --muted: #756e66;
@@ -1053,7 +1053,7 @@ body.site--read {
   --fill: #f3eee7;
   --hairline: rgba(72, 52, 30, 0.12);
   --hairline-strong: rgba(72, 52, 30, 0.22);
-  --surface: #fffdfa;
+  --surface: #fff;
   --blue: #29a9ec;
   --orange: #f3913a;
   --link: #0b5fb3;
@@ -1065,7 +1065,7 @@ body.site--read {
   background: var(--paper);
 }
 
-.site--read .nav { background: rgba(251, 248, 244, 0.82); }
+.site--read .nav { background: rgba(255, 255, 255, 0.82); }
 
 /* The wash behind the top of every page, fading into the paper. */
 .site--read main { position: relative; isolation: isolate; }
@@ -1100,18 +1100,6 @@ body.site--read {
 
 .site--read main h3 { letter-spacing: -0.012em; }
 
-/* A short blue-to-orange stroke opens each section instead of a rule. */
-.site--read .article h2::before,
-.site--read .section-card:not(.text-center) > h2::before {
-  content: "";
-  display: block;
-  width: 34px;
-  height: 4px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--orange));
-}
-
 .site--read .section-card + .section-card,
 .site--read .section-card + section,
 .site--read section + .section-card {
@@ -1125,7 +1113,7 @@ body.site--read {
   padding: 6px 13px;
   border: 1px solid var(--hairline);
   border-radius: 980px;
-  background: rgba(255, 253, 250, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   font-size: 13px;
 }
 
@@ -1142,7 +1130,7 @@ body.site--read {
   padding: 0 1px;
 }
 
-/* Bullets in the icon's colours. */
+/* Bullets: a plain dash, as in a notebook. */
 .site--read .article ul,
 .site--read .section-card ul { list-style: none; padding-left: 0; }
 
@@ -1151,17 +1139,13 @@ body.site--read {
 
 .site--read .article ul > li::before,
 .site--read .section-card ul > li::before {
-  content: "";
+  content: "–";
   position: absolute;
-  left: 3px;
-  top: 0.62em;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--orange));
+  left: 2px;
+  color: var(--faint);
 }
 
-.site--read .article ol li::marker { color: var(--orange); font-weight: 600; }
+.site--read .article ol li::marker { color: var(--muted); font-weight: 600; }
 
 /* Links: ink-blue with a warm underline. */
 .site--read main p a,
@@ -1237,40 +1221,50 @@ body.site--read {
   box-shadow: 0 18px 40px -30px rgba(72, 52, 30, 0.5);
 }
 
-/* Tiles: guide cards and feature grids lift a little, like cards in the app. */
+/* Guide links and feature grids read as a table of contents, not as
+   cards: a hairline over each entry, a quiet topic in small caps, a serif
+   title that underlines on hover. The whole entry stays the link. */
 .site--read .neo-glass,
 .site--read .post-card {
-  position: relative;
-  border-color: var(--hairline);
-  border-radius: 22px;
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgba(72, 52, 30, 0.05);
-  overflow: hidden;
+  height: auto;
+  padding: 18px 0 22px;
+  border: 0;
+  border-top: 1px solid var(--hairline-strong);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
-
-.site--read .post-card::before,
-.site--read div.grid > .neo-glass::before,
-.site--read div.grid > a.neo-glass::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 4px;
-  background: linear-gradient(90deg, var(--blue), var(--orange));
-  opacity: 0.85;
-}
-
-.site--read a.neo-glass,
-.site--read .post-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
 
 .site--read a.neo-glass:hover,
-.site--read .post-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--hairline-strong);
-  box-shadow: 0 22px 44px -28px rgba(88, 60, 150, 0.45);
+.site--read .post-card:hover { transform: none; border-color: var(--ink); box-shadow: none; }
+
+.site--read .post-card h2,
+.site--read .neo-glass:not(.text-center) > h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  transition: text-decoration-color 0.15s ease;
 }
 
-.site--read .post-card h2 { font-family: var(--serif); font-size: 23px; }
-.site--read .post-card .uppercase { color: var(--orange); font-weight: 600; }
+.site--read .post-card:hover h2,
+.site--read a.neo-glass:hover > h3 { text-decoration-color: var(--orange); }
+
+.site--read .post-card .uppercase {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.site--read .post-card > span:last-child { display: none; }
+.site--read .post-card p,
+.site--read a.neo-glass p { color: var(--body); }
 
 /* FAQ: the plus turns into a close mark when a row is open. */
 .site--read details summary > span { color: var(--orange); transition: transform 0.2s ease; }
