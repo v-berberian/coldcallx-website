@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- Redeploy: enable GitHub Pages -->
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <!-- Cookie consent. MUST stay above gtag.js: it seeds the Consent Mode
        defaults the tag reads on boot. -->
   <script src="/consent.js"></script>
@@ -14,10 +14,9 @@
 
     gtag('config', 'G-0CKNY5PSV1');
   </script>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#f0f9ff">
+  <meta name="theme-color" content="#fafafc">
 
   <!-- Primary SEO -->
   <title>Cold Call X: Auto Dialer & Cold Calling App for iPhone</title>
@@ -54,425 +53,14 @@
   <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
   <meta name="twitter:image:alt" content="Cold Call X app icon" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/logo.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    :root { 
-      --brand: #00AEEF; 
-      --ink: #0F172A; 
-      --muted: #64748B;
-      --surface: rgba(255,255,255,0.8);
+  <link rel="stylesheet" href="/site.css">
+  <script>
+    // Opt into the scroll-in reveal before first paint. Without
+    // IntersectionObserver, or with reduced motion, everything simply shows.
+    if ('IntersectionObserver' in window && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.classList.add('reveal-ready');
     }
-    
-    html, body { margin: 0; }
-    html { height: 100%; }
-    html {
-      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
-      position: relative;
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      color-scheme: light;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body, html {
-        background: radial-gradient(ellipse at top, #f0f9ff 0%, #e0f2fe 35%, #bae6fd 100%);
-      }
-      body {
-        color: var(--ink);
-      }
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 1rem 0;
-      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-      padding-bottom: calc(1rem + constant(safe-area-inset-bottom, 0px));
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    /* Enhanced animated background */
-    .bg-anim {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      filter: hue-rotate(0deg);
-      animation: hue 60s linear infinite;
-    }
-    
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      opacity: 0.4;
-      mix-blend-mode: multiply;
-    }
-    
-    .blob.b1 {
-      width: 80vw;
-      height: 80vw;
-      left: -20vw;
-      top: -25vh;
-      background: radial-gradient(circle at 30% 30%, rgba(0,174,239,0.6), rgba(0,174,239,0) 70%);
-      animation: move1 40s ease-in-out infinite alternate;
-    }
-    
-    .blob.b2 {
-      width: 70vw;
-      height: 70vw;
-      right: -25vw;
-      top: -20vh;
-      background: radial-gradient(circle at 70% 40%, rgba(139,92,246,0.5), rgba(139,92,246,0) 70%);
-      animation: move2 45s ease-in-out infinite alternate;
-    }
-    
-    .blob.b3 {
-      width: 90vw;
-      height: 90vw;
-      left: -10vw;
-      bottom: -35vh;
-      background: radial-gradient(circle at 40% 60%, rgba(6,182,212,0.4), rgba(6,182,212,0) 70%);
-      animation: move3 50s ease-in-out infinite alternate;
-    }
-
-    /* Super modern glass effect */
-    .glass {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.6);
-      box-shadow: 
-        0 25px 50px -12px rgba(0,0,0,0.1),
-        0 0 0 1px rgba(255,255,255,0.5) inset;
-    }
-    
-    .neo-glass {
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
-      border: 1px solid rgba(255,255,255,0.7);
-      box-shadow: 
-        0 32px 64px -12px rgba(0,0,0,0.12),
-        0 0 0 1px rgba(255,255,255,0.6) inset,
-        0 2px 4px rgba(0,0,0,0.05) inset;
-    }
-
-    /* Enhanced animations */
-    @keyframes hue {
-      0% { filter: hue-rotate(0deg) brightness(1.02); }
-      33% { filter: hue-rotate(15deg) brightness(1.05); }
-      66% { filter: hue-rotate(-10deg) brightness(1.03); }
-      100% { filter: hue-rotate(0deg) brightness(1.02); }
-    }
-    
-    @keyframes move1 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(12vw,15vh,0) scale(1.15) rotate(8deg); }
-    }
-    
-    @keyframes move2 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(-15vw,12vh,0) scale(1.12) rotate(-6deg); }
-    }
-    
-    @keyframes move3 {
-      0% { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
-      100% { transform: translate3d(8vw,-12vh,0) scale(1.18) rotate(4deg); }
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(2deg); }
-    }
-    
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 0 40px rgba(0,174,239,0.3); }
-      50% { box-shadow: 0 0 80px rgba(0,174,239,0.5); }
-    }
-
-    /* Text effects */
-    .text-shimmer {
-      background: linear-gradient(45deg, #1e293b, #0ea5e9, #8b5cf6, #06b6d4, #1e293b);
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: shimmer 8s ease-in-out infinite;
-    }
-    
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    /* Liquid Glass Badge */
-    .liquid-glass-badge {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: linear-gradient(135deg, 
-        rgba(255,255,255,0.25) 0%, 
-        rgba(255,255,255,0.1) 50%, 
-        rgba(255,255,255,0.05) 100%);
-      border: 1px solid rgba(255,255,255,0.3);
-      box-shadow: 
-        0 8px 32px rgba(0,0,0,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.4),
-        inset 0 -1px 0 rgba(255,255,255,0.2);
-      position: relative;
-    }
-
-    .liquid-displacement {
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(0,174,239,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139,92,246,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(6,182,212,0.05) 0%, transparent 50%);
-      filter: blur(40px);
-      animation: liquid-flow 12s ease-in-out infinite;
-    }
-
-    .liquid-glass-badge::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(45deg, 
-        rgba(255,255,255,0.6), 
-        rgba(255,255,255,0.2), 
-        rgba(0,174,239,0.3), 
-        rgba(255,255,255,0.4));
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: subtract;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: subtract;
-      z-index: -1;
-    }
-
-    @keyframes liquid-flow {
-      0%, 100% { 
-        background-position: 20% 80%, 80% 20%, 40% 40%;
-        filter: blur(40px) hue-rotate(0deg);
-      }
-      25% { 
-        background-position: 30% 70%, 70% 30%, 60% 60%;
-        filter: blur(35px) hue-rotate(15deg);
-      }
-      50% { 
-        background-position: 80% 20%, 20% 80%, 80% 20%;
-        filter: blur(45px) hue-rotate(30deg);
-      }
-      75% { 
-        background-position: 70% 30%, 30% 70%, 20% 80%;
-        filter: blur(38px) hue-rotate(15deg);
-      }
-    }
-
-    /* Organic gradient animations */
-    .organic-morph,
-    .organic-flow,
-    .organic-pulse {
-      pointer-events: none;
-    }
-
-    .pointer-events-auto {
-      pointer-events: auto;
-    }
-
-    .organic-morph {
-      animation: organic-morph 25s ease-in-out infinite;
-    }
-    
-    .organic-flow {
-      animation: organic-flow 30s ease-in-out infinite;
-    }
-    
-    .organic-pulse {
-      animation: organic-pulse 20s ease-in-out infinite;
-    }
-    
-    @keyframes organic-morph {
-      0% { 
-        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        filter: blur(100px) hue-rotate(0deg) brightness(1);
-      }
-      20% {
-        background: radial-gradient(ellipse 90% 120% at 70% 40%, rgba(139,92,246,0.2) 0%, rgba(6,182,212,0.25) 30%, rgba(236,72,153,0.15) 65%, transparent 100%);
-        transform: scale(1.1) rotate(8deg);
-        filter: blur(80px) hue-rotate(20deg) brightness(1.1);
-      }
-      40% {
-        background: radial-gradient(ellipse 140% 90% at 20% 80%, rgba(6,182,212,0.3) 0%, rgba(16,185,129,0.18) 40%, rgba(0,174,239,0.12) 75%, transparent 100%);
-        transform: scale(0.95) rotate(-5deg);
-        filter: blur(120px) hue-rotate(40deg) brightness(0.9);
-      }
-      60% {
-        background: radial-gradient(ellipse 100% 130% at 80% 30%, rgba(236,72,153,0.22) 0%, rgba(168,85,247,0.28) 25%, rgba(59,130,246,0.16) 60%, transparent 100%);
-        transform: scale(1.15) rotate(12deg);
-        filter: blur(90px) hue-rotate(-15deg) brightness(1.05);
-      }
-      80% {
-        background: radial-gradient(ellipse 110% 95% at 40% 70%, rgba(16,185,129,0.2) 0%, rgba(0,174,239,0.3) 45%, rgba(139,92,246,0.18) 80%, transparent 100%);
-        transform: scale(1.05) rotate(-10deg);
-        filter: blur(110px) hue-rotate(35deg) brightness(0.95);
-      }
-      100% { 
-        background: radial-gradient(ellipse 120% 80% at 30% 20%, rgba(0,174,239,0.25) 0%, rgba(139,92,246,0.15) 35%, rgba(6,182,212,0.2) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        filter: blur(100px) hue-rotate(0deg) brightness(1);
-      }
-    }
-    
-    @keyframes organic-flow {
-      0% { 
-        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
-        transform: translate(0,0) scale(1) skew(0deg);
-        filter: blur(60px) saturate(1.2);
-      }
-      25% {
-        background: radial-gradient(ellipse 120% 140% at 30% 70%, rgba(168,85,247,0.15) 0%, rgba(236,72,153,0.1) 35%, transparent 75%);
-        transform: translate(15px,-10px) scale(1.2) skew(3deg);
-        filter: blur(45px) saturate(1.4);
-      }
-      50% {
-        background: radial-gradient(ellipse 100% 120% at 80% 30%, rgba(236,72,153,0.18) 0%, rgba(16,185,129,0.12) 50%, transparent 85%);
-        transform: translate(-8px,12px) scale(0.9) skew(-2deg);
-        filter: blur(70px) saturate(1.1);
-      }
-      75% {
-        background: radial-gradient(ellipse 130% 90% at 20% 60%, rgba(16,185,129,0.14) 0%, rgba(59,130,246,0.16) 45%, transparent 80%);
-        transform: translate(20px,5px) scale(1.1) skew(4deg);
-        filter: blur(55px) saturate(1.3);
-      }
-      100% { 
-        background: radial-gradient(ellipse 150% 100% at 50% 50%, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.08) 40%, transparent 80%);
-        transform: translate(0,0) scale(1) skew(0deg);
-        filter: blur(60px) saturate(1.2);
-      }
-    }
-    
-    @keyframes organic-pulse {
-      0% { 
-        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        opacity: 0.8;
-      }
-      15% {
-        background: radial-gradient(circle at 40% 60%, rgba(34,197,94,0.12) 0%, rgba(168,85,247,0.1) 35%, rgba(59,130,246,0.07) 65%, transparent 100%);
-        transform: scale(1.3) rotate(15deg);
-        opacity: 0.6;
-      }
-      30% {
-        background: radial-gradient(circle at 80% 20%, rgba(168,85,247,0.18) 0%, rgba(236,72,153,0.06) 40%, rgba(6,182,212,0.09) 75%, transparent 100%);
-        transform: scale(0.8) rotate(-8deg);
-        opacity: 0.9;
-      }
-      45% {
-        background: radial-gradient(circle at 20% 80%, rgba(236,72,153,0.1) 0%, rgba(6,182,212,0.14) 25%, rgba(34,197,94,0.11) 60%, transparent 100%);
-        transform: scale(1.4) rotate(22deg);
-        opacity: 0.5;
-      }
-      60% {
-        background: radial-gradient(circle at 70% 70%, rgba(59,130,246,0.16) 0%, rgba(34,197,94,0.12) 45%, rgba(168,85,247,0.08) 80%, transparent 100%);
-        transform: scale(0.9) rotate(-12deg);
-        opacity: 0.8;
-      }
-      75% {
-        background: radial-gradient(circle at 30% 30%, rgba(34,197,94,0.13) 0%, rgba(59,130,246,0.09) 50%, rgba(236,72,153,0.06) 85%, transparent 100%);
-        transform: scale(1.2) rotate(18deg);
-        opacity: 0.7;
-      }
-      90% {
-        background: radial-gradient(circle at 90% 50%, rgba(6,182,212,0.11) 0%, rgba(168,85,247,0.15) 30%, rgba(34,197,94,0.08) 70%, transparent 100%);
-        transform: scale(1.1) rotate(-5deg);
-        opacity: 0.85;
-      }
-      100% { 
-        background: radial-gradient(circle at 60% 40%, rgba(6,182,212,0.15) 0%, rgba(34,197,94,0.08) 30%, rgba(168,85,247,0.05) 70%, transparent 100%);
-        transform: scale(1) rotate(0deg);
-        opacity: 0.8;
-      }
-    }
-
-    /* Neomorphic Buttons */
-    .neomorphic-btn {
-      background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
-      box-shadow: 
-        6px 6px 12px rgba(0,0,0,0.06),
-        -3px -3px 8px rgba(255,255,255,0.3);
-      border: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .neomorphic-btn:hover {
-      background: linear-gradient(145deg, #e0f2fe, #bae6fd);
-      box-shadow: 
-        3px 3px 6px rgba(0,0,0,0.08),
-        -2px -2px 4px rgba(255,255,255,0.2),
-        inset 1px 1px 2px rgba(0,174,239,0.05);
-      transform: translateY(-1px);
-    }
-
-    .neomorphic-btn:active {
-      background: linear-gradient(145deg, #bae6fd, #e0f2fe);
-      box-shadow:
-        inset 3px 3px 6px rgba(0,0,0,0.08),
-        inset -1px -1px 2px rgba(255,255,255,0.2);
-      transform: translateY(0);
-    }
-
-    /* Smooth anchor scrolling for in-page nav */
-    html { scroll-behavior: smooth; }
-
-    /* Full-viewport hero now that the page scrolls */
-    .hero-viewport {
-      min-height: calc(100vh - 6.5rem);
-      min-height: calc(100svh - 6.5rem);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* FAQ accordion */
-    details > summary { list-style: none; }
-    details > summary::-webkit-details-marker { display: none; }
-
-    /* Phone layout: let content determine height and keep controls thumb-friendly. */
-    @media (max-width: 639px) {
-      .hero-viewport { min-height: auto !important; align-items: flex-start; padding-top: 1rem !important; padding-bottom: 2rem !important; }
-      .hero-viewport > div { padding-top: 1rem !important; gap: 1.5rem !important; }
-      .hero-viewport h1 { font-size: clamp(2.25rem, 11vw, 3rem); line-height: 1; }
-      .hero-viewport .space-y-8 { gap: 1.5rem; }
-      .hero-viewport p { font-size: 1.0625rem; line-height: 1.55; }
-      .hero-viewport .neomorphic-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-      details > summary { min-height: 44px; display: flex; align-items: center; }
-      section[aria-label="Frequently asked questions"] { padding-top: 3rem; padding-bottom: 3rem; }
-      section[aria-label="Frequently asked questions"] h2 { margin-bottom: 2rem; font-size: 2rem; line-height: 1.08; }
-      footer nav { row-gap: .75rem; }
-    }
-
-  </style>
+  </script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -529,155 +117,396 @@
           "Multiple call lists with pinned favorites and shuffle mode",
           "100% on-device storage, no account, no cloud"
         ]
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://coldcallx.app/#software",
-        "name": "Cold Call X",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "iOS 17.6+",
-        "url": "https://coldcallx.app/",
-        "downloadUrl": "https://apps.apple.com/us/app/cold-call-x/id6751245004",
-        "offers": { "@type": "Offer", "price": "12.99", "priceCurrency": "USD" },
-        "description": "An iPhone auto dialer and private mobile CRM for working through user-imported sales call lists."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://coldcallx.app/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Cold Call X an auto dialer for iPhone?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is an auto dialer built for iOS. It dials through your call list using your iPhone's native phone app, choose manual one-tap dialing, timed auto-call delays, or 0-second Rocket mode." }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I import my call list?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Import leads from any CSV file or directly from Google Sheets. Columns like name, phone number, email, and notes are auto-mapped, and large lists are supported." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does Cold Call X require a subscription?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. Cold Call X is a one-time purchase of $12.99 on the App Store. There are no subscriptions, seats, or hidden fees, and no account is required." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my lead data private?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Completely. All leads, notes, tags, and call activity stay on your device. Nothing is uploaded to external servers, there is no tracking, and no data is linked to your identity." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I send follow-up messages from the app?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, send texts, WhatsApp messages, or emails with customizable templates, and schedule callback reminders as iOS calendar events." }
-          },
-          {
-            "@type": "Question",
-            "name": "What do I need to run Cold Call X?",
-            "acceptedAnswer": { "@type": "Answer", "text": "An iPhone running iOS 17.6 or later. Download Cold Call X from the App Store and import your first list in under a minute." }
-          }
-        ]
       }
     ]
   }
   </script>
 </head>
-<body class="text-[var(--ink)] antialiased">
-  <div class="bg-anim">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-  </div>
+<body class="site">
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="/">
+        <img src="/icon-192.png" alt="" width="28" height="28">
+        Cold Call X
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#tutorials">Tutorials</a>
+        <a class="nav__cta" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=home&pt=128076300&mt=8">Download</a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="flex-1 relative">
-    <section class="hero-viewport relative w-full py-8" aria-label="Cold Call X">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center h-full pt-10 md:pt-0">
-        <div class="space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-          <div class="space-y-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] text-center lg:text-left">
-              <span class="block text-shimmer">Cold&nbsp;calling,</span>
-              <span class="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">refined.</span>
-            </h1>
-
-            <div class="lg:hidden flex justify-center">
-              <a href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8" class="relative inline-flex p-4 rounded-2xl neo-glass shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]" aria-label="Open Cold Call X in the App Store">
-                <img src="logo.jpg" alt="Cold Call X, cold calling auto dialer app for iPhone" width="1024" height="1024" fetchpriority="high" decoding="async" class="w-28 sm:w-36 h-auto rounded-2xl filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.25)]">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
-              </a>
-            </div>
-            
-            <p class="text-lg lg:text-2xl text-[var(--muted)] max-w-2xl leading-relaxed font-light text-center lg:text-left mx-auto lg:mx-0">
-              The cold calling app for iPhone, a fast auto dialer and private CRM built for sales professionals, entrepreneurs, and business development teams.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4 justify-center lg:justify-start">
-              <a href="https://coldcallx.app/privacy" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Privacy Policy</span>
-              </a>
-              <a href="mailto:support@coldcallx.app" class="neomorphic-btn px-8 py-3 text-[var(--ink)] font-medium rounded-2xl transition-all duration-300 w-full sm:w-auto text-center">
-                <span class="text-base">Contact Us</span>
-              </a>
-              <a href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8" aria-label="Download on the App Store" class="hidden sm:inline-flex lg:hidden items-center justify-center">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-11 w-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="sm:hidden mt-3 flex justify-center w-full">
-          <a href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8" aria-label="Download on the App Store" class="inline-flex items-center justify-center w-full max-w-xs">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="w-full h-12 object-contain">
-          </a>
-        </div>
-        
-        <div class="relative hidden lg:flex flex-col items-center justify-center w-full">
-          <div class="absolute -inset-8 sm:-inset-16 lg:-inset-20 rounded-full bg-gradient-to-r from-blue-400/20 via-purple-500/15 to-cyan-400/20 blur-[100px] organic-morph pointer-events-none"></div>
-          <div class="absolute -inset-6 sm:-inset-12 lg:-inset-16 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-600/10 blur-3xl organic-flow pointer-events-none"></div>
-          <div class="absolute -inset-4 sm:-inset-10 lg:-inset-12 rounded-full bg-gradient-to-tl from-cyan-300/10 via-violet-400/8 to-emerald-300/12 blur-2xl organic-pulse pointer-events-none"></div>
-          
-          <div class="relative p-8 sm:p-10 lg:p-12 rounded-3xl sm:rounded-[3rem] neo-glass shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] transform hover:scale-105 transition-all duration-700 hover:rotate-1 group mt-6 sm:mt-8 lg:mt-0 z-10">
-            <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-white/60 via-white/20 to-transparent opacity-60"></div>
-            <div class="absolute inset-0 rounded-3xl sm:rounded-[3rem] bg-gradient-to-tl from-blue-500/5 to-purple-500/5"></div>
-            
-            <div class="relative">
-              <a href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8">
-                <img src="logo.jpg" alt="Cold Call X app icon, iPhone power dialer and mobile CRM" width="1024" height="1024" decoding="async" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-96 h-auto rounded-3xl mx-auto filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
-              </a>
-              <div class="absolute -inset-4 sm:-inset-6 lg:-inset-8 bg-gradient-to-r from-blue-500/15 via-purple-500/10 to-cyan-500/15 rounded-3xl sm:rounded-[3rem] blur-3xl -z-10"></div>
-            </div>
-          </div>
-
-          <div class="hidden lg:flex mt-8 justify-center">
-            <a href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8" aria-label="Download on the App Store" class="relative z-10 inline-flex items-center justify-center pointer-events-auto">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 xl:h-14 w-auto">
-            </a>
-          </div>
-          
-          <div class="absolute top-1/4 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[3s] hidden md:block pointer-events-none"></div>
-          <div class="absolute bottom-1/4 -left-8 w-24 h-24 bg-gradient-to-br from-purple-400/20 to-transparent rounded-full blur-2xl animate-bounce animation-duration-[4s] animation-delay-1000 hidden md:block pointer-events-none"></div>
-        </div>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="hero__name"><img class="hero__icon" src="/icon-192.png" alt="" width="40" height="40"> Cold Call X</p>
+        <h1 class="hero__title" id="hero-title">Cold calling,<br> <span class="hero__accent">refined.</span></h1>
+        <p class="hero__lede">The auto dialer and CRM for iPhone. Import a list, then call straight through it.</p>
+        <a class="hero__cta" href="https://apps.apple.com/app/id6751245004?pt=128076300&ct=home&mt=8">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="144" height="48">
+        </a>
+        <p class="hero__note">One-time purchase. No subscription.</p>
       </div>
+      <picture class="hero__phone">
+        <source srcset="/hero-phone.avif" type="image/avif">
+        <img src="/hero-phone.jpg" alt="Cold Call X on iPhone, showing a lead card ready to call" width="438" height="928" fetchpriority="high">
+      </picture>
     </section>
 
+    <section class="tutorials" id="tutorials" aria-labelledby="tutorials-title">
+      <div class="wrap">
+        <div class="tutorials__head reveal">
+          <h2 class="tutorials__title" id="tutorials-title">Tutorials</h2>
+          <p class="tutorials__sub">Short films, one task each.</p>
+        </div>
+
+        <!-- The playlist: https://www.youtube.com/playlist?list=PLMc0yGXz65rw
+             data-playlist takes the playlist URL or its ID. Cards below carry
+             each film's video ID; thumbnails in /films are frames from the
+             renders, so nothing is requested from YouTube until play. -->
+        <div class="player reveal" data-playlist="PLMc0yGXz65rw">
+          <button class="player__poster" type="button" aria-label="Play the Cold Call X tutorials">
+            <picture>
+              <source srcset="/tutorials-poster.avif" type="image/avif">
+              <img src="/tutorials-poster.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+            </picture>
+            <span class="player__play" aria-hidden="true"></span>
+            <span class="player__soon" aria-hidden="true">Coming soon</span>
+          </button>
+        </div>
+        <p class="player-note" data-player-note>Nothing loads from YouTube until you press play. <a href="/cookies#videos">Details</a><span data-youtube hidden> · <a href="https://www.youtube.com/playlist?list=PLMc0yGXz65rw">Open in YouTube</a></span></p>
+
+        <ol class="films" aria-label="All tutorials">
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=rqZMEoW6wyE&amp;list=PLMc0yGXz65rw" data-video="rqZMEoW6wyE">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/rqZMEoW6wyE.avif" type="image/avif">
+                  <img src="/films/rqZMEoW6wyE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:27</span>
+              </span>
+              <span class="film__title">Import Your First List</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=M2wodZdUXZ8&amp;list=PLMc0yGXz65rw" data-video="M2wodZdUXZ8">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/M2wodZdUXZ8.avif" type="image/avif">
+                  <img src="/films/M2wodZdUXZ8.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:36</span>
+              </span>
+              <span class="film__title">Map Your Columns</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=OpvKS6cwxbQ&amp;list=PLMc0yGXz65rw" data-video="OpvKS6cwxbQ">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/OpvKS6cwxbQ.avif" type="image/avif">
+                  <img src="/films/OpvKS6cwxbQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:35</span>
+              </span>
+              <span class="film__title">Your Lists</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=kqMLXn8W-wY&amp;list=PLMc0yGXz65rw" data-video="kqMLXn8W-wY">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/kqMLXn8W-wY.avif" type="image/avif">
+                  <img src="/films/kqMLXn8W-wY.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:26</span>
+              </span>
+              <span class="film__title">Find Your Leads</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=RuQjHtDvyxE&amp;list=PLMc0yGXz65rw" data-video="RuQjHtDvyxE">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/RuQjHtDvyxE.avif" type="image/avif">
+                  <img src="/films/RuQjHtDvyxE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:18</span>
+              </span>
+              <span class="film__title">Filters</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=vOgtSUFlUMQ&amp;list=PLMc0yGXz65rw" data-video="vOgtSUFlUMQ">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/vOgtSUFlUMQ.avif" type="image/avif">
+                  <img src="/films/vOgtSUFlUMQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:34</span>
+              </span>
+              <span class="film__title">Call, Mark the Outcome, Take the Note</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=a2xlvSzxoro&amp;list=PLMc0yGXz65rw" data-video="a2xlvSzxoro">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/a2xlvSzxoro.avif" type="image/avif">
+                  <img src="/films/a2xlvSzxoro.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:23</span>
+              </span>
+              <span class="film__title">Script &amp; Objections</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=J_3qxoJeIFQ&amp;list=PLMc0yGXz65rw" data-video="J_3qxoJeIFQ">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/J_3qxoJeIFQ.avif" type="image/avif">
+                  <img src="/films/J_3qxoJeIFQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:15</span>
+              </span>
+              <span class="film__title">Daily Goal</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=eOO8tCoFLv4&amp;list=PLMc0yGXz65rw" data-video="eOO8tCoFLv4">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/eOO8tCoFLv4.avif" type="image/avif">
+                  <img src="/films/eOO8tCoFLv4.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:31</span>
+              </span>
+              <span class="film__title">Scheduling a Callback</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=2kUv4wDitss&amp;list=PLMc0yGXz65rw" data-video="2kUv4wDitss">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/2kUv4wDitss.avif" type="image/avif">
+                  <img src="/films/2kUv4wDitss.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">1:17</span>
+              </span>
+              <span class="film__title">Follow Ups</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=tlgke_1vzz0&amp;list=PLMc0yGXz65rw" data-video="tlgke_1vzz0">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/tlgke_1vzz0.avif" type="image/avif">
+                  <img src="/films/tlgke_1vzz0.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:30</span>
+              </span>
+              <span class="film__title">Texting Templates</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=Bc8lVuzBgDA&amp;list=PLMc0yGXz65rw" data-video="Bc8lVuzBgDA">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/Bc8lVuzBgDA.avif" type="image/avif">
+                  <img src="/films/Bc8lVuzBgDA.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:21</span>
+              </span>
+              <span class="film__title">Templates Settings</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=2hOlj42FTcE&amp;list=PLMc0yGXz65rw" data-video="2hOlj42FTcE">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/2hOlj42FTcE.avif" type="image/avif">
+                  <img src="/films/2hOlj42FTcE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:16</span>
+              </span>
+              <span class="film__title">Calling Hours</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=tmlFHu25xto&amp;list=PLMc0yGXz65rw" data-video="tmlFHu25xto">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/tmlFHu25xto.avif" type="image/avif">
+                  <img src="/films/tmlFHu25xto.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:30</span>
+              </span>
+              <span class="film__title">Do Not Call List/Telephone Preference Service</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=FtP1mwFTf3Q&amp;list=PLMc0yGXz65rw" data-video="FtP1mwFTf3Q">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/FtP1mwFTf3Q.avif" type="image/avif">
+                  <img src="/films/FtP1mwFTf3Q.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:23</span>
+              </span>
+              <span class="film__title">Back Up and Restore</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=nMexHJP4qFY&amp;list=PLMc0yGXz65rw" data-video="nMexHJP4qFY">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/nMexHJP4qFY.avif" type="image/avif">
+                  <img src="/films/nMexHJP4qFY.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:28</span>
+              </span>
+              <span class="film__title">Settings</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=QmJVqRzjo5w&amp;list=PLMc0yGXz65rw" data-video="QmJVqRzjo5w">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/QmJVqRzjo5w.avif" type="image/avif">
+                  <img src="/films/QmJVqRzjo5w.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:10</span>
+              </span>
+              <span class="film__title">Lead Caller ID</span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="film" href="https://www.youtube.com/watch?v=_TH78v3IuuU&amp;list=PLMc0yGXz65rw" data-video="_TH78v3IuuU">
+              <span class="film__thumb">
+                <picture>
+                  <source srcset="/films/_TH78v3IuuU.avif" type="image/avif">
+                  <img src="/films/_TH78v3IuuU.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                </picture>
+                <span class="film__time">0:31</span>
+              </span>
+              <span class="film__title">Auto Call</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
   </main>
 
-  <footer class="px-6 text-center">
-    <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[var(--muted)]" aria-label="Footer">
-      <a href="/auto-dialer-iphone" class="hover:text-[var(--ink)] transition-colors">Auto Dialer</a>
-      <a href="/cold-calling-apps" class="hover:text-[var(--ink)] transition-colors">Cold Calling Apps</a>
-      <a href="/blog/" class="hover:text-[var(--ink)] transition-colors">Guides</a>
-      <a href="/real-estate" class="hover:text-[var(--ink)] transition-colors">For Real Estate</a>
-      <a href="/recruiters" class="hover:text-[var(--ink)] transition-colors">For Recruiters</a>
-      <a href="/insurance" class="hover:text-[var(--ink)] transition-colors">For Insurance</a>
-      <a href="/loan-officers" class="hover:text-[var(--ink)] transition-colors">For Loan Officers</a>
-      <a href="/privacy" class="hover:text-[var(--ink)] transition-colors">Privacy Policy</a>
-      <a href="/cookies" class="hover:text-[var(--ink)] transition-colors">Cookies</a>
-      <a href="mailto:support@coldcallx.app" class="hover:text-[var(--ink)] transition-colors">Support</a>
-      <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&pt=128076300&ct=home&mt=8" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--ink)] transition-colors">App Store</a>
-    </nav>
-    <p class="text-[var(--muted)] font-light text-sm">Cold Call X, the cold calling auto dialer &amp; mobile CRM for iPhone.</p>
-    <p class="text-[var(--muted)] font-light text-sm">&copy; 2026 Berberian Enterprises Inc.</p>
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <nav class="foot__links" aria-label="Guides">
+        <a href="/auto-dialer-iphone">Auto Dialer for iPhone</a>
+        <a href="/cold-calling-apps">Cold Calling Apps</a>
+        <a href="/real-estate">Real Estate</a>
+        <a href="/recruiters">Recruiters</a>
+        <a href="/insurance">Insurance</a>
+        <a href="/loan-officers">Loan Officers</a>
+        <a href="/blog/">All Guides</a>
+      </nav>
+      <div class="foot__legal">
+        <p>Copyright © 2026 Berberian Enterprises Inc.</p>
+        <nav aria-label="Legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/cookies">Cookies</a>
+          <a href="mailto:support@coldcallx.app">Support</a>
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=home&pt=128076300&mt=8">App Store</a>
+        </nav>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    /* Tutorials player. Until someone presses play the player and the film
+       cards are only pictures served from this site: no request goes to
+       YouTube, so a visit sets nothing beyond what /cookies lists. Pressing
+       play swaps in YouTube's privacy-enhanced (youtube-nocookie.com) embed.
+       The poster starts the playlist; a card starts that film inside it. */
+    (function () {
+      var player = document.querySelector('.player');
+      if (!player) return;
+      var button = player.querySelector('.player__poster');
+      var note = document.querySelector('[data-player-note]');
+      var films = [].slice.call(document.querySelectorAll('.film[data-video]'));
+      var raw = player.getAttribute('data-playlist') || '';
+      var fromUrl = raw.match(/[?&]list=([\w-]+)/);
+      var list = fromUrl ? fromUrl[1] : raw.trim();
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+      if (!/^[\w-]{10,}$/.test(list)) {
+        player.setAttribute('data-state', 'soon');
+        button.disabled = true;
+        button.setAttribute('aria-label', 'Tutorials are coming soon');
+        if (note) note.hidden = true;
+        return;
+      }
+
+      var youtube = note && note.querySelector('[data-youtube]');
+      if (youtube) {
+        youtube.querySelector('a').href = 'https://www.youtube.com/playlist?list=' + list;
+        youtube.hidden = false;
+      }
+
+      function play(video) {
+        var src = 'https://www.youtube-nocookie.com/embed/' +
+          (video ? video + '?list=' : 'videoseries?list=') + list +
+          '&autoplay=1&playsinline=1&rel=0';
+        var frame = player.querySelector('iframe');
+        if (!frame) {
+          frame = document.createElement('iframe');
+          frame.title = 'Cold Call X tutorials';
+          frame.allow = 'autoplay; encrypted-media; picture-in-picture; web-share';
+          frame.allowFullscreen = true;
+          // YouTube refuses to play embeds that arrive without a referrer.
+          frame.referrerPolicy = 'strict-origin-when-cross-origin';
+          frame.src = src;
+          player.replaceChild(frame, button);
+          player.setAttribute('data-state', 'playing');
+        } else {
+          frame.src = src;
+        }
+        if (typeof gtag === 'function') gtag('event', 'tutorials_play', { video: video || 'playlist' });
+        return frame;
+      }
+
+      button.addEventListener('click', function () { play(null).focus(); });
+
+      films.forEach(function (film) {
+        film.addEventListener('click', function (event) {
+          // A modified click still opens the film on YouTube in a new tab.
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          var frame = play(film.getAttribute('data-video'));
+          player.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+          frame.focus({ preventScroll: true });
+        });
+      });
+    })();
+
+    // Scroll-in reveal for the tutorials section.
+    (function () {
+      if (!document.documentElement.classList.contains('reveal-ready')) return;
+      var items = [].slice.call(document.querySelectorAll('.reveal'));
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in');
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+      items.forEach(function (item) {
+        if (item.parentNode.classList.contains('films')) {
+          var index = [].indexOf.call(item.parentNode.children, item);
+          item.style.setProperty('--delay', (index % 3) * 0.08 + 's');
+        }
+        observer.observe(item);
+      });
+    })();
+  </script>
 </body>
 </html>

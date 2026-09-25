@@ -4,6 +4,39 @@ Static marketing site for Cold Call X. Deployed to GitHub Pages on every push to
 `main` (`.github/workflows/static.yml`); `CNAME` points the Pages site at
 `coldcallx.app`.
 
+## Styles
+
+| File | Role |
+|---|---|
+| `site.css` | The design system, hand-written. Every page loads it. Same ground, ink and type as the tutorial films: flat `#FAFAFC`, `#1D1D1F`, the system font. |
+| `styles.css` | Compiled Tailwind utilities that the long-form pages still use for layout. Rebuild it whenever you add a class to any page, or the class silently does nothing: `npx tailwindcss@3.4.17 --content "./*.html,./blog/*.html" -o styles.css -m` (then restore its three-line header comment). |
+
+Pages carry no inline `<style>` of their own; a component that needs styling
+goes in `site.css`.
+
+## Tutorials
+
+The home page's tutorials section plays the YouTube playlist
+[Cold Call X 2.0](https://www.youtube.com/playlist?list=PLMc0yGXz65rw)
+(`data-playlist` on `.player` in `index.html`; it takes the URL or the ID).
+Below the player, one card per film links to it on YouTube; the page's
+script plays it in the player instead.
+
+Nothing is requested from YouTube until someone presses play: the poster
+(`tutorials-poster.*`) and the card thumbnails (`films/<videoId>.avif`, `.jpg`
+fallback) are frames from the renders, served from this site. Section 3 of
+`/cookies` says so; keep it true if the embed changes.
+
+To add a film: upload it to the playlist, add a card to the `.films` list with
+its video ID, title and length, and make its thumbnail from the render's title
+card:
+
+```bash
+ffmpeg -ss 2.5 -i film.mp4 -frames:v 1 -vf scale=640:360:flags=lanczos thumb.png
+ffmpeg -i thumb.png -c:v libsvtav1 -crf 34 -frames:v 1 films/<videoId>.avif
+ffmpeg -i thumb.png -q:v 5 films/<videoId>.jpg
+```
+
 ## privacy.html is generated — do not edit it directly
 
 ```bash
