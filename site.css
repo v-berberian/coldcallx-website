@@ -1036,3 +1036,288 @@ body.site {
   .site .cmp-row > div { padding: 11px 10px; font-size: 14px; }
   .site details summary { min-height: 44px; }
 }
+
+/* ------------------------------------------------ reading pages: soul */
+
+/* Every page but the home page carries body.site--read, so none of this
+   reaches the home page. The guides and legal pages borrow the app's own
+   voice instead of a store's: warm paper, the lead card's lavender, teal and
+   pink wash, the icon's blue to orange, a serif for reading, and call
+   scripts that look like one side of a phone call. */
+body.site--read {
+  --paper: #fbf8f4;
+  --ink: #1f1b17;
+  --body: #3f3a34;
+  --muted: #756e66;
+  --faint: #9a928a;
+  --fill: #f3eee7;
+  --hairline: rgba(72, 52, 30, 0.12);
+  --hairline-strong: rgba(72, 52, 30, 0.22);
+  --surface: #fffdfa;
+  --blue: #29a9ec;
+  --orange: #f3913a;
+  --link: #0b5fb3;
+  --serif: ui-serif, "New York", "Iowan Old Style", Charter, Georgia, "Times New Roman", serif;
+  --wash:
+    radial-gradient(60% 90% at 0% 0%, rgba(186, 170, 255, 0.45), transparent 70%),
+    radial-gradient(55% 85% at 100% 10%, rgba(140, 232, 214, 0.38), transparent 70%),
+    radial-gradient(70% 90% at 70% 100%, rgba(255, 190, 214, 0.42), transparent 70%);
+  background: var(--paper);
+}
+
+.site--read .nav { background: rgba(251, 248, 244, 0.82); }
+
+/* The wash behind the top of every page, fading into the paper. */
+.site--read main { position: relative; isolation: isolate; }
+.site--read main::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 620px;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--wash);
+  -webkit-mask-image: linear-gradient(#000 35%, transparent);
+  mask-image: linear-gradient(#000 35%, transparent);
+}
+
+/* Type. A serif for titles and section heads; the body stays in the system
+   face so long reads stay easy on a phone. */
+.site--read main h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.site--read main h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.site--read main h3 { letter-spacing: -0.012em; }
+
+/* A short blue-to-orange stroke opens each section instead of a rule. */
+.site--read .article h2::before,
+.site--read .section-card:not(.text-center) > h2::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 4px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+}
+
+.site--read .section-card + .section-card,
+.site--read .section-card + section,
+.site--read section + .section-card {
+  margin-top: 72px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Back link on guide posts: a small pill. */
+.site--read main a.mb-8.text-sm {
+  padding: 6px 13px;
+  border: 1px solid var(--hairline);
+  border-radius: 980px;
+  background: rgba(255, 253, 250, 0.7);
+  font-size: 13px;
+}
+
+.site--read main a.mb-8.text-sm:hover { border-color: var(--hairline-strong); background: var(--surface); }
+
+/* Emphasis is a highlighter stroke, as on a printed script. */
+.site--read .article p strong,
+.site--read .article li strong,
+.site--read .section-card p strong,
+.site--read .section-card li strong {
+  background: linear-gradient(transparent 60%, rgba(243, 145, 58, 0.24) 60%, rgba(243, 145, 58, 0.24) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 1px;
+}
+
+/* Bullets in the icon's colours. */
+.site--read .article ul,
+.site--read .section-card ul { list-style: none; padding-left: 0; }
+
+.site--read .article ul > li,
+.site--read .section-card ul > li { position: relative; padding-left: 22px; }
+
+.site--read .article ul > li::before,
+.site--read .section-card ul > li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--orange));
+}
+
+.site--read .article ol li::marker { color: var(--orange); font-weight: 600; }
+
+/* Links: ink-blue with a warm underline. */
+.site--read main p a,
+.site--read main li a,
+.site--read main td a,
+.site--read .article a:not([href^="https://apps.apple.com"]),
+.site--read .callout a,
+.site--read .notice a {
+  color: var(--link);
+  text-decoration-color: rgba(243, 145, 58, 0.7);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.site--read main p a:hover,
+.site--read main li a:hover,
+.site--read main td a:hover,
+.site--read .article a:hover { color: var(--ink); text-decoration-color: var(--orange); }
+
+/* Call scripts: one side of a call, in a speech bubble on the lead card's
+   wash, with the app's green call button beside it. */
+.site--read .script {
+  position: relative;
+  margin: 4px 0 22px;
+  padding: 18px 22px 18px 62px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 22px 22px 22px 6px;
+  background: var(--wash), var(--surface);
+  box-shadow: 0 14px 34px -24px rgba(88, 60, 150, 0.55), 0 1px 2px rgba(72, 52, 30, 0.06);
+  color: var(--ink);
+  font-size: 17px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.site--read .script::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #30c85a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z'/%3E%3C/svg%3E") center / 15px no-repeat;
+  box-shadow: 0 8px 16px -8px rgba(48, 200, 90, 0.9);
+}
+
+/* Callouts and notes: an index card with the icon's colours down its edge. */
+.site--read .callout {
+  position: relative;
+  padding: 18px 22px 18px 26px;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.site--read .callout::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(var(--blue), var(--orange));
+}
+
+.site--read .notice {
+  border: 1px solid rgba(243, 145, 58, 0.28);
+  background: #fff4e6;
+}
+
+.site--read .cheat-sheet {
+  border: 1px dashed var(--hairline-strong);
+  background: var(--surface);
+  box-shadow: 0 18px 40px -30px rgba(72, 52, 30, 0.5);
+}
+
+/* Tiles: guide cards and feature grids lift a little, like cards in the app. */
+.site--read .neo-glass,
+.site--read .post-card {
+  position: relative;
+  border-color: var(--hairline);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(72, 52, 30, 0.05);
+  overflow: hidden;
+}
+
+.site--read .post-card::before,
+.site--read div.grid > .neo-glass::before,
+.site--read div.grid > a.neo-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+  opacity: 0.85;
+}
+
+.site--read a.neo-glass,
+.site--read .post-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+
+.site--read a.neo-glass:hover,
+.site--read .post-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--hairline-strong);
+  box-shadow: 0 22px 44px -28px rgba(88, 60, 150, 0.45);
+}
+
+.site--read .post-card h2 { font-family: var(--serif); font-size: 23px; }
+.site--read .post-card .uppercase { color: var(--orange); font-weight: 600; }
+
+/* FAQ: the plus turns into a close mark when a row is open. */
+.site--read details summary > span { color: var(--orange); transition: transform 0.2s ease; }
+.site--read details[open] summary > span { transform: rotate(45deg); }
+.site--read details.neo-glass { border-radius: 0; background: none; box-shadow: none; overflow: visible; }
+.site--read details.neo-glass::before { content: none; }
+
+/* Tables sit on a card with a washed header. */
+.site--read .cmp-wrap,
+.site--read .ck-table-wrap,
+.site--read main div.overflow-x-auto:has(> table) {
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--surface);
+  overflow-x: auto;
+}
+
+.site--read .cmp-table thead,
+.site--read .ck-table thead,
+.site--read .article thead,
+.site--read main table.w-full thead { background: var(--wash), var(--surface); }
+
+/* The closing call to action is a lead card of its own. */
+.site--read .section-card.text-center,
+.site--read .article-card.text-center,
+.site--read .neo-glass.text-center {
+  margin-top: 80px;
+  padding: 56px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  background: var(--wash), var(--surface);
+  box-shadow: 0 30px 60px -40px rgba(88, 60, 150, 0.6);
+}
+
+.site--read .neo-glass.text-center::before { content: none; }
+.site--read .section-card.text-center h2,
+.site--read .neo-glass.text-center h2 { font-size: clamp(28px, 4vw, 38px); }
+.site--read div.space-y-4 + :is(.section-card, .neo-glass, .article-card).text-center { margin-top: 64px; padding-top: 56px; border: 1px solid rgba(255, 255, 255, 0.9); }
+
+.site--read .foot { border-top-color: var(--hairline); }
+
+@media (max-width: 640px) {
+  .site--read .script { padding: 16px 18px 16px 56px; font-size: 16px; }
+  .site--read .script::before { left: 15px; top: 16px; width: 28px; height: 28px; }
+  .site--read .section-card + .section-card,
+  .site--read .section-card + section,
+  .site--read section + .section-card { margin-top: 56px; }
+  .site--read .section-card.text-center,
+  .site--read .neo-glass.text-center { padding: 44px 20px; border-radius: 24px; }
+}
