@@ -54,13 +54,6 @@
   <meta name="twitter:image:alt" content="Cold Call X app icon" />
 
   <link rel="stylesheet" href="/site.css">
-  <script>
-    // Opt into the scroll-in reveal before first paint. Without
-    // IntersectionObserver, or with reduced motion, everything simply shows.
-    if ('IntersectionObserver' in window && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
-      document.documentElement.classList.add('reveal-ready');
-    }
-  </script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -155,7 +148,7 @@
 
     <section class="tutorials" id="tutorials" aria-labelledby="tutorials-title">
       <div class="wrap">
-        <div class="tutorials__head reveal">
+        <div class="tutorials__head">
           <h2 class="tutorials__title" id="tutorials-title">Tutorials</h2>
           <p class="tutorials__sub">Short films, one task each.</p>
         </div>
@@ -164,11 +157,11 @@
              data-playlist takes the playlist URL or its ID. Cards below carry
              each film's video ID; thumbnails in /films are frames from the
              renders, so nothing is requested from YouTube until play. -->
-        <div class="player reveal" data-playlist="PLMc0yGXz65rw">
+        <div class="player" data-playlist="PLMc0yGXz65rw">
           <button class="player__poster" type="button" aria-label="Play the Cold Call X tutorials">
             <picture>
               <source srcset="/tutorials-poster.avif" type="image/avif">
-              <img src="/tutorials-poster.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+              <img src="/tutorials-poster.jpg" alt="" width="1920" height="1080" decoding="async">
             </picture>
             <span class="player__play" aria-hidden="true"></span>
             <span class="player__soon" aria-hidden="true">Coming soon</span>
@@ -177,216 +170,216 @@
         <p class="player-note" data-player-note>Nothing loads from YouTube until you press play. <a href="/cookies#videos">Details</a><span data-youtube hidden> · <a href="https://www.youtube.com/playlist?list=PLMc0yGXz65rw">Open in YouTube</a></span></p>
 
         <ol class="films" aria-label="All tutorials">
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=rqZMEoW6wyE&amp;list=PLMc0yGXz65rw" data-video="rqZMEoW6wyE">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/rqZMEoW6wyE.avif" type="image/avif">
-                  <img src="/films/rqZMEoW6wyE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/rqZMEoW6wyE.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:27</span>
               </span>
               <span class="film__title">Import Your First List</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=M2wodZdUXZ8&amp;list=PLMc0yGXz65rw" data-video="M2wodZdUXZ8">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/M2wodZdUXZ8.avif" type="image/avif">
-                  <img src="/films/M2wodZdUXZ8.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/M2wodZdUXZ8.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:36</span>
               </span>
               <span class="film__title">Map Your Columns</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=OpvKS6cwxbQ&amp;list=PLMc0yGXz65rw" data-video="OpvKS6cwxbQ">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/OpvKS6cwxbQ.avif" type="image/avif">
-                  <img src="/films/OpvKS6cwxbQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/OpvKS6cwxbQ.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:35</span>
               </span>
               <span class="film__title">Your Lists</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=kqMLXn8W-wY&amp;list=PLMc0yGXz65rw" data-video="kqMLXn8W-wY">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/kqMLXn8W-wY.avif" type="image/avif">
-                  <img src="/films/kqMLXn8W-wY.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/kqMLXn8W-wY.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:26</span>
               </span>
               <span class="film__title">Find Your Leads</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=RuQjHtDvyxE&amp;list=PLMc0yGXz65rw" data-video="RuQjHtDvyxE">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/RuQjHtDvyxE.avif" type="image/avif">
-                  <img src="/films/RuQjHtDvyxE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/RuQjHtDvyxE.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:18</span>
               </span>
               <span class="film__title">Filters</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=vOgtSUFlUMQ&amp;list=PLMc0yGXz65rw" data-video="vOgtSUFlUMQ">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/vOgtSUFlUMQ.avif" type="image/avif">
-                  <img src="/films/vOgtSUFlUMQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/vOgtSUFlUMQ.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:34</span>
               </span>
               <span class="film__title">Call, Mark the Outcome, Take the Note</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=a2xlvSzxoro&amp;list=PLMc0yGXz65rw" data-video="a2xlvSzxoro">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/a2xlvSzxoro.avif" type="image/avif">
-                  <img src="/films/a2xlvSzxoro.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/a2xlvSzxoro.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:23</span>
               </span>
               <span class="film__title">Script &amp; Objections</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=J_3qxoJeIFQ&amp;list=PLMc0yGXz65rw" data-video="J_3qxoJeIFQ">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/J_3qxoJeIFQ.avif" type="image/avif">
-                  <img src="/films/J_3qxoJeIFQ.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/J_3qxoJeIFQ.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:15</span>
               </span>
               <span class="film__title">Daily Goal</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=eOO8tCoFLv4&amp;list=PLMc0yGXz65rw" data-video="eOO8tCoFLv4">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/eOO8tCoFLv4.avif" type="image/avif">
-                  <img src="/films/eOO8tCoFLv4.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/eOO8tCoFLv4.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:31</span>
               </span>
               <span class="film__title">Scheduling a Callback</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=2kUv4wDitss&amp;list=PLMc0yGXz65rw" data-video="2kUv4wDitss">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/2kUv4wDitss.avif" type="image/avif">
-                  <img src="/films/2kUv4wDitss.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/2kUv4wDitss.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">1:17</span>
               </span>
               <span class="film__title">Follow Ups</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=tlgke_1vzz0&amp;list=PLMc0yGXz65rw" data-video="tlgke_1vzz0">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/tlgke_1vzz0.avif" type="image/avif">
-                  <img src="/films/tlgke_1vzz0.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/tlgke_1vzz0.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:30</span>
               </span>
               <span class="film__title">Texting Templates</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=Bc8lVuzBgDA&amp;list=PLMc0yGXz65rw" data-video="Bc8lVuzBgDA">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/Bc8lVuzBgDA.avif" type="image/avif">
-                  <img src="/films/Bc8lVuzBgDA.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/Bc8lVuzBgDA.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:21</span>
               </span>
               <span class="film__title">Templates Settings</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=2hOlj42FTcE&amp;list=PLMc0yGXz65rw" data-video="2hOlj42FTcE">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/2hOlj42FTcE.avif" type="image/avif">
-                  <img src="/films/2hOlj42FTcE.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/2hOlj42FTcE.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:16</span>
               </span>
               <span class="film__title">Calling Hours</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=tmlFHu25xto&amp;list=PLMc0yGXz65rw" data-video="tmlFHu25xto">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/tmlFHu25xto.avif" type="image/avif">
-                  <img src="/films/tmlFHu25xto.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/tmlFHu25xto.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:30</span>
               </span>
               <span class="film__title">Do Not Call List/Telephone Preference Service</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=FtP1mwFTf3Q&amp;list=PLMc0yGXz65rw" data-video="FtP1mwFTf3Q">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/FtP1mwFTf3Q.avif" type="image/avif">
-                  <img src="/films/FtP1mwFTf3Q.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/FtP1mwFTf3Q.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:23</span>
               </span>
               <span class="film__title">Back Up and Restore</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=nMexHJP4qFY&amp;list=PLMc0yGXz65rw" data-video="nMexHJP4qFY">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/nMexHJP4qFY.avif" type="image/avif">
-                  <img src="/films/nMexHJP4qFY.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/nMexHJP4qFY.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:28</span>
               </span>
               <span class="film__title">Settings</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=QmJVqRzjo5w&amp;list=PLMc0yGXz65rw" data-video="QmJVqRzjo5w">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/QmJVqRzjo5w.avif" type="image/avif">
-                  <img src="/films/QmJVqRzjo5w.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/QmJVqRzjo5w.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:10</span>
               </span>
               <span class="film__title">Lead Caller ID</span>
             </a>
           </li>
-          <li class="reveal">
+          <li>
             <a class="film" href="https://www.youtube.com/watch?v=_TH78v3IuuU&amp;list=PLMc0yGXz65rw" data-video="_TH78v3IuuU">
               <span class="film__thumb">
                 <picture>
                   <source srcset="/films/_TH78v3IuuU.avif" type="image/avif">
-                  <img src="/films/_TH78v3IuuU.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+                  <img src="/films/_TH78v3IuuU.jpg" alt="" width="640" height="360" decoding="async">
                 </picture>
                 <span class="film__time">0:31</span>
               </span>
@@ -485,26 +478,6 @@
           player.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
           frame.focus({ preventScroll: true });
         });
-      });
-    })();
-
-    // Scroll-in reveal for the tutorials section.
-    (function () {
-      if (!document.documentElement.classList.contains('reveal-ready')) return;
-      var items = [].slice.call(document.querySelectorAll('.reveal'));
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-in');
-          observer.unobserve(entry.target);
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-      items.forEach(function (item) {
-        if (item.parentNode.classList.contains('films')) {
-          var index = [].indexOf.call(item.parentNode.children, item);
-          item.style.setProperty('--delay', (index % 3) * 0.08 + 's');
-        }
-        observer.observe(item);
       });
     })();
   </script>
