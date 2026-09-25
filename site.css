@@ -210,50 +210,80 @@ body.site {
 }
 
 /* 2.0 launch giveaway band. index.html keeps it hidden until the giveaway
-   worker says codes are left. */
+   worker says codes are left. Centred on a wash of the brand's two colours
+   so it reads as an announcement, not as part of the hero. */
 .gift {
-  background: var(--surface);
+  background:
+    linear-gradient(90deg, rgba(41, 169, 236, 0.14), rgba(243, 145, 58, 0.14)),
+    var(--surface);
   border-bottom: 1px solid var(--hairline);
+  text-align: center;
 }
 
 .gift [hidden] { display: none !important; }
 
-.gift__inner { padding-top: 14px; padding-bottom: 14px; }
+.gift__inner { padding-top: 26px; padding-bottom: 24px; }
+
+.gift__tag {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 4px 12px;
+  border-radius: 980px;
+  background: linear-gradient(90deg, #29a9ec, #f3913a);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
 .gift__row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px 24px;
+  gap: 16px;
 }
 
-.gift__text { margin: 0; font-size: 15px; line-height: 1.45; color: var(--body); }
+.gift__text {
+  margin: 0;
+  max-width: 36em;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--body);
+  text-wrap: balance;
+}
+
 .gift__text strong { color: var(--ink); font-weight: 600; }
 
-.gift__action { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.gift__action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 16px;
+}
 
 .gift__left {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14px;
+  color: var(--body);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
-.gift__pips { display: inline-flex; gap: 4px; }
-.gift__pips i { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #29a9ec, #f3913a); }
+.gift__pips { display: inline-flex; gap: 5px; }
+.gift__pips i { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #29a9ec, #f3913a); }
 .gift__pips i.is-gone { background: var(--hairline-strong); }
 
 .gift__btn {
-  padding: 7px 16px;
+  padding: 10px 22px;
   border: 0;
   border-radius: 980px;
   background: var(--ink);
   color: #fff;
-  font: 500 14px/1.2 var(--font);
+  font: 600 15px/1.2 var(--font);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -261,24 +291,29 @@ body.site {
 .gift__btn:hover { background: #000; }
 .gift__btn:disabled { opacity: 0.5; cursor: default; }
 .gift__btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.gift__btn--quiet { background: var(--fill); color: var(--ink); }
-.gift__btn--quiet:hover { background: #e6e6eb; }
+.gift__btn--quiet { background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 1px var(--hairline); }
+.gift__btn--quiet:hover { background: var(--fill); }
 
 .site .gift__code {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: 1px solid var(--hairline);
-  border-radius: 10px;
-  background: var(--bg);
+  border-radius: 12px;
+  background: var(--surface);
   color: var(--ink);
-  font: 600 17px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 0.06em;
+  font: 600 20px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
   user-select: all;
 }
 
 .gift__status,
-.gift__fine { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
-.gift__status { color: var(--ink); font-size: 13px; }
+.gift__fine { margin: 12px auto 0; max-width: 40em; font-size: 12px; color: var(--muted); }
+.gift__status { color: var(--ink); font-size: 14px; }
 .gift__status:empty { display: none; }
+
+@media (max-width: 640px) {
+  .gift__inner { padding-top: 22px; padding-bottom: 20px; }
+  .gift__text { font-size: 16px; }
+}
 
 /* Tutorials sit on the films' own closing colour, so the section reads as a
    change of scene and the light player stands out. */
