@@ -130,6 +130,31 @@
   </header>
 
   <main>
+    <!-- 2.0 launch giveaway. Hidden until the giveaway worker says codes are
+         left, so it goes away by itself once all three are claimed.
+         Loading codes and ending it: giveaway-worker/README.md -->
+    <aside class="gift" data-giveaway data-api="https://coldcallx-giveaway.vadykk.workers.dev" aria-label="2.0 launch giveaway" hidden>
+      <div class="wrap gift__inner">
+        <div class="gift__row" data-offer>
+          <p class="gift__text"><strong>Cold Call X 2.0 is here.</strong> To celebrate, we’re giving away three free copies. First come, first served.</p>
+          <div class="gift__action">
+            <span class="gift__left" data-left></span>
+            <button class="gift__btn" type="button" data-claim>Claim a free copy</button>
+          </div>
+        </div>
+        <div class="gift__row" data-mine hidden>
+          <p class="gift__text"><strong>It’s yours.</strong> In the App Store, tap your photo, then Redeem Gift Card or Code.</p>
+          <div class="gift__action">
+            <code class="gift__code" data-code></code>
+            <button class="gift__btn gift__btn--quiet" type="button" data-copy>Copy</button>
+            <button class="gift__btn gift__btn--quiet" type="button" data-done>Done</button>
+          </div>
+        </div>
+        <p class="gift__status" data-status role="status" aria-live="polite"></p>
+        <p class="gift__fine">Each code works once and expires four weeks after it was made. Apple is not a sponsor of this giveaway.</p>
+      </div>
+    </aside>
+
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero__copy">
         <p class="hero__name"><img class="hero__icon" src="/icon-192.png" alt="" width="40" height="40"> Cold Call X</p>
@@ -479,6 +504,86 @@
           frame.focus({ preventScroll: true });
         });
       });
+    })();
+
+    // 2.0 launch giveaway: three App Store promo codes, first come, first
+    // served, one per claim from the giveaway worker. The band shows only
+    // while codes are left, or to the browser that claimed one.
+    (function () {
+      var band = document.querySelector('[data-giveaway]');
+      if (!band || !window.fetch) return;
+      var api = /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? 'http://127.0.0.1:8787' : band.getAttribute('data-api');
+      var KEY = 'ccx-giveaway';
+      var claim = band.querySelector('[data-claim]');
+      var status = band.querySelector('[data-status]');
+      var codeEl = band.querySelector('[data-code]');
+
+      function read() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
+      function write(value) { try { localStorage.setItem(KEY, JSON.stringify(value)); } catch (e) {} }
+
+      function showLeft(left, total) {
+        var pips = '';
+        for (var i = 0; i < total; i++) pips += i < total - left ? '<i class="is-gone"></i>' : '<i></i>';
+        band.querySelector('[data-left]').innerHTML = '<span class="gift__pips" aria-hidden="true">' + pips + '</span>' + left + ' of ' + total + ' left';
+      }
+
+      function showCode(code) {
+        codeEl.textContent = code;
+        band.querySelector('[data-offer]').hidden = true;
+        band.querySelector('[data-mine]').hidden = false;
+        band.hidden = false;
+      }
+
+      claim.addEventListener('click', function () {
+        claim.disabled = true;
+        status.textContent = '';
+        fetch(api + '/claim', { method: 'POST' })
+          .then(function (r) { return r.json().then(function (body) { return { status: r.status, body: body }; }); })
+          .then(function (res) {
+            if (res.body.code) {
+              write({ code: res.body.code });
+              showCode(res.body.code);
+              if (typeof gtag === 'function') gtag('event', 'giveaway_claim', { left: res.body.left });
+              return;
+            }
+            if (res.status === 410) {
+              showLeft(0, res.body.total || 3);
+              status.textContent = 'All three have been claimed. Thanks for coming by.';
+              return;
+            }
+            status.textContent = res.status === 429 ? 'One moment, then try again.' : 'That didn’t work. Try again.';
+            claim.disabled = false;
+          })
+          .catch(function () {
+            status.textContent = 'That didn’t work. Try again.';
+            claim.disabled = false;
+          });
+      });
+
+      band.querySelector('[data-copy]').addEventListener('click', function (event) {
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(codeEl.textContent).then(function () { event.target.textContent = 'Copied'; });
+      });
+
+      band.querySelector('[data-done]').addEventListener('click', function () {
+        write({ code: codeEl.textContent, done: true });
+        band.hidden = true;
+      });
+
+      var mine = read();
+      if (mine && mine.code) {
+        if (!mine.done) showCode(mine.code);
+        return;
+      }
+
+      fetch(api + '/status', { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (s) {
+          if (!s || !s.left) return;
+          showLeft(s.left, s.total);
+          band.hidden = false;
+        })
+        .catch(function () {});
     })();
   </script>
 </body>

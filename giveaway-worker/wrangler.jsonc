@@ -1,0 +1,20 @@
+// The 2.0 launch giveaway worker. Deployed on its own, apart from the
+// calling worker: https://coldcallx-giveaway.vadykk.workers.dev
+{
+  "name": "coldcallx-giveaway",
+  "main": "worker.js",
+  "account_id": "708cc6649abe57807f8c63b77b61d4d4",
+  "compatibility_date": "2026-07-21",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "coldcallx-giveaway",
+      "database_id": "e79e2af0-9e66-41fb-9ca7-191fac1b0689"
+    }
+  ],
+  // One claim per IP per minute, held in memory only.
+  "ratelimits": [
+    { "name": "CLAIMS", "namespace_id": "4401", "simple": { "limit": 1, "period": 60 } }
+  ]
+}

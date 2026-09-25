@@ -209,6 +209,77 @@ body.site {
   box-shadow: 0 40px 70px -30px rgba(0, 0, 0, 0.35);
 }
 
+/* 2.0 launch giveaway band. index.html keeps it hidden until the giveaway
+   worker says codes are left. */
+.gift {
+  background: var(--surface);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.gift [hidden] { display: none !important; }
+
+.gift__inner { padding-top: 14px; padding-bottom: 14px; }
+
+.gift__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.gift__text { margin: 0; font-size: 15px; line-height: 1.45; color: var(--body); }
+.gift__text strong { color: var(--ink); font-weight: 600; }
+
+.gift__action { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+
+.gift__left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.gift__pips { display: inline-flex; gap: 4px; }
+.gift__pips i { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #29a9ec, #f3913a); }
+.gift__pips i.is-gone { background: var(--hairline-strong); }
+
+.gift__btn {
+  padding: 7px 16px;
+  border: 0;
+  border-radius: 980px;
+  background: var(--ink);
+  color: #fff;
+  font: 500 14px/1.2 var(--font);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.gift__btn:hover { background: #000; }
+.gift__btn:disabled { opacity: 0.5; cursor: default; }
+.gift__btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.gift__btn--quiet { background: var(--fill); color: var(--ink); }
+.gift__btn--quiet:hover { background: #e6e6eb; }
+
+.site .gift__code {
+  padding: 8px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 600 17px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.06em;
+  user-select: all;
+}
+
+.gift__status,
+.gift__fine { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+.gift__status { color: var(--ink); font-size: 13px; }
+.gift__status:empty { display: none; }
+
 /* Tutorials sit on the films' own closing colour, so the section reads as a
    change of scene and the light player stands out. */
 .tutorials {
