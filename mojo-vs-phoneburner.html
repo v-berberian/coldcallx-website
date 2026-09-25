@@ -57,7 +57,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -70,9 +70,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -122,12 +125,12 @@
           {
             "@type": "Question",
             "name": "Is there a cheaper alternative to Mojo and PhoneBurner for solo agents?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a single-line power dialer that runs entirely on your iPhone and dials through your own carrier number, $12.99 once, no subscription. It imports CSV or Google Sheets lists, auto-dials with pacing modes, tags leads Hot/Warm/Cold, and keeps your lists, notes, and tags stored on your device (Apple privacy label: Data Not Collected, 4.7 stars on the App Store). It won't replace triple-line dialing for a call center, but for one person working a list it does the core job for less than 1% of a year of Mojo." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a single-line power dialer that runs entirely on your iPhone and dials through your own carrier number, $12.99 once, no subscription. It imports CSV or Google Sheets lists, auto-dials with pacing modes, logs one-tap call outcomes, and keeps your lists, notes, and outcomes stored on your device (4.8 stars on the App Store; your leads never touch our servers). It won't replace triple-line dialing for a call center, but for one person working a list it does the core job for less than 1% of a year of Mojo." }
           },
           {
             "@type": "Question",
             "name": "Where does my lead data live with each tool?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Mojo and PhoneBurner are cloud CRMs: your contacts, notes, and call activity sit on their servers under their privacy policies. Cold Call X keeps your lists, notes, and tags on your iPhone, so your complete lead list is never parked on a dialer vendor's servers (Apple privacy label: Data Not Collected). If you would rather not store your prospect database in someone else's cloud, that difference matters as much as the price." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Mojo and PhoneBurner are cloud CRMs: your contacts, notes, and call activity sit on their servers under their privacy policies. Cold Call X keeps your lists, notes, and tags on your iPhone, so your complete lead list is never parked on a dialer vendor's servers. If you would rather not store your prospect database in someone else's cloud, that difference matters as much as the price." }
           },
           {
             "@type": "Question",
@@ -166,7 +169,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-mojo-vs-phoneburner&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (58 ratings, checked September 6, 2026) &middot; $12.99 one-time &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -335,7 +338,7 @@
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Honest fit: who should pick what</h2>
         <p class="text-[var(--muted)] leading-relaxed mb-4"><strong class="text-[var(--ink)]">Stay on Mojo</strong> if you run a real estate team that wants triple-line volume, supervisor coaching, and Mojo's own expired/FSBO data feeds: that combination is genuinely hard to replicate, and $214/month is cheap for a functioning call center.</p>
         <p class="text-[var(--muted)] leading-relaxed mb-4"><strong class="text-[var(--ink)]">Stay on PhoneBurner</strong> if you're an SDR team married to Salesforce or HubSpot and want disposition-driven follow-up without building it yourself. The integrations and support are real.</p>
-        <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">Consider Cold Call X</strong> if you're one of the many solo agents, investors, or wholesalers subsidizing team software: you import a list (CSV or Google Sheets), tap once, and dial straight through from your own number, with Hot/Warm/Cold tags, notes, and callback reminders on-device. <a href="/mojo-dialer-alternative" class="text-[var(--ink)] font-semibold underline">Full Mojo comparison here</a> · <a href="/phoneburner-alternative" class="text-[var(--ink)] font-semibold underline">Full PhoneBurner comparison here</a> · <a href="/real-estate" class="text-[var(--ink)] font-semibold underline">The real estate setup</a>.</p>
+        <p class="text-[var(--muted)] leading-relaxed"><strong class="text-[var(--ink)]">Consider Cold Call X</strong> if you're one of the many solo agents, investors, or wholesalers subsidizing team software: you import a list (CSV or Google Sheets), tap once, and dial straight through from your own number, with one-tap call outcomes, notes, and automatic follow-ups on-device. <a href="/mojo-dialer-alternative" class="text-[var(--ink)] font-semibold underline">Full Mojo comparison here</a> · <a href="/phoneburner-alternative" class="text-[var(--ink)] font-semibold underline">Full PhoneBurner comparison here</a> · <a href="/real-estate" class="text-[var(--ink)] font-semibold underline">The real estate setup</a>.</p>
       </div>
 
       <!-- FAQ -->
@@ -359,11 +362,11 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a cheaper alternative for solo agents?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Cold Call X: a one-time $12.99 iPhone app that power-dials your imported lists from your own number, with on-device storage (Apple label: Data Not Collected) and a 4.7★ App Store rating. It won't run a call center, but for one person with a list, it does the core job for under 1% of a year of Mojo.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Cold Call X: a one-time $12.99 iPhone app that power-dials your imported lists from your own number, with on-device storage and a 4.8★ App Store rating. It won't run a call center, but for one person with a list, it does the core job for under 1% of a year of Mojo.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Where does my lead data live with each tool?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Mojo and PhoneBurner are cloud CRMs: your contacts, notes, and call activity sit on their servers under their privacy policies. Cold Call X keeps your lists, notes, and tags on your iPhone, so your complete lead list is never parked on a dialer vendor's servers (Apple privacy label: Data Not Collected). If you would rather not store your prospect database in someone else's cloud, that difference matters as much as the price.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Mojo and PhoneBurner are cloud CRMs: your contacts, notes, and call activity sit on their servers under their privacy policies. Cold Call X keeps your lists, notes, and tags on your iPhone, so your complete lead list is never parked on a dialer vendor's servers. If you would rather not store your prospect database in someone else's cloud, that difference matters as much as the price.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Do Mojo and PhoneBurner call from my own phone number?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -378,7 +381,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-mojo-vs-phoneburner&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">4.7★ on the App Store (58 ratings, checked September 6, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         <p class="text-sm text-[var(--muted)] mt-3">Dig deeper: <a href="/mojo-dialer-alternative" class="text-[var(--ink)] font-semibold underline">Mojo alternative</a> &middot; <a href="/phoneburner-alternative" class="text-[var(--ink)] font-semibold underline">PhoneBurner alternative</a> &middot; <a href="/blog/power-dialer-for-real-estate-agents" class="text-[var(--ink)] font-semibold underline">Power dialers for real estate agents</a></p>
       </div>
 

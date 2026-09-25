@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Cookie consent. MUST stay above gtag.js: it seeds the Consent Mode
+       defaults the tag reads on boot. -->
+  <script src="/consent.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CKNY5PSV1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0CKNY5PSV1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Salesforce Dialer for iPhone: Call Leads, Log Tasks | Cold Call X</title>
+  <meta name="description" content="Power dial Salesforce leads and contacts from your iPhone, on your own number. Each outcome is logged as a completed call task and notes sync both ways." />
+  <link rel="canonical" href="https://coldcallx.app/blog/salesforce-dialer-iphone" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Vadym Berberian" />
+
+  <meta name="apple-itunes-app" content="app-id=6751245004">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/blog/salesforce-dialer-iphone" />
+  <meta property="og:title" content="Salesforce Dialer for iPhone: Call Leads, Log Call Tasks" />
+  <meta property="og:description" content="Power dial Salesforce leads and contacts from your iPhone, on your own number. Each outcome is logged as a completed call task and notes sync both ways."/>
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Salesforce Dialer for iPhone: Call Leads, Log Call Tasks" />
+  <meta name="twitter:description" content="Power dial Salesforce leads and contacts from your iPhone, on your own number. Each outcome is logged as a completed call task and notes sync both ways."/>
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Salesforce Dialer for iPhone: Call Leads and Contacts, Log Every Call Task",
+        "description": "How to power dial Salesforce leads and contacts from an iPhone on your own number, what gets logged in Salesforce, and when a cloud Salesforce dialer is the better fit.",
+        "image": "https://coldcallx.app/logo.png",
+        "datePublished": "2026-09-25",
+        "dateModified": "2026-09-25",
+        "author":{"@type":"Person","name":"Vadym Berberian"},
+        "publisher": { "@id": "https://coldcallx.app/#organization" },
+        "mainEntityOfPage": "https://coldcallx.app/blog/salesforce-dialer-iphone",
+        "isPartOf": { "@id": "https://coldcallx.app/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Cold Call X", "item": "https://coldcallx.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://coldcallx.app/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Salesforce dialer for iPhone", "item": "https://coldcallx.app/blog/salesforce-dialer-iphone" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://coldcallx.app/blog/salesforce-dialer-iphone#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I power dial Salesforce leads from my iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X imports Salesforce leads or contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome is logged on the record as a completed call task, and notes sync both ways. The Salesforce integration is in beta, and the app costs $12.99 once with no subscription." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Salesforce records can I import?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Leads or contacts: every record you can see, only the ones you own, or one of your list views. For each record the app reads first name, last name, phone, mobile phone, company or account name, title, email and the Salesforce record ID." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Cold Call X update the lead status in Salesforce?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only if you turn it on. The app reads your org's lead statuses so you can pair each call outcome with one. With that on, a lead's status moves to the status you paired with the outcome, and only from a status the app manages or your org's default." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does my Salesforce data go through Cold Call X's servers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Salesforce's sign-in returns directly to the app, so no Cold Call X server is involved: the sign-in, reading records, and logging calls and notes all go directly between your iPhone and Salesforce." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Cold Call X a replacement for a Salesforce call center?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. It doesn't record calls, route leads between reps or give managers dashboards. It is built for the rep who makes their own calls and wants every attempt and conversation logged in Salesforce without a per-seat dialer." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="site site--read">
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="/">
+        <img src="/icon-192.png" alt="" width="28" height="28">
+        Cold Call X
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/#tutorials">Tutorials</a>
+        <a class="nav__cta" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-salesforce-dialer-iphone&pt=128076300&mt=8">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 relative">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
+
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Salesforce dialer for iPhone: call leads and log every call task</h1>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; September 2026 &middot; 7 min read</p>
+
+      <article class="article article-card p-7 sm:p-10">
+        <p class="text-lg">Most Salesforce dialers assume you sit at a desk: a softphone in the browser, a VoIP number, a seat license. Plenty of people who live in Salesforce do their calling somewhere else, in the car between meetings, from a job site, on the phone they already carry. <strong>Cold Call X 2.0 brings the call list to that phone</strong>: it imports your Salesforce leads or contacts, dials them from your own number, and logs every outcome back as a completed call task.</p>
+
+        <h2>What it does, in one minute</h2>
+        <ul>
+          <li><strong>Import leads or contacts</strong>: every record you can see, only the ones you own, or one of your list views.</li>
+          <li><strong>Dial</strong> through them on your iPhone, one call at a time, through your own carrier.</li>
+          <li><strong>Tap the outcome</strong>: No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested.</li>
+          <li><strong>Salesforce gets a completed call task</strong> on the lead or contact with the outcome you chose, and your notes are saved on the record.</li>
+          <li><strong>Lead status can follow</strong>, if you switch it on: pair each outcome with one of your org's statuses.</li>
+          <li><strong>The next attempt schedules itself</strong> in the app, with morning reminders and an exact-time alert for booked callbacks.</li>
+        </ul>
+        <p>The Salesforce integration is in <strong>beta</strong> in Cold Call X 2.0. The app costs $12.99 once; there's no seat to license and no VoIP number to rent.</p>
+
+        <h2>Exactly what gets logged</h2>
+        <div class="cmp-wrap">
+          <table class="cmp-table">
+            <caption class="sr-only">What Cold Call X reads from and writes to Salesforce</caption>
+            <thead>
+              <tr><th>Direction</th><th>What</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Salesforce &rarr; iPhone</th><td>Leads or contacts</td><td>All records you can see, only the ones you own, or one list view. Fields: first and last name, phone, mobile phone, company or account name, title, email, record ID</td></tr>
+              <tr><th scope="row">Salesforce &rarr; iPhone</th><td>Your org's setup</td><td>List view names, your call results and your lead statuses, so outcomes can be matched to how your org works</td></tr>
+              <tr><th scope="row">Salesforce &rarr; iPhone</th><td>Notes</td><td>Notes written on the record in Salesforce show in the app</td></tr>
+              <tr><th scope="row">iPhone &rarr; Salesforce</th><td>Call outcome</td><td>A completed call task on the lead or contact, with the outcome you chose</td></tr>
+              <tr><th scope="row">iPhone &rarr; Salesforce</th><td>Lead status</td><td>Off unless you turn it on; moves only from a status the app manages or your org's default</td></tr>
+              <tr><th scope="row">iPhone &rarr; Salesforce</th><td>Notes</td><td>Notes you type are saved as notes on the record</td></tr>
+              <tr><th scope="row">Neither way</th><td>Everything else</td><td>Opportunities, accounts, campaigns and other fields are not read or changed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Clearing an outcome or deleting a note in the app removes the task or note the app created, and the app never deletes anything it didn't create. Your activity history stays clean, and nothing a colleague logged can be touched.</p>
+
+        <h2>Why the outcome matching matters</h2>
+        <p>Every Salesforce org has its own vocabulary. One team's "Attempted - Left Voicemail" is another team's "Working - Contacted". A dialer that writes its own labels leaves you with activity history nobody can report on. Because Cold Call X reads your org's call results and lead statuses, you pair the six outcomes with the values your org already uses, and the tasks it logs fit your existing reports and list views.</p>
+        <p>Lead status changes are the one write the app never makes on its own: they stay off until you turn them on, and even then the app only moves a lead that is still in a status it manages or your org's default. A lead a colleague moved to Qualified stays Qualified.</p>
+
+        <h2>How to set it up</h2>
+        <ol>
+          <li><strong>Get Cold Call X</strong> on your iPhone.</li>
+          <li><strong>Choose Salesforce as the import source</strong> and sign in with Salesforce. You approve access on Salesforce's own screen.</li>
+          <li><strong>Pick leads or contacts</strong>, then all records you can see, the ones you own, or a list view. A list view is the cleanest way to define a call block, because it's already how your org slices records.</li>
+          <li><strong>Match outcomes</strong> to your org's call results, and decide whether lead status should follow.</li>
+          <li><strong>Dial.</strong> Calls go out through the iPhone's phone app from your own number; Calling Hours only dials leads during their own daytime.</li>
+          <li><strong>Tap the outcome, add a note</strong>, and the task lands in Salesforce while the next lead is already on screen.</li>
+        </ol>
+
+        <h2>Where your Salesforce data goes</h2>
+        <p>Salesforce's sign-in returns directly to the app, so <strong>no Cold Call X server is involved at any point</strong>: signing in, reading records, and logging calls and notes all go directly between your iPhone and Salesforce. The imported records are stored on your iPhone like any other list. Your Salesforce token is kept in the iPhone Keychain and excluded from backups; logging out in Settings removes it and asks Salesforce to revoke it, and an admin can also remove access under Connected Apps OAuth Usage in Setup. Details are in the <a href="/privacy">privacy policy</a>.</p>
+
+        <h2>Cold Call X or a cloud Salesforce dialer?</h2>
+        <p>The AppExchange is full of dialers, and for a call center they are the right tool. Here is where each approach fits:</p>
+        <div class="cmp-wrap">
+          <table class="cmp-table">
+            <caption class="sr-only">Cold Call X compared with a typical cloud Salesforce dialer</caption>
+            <thead>
+              <tr><th></th><th>Cold Call X</th><th>Typical cloud Salesforce dialer</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Price</th><td class="hi">$12.99 once</td><td>Per user, per month</td></tr>
+              <tr><th scope="row">Number prospects see</th><td class="hi">Your own mobile number</td><td>A VoIP number you rent</td></tr>
+              <tr><th scope="row">Where you dial</th><td class="hi">iPhone</td><td>Browser softphone, often with a mobile app</td></tr>
+              <tr><th scope="row">Logged to Salesforce</th><td class="hi">Completed call task, notes, optional lead status</td><td>Call activity, often with recordings</td></tr>
+              <tr><th scope="row">Recording, coaching, dashboards</th><td>No</td><td>Usually</td></tr>
+              <tr><th scope="row">Setup</th><td class="hi">Sign in on the phone</td><td>Usually an admin install and user licenses</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Choose a cloud dialer</strong> if you run a team that needs recordings, routing and manager reporting. <strong>Choose Cold Call X</strong> if you make your own calls, want prospects to see your real number, and need Salesforce to have an honest record of every attempt without another license. If your contacts live in HubSpot instead, see the <a href="/blog/hubspot-dialer-iphone">HubSpot dialer for iPhone</a> guide.</p>
+
+        <h2>Making it stick</h2>
+        <ul>
+          <li><strong>One list view per call block.</strong> "My open leads, no activity in 14 days" is a better session than "all leads".</li>
+          <li><strong>Outcome first, note second.</strong> The outcome drives the follow-up and the task; the note is what makes the next call personal.</li>
+          <li><strong>Watch the numbers.</strong> List stats show connect rate, outcomes and the best time to call from your own dials; a daily dial goal and streak keep the habit.</li>
+          <li><strong>Respect the clock.</strong> Calling Hours handles time zones; the legal windows by country and state are in our <a href="/blog/calling-hours">calling hours guide</a>.</li>
+        </ul>
+        <p>For the dialing modes themselves, see the <a href="/auto-dialer-iphone">iPhone dialer guide</a>; for spreadsheet lists, the <a href="/blog/google-sheets-dialer">Google Sheets dialer</a>.</p>
+      </article>
+
+      <!-- FAQ -->
+      <h2 class="text-3xl font-black tracking-tight mb-6 mt-12 text-center">Salesforce dialing questions, answered</h2>
+      <div class="space-y-4">
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I power dial Salesforce leads from my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X imports Salesforce leads or contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome is logged on the record as a completed call task, and notes sync both ways. The Salesforce integration is in beta, and the app costs $12.99 once with no subscription.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Which Salesforce records can I import?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Leads or contacts: every record you can see, only the ones you own, or one of your list views. For each record the app reads first name, last name, phone, mobile phone, company or account name, title, email and the Salesforce record ID.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X update the lead status in Salesforce?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Only if you turn it on. The app reads your org's lead statuses so you can pair each call outcome with one. With that on, a lead's status moves to the status you paired with the outcome, and only from a status the app manages or your org's default.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does my Salesforce data go through Cold Call X's servers?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Salesforce's sign-in returns directly to the app, so no Cold Call X server is involved: the sign-in, reading records, and logging calls and notes all go directly between your iPhone and Salesforce.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is Cold Call X a replacement for a Salesforce call center?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. It doesn't record calls, route leads between reps or give managers dashboards. It is built for the rep who makes their own calls and wants every attempt and conversation logged in Salesforce without a per-seat dialer.</p>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-card p-8 lg:p-12 text-center mt-12">
+        <h2 class="text-3xl font-black tracking-tight mb-4">Work your Salesforce leads from your iPhone</h2>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Import leads or contacts, dial from your own number, and log every outcome as a completed call task. 4.8★ on the App Store (64 ratings, checked September 25, 2026).</p>
+        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-salesforce-dialer-iphone&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
+        </a>
+        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <nav class="foot__links" aria-label="Guides">
+        <a href="/auto-dialer-iphone">Auto Dialer for iPhone</a>
+        <a href="/cold-calling-apps">Cold Calling Apps</a>
+        <a href="/real-estate">Real Estate</a>
+        <a href="/recruiters">Recruiters</a>
+        <a href="/insurance">Insurance</a>
+        <a href="/loan-officers">Loan Officers</a>
+        <a href="/blog/">All Guides</a>
+      </nav>
+      <div class="foot__legal">
+        <p>Copyright © 2026 Berberian Enterprises Inc.</p>
+        <nav aria-label="Legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/cookies">Cookies</a>
+          <a href="mailto:support@coldcallx.app">Support</a>
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-salesforce-dialer-iphone&pt=128076300&mt=8">App Store</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

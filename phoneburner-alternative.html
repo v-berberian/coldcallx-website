@@ -57,7 +57,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line: no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -70,9 +70,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -107,7 +110,7 @@
           {
             "@type": "Question",
             "name": "What's the best PhoneBurner alternative for solo reps?",
-            "acceptedAnswer": { "@type": "Answer", "text": "If you prospect alone from your iPhone, Cold Call X does the core job: advancing through an imported call list with tags, notes, and callback scheduling, for a one-time $12.99 instead of a monthly per-user subscription. You give up multi-user CRM features you probably don't use as a solo. Cold Call X holds a 4.7-out-of-5 App Store rating with Apple's Data Not Collected privacy label: no account required, with your lists and notes stored locally on your device." }
+            "acceptedAnswer": { "@type": "Answer", "text": "If you prospect alone from your iPhone, Cold Call X does the core job: advancing through an imported call list with one-tap outcomes, notes, and automatic follow-ups, for a one-time $12.99 instead of a monthly per-user subscription. You give up multi-user CRM features you probably don't use as a solo. Cold Call X holds a 4.8-out-of-5 App Store rating: no account required, with your lists and notes stored locally on your device." }
           },
           {
             "@type": "Question",
@@ -127,7 +130,7 @@
           {
             "@type": "Question",
             "name": "What do I give up by switching from PhoneBurner to Cold Call X?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Team machinery: shared seats, lead distribution, Salesforce and HubSpot sync, admin dashboards, and call coaching stay with PhoneBurner. What you keep is the part that books meetings: fast list advancing from your own number, tags, notes, and callback scheduling, with your data stored on your device." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Team machinery: shared seats, lead distribution, admin dashboards, recording, and call coaching stay with PhoneBurner. What you keep is the part that books meetings: fast list advancing from your own number, one-tap outcomes, notes, and follow-ups, with your data stored on your device. If you work from HubSpot or Salesforce, Cold Call X 2.0 imports from both and logs each call's outcome and notes back (beta)." }
           }
         ]
       }
@@ -161,7 +164,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-phoneburner-alternative&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (59 ratings, checked September 8, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -177,7 +180,7 @@
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">The features solo reps pay for and never open</h2>
         <ul class="text-[var(--muted)] leading-relaxed list-disc pl-6 space-y-3">
           <li><strong class="text-[var(--ink)]">A CRM you already have.</strong> If your leads live in a spreadsheet, a CSV, or Google Sheets, you don't need a second CRM with a per-user seat: Cold Call X imports your list and keeps notes, tags, and call history on the lead itself.</li>
-          <li><strong class="text-[var(--ink)]">Integrations for teams.</strong> Salesforce and HubSpot sync, admin portals, live call monitoring; that's team infrastructure. Solo prospecting needs a fast dialer and follow-up reminders, not middleware.</li>
+          <li><strong class="text-[var(--ink)]">Integrations for teams.</strong> Admin portals, live call monitoring, Zapier-style middleware; that's team infrastructure. Solo prospecting needs a fast dialer and follow-up reminders, and if your contacts live in <a href="/blog/hubspot-dialer-iphone" class="text-[var(--ink)] font-semibold underline">HubSpot</a> or <a href="/blog/salesforce-dialer-iphone" class="text-[var(--ink)] font-semibold underline">Salesforce</a>, Cold Call X 2.0 syncs outcomes and notes back to them (beta).</li>
           <li><strong class="text-[var(--ink)]">Voice infrastructure.</strong> Cloud dialer minutes are a real cost, which is why they're a real line item on your invoice. Your iPhone already has unlimited minutes with a caller ID prospects trust.</li>
           <li><strong class="text-[var(--ink)]">Onboarding calls.</strong> When the platform is complicated, "expert onboarding" is a feature. When it's a dialer you already know how to use, it's overhead.</li>
         </ul>
@@ -190,8 +193,8 @@
         <ul class="text-[var(--muted)] leading-relaxed list-disc pl-6 space-y-3">
           <li><strong class="text-[var(--ink)]">One-tap advance through your list.</strong> Import a CSV or Google Sheet, auto-map columns, and dial. No number is ever typed by hand.</li>
           <li><strong class="text-[var(--ink)]">Your own number out.</strong> Calls go through your iPhone's native phone app. No VoIP number to get spam-flagged, no per-minute meter.</li>
-          <li><strong class="text-[var(--ink)]">Disposition + follow-up.</strong> Tag Hot/Warm/Cold mid-call, jot notes, and schedule callbacks as iOS calendar events before the next call connects.</li>
-          <li><strong class="text-[var(--ink)]">Timezone-aware.</strong> Filter lists by timezone so you're always calling at a sane hour, the cheapest answer-rate boost there is.</li>
+          <li><strong class="text-[var(--ink)]">Disposition + follow-up.</strong> Tap the outcome as you hang up, jot notes, and book callbacks with an exact-time reminder before the next call connects.</li>
+          <li><strong class="text-[var(--ink)]">Calling Hours.</strong> Leads are only dialed during their own daytime, so you're always calling at a sane hour, the cheapest answer-rate boost there is.</li>
           <li><strong class="text-[var(--ink)]">No account, no lock-in.</strong> Your lead data stays on your device and exports whenever you want it.</li>
         </ul>
       </div>
@@ -227,12 +230,12 @@
               </tr>
               <tr>
                 <th scope="row">Privacy label</th>
-                <td class="hi">Data Not Collected (Apple App Store label)</td>
+                <td class="hi">Leads never leave your iPhone (Apple label: Data Not Linked to You, for anonymous usage stats you can switch off)</td>
                 <td>Cloud platform account under vendor policy</td>
               </tr>
               <tr>
                 <th scope="row">CRM</th>
-                <td class="hi">Built-in tags, notes, history per lead</td>
+                <td class="hi">Built-in call outcomes, notes, history per lead; HubSpot &amp; Salesforce sync (beta)</td>
                 <td>Full CRM + Salesforce/HubSpot/Zapier sync</td>
               </tr>
               <tr>
@@ -265,7 +268,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What's the best PhoneBurner alternative for solo reps?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">If you prospect alone from your iPhone, Cold Call X does the core job: advancing through an imported call list with tags, notes, and callback scheduling, for a one-time $12.99 instead of a monthly per-user subscription. You give up multi-user CRM features you probably don't use as a solo. Cold Call X holds a 4.7-out-of-5 App Store rating with Apple's Data Not Collected privacy label: no account required, with your lists and notes stored locally on your device.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">If you prospect alone from your iPhone, Cold Call X does the core job: advancing through an imported call list with one-tap outcomes, notes, and automatic follow-ups, for a one-time $12.99 instead of a monthly per-user subscription. You give up multi-user CRM features you probably don't use as a solo. Cold Call X holds a 4.8-out-of-5 App Store rating: no account required, with your lists and notes stored locally on your device.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does PhoneBurner call from my own number?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -281,7 +284,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What do I give up by switching from PhoneBurner to Cold Call X?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Team machinery: shared seats, lead distribution, Salesforce and HubSpot sync, admin dashboards, and call coaching stay with PhoneBurner. What you keep is the part that books meetings: fast list advancing from your own number, tags, notes, and callback scheduling, with your data stored on your device.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Team machinery: shared seats, lead distribution, admin dashboards, recording, and call coaching stay with PhoneBurner. What you keep is the part that books meetings: fast list advancing from your own number, one-tap outcomes, notes, and follow-ups, with your data stored on your device. If you work from HubSpot or Salesforce, Cold Call X 2.0 imports from both and logs each call's outcome and notes back (beta).</p>
         </details>
       </div>
 
@@ -292,7 +295,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-phoneburner-alternative&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription</p>
       </div>
 
     </div>

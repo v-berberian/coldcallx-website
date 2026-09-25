@@ -76,7 +76,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -89,9 +89,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -164,7 +167,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-auto-dialer-small-business&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (62 ratings, checked September 16, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -268,7 +271,7 @@
           <p>• <strong class="text-[var(--ink)]">A shared calling queue.</strong> Everyone pulling from one live list, with leads locked while being worked.</p>
           <p>• <strong class="text-[var(--ink)]">Call recording and coaching.</strong> Managers listening in, whispering, and reviewing calls, training infrastructure, not just dialing.</p>
           <p>• <strong class="text-[var(--ink)]">Predictive or parallel pacing.</strong> Multiple lines dialing at once with answered calls routed to free reps. Requires cloud telephony by definition.</p>
-          <p>• <strong class="text-[var(--ink)]">Deep CRM sync.</strong> Two-way activity logging with HubSpot, Salesforce, and friends, plus admin dashboards and audit trails.</p>
+          <p>• <strong class="text-[var(--ink)]">Deep CRM sync.</strong> Recordings, activity logging across every object, admin dashboards and audit trails. (Logging each call&rsquo;s outcome and notes to HubSpot or Salesforce no longer needs a platform: Cold Call X 2.0 does it from your iPhone, in beta: see the <a href="/blog/hubspot-dialer-iphone" class="text-[var(--ink)] font-semibold underline">HubSpot</a> and <a href="/blog/salesforce-dialer-iphone" class="text-[var(--ink)] font-semibold underline">Salesforce</a> guides.)</p>
         </div>
         <p class="text-[var(--muted)] leading-relaxed mt-4">If none of those describe your week, you are paying a monthly seat fee for capabilities you never open. If several do, the subscription is doing real work, pick the platform whose per-seat price and contract terms you have verified yourself, not the one that ranks first. For legality context on dialing modes and consent, see our <a href="/blog/auto-dialer-laws" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">auto dialer laws</a> guide (not legal advice).</p>
       </div>
@@ -286,8 +289,8 @@
         <div class="space-y-4 text-[var(--muted)] leading-relaxed">
           <p><strong class="text-[var(--ink)]">1. Import your list.</strong> CSV from a list provider or CRM export, or connect a Google Sheet directly, columns auto-map, multi-number leads stay one row. Separate lists per campaign; pin the one you work daily.</p>
           <p><strong class="text-[var(--ink)]">2. Suppress who you shouldn't call.</strong> Add past do-not-call requests, angry ex-customers, and internal numbers to the built-in DNC list once; the app skips them from every dial session. (Note: it manages your own suppression list; it does not scrub the National Do Not Call Registry for you.)</p>
-          <p><strong class="text-[var(--ink)]">3. Power dial at a set pace.</strong> One tap starts the run; when a call ends, the next number goes out. Choose the pacing, a countdown between calls or 0-second Rocket mode. Filter by timezone so nobody gets a 7 a.m. ring.</p>
-          <p><strong class="text-[var(--ink)]">4. Tag and note as you go.</strong> Hot, Warm, Cold tags plus notes per lead, the objection heard, the reorder date, who actually decides. Second passes filter straight to the Hot list.</p>
+          <p><strong class="text-[var(--ink)]">3. Power dial at a set pace.</strong> One tap starts the run; when a call ends, the next number goes out. Choose the pacing, a countdown between calls or 0-second Rocket mode. Calling Hours only dials leads during their own daytime, so nobody gets a 7 a.m. ring.</p>
+          <p><strong class="text-[var(--ink)]">4. Log the outcome and note as you go.</strong> One tap records the outcome, Interested, Callback, Voicemail and the rest, and schedules the next attempt. Notes hold the objection heard, the reorder date, who actually decides.</p>
           <p><strong class="text-[var(--ink)]">5. Book the follow-up before you hang up.</strong> "Call me Tuesday" becomes a native calendar event; one-tap text, WhatsApp, or email templates keep the tone consistent across whoever is dialing that week.</p>
         </div>
         <p class="text-[var(--muted)] leading-relaxed mt-4">Everything stays on the phone: no account, no per-seat login, and your complete lead list isn't parked on a dialer vendor's servers, connecting each call uses only the information needed to place it, and optional Google Sheets import connects directly to Google. See the <a href="/privacy">Privacy Policy</a> for details. Curious what one-time pricing looks like next to the app-store competition? We compared it with <a href="/swiftcall-alternative" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">SwiftCall, the closest one-time-price iPhone rival</a>.</p>
@@ -329,7 +332,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-auto-dialer-small-business&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription</p>
       </div>
 
     </div>

@@ -209,6 +209,68 @@ body.site {
   box-shadow: 0 40px 70px -30px rgba(0, 0, 0, 0.35);
 }
 
+/* What's in 2.0: the feature list under the hero. Plain type on the page
+   ground in three columns, no cards, so it reads like the App Store
+   description rather than a pricing table. */
+.features { padding-top: 16px; padding-bottom: 96px; }
+
+.site .features__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.6vw, 56px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.features__sub {
+  max-width: 34ch;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 19px;
+  letter-spacing: -0.018em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 36px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site .features__grid h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.features__grid p {
+  margin: 8px 0 0;
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.features__grid a { color: var(--link); text-decoration: none; }
+.features__grid a:hover { text-decoration: underline; }
+
+@media (max-width: 820px) {
+  .features__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .features { padding-bottom: 72px; }
+  .features__grid { grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
+}
+
 /* 2.0 launch giveaway band. index.html keeps it hidden until the giveaway
    worker says codes are left. Centred on a wash of the brand's two colours
    so it reads as an announcement, not as part of the hero. */

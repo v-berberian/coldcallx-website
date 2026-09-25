@@ -58,7 +58,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -71,9 +71,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -118,7 +121,7 @@
           {
             "@type": "Question",
             "name": "What should I look for in a cold calling app?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Fast list import from CSV or Google Sheets, auto-dialing to move through a list quickly, lead tagging and notes, timezone and called/uncalled filters, follow-up scheduling, and clear pricing. Decide whether you need cloud VoIP features or prefer to dial from your own number at a one-time cost." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Fast list import from CSV or Google Sheets, auto-dialing to move through a list quickly, call outcomes and notes, calling-hours control, automatic follow-ups, a sync to your CRM or sheet, and clear pricing. Decide whether you need cloud VoIP features or prefer to dial from your own number at a one-time cost." }
           }
         ]
       }
@@ -152,7 +155,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-cold-calling-apps&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (59 ratings, checked August 31, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -201,7 +204,8 @@
           <p>• <strong class="text-[var(--ink)]">Fast list import.</strong> You should be able to load a CSV or Google Sheet with auto-mapped columns and start dialing in under a minute.</p>
           <p>• <strong class="text-[var(--ink)]">Auto-dialing.</strong> The whole point of a cold calling app is to move through a list without retyping numbers: look for hands-free or one-tap dialing with adjustable speed.</p>
           <p>• <strong class="text-[var(--ink)]">A lightweight CRM.</strong> Tags, notes, last-called dates, and multi-number leads keep a big list workable without a separate tool.</p>
-          <p>• <strong class="text-[var(--ink)]">Smart filters.</strong> Timezone and called/uncalled filters mean you always dial the right lead at the right time.</p>
+          <p>• <strong class="text-[var(--ink)]">Calling Hours.</strong> Leads are only dialed during their own daytime, in any time zone, so you reach the right lead at the right time (<a href="/blog/calling-hours" class="text-[var(--ink)] font-semibold underline">legal calling hours</a>).</p>
+          <p>• <strong class="text-[var(--ink)]">CRM and Sheets sync.</strong> Import from <a href="/blog/hubspot-dialer-iphone" class="text-[var(--ink)] font-semibold underline">HubSpot</a>, <a href="/blog/salesforce-dialer-iphone" class="text-[var(--ink)] font-semibold underline">Salesforce</a> (beta) or <a href="/blog/google-sheets-dialer" class="text-[var(--ink)] font-semibold underline">Google Sheets</a>, and call outcomes and notes go back where they came from.</p>
           <p>• <strong class="text-[var(--ink)]">Follow-ups.</strong> Calendar callbacks and one-tap text, WhatsApp, or email templates turn a conversation into a booked next step.</p>
           <p>• <strong class="text-[var(--ink)]">Honest pricing.</strong> Decide whether you need cloud VoIP features billed monthly, or prefer to dial from your own number at a one-time cost.</p>
         </div>
@@ -230,7 +234,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What should I look for in a cold calling app?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Fast list import from CSV or Google Sheets, auto-dialing to move through a list quickly, lead tagging and notes, timezone and called/uncalled filters, follow-up scheduling, and clear pricing. Decide whether you need cloud VoIP features or prefer to dial from your own number at a one-time cost.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Fast list import from CSV or Google Sheets, auto-dialing to move through a list quickly, call outcomes and notes, calling-hours control, automatic follow-ups, a sync to your CRM or sheet, and clear pricing. Decide whether you need cloud VoIP features or prefer to dial from your own number at a one-time cost.</p>
         </details>
       </div>
 
@@ -241,7 +245,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-cold-calling-apps&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">4.7★ on the App Store (59 ratings, checked August 31, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
       </div>
 
     </div>

@@ -57,7 +57,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line: no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -70,9 +70,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -107,7 +110,7 @@
           {
             "@type": "Question",
             "name": "What is the cheapest alternative to Mojo Dialer?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For solo agents and investors who just need to work a list fast, Cold Call X is the cheapest real option: a one-time $12.99 purchase on the App Store with no monthly fee. It dials through your iPhone's native phone app from your own number, so there are also no per-minute VoIP charges. It carries a 4.7-out-of-5 App Store rating and Apple's Data Not Collected privacy label: there is no account to create, and your lists and notes stay stored locally on your device." }
+            "acceptedAnswer": { "@type": "Answer", "text": "For solo agents and investors who just need to work a list fast, Cold Call X is the cheapest real option: a one-time $12.99 purchase on the App Store with no monthly fee. It dials through your iPhone's native phone app from your own number, so there are also no per-minute VoIP charges. It carries a 4.8-out-of-5 App Store rating, there is no account to create, and your lists and notes stay stored locally on your device." }
           },
           {
             "@type": "Question",
@@ -166,7 +169,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-mojo-dialer-alternative&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (59 ratings, checked September 7, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+ &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -217,8 +220,8 @@
           <li><strong class="text-[var(--ink)]">Your number, your caller ID.</strong> Every call goes out from the number on your business card. Callbacks ring your pocket, not a browser tab.</li>
           <li><strong class="text-[var(--ink)]">$12.99 once.</strong> No per-seat fees, no licenses, no per-minute charges, no contract. It's an App Store purchase, not a SaaS relationship.</li>
           <li><strong class="text-[var(--ink)]">CSV imports that auto-map.</strong> Export your leads from Mojo's Lead Manager, drop the CSV in, and keep dialing. Separate lists per market or lead source.</li>
-          <li><strong class="text-[var(--ink)]">Built for follow-up.</strong> Hot/Warm/Cold tags, notes, last-called dates, timezone filters, and callback reminders that land in your iOS calendar.</li>
-          <li><strong class="text-[var(--ink)]">Your data stays on your device.</strong> No account, no cloud, no lead list sitting on someone else's servers.</li>
+          <li><strong class="text-[var(--ink)]">Built for follow-up.</strong> One-tap call outcomes, notes, last-called dates, Calling Hours, and automatic follow-ups, with callback reminders that can land in your iOS calendar.</li>
+          <li><strong class="text-[var(--ink)]">Your data stays on your device.</strong> No account, no vendor cloud, no lead list sitting on someone else's servers. Backups are encrypted into your own iCloud.</li>
         </ul>
       </div>
 
@@ -263,7 +266,7 @@
               </tr>
               <tr>
                 <th scope="row">Privacy label</th>
-                <td class="hi">Data Not Collected (Apple App Store label)</td>
+                <td class="hi">Leads never leave your iPhone (Apple label: Data Not Linked to You, for anonymous usage stats you can switch off)</td>
                 <td>Cloud SaaS account; data handled under vendor policy</td>
               </tr>
               <tr>
@@ -333,7 +336,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-mojo-dialer-alternative&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription</p>
         <p class="text-sm text-[var(--muted)] mt-3">Torn between the big two? <a href="/mojo-vs-phoneburner" class="text-[var(--ink)] font-semibold underline">Our Mojo vs PhoneBurner head-to-head</a> prices both out. Also comparing <a href="/phoneburner-alternative" class="text-[var(--ink)] font-semibold underline">PhoneBurner</a>? We broke that down too.</p>
       </div>
 

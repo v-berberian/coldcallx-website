@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Cookie consent. MUST stay above gtag.js: it seeds the Consent Mode
+       defaults the tag reads on boot. -->
+  <script src="/consent.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CKNY5PSV1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0CKNY5PSV1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Google Sheets Dialer for iPhone | Cold Call X</title>
+  <meta name="description" content="Turn a Google Sheet into a call list on your iPhone: dial down the rows from your own number and write call notes back to the sheet. $12.99 once." />
+  <link rel="canonical" href="https://coldcallx.app/blog/google-sheets-dialer" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Vadym Berberian" />
+
+  <meta name="apple-itunes-app" content="app-id=6751245004">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/blog/google-sheets-dialer" />
+  <meta property="og:title" content="Google Sheets Dialer for iPhone: Call Down Your Sheet" />
+  <meta property="og:description" content="Turn a Google Sheet into a call list on your iPhone: dial down the rows from your own number and write call notes back to the sheet. $12.99 once."/>
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Google Sheets Dialer for iPhone: Call Down Your Sheet" />
+  <meta name="twitter:description" content="Turn a Google Sheet into a call list on your iPhone: dial down the rows from your own number and write call notes back to the sheet. $12.99 once."/>
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Google Sheets Dialer for iPhone: Call Down Your Sheet and Write Notes Back",
+        "description": "Ways to call a list kept in Google Sheets from an iPhone, and how to dial it with your own number while call notes flow back into the sheet.",
+        "image": "https://coldcallx.app/logo.png",
+        "datePublished": "2026-09-25",
+        "dateModified": "2026-09-25",
+        "author":{"@type":"Person","name":"Vadym Berberian"},
+        "publisher": { "@id": "https://coldcallx.app/#organization" },
+        "mainEntityOfPage": "https://coldcallx.app/blog/google-sheets-dialer",
+        "isPartOf": { "@id": "https://coldcallx.app/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Cold Call X", "item": "https://coldcallx.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://coldcallx.app/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Google Sheets dialer", "item": "https://coldcallx.app/blog/google-sheets-dialer" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://coldcallx.app/blog/google-sheets-dialer#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I power dial a Google Sheet from my iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X connects to Google Sheets, imports the tab you pick as a call list, and dials down it one lead at a time from your own number. Call notes can be written back to the sheet's Notes column, and pulling down refreshes the list when rows change." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Cold Call X change in my spreadsheet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only the Notes column of a list you mapped one for, and only for the leads in that list. It changes no other cell, tab or file, and a list with no Notes column mapped is never written to." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does the app ask for permission to edit my spreadsheets?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Writing call notes back into your sheet needs Google's edit permission. The app uses it only for the Notes column of lists you mapped, lists your spreadsheets by name so you can pick one, and never opens a file you didn't select." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does my spreadsheet data go through Cold Call X's servers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. The sheet's contents are read directly by your iPhone and stored only on it, and your Google token stays in the iPhone Keychain. The data is never sent to Cold Call X or any third party." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="site site--read">
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="/">
+        <img src="/icon-192.png" alt="" width="28" height="28">
+        Cold Call X
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/#tutorials">Tutorials</a>
+        <a class="nav__cta" href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-google-sheets-dialer&pt=128076300&mt=8">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 relative">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
+
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Google Sheets dialer for iPhone: call down your sheet, write notes back</h1>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; September 2026 &middot; 6 min read</p>
+
+      <article class="article article-card p-7 sm:p-10">
+        <p class="text-lg">A Google Sheet is where most call lists actually live: a skip-traced export, a list your team shares, a column of numbers someone pasted in last night. Calling it from an iPhone usually means switching between the Sheets app and the phone, copying numbers, and typing notes into a cell afterwards, if you remember. <strong>Here are the ways to dial a sheet from your phone, and the one that keeps the sheet up to date for you.</strong></p>
+
+        <h2>Three ways to call a Google Sheet from an iPhone</h2>
+        <h3>1. Tap-to-call links in the sheet</h3>
+        <p>Format the phone column as <code>tel:</code> links (a <code>HYPERLINK</code> formula does it) and each number becomes tappable in the Sheets app. It's free and it works for twenty calls. For two hundred it's slow: every call means finding the row, tapping, confirming, coming back, and typing the note by hand, and nothing reminds you who needs a callback.</p>
+        <h3>2. A desktop dialer add-on</h3>
+        <p>Several cloud dialers read Google Sheets through a browser extension or an add-on. They're built for a desk: a laptop, a headset and a VoIP number, usually on a monthly per-user plan. If you call from your phone, they don't help.</p>
+        <h3>3. A dialer app that reads the sheet</h3>
+        <p>An iPhone dialer that connects to Google Sheets turns the tab into a call list, dials down it, and keeps notes and follow-ups next to each lead. That's what Cold Call X does, and since version 2.0 the notes go back into the sheet. It's what most people mean by a "Google Sheets auto dialer", though Cold Call X is a power dialer: it places one call at a time, from your own number, with you on the line.</p>
+
+        <h2>How it works in Cold Call X</h2>
+        <ol>
+          <li><strong>Connect Google.</strong> Sign in with your Google account; the app lists your spreadsheets by name so you can choose one.</li>
+          <li><strong>Pick the spreadsheet and the tab.</strong> The rows become your call list. Columns are mapped automatically: name, company, phone numbers, notes.</li>
+          <li><strong>Dial.</strong> Tap Call and work down the list from your own number; when a call ends, the next lead is ready. Calling Hours only dials leads during their own daytime.</li>
+          <li><strong>Tap the outcome, add a note.</strong> The outcome schedules the next attempt in the app; the note is written into the sheet's Notes column.</li>
+          <li><strong>Pull down to refresh.</strong> When someone adds rows or fixes a number in the sheet, refresh the list instead of re-importing.</li>
+        </ol>
+        <p>A lead with a mobile and an office line is one lead with two numbers, not two rows to call. The <a href="/#tutorials">import and column-mapping tutorials</a> show the whole thing in under a minute.</p>
+
+        <h2>What the app writes to your sheet, and what it doesn't</h2>
+        <p>Handing an app edit access to your spreadsheets deserves a straight answer about what it does with it:</p>
+        <ul>
+          <li><strong>It writes only to the Notes column</strong> of a list you mapped a Notes column for, and only for the leads in that list.</li>
+          <li><strong>It changes no other cell, tab or file.</strong> A list with no Notes column mapped is never written to.</li>
+          <li><strong>It keeps the sheet matching the app.</strong> If you delete a lead's last note in the app, it clears that one cell.</li>
+          <li><strong>It reads only what you pick.</strong> The app lists spreadsheets by name so you can choose, and never opens or reads a file you didn't select.</li>
+          <li><strong>It never sends the data to us.</strong> The sheet's contents are stored only on your iPhone, and your Google token is kept in the iPhone Keychain and excluded from backups.</li>
+        </ul>
+        <p>You can disconnect Google in Settings at any time, and revoke the permission at myaccount.google.com/permissions. The full wording is in the <a href="/privacy">privacy policy</a>.</p>
+
+        <h2>Set up the sheet for calling</h2>
+        <p>Any tab with a phone column will import, but a little structure pays for itself on the first session:</p>
+        <div class="cmp-wrap">
+          <table class="cmp-table">
+            <caption class="sr-only">Suggested columns for a call list in Google Sheets</caption>
+            <thead>
+              <tr><th>Column</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">First name, Last name</th><td>So the lead card and your opener use a name, not a number</td></tr>
+              <tr><th scope="row">Phone, Mobile</th><td>Keep extra numbers in their own columns; they stay on one lead</td></tr>
+              <tr><th scope="row">Company</th><td>Context before the call connects</td></tr>
+              <tr><th scope="row">Email</th><td>For the follow-up after a voicemail</td></tr>
+              <tr><th scope="row">Notes</th><td>Map it, and your call notes land back here for the whole team</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>One tab per campaign.</strong> A tab is a list in the app, so "Expireds September" and "Past clients" stay separate.</li>
+          <li><strong>Scrub before you import.</strong> The app's Do Not Call list blocks a contact across every list and future import, but it doesn't check national registries; screen the sheet against the right register first. The rules by country are in our <a href="/blog/calling-hours">calling hours guide</a>.</li>
+          <li><strong>Share the sheet, not the phone.</strong> Teammates see your notes in the sheet as you call; each person dials from their own iPhone and number.</li>
+        </ul>
+
+        <h2>When a spreadsheet stops being enough</h2>
+        <p>Sheets are great until two people call the same lead the same afternoon, or the list outgrows a tab. If your team already runs on a CRM, Cold Call X imports from it directly: see the <a href="/blog/hubspot-dialer-iphone">HubSpot dialer</a> and <a href="/blog/salesforce-dialer-iphone">Salesforce dialer</a> guides. If you work alone off exports, a sheet plus a dialer is still the fastest, cheapest setup there is; the <a href="/blog/free-vs-paid-power-dialer">free vs paid power dialer guide</a> does the math, and the <a href="/auto-dialer-iphone">iPhone dialer guide</a> covers the dialing modes.</p>
+      </article>
+
+      <!-- FAQ -->
+      <h2 class="text-3xl font-black tracking-tight mb-6 mt-12 text-center">Google Sheets dialing questions, answered</h2>
+      <div class="space-y-4">
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I power dial a Google Sheet from my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X connects to Google Sheets, imports the tab you pick as a call list, and dials down it one lead at a time from your own number. Call notes can be written back to the sheet's Notes column, and pulling down refreshes the list when rows change.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What does Cold Call X change in my spreadsheet?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Only the Notes column of a list you mapped one for, and only for the leads in that list. It changes no other cell, tab or file, and a list with no Notes column mapped is never written to.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Why does the app ask for permission to edit my spreadsheets?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Writing call notes back into your sheet needs Google's edit permission. The app uses it only for the Notes column of lists you mapped, lists your spreadsheets by name so you can pick one, and never opens a file you didn't select.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does my spreadsheet data go through Cold Call X's servers?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. The sheet's contents are read directly by your iPhone and stored only on it, and your Google token stays in the iPhone Keychain. The data is never sent to Cold Call X or any third party.</p>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-card p-8 lg:p-12 text-center mt-12">
+        <h2 class="text-3xl font-black tracking-tight mb-4">Call down your sheet from your iPhone</h2>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Import a Google Sheet, dial from your own number, and write call notes back to the sheet. 4.8★ on the App Store (64 ratings, checked September 25, 2026).</p>
+        <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-google-sheets-dialer&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
+        </a>
+        <p class="text-sm text-[var(--muted)] mt-5">$12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <nav class="foot__links" aria-label="Guides">
+        <a href="/auto-dialer-iphone">Auto Dialer for iPhone</a>
+        <a href="/cold-calling-apps">Cold Calling Apps</a>
+        <a href="/real-estate">Real Estate</a>
+        <a href="/recruiters">Recruiters</a>
+        <a href="/insurance">Insurance</a>
+        <a href="/loan-officers">Loan Officers</a>
+        <a href="/blog/">All Guides</a>
+      </nav>
+      <div class="foot__legal">
+        <p>Copyright © 2026 Berberian Enterprises Inc.</p>
+        <nav aria-label="Legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/cookies">Cookies</a>
+          <a href="mailto:support@coldcallx.app">Support</a>
+          <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-google-sheets-dialer&pt=128076300&mt=8">App Store</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

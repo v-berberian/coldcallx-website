@@ -76,7 +76,7 @@
         "@type": "MobileApplication",
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
-        "alternateName": "Cold Call X: Auto Dialer & CRM",
+        "alternateName": "Cold Call X: Sales Dialer",
         "description": "Cold Call X is an auto dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
@@ -89,9 +89,12 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns",
-          "Hot / Warm / Cold outcome tagging with notes and last-called tracking",
-          "Timezone, called/uncalled, and lead-temperature filters",
+          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
+          "Automatic follow-ups: every outcome schedules the next attempt, with morning reminders",
+          "Calling Hours: leads are only dialed during their own daytime, in any time zone",
+          "HubSpot and Salesforce import (beta), with call outcomes and notes synced back",
+          "Daily dial goal, streaks, and list stats: connect rate, outcomes, and best time to call",
           "Callback scheduling as native iOS calendar events",
           "Text, WhatsApp, and email follow-up templates",
           "One-time purchase with no subscription and no per-seat fees",
@@ -164,7 +167,7 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-auto-dialer-iphone&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.7★ on the App Store (60 ratings, checked September 3, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Apple privacy label: Data Not Collected</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
         </div>
       </div>
 
@@ -203,10 +206,10 @@
         <div class="space-y-4 text-[var(--muted)] leading-relaxed">
           <p><strong class="text-[var(--ink)]">1. Import the list.</strong> Bring in a CSV from wherever your leads live, a list provider, a skip trace, an export from your CRM, or connect a Google Sheet directly and pull the rows in. Columns like name, phone, email, and notes auto-map, so a list is usually dialable within a minute of opening the app. Leads with several numbers stay one lead instead of splintering into duplicate rows.</p>
           <p><strong class="text-[var(--ink)]">2. Power dial down it.</strong> Open the list and tap once. Cold Call X dials through the iPhone's phone app, and when the call ends it brings you straight back and queues the next lead. You set the pace: a countdown that leaves you a few seconds to breathe and write, or 0-second Rocket mode when you're warm and want the next ring immediately.</p>
-          <p><strong class="text-[var(--ink)]">3. Tag the outcome.</strong> Mark each lead Hot, Warm, or Cold as you hang up. Later you can filter to just the Hot ones, or to everyone you haven't called yet, so the second pass through a list is never a guessing game.</p>
+          <p><strong class="text-[var(--ink)]">3. Tap the outcome.</strong> No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested, one tap as you hang up. Each outcome schedules the next attempt for you, so the second pass through a list is never a guessing game.</p>
           <p><strong class="text-[var(--ink)]">4. Take the note before it evaporates.</strong> Notes attach to the lead, not to a scratchpad you'll never find again, the objection you heard, the renewal date, the name of the person who actually decides. The last-called date is tracked for you.</p>
           <p><strong class="text-[var(--ink)]">5. Schedule the callback.</strong> "Call me Thursday after four" becomes a native iOS calendar event before you hang up. Follow up in one tap with a text, WhatsApp message, or email built from your own templates.</p>
-          <p><strong class="text-[var(--ink)]">6. Dial the right leads at the right hour.</strong> Filter by timezone so you're not catching someone at dinner three states away, filter to uncalled leads to keep the pipeline moving, or shuffle the order when a stale list needs a fresh angle. Keep separate lists for separate campaigns and pin the ones you work daily.</p>
+          <p><strong class="text-[var(--ink)]">6. Dial the right leads at the right hour.</strong> Calling Hours only dials a lead during their own daytime, so you're not catching someone at dinner three states away; filter to uncalled leads to keep the pipeline moving, or shuffle the order when a stale list needs a fresh angle. Keep separate lists for separate campaigns and pin the ones you work daily.</p>
         </div>
         <p class="text-[var(--muted)] leading-relaxed mt-4">Lists, tags, notes, and workflow state are stored on your device, no account required. Your complete lead database isn't uploaded to any server; connecting each call uses only the information needed to place it, and optional Google Sheets import connects directly to Google. See the <a href="/privacy">Privacy Policy</a> for details.</p>
       </div>
@@ -336,7 +339,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-auto-dialer-iphone&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">4.7★ on the App Store (60 ratings, checked September 3, 2026) &middot; $12.99 one-time &middot; No subscription &middot; iOS 17.6+</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $12.99 one-time &middot; No subscription</p>
       </div>
 
     </div>

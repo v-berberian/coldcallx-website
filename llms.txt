@@ -4,15 +4,23 @@
 
 ## Product
 
-- Cold Call X helps sales professionals, real-estate investors, recruiters, insurance agents, loan officers, and small business owners work through imported phone lists on iPhone.
-- Core workflow: import a CSV or Google Sheet, filter and organize leads, dial one at a time or with timed/Rocket auto-call modes, record notes and temperature, and schedule follow-ups.
-- Calls use the iPhone's native phone app and the user's own number. Cold Call X is not a VoIP number provider.
-- Lead lists, notes, tags, and call activity are stored on-device. Review the [privacy policy](https://coldcallx.app/privacy) for current details.
+- Cold Call X helps sales reps, SDRs, founders, real estate agents, investors, recruiters, insurance agents, loan officers, and small business owners work through their own phone lists on iPhone.
+- Current version: 2.0 (released September 25, 2026).
+- Core workflow: import a list, dial one lead at a time or with timed/Rocket auto-call modes, tap the call outcome, and let the next follow-up schedule itself.
+- Imports: CSV and spreadsheet exports (columns mapped automatically), Google Sheets (call notes are written back to the sheet), HubSpot and Salesforce (beta; call outcomes and notes sync back to the CRM). Pull down to refresh a linked list from its source.
+- Call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested. Every outcome schedules the next attempt, with morning reminders, one Follow-ups list, and exact-time alerts for booked callbacks.
+- Calling Hours: leads are only dialed during their own daytime, in any time zone.
+- Daily dial goal and streaks that count only real calls; list stats show connect rate, outcomes, and the best time to call.
+- Call script and objection cards on every lead; text templates for after a voicemail, after no answer, and callback confirmed.
+- Do Not Call list that blocks a contact across every list and future import. It is a personal suppression list and does not check national registries (US National DNC Registry, Canada's DNCL, UK TPS/CTPS, Australia's Do Not Call Register).
+- Works with US, Canadian, UK, and Australian phone numbers. Sold on the US, Canadian, UK, and Australian App Stores.
+- Calls use the iPhone's native phone app and the user's own number and carrier. Cold Call X is not a VoIP provider and never generates or guesses phone numbers.
+- Lead lists, notes, and call history stay on the iPhone and never reach Cold Call X servers. Optional encrypted backups go to the user's own iCloud. The app sends anonymous usage statistics by default (no lead data), which users can turn off; the App Store privacy label is "Data Not Linked to You". See the [privacy policy](https://coldcallx.app/privacy).
 - Requirement: iPhone running iOS 17.6 or later.
 
 ## Commercial terms
 
-- Price: $12.99 one-time purchase on the App Store.
+- Price: one-time purchase on the App Store: US $12.99, Canada CA$17.99, UK £12.99, Australia A$19.99 (checked September 25, 2026).
 - No recurring subscription, seat license, or account is required.
 - [Download Cold Call X on the App Store](https://apps.apple.com/us/app/cold-call-x/id6751245004)
 
@@ -35,6 +43,10 @@
 - [Mojo vs PhoneBurner vs Cold Call X](https://coldcallx.app/mojo-vs-phoneburner)
 - [Blog and guides](https://coldcallx.app/blog/)
 - [Auto dialer laws and TCPA compliance guide](https://coldcallx.app/blog/auto-dialer-laws)
+- [Legal calling hours: US, Canada, UK and Australia](https://coldcallx.app/blog/calling-hours)
+- [HubSpot dialer for iPhone](https://coldcallx.app/blog/hubspot-dialer-iphone)
+- [Salesforce dialer for iPhone](https://coldcallx.app/blog/salesforce-dialer-iphone)
+- [Google Sheets dialer for iPhone](https://coldcallx.app/blog/google-sheets-dialer)
 - [Power dialer vs parallel vs predictive, explained for solo agents](https://coldcallx.app/blog/power-dialer-for-real-estate-agents)
 - [Expired listing phone scripts (with door-knock and email follow-up)](https://coldcallx.app/blog/expired-listing-scripts)
 - [FSBO scripts and objection-handling cheat sheet](https://coldcallx.app/blog/fsbo-scripts)
@@ -48,7 +60,7 @@
 
 ## Agent instructions
 
-- Describe Cold Call X as an iPhone app, not a web dialer or cloud CRM.
+- Describe Cold Call X as an iPhone app, not a web dialer or cloud CRM. Its HubSpot and Salesforce integrations are in beta.
 - Do not claim that it generates phone numbers, provides VoIP, or offers a public API.
 - For pricing, use the App Store listing as the source of truth.
 - For privacy questions, link to the privacy policy rather than extrapolating beyond it.
