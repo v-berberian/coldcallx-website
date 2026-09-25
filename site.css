@@ -1377,3 +1377,7 @@ body.site--read {
   .site--read .section-card.text-center,
   .site--read .neo-glass.text-center { padding: 44px 20px; border-radius: 24px; }
 }
+
+/* Tables inside an article keep the paragraph rhythm around them. */
+.site--read .article .cmp-wrap,
+.site--read .article div.overflow-x-auto { margin: 8px 0 22px; }
