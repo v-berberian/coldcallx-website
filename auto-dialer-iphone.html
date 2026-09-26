@@ -132,8 +132,8 @@
           },
           {
             "@type": "Question",
-            "name": "Is there a subscription?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. Cold Call X is a single $12.99 purchase on the App Store. There is no subscription, no per-seat licensing, no per-minute charge, and no account to create. Your leads, notes, tags, and call history stay on your device, so there is nothing to keep paying a server to hold." }
+            "name": "Is there a power dialer for iPhone without a subscription?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer for iPhone that you buy once: a single $12.99 purchase on the App Store. There is no subscription, no per-seat licensing, no per-minute charge, and no account to create. Your leads, notes, call outcomes, and call history stay on your iPhone, so there is nothing to keep paying a server to hold." }
           }
         ]
       }
@@ -188,7 +188,7 @@
       <div class="section-card p-6 lg:p-12 mb-8">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Your line, not their line</h2>
         <p class="text-[var(--muted)] leading-relaxed mb-4">Most apps sold as an auto dialer for iPhone are VoIP clients. You create an account, they issue you a phone number, your voice travels as data through their servers, and you pay every month for the privilege, usually per seat, sometimes with per-minute charges layered on top. The dialer is really a front end for a phone network they own.</p>
-        <p class="text-[var(--muted)] leading-relaxed mb-4">Cold Call X works the other way around. It doesn't operate a phone network and doesn't want to. It hands each number to the iPhone's native phone app, and the call goes out over your carrier's cellular line exactly as if you'd tapped the contact yourself. The app's job is everything around the call: the list, the queue, the tags, the notes, the follow-up. That one architectural choice cascades:</p>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">Cold Call X works the other way around. It doesn't operate a phone network and doesn't want to. It hands each number to the iPhone's native phone app, and the call goes out over your carrier's cellular line exactly as if you'd tapped the contact yourself. The app's job is everything around the call: the list, the queue, the call outcomes, the notes, the follow-up. That one architectural choice cascades:</p>
         <div class="space-y-3 text-[var(--muted)] leading-relaxed">
           <p>• <strong class="text-[var(--ink)]">Your number is the caller ID.</strong> The one on your email signature, the one your callbacks come back to, the one people can look up and recognize, not a freshly issued VoIP line with no history behind it.</p>
           <p>• <strong class="text-[var(--ink)]">Call quality is whatever your carrier gives you.</strong> No jitter from café Wi-Fi, no half-second delay that has you talking over a prospect at the worst possible moment.</p>
@@ -208,10 +208,10 @@
           <p><strong class="text-[var(--ink)]">2. Power dial down it.</strong> Open the list and tap once. Cold Call X dials through the iPhone's phone app, and when the call ends it brings you straight back and queues the next lead. You set the pace: a countdown that leaves you a few seconds to breathe and write, or 0-second Rocket mode when you're warm and want the next ring immediately.</p>
           <p><strong class="text-[var(--ink)]">3. Tap the outcome.</strong> No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested, one tap as you hang up. Each outcome schedules the next attempt for you, so the second pass through a list is never a guessing game.</p>
           <p><strong class="text-[var(--ink)]">4. Take the note before it evaporates.</strong> Notes attach to the lead, not to a scratchpad you'll never find again, the objection you heard, the renewal date, the name of the person who actually decides. The last-called date is tracked for you.</p>
-          <p><strong class="text-[var(--ink)]">5. Schedule the callback.</strong> "Call me Thursday after four" becomes a native iOS calendar event before you hang up. Follow up in one tap with a text, WhatsApp message, or email built from your own templates.</p>
+          <p><strong class="text-[var(--ink)]">5. Schedule the callback.</strong> "Call me Thursday after four" becomes a Callback for that day and time before you hang up, with an exact-time reminder and, if you want it, an event in your calendar. Follow up in one tap with a text, WhatsApp message, or email built from your own templates.</p>
           <p><strong class="text-[var(--ink)]">6. Dial the right leads at the right hour.</strong> Calling Hours only dials a lead during their own daytime, so you're not catching someone at dinner three states away; filter to uncalled leads to keep the pipeline moving, or shuffle the order when a stale list needs a fresh angle. Keep separate lists for separate campaigns and pin the ones you work daily.</p>
         </div>
-        <p class="text-[var(--muted)] leading-relaxed mt-4">Lists, tags, notes, and workflow state are stored on your device, no account required. Your complete lead database isn't uploaded to any server; connecting each call uses only the information needed to place it, and optional Google Sheets import connects directly to Google. See the <a href="/privacy">Privacy Policy</a> for details.</p>
+        <p class="text-[var(--muted)] leading-relaxed mt-4">Lists, notes, call outcomes, and call history are stored on your iPhone, no account required, and they never reach Cold Call X servers. The optional Google Sheets, HubSpot, and Salesforce connections go directly between your iPhone and your own account. See the <a href="/privacy">Privacy Policy</a> for details.</p>
       </div>
 
       <!-- Free intent -->
@@ -312,7 +312,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there an auto dialer built into the iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. iOS has a Phone app and a Contacts app, but nothing that takes a list of leads and works down it for you. You can dial a saved contact in one tap, but there is no built-in way to import a CSV, queue it, dial the next number automatically when a call ends, or tag the outcome. That gap is what a power dialer app for iPhone fills.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. iOS has a Phone app and a Contacts app, but <a href="/blog/call-a-list-of-numbers-on-iphone">nothing that takes a list of leads and works down it for you</a>. You can dial a saved contact in one tap, but there is no built-in way to import a CSV, queue it, dial the next number automatically when a call ends, or tag the outcome. That gap is what a power dialer app for iPhone fills.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Will it dial automatically without me pressing anything?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -327,8 +327,8 @@
           <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Cold Call X is iPhone only and requires iOS 17.6 or later. It is built directly on the iPhone's own phone, contacts, calendar, and messaging integrations, which is exactly what lets it dial from your real number without VoIP, so there is no Android or web version.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Cold Call X is a single $12.99 purchase on the App Store. There is no subscription, no per-seat licensing, no per-minute charge, and no account to create. Your leads, notes, tags, and call history stay on your device, so there is nothing to keep paying a server to hold.</p>
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a power dialer for iPhone without a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer for iPhone that you buy once: a single $12.99 purchase on the App Store. There is no subscription, no per-seat licensing, no per-minute charge, and no account to create. Your leads, notes, call outcomes, and call history stay on your iPhone, so there is nothing to keep paying a server to hold.</p>
         </details>
       </div>
 

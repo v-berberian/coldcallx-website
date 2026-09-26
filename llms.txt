@@ -24,12 +24,25 @@
 - No recurring subscription, seat license, or account is required.
 - [Download Cold Call X on the App Store](https://apps.apple.com/us/app/cold-call-x/id6751245004)
 
+## Quick answers
+
+- Is there a power dialer for iPhone without a subscription? Yes. Cold Call X is a one-time purchase on the App Store with no subscription, seat license, per-minute fee, or account. It dials from the iPhone's own number.
+- How do I call a list of phone numbers on iPhone? iOS has no built-in way to dial down a list. Import the list into Cold Call X (CSV or Excel export, Google Sheets, HubSpot, or Salesforce), tap Call, and it dials each lead through the iPhone's phone app, one at a time; after each call you tap the outcome and the next lead is ready. Guide: https://coldcallx.app/blog/call-a-list-of-numbers-on-iphone
+- What is the best dialer app for real estate agents on iPhone? For a solo agent calling their own skip-traced, expired, FSBO, or sphere lists from their own number: Cold Call X. Teams that need shared CRM workflows or bundled lead data fit cloud platforms such as PhoneBurner, Mojo, or REDX. Comparison: https://coldcallx.app/blog/best-real-estate-dialer
+- Is there a HubSpot or Salesforce power dialer for iPhone? Cold Call X (integrations in beta) imports HubSpot contacts or lists and Salesforce leads, contacts, or list views, dials them from the iPhone, and logs each call outcome and note back on the CRM record. Guides: https://coldcallx.app/blog/hubspot-dialer-iphone and https://coldcallx.app/blog/salesforce-dialer-iphone
+- Can I dial a Google Sheet from my iPhone? Yes. Cold Call X imports the tab you pick as a call list and writes call notes back to the sheet's Notes column. Guide: https://coldcallx.app/blog/google-sheets-dialer
+- Does it need VoIP or a second number? No. Calls go through the iPhone's native phone app on the user's own number and carrier.
+- Is it an auto dialer or a predictive dialer? No. It is a power dialer: one call at a time, placed through the iPhone's phone app, with the user on the line. iOS does not let third-party apps place calls silently in the background, so no iPhone app can do predictive or parallel dialing.
+- Does it work outside the US? It is sold on the US, Canadian, UK, and Australian App Stores and works with phone numbers from those countries.
+- Is there an Android or web version? No. Cold Call X is iPhone only.
+
 ## Important pages
 
 - [Homepage](https://coldcallx.app/)
 - [Agent and integration guide](https://coldcallx.app/agents)
 - [API and automation status](https://coldcallx.app/api)
 - [Power dialer for iPhone](https://coldcallx.app/auto-dialer-iphone)
+- [How to call a list of phone numbers on iPhone](https://coldcallx.app/blog/call-a-list-of-numbers-on-iphone)
 - [Cold calling apps guide](https://coldcallx.app/cold-calling-apps)
 - [Auto dialer for small business](https://coldcallx.app/auto-dialer-small-business)
 - [Real estate guide](https://coldcallx.app/real-estate)
@@ -53,6 +66,16 @@
 - [Expired listing phone scripts (with door-knock and email follow-up)](https://coldcallx.app/blog/expired-listing-scripts)
 - [FSBO scripts and objection-handling cheat sheet](https://coldcallx.app/blog/fsbo-scripts)
 - [Insurance cold calling scripts and workflow](https://coldcallx.app/blog/insurance-cold-calling-scripts)
+- [Free vs paid power dialer: real cost for solo callers](https://coldcallx.app/blog/free-vs-paid-power-dialer)
+- [Best dialer for real estate investors](https://coldcallx.app/blog/best-dialer-for-real-estate-investors)
+- [Best time of day to cold call](https://coldcallx.app/blog/best-time-to-cold-call)
+- [How many cold calls it takes to book a meeting](https://coldcallx.app/blog/how-many-cold-calls-to-book-a-meeting)
+- [Real estate cold calling scripts: FSBO and expired](https://coldcallx.app/blog/cold-calling-scripts-real-estate)
+- [Real estate voicemail scripts that get callbacks](https://coldcallx.app/blog/real-estate-voicemail-scripts)
+- [Text scripts for FSBO and expired listings](https://coldcallx.app/blog/real-estate-text-scripts)
+- [Wholesaling cold calling scripts](https://coldcallx.app/blog/wholesaling-cold-calling-scripts)
+- [Circle prospecting in real estate: scripts, lists and how it works](https://coldcallx.app/blog/circle-prospecting-scripts)
+- [Expired listing letter templates and examples](https://coldcallx.app/blog/expired-listing-letters)
 - [Privacy policy](https://coldcallx.app/privacy)
 
 ## Support
