@@ -52,7 +52,7 @@
         "description": "What the TCPA actually restricts, what counts as an autodialer after Facebook v. Duguid, consent and Do Not Call rules, and the most compliance-cautious way to dial in 2026.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-08-22",
-        "dateModified": "2026-09-25",
+        "dateModified": "2026-09-30",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/auto-dialer-laws",
@@ -70,6 +70,16 @@
         "@type": "FAQPage",
         "@id": "https://coldcallx.app/blog/auto-dialer-laws#faq",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is autodialing legal for B2B calls?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Partly. The National Do Not Call rules protect residential subscribers, so they don't cover business landlines. But the consent rule for autodialed or prerecorded calls applies to any cellular number, including a business owner's mobile. Live, one-at-a-time calls from a list you chose are outside the autodialer definition. Not legal advice." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an auto dialer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Legally, an automatic telephone dialing system is equipment that can store or produce numbers using a random or sequential number generator and dial them. In sales, the word is used loosely for any dialer. Cold Call X is a power dialer: it calls the list you imported, one call at a time, with you on the line." }
+          },
           {
             "@type": "Question",
             "name": "Are auto dialers illegal in the US?",
@@ -132,6 +142,10 @@
 
         <div class="callout"><strong>Not legal advice.</strong> This is general information current as of August 2026, and the rules are genuinely in flux, a March 2026 federal appeals court ruling rejected a recent FCC consent rule, and states keep passing their own laws. For anything with real money attached, confirm with a TCPA attorney. Sources and dates are cited throughout.</div>
 
+        <h2>Quick answers: are auto dialers illegal, and is autodialing legal for B2B?</h2>
+        <p><strong>Are auto dialers illegal?</strong> No. In the US an auto dialer is legal equipment; the law restricts how it is used. Under <a href="https://www.law.cornell.edu/uscode/text/47/227" target="_blank" rel="noopener noreferrer">47 U.S.C. 227(b)(1)(A)</a> and <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200" target="_blank" rel="noopener noreferrer">47 CFR 64.1200(a)</a>, it is unlawful to place a call to a cellular number using an automatic telephone dialing system or an artificial or prerecorded voice without the called party's prior express consent (prior express <em>written</em> consent for advertising and telemarketing calls). A live person dialing one number at a time from a list they chose is a different situation from a system that generates numbers and dials them.</p>
+        <p><strong>What is an auto dialer, legally?</strong> The statute's term is "automatic telephone dialing system": equipment with the capacity to store or produce numbers to be called using a random or sequential number generator, and to dial them (<a href="https://www.law.cornell.edu/uscode/text/47/227" target="_blank" rel="noopener noreferrer">47 U.S.C. 227(a)(1)</a>, read narrowly by the Supreme Court in <em>Facebook v. Duguid</em>, 2021). A "power dialer" that walks a list you imported, one call at a time, is not described by that wording. Cold Call X is a power dialer.</p>
+        <p><strong>Is autodialing legal for B2B?</strong> Partly, and B2B does not switch the rules off. The Do Not Call registry rules in 47 CFR 64.1200(c) protect a "residential telephone subscriber", so they do not cover a business landline. But the consent rule for autodialed or prerecorded calls to cellular numbers (227(b)(1)(A)(iii); 64.1200(a)(1)(iii)) is keyed to the type of number, not to who owns it, so a business owner's mobile number is covered. Prerecorded telemarketing messages to residential lines are restricted separately. The cautious B2B approach is the same as everywhere else: live voice, your own number, your own suppression list, and no robocalls or automated texts to mobiles. Mixed and small-business lists often contain home or mobile numbers, which is why scrubbing everything is the safer habit.</p>
         <h2>What the TCPA actually regulates</h2>
         <p>The Telephone Consumer Protection Act of 1991 is the backbone of every auto dialer rule in the US. Despite its reputation, the TCPA doesn't outlaw dialing equipment, it restricts three behaviors, mostly aimed at protecting wireless numbers and residential privacy:</p>
         <ul>
@@ -169,7 +183,7 @@
         <p>Required for telemarketing calls or texts to wireless numbers using an autodialer or prerecorded voice. Since January 2025, the FCC's one-to-one rule means the consent must name your specific company, bundled "I agree to receive calls from partners" language no longer qualifies. This is the tier lead-gen callers keep getting wrong.</p>
         <h3>2. Prior express consent (oral or implied)</h3>
         <p>Required for non-telemarketing autodialed or prerecorded calls to wireless numbers, appointments, account notices, deliverables. Giving a company your cell number for that relationship generally implies this tier.</p>
-        <h3>3. No consent needed</p>
+        <h3>3. No consent needed</h3>
         <p>Live, one-at-a-time calls placed by a human, including with equipment that only walks your own list, plus purely personal calls, emergencies, and several healthcare and informational exemptions. A human being, speaking live, dialing imported contacts, is outside the autodialer rules entirely.</p>
         <div class="callout">Practical shortcut: if you're speaking live, one call at a time, from your own number, and honoring DNC requests, the consent tiers mostly never activate. That's why <a href="/blog/cold-calling-scripts-real-estate">cold calling scripts that keep humans in the conversation</a> are also the compliant ones.</div>
 
@@ -216,28 +230,36 @@
       <h2 class="text-3xl font-black tracking-tight mb-6 mt-12 text-center">Auto dialer laws, answered</h2>
       <div class="space-y-4">
         <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is autodialing legal for B2B calls?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Partly. The National Do Not Call rules protect residential subscribers, so they don't cover business landlines. But the consent rule for autodialed or prerecorded calls applies to any cellular number, including a business owner's mobile. Live, one-at-a-time calls from a list you chose are outside the autodialer definition. Not legal advice.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What is an auto dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Legally, an automatic telephone dialing system is equipment that can store or produce numbers using a random or sequential number generator and dial them. In sales, the word is used loosely for any dialer. Cold Call X is a power dialer: it calls the list you imported, one call at a time, with you on the line.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Are auto dialers illegal in the US?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No, the TCPA regulates how dialers are used, not the equipment. Consent-less automated calls/texts to wireless numbers, prerecorded messages, and DNC telemarketing calls are what's prohibited.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Auto dialers are legal, the Telephone Consumer Protection Act (TCPA) regulates how they are used, not the equipment itself. What the law restricts is specific conduct: autodialed or prerecorded calls or texts to wireless numbers without the required consent, calls to numbers on the National Do Not Call Registry for telemarketing, and calling outside allowed hours. Used on consented lists, with live speech and DNC scrubbing, dialers are a legal, ordinary sales tool.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What counts as an autodialer under the TCPA?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Per Facebook v. Duguid (2021): equipment with capacity to store or produce numbers using a random or sequential number generator. Dialing a user-imported list in user-set order doesn't meet the definition, but state laws can be broader.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Under the Supreme Court's 2021 Facebook v. Duguid decision, an automatic telephone dialing system (ATDS) is equipment with the capacity to store or produce telephone numbers using a random or sequential number generator and to dial them. Equipment that only dials numbers from a user-imported list, in the order the user sets, does not meet that definition, but the analysis is fact-specific, some courts and state laws read it more broadly, and plaintiffs' lawyers keep testing the edges, so caution still pays.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I use an auto dialer on my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Apps that dial only your imported contacts, through your own carrier and number, in your chosen order, stay outside the autodialer definition. Still honor DNC and skip prerecorded messages.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Apps on the App Store can place calls from your imported contact lists through your own carrier and your own number. Because the phone only dials numbers you imported, in your chosen order, never generating or guessing numbers; it does not function as a random-or-sequential autodialer. The compliance basics still apply: respect the Do Not Call Registry for telemarketing, keep your own suppression list, and speak live rather than dropping prerecorded messages.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What is the fine for illegal autodialing?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">$500 per unlawful call/text, up to $1,500 if willful, plus FCC forfeitures. Per-call damages scale brutally with volume; class actions are the main enforcement channel.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">TCPA violations carry statutory damages of $500 per unlawful call, text, or fax, and up to $1,500 per violation for willful or knowing violations, plus the FCC can impose forfeitures. Because damages are per call, volume multiplies fast, a single non-compliant campaign of thousands of calls can reach seven or eight figures. Class actions are the main enforcement channel.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I leave a prerecorded voicemail with a dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Generally not without consent, prerecorded voice (including ringless voicemail drops) to wireless numbers requires prior express consent. A short live voicemail in your own voice is the cautious alternative.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Generally not without consent. Prerecorded voice messages, including ringless voicemail drops, delivered to wireless numbers require prior express consent, and artificial or prerecorded voices to residential lines are restricted for telemarketing too. This is the highest-risk dialer feature. Leaving a short live voicemail in the moment, in your own voice, is the cautious alternative.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Do I have to check the Do Not Call Registry?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">For telemarketing, yes, registry numbers are off-limits (with narrow exceptions), telemarketers must scrub at least every 31 days, and your own internal do-not-call list is mandatory regardless. Personal calls and much of B2B sit outside the rule.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">If you are telemarketing, selling goods or services, yes: calling numbers on the National Do Not Call Registry is prohibited, with exceptions for prior express permission, an established business relationship within the allowed window, and personal (non-commercial) calls. You must also honor your own internal do-not-call list for anyone who asks. Purely personal calls and many B2B calls fall outside the DNC rules, but scrubbing every list is the safe habit.</p>
         </details>
       </div>
 
