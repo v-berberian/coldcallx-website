@@ -144,6 +144,28 @@ body.site {
   .nav__links { gap: 18px; }
 }
 
+/* The agents guide keeps its primary links readable when the header
+   needs more than one row, without changing navigation on other pages. */
+.site--agents .nav__inner {
+  height: auto;
+  min-height: 52px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site--agents .nav__brand,
+.site--agents .nav__links {
+  flex-shrink: 0;
+}
+
+.site--agents .nav__links {
+  max-width: 100%;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
 /* ----------------------------------------------------------------- home */
 
 .hero {
