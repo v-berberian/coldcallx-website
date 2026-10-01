@@ -58,7 +58,7 @@
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
         "alternateName": "Cold Call X: Sales Dialer",
-        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It queues your approved outreach list through the iPhone phone app over your carrier line, so your existing partner relationships stay tied to the number they know. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
+        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It queues your approved outreach list through the iPhone phone app over your carrier line, so your existing partner relationships stay tied to the number they know. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, log call outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
         "image": "https://coldcallx.app/logo.png",
@@ -104,6 +104,11 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Is there a dialer for loan officers without a subscription?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer for loan officers and mortgage brokers on iPhone, and it is a one-time $19.99 App Store purchase with no monthly fee and no per-seat license. It dials from your own cell number, one call at a time, so realtor partners and past clients see the number they already know. For comparison, PhoneBurner lists $140 per user per month billed annually and Mojo's single-line setup starts at $99 a month, per their own pricing pages (checked September 27, 2026)." }
+          },
+          {
+            "@type": "Question",
             "name": "Can I import my lists from a CSV export?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Export the fields you need from your LOS, spreadsheet, or contact database, then import the CSV or Google Sheet. Keep partner referrals, past clients, and purchased leads in separate lists so the source and follow-up context remain clear." }
           },
@@ -125,7 +130,7 @@
           {
             "@type": "Question",
             "name": "Will it replace my mortgage CRM?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. Keep applications, disclosures, milestones, and borrower documents in your LOS or mortgage CRM. Cold Call X handles the calling list, notes, tags, and reminders, and you can export data through the iOS share sheet." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Keep applications, disclosures, milestones, and borrower documents in your LOS or mortgage CRM. Cold Call X handles the calling list, call outcomes, notes, and follow-up reminders, and you can export data through the iOS share sheet." }
           },
           {
             "@type": "Question",
@@ -174,14 +179,20 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-loan-officers&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $19.99 one-time &middot; No subscription</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (67 ratings, checked October 1, 2026) &middot; $19.99 one-time &middot; No subscription</p>
         </div>
+      </div>
+
+      <!-- Short answer -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">What is the best dialer for a loan officer on iPhone?</h2>
+        <p class="text-[var(--muted)] leading-relaxed">For a loan officer or mortgage broker who dials their own lists, Cold Call X is a power dialer that runs on your iPhone from your own cell number. Import your realtor partners, past clients or aged leads from CSV or Google Sheets, tap to dial one call at a time, log the outcome, and the next follow-up schedules itself. It costs $19.99 once, with no subscription and no per-seat fee. For comparison, per their own pricing pages (checked September 27, 2026), PhoneBurner starts at $140 per user per month billed annually, and Mojo's single-line dialer setup starts at $99 a month. See the <a href="/mojo-vs-phoneburner" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">full cost breakdown</a>, or the <a href="/auto-dialer-iphone" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">power dialer for iPhone</a> page for everything the app does.</p>
       </div>
 
       <!-- Use-case cards -->
       <div class="section-card p-6 lg:p-12 mb-8">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Your realtor partner list, actually dialed</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Every loan officer has the list: agents who promised to send business, agents who used to, agents you met at the networking event. Export it to CSV or Google Sheet, import, and tag each partner <strong class="text-[var(--ink)]">Hot</strong>, <strong class="text-[var(--ink)]">Warm</strong>, or <strong class="text-[var(--ink)]">Cold</strong>. Last-called dates keep you honest about who's gone three months without a check-in.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Every loan officer has the list: agents who promised to send business, agents who used to, agents you met at the networking event. Export it to CSV or Google Sheet, import, and log a one-tap <strong class="text-[var(--ink)]">call outcome</strong> after each call: Voicemail, Callback, Interested, Not Interested. Every outcome schedules the next attempt automatically, and last-called dates keep you honest about who's gone three months without a check-in.</p>
       </div>
 
       <div class="section-card p-6 lg:p-12 mb-8">
@@ -238,6 +249,10 @@
       <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-center mb-8">Loan officer dialing, answered</h2>
       <div class="space-y-4 mb-12">
         <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a dialer for loan officers without a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer for loan officers and mortgage brokers on iPhone, and it is a one-time $19.99 App Store purchase with no monthly fee and no per-seat license. It dials from your own cell number, one call at a time, so realtor partners and past clients see the number they already know. For comparison, PhoneBurner lists $140 per user per month billed annually and Mojo's single-line setup starts at $99 a month, per their own pricing pages (checked September 27, 2026).</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I import my lists from a CSV export?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Export the fields you need from your LOS, spreadsheet, or contact database, then import the CSV or Google Sheet. Keep partner referrals, past clients, and purchased leads in separate lists so the source and follow-up context remain clear.</p>
         </details>
@@ -255,7 +270,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Will it replace my mortgage CRM?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Keep applications, disclosures, milestones, and borrower documents in your LOS or mortgage CRM. Cold Call X handles the calling list, notes, tags, and reminders, and you can export data through the iOS share sheet.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Keep applications, disclosures, milestones, and borrower documents in your LOS or mortgage CRM. Cold Call X handles the calling list, call outcomes, notes, and follow-up reminders, and you can export data through the iOS share sheet.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can multiple loan officers on my team use it?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -278,7 +293,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-loan-officers&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $19.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (67 ratings, checked October 1, 2026) &middot; $19.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
       </div>
 
     </div>
