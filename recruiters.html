@@ -58,7 +58,7 @@
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
         "alternateName": "Cold Call X: Sales Dialer",
-        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, tag outcomes, take notes between calls, and schedule callbacks.",
+        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, log call outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
         "image": "https://coldcallx.app/logo.png",
@@ -102,6 +102,11 @@
         "@type": "FAQPage",
         "@id": "https://coldcallx.app/recruiters#faq",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there a dialer for recruiters without a subscription?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer for recruiters on iPhone, and it is a one-time $19.99 App Store purchase with no monthly fee and no per-seat license. It dials from your own cell number, one call at a time, so candidates see a real number and callbacks reach the phone in your hand. For comparison, PhoneBurner lists $140 per user per month billed annually (checked September 27, 2026) and JustCall's power dialer starts at $49 per user per month billed annually with a two-license minimum (checked September 29, 2026), per their own pricing pages." }
+          },
           {
             "@type": "Question",
             "name": "Can I import candidates from Google Sheets?",
@@ -164,8 +169,14 @@
           <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-recruiters&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" class="h-12 w-auto">
           </a>
-          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $19.99 one-time &middot; No subscription</p>
+          <p class="text-sm text-[var(--muted)]">4.8★ on the App Store (67 ratings, checked October 2, 2026) &middot; $19.99 one-time &middot; No subscription</p>
         </div>
+      </div>
+
+      <!-- Short answer -->
+      <div class="section-card p-6 lg:p-12 mb-8">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">What is the best dialer for a recruiter on iPhone?</h2>
+        <p class="text-[var(--muted)] leading-relaxed">For a solo recruiter or a desk of one who dials their own shortlists, Cold Call X is a power dialer that runs on your iPhone from your own cell number. Import candidates from CSV, Excel or Google Sheets, tap to dial one call at a time, log the outcome, and the next follow-up schedules itself. It costs $19.99 once, with no subscription and no per-seat fee. For comparison, per their own pricing pages, PhoneBurner starts at $140 per user per month billed annually (checked September 27, 2026), and JustCall's power dialer starts at $49 per user per month billed annually with a two-license minimum (checked September 29, 2026). See the <a href="/cold-calling-apps" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">cold calling apps comparison</a> for the full price table, or the <a href="/auto-dialer-iphone" class="underline decoration-blue-400/60 underline-offset-2 hover:text-[var(--ink)] transition-colors">power dialer for iPhone</a> page for everything the app does.</p>
       </div>
 
       <!-- What a power dialer does -->
@@ -188,10 +199,10 @@
         </ul>
       </div>
 
-      <!-- Tags, notes, follow-ups -->
+      <!-- Outcomes, notes, follow-ups -->
       <div class="section-card p-6 lg:p-12 mb-8">
-        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Tags, notes, and follow-ups that happen before the next ring</h2>
-        <p class="text-[var(--muted)] leading-relaxed mb-4">After ten screens, candidates blur together. Drop a note on each one as you hang up, tag them <strong class="text-[var(--ink)]">Hot</strong>, <strong class="text-[var(--ink)]">Warm</strong>, or <strong class="text-[var(--ink)]">Cold</strong>, and let last-called timestamps tell you who's aging out. When a req reopens in three months, the shortlist is already built, filter by Hot and start there.</p>
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Outcomes, notes, and follow-ups that happen before the next ring</h2>
+        <p class="text-[var(--muted)] leading-relaxed mb-4">After ten screens, candidates blur together. Drop a note on each one as you hang up and log a one-tap <strong class="text-[var(--ink)]">call outcome</strong>: No Answer, Voicemail, Callback, Interested, Not Interested. Every outcome schedules the next attempt automatically, and last-called timestamps tell you who's aging out. When a req reopens in three months, the shortlist is already built: the outcomes and notes are still on every candidate, so you start with the ones who were Interested.</p>
         <p class="text-[var(--muted)] leading-relaxed mb-4">Follow-up without the typing: templates for <strong class="text-[var(--ink)]">text, WhatsApp, and email</strong> auto-fill name, company, and phone fields, so "great talking today, here's the job description" is one tap instead of forty re-typed messages a day. And when a candidate says "Thursday afternoon works," you create the calendar event from inside the app before you hang up, so the phone screen is booked while it's real.</p>
         <p class="text-[var(--muted)] leading-relaxed">Not interested? One tap adds them to the built-in Do Not Call list, and they're suppressed across every list and every future import.</p>
       </div>
@@ -252,7 +263,7 @@
             <tr>
               <th scope="row">ATS integration</th>
               <td class="hi">None, export lists + notes via share sheet</td>
-              <td>Native ATS sync (the reason teams buy them)</td>
+              <td>Native ATS sync</td>
             </tr>
             <tr>
               <th scope="row">Dialing</th>
@@ -260,7 +271,7 @@
               <td>Power, parallel, and predictive modes</td>
             </tr>
             <tr>
-              <th scope="row">Best fit</th>
+              <th scope="row">Built for</th>
               <td class="hi">Solo recruiters, exec search, boutique desks</td>
               <td>Staffing teams that need oversight and logging</td>
             </tr>
@@ -279,6 +290,10 @@
       <!-- FAQ -->
       <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-center mb-8">Recruiter dialing, answered</h2>
       <div class="space-y-4 mb-12">
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a dialer for recruiters without a subscription?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer for recruiters on iPhone, and it is a one-time $19.99 App Store purchase with no monthly fee and no per-seat license. It dials from your own cell number, one call at a time, so candidates see a real number and callbacks reach the phone in your hand. For comparison, PhoneBurner lists $140 per user per month billed annually (checked September 27, 2026) and JustCall's power dialer starts at $49 per user per month billed annually with a two-license minimum (checked September 29, 2026), per their own pricing pages.</p>
+        </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I import candidates from Google Sheets?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Import your sourcing sheet directly from Google Sheets or as a CSV, names, numbers, emails, and notes auto-map. Keep separate lists per req, per client, or per campaign, and refresh the Sheets import anytime.</p>
@@ -312,7 +327,7 @@
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=page-recruiters&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
-        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (64 ratings, checked September 25, 2026) &middot; $19.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
+        <p class="text-sm text-[var(--muted)] mt-5">4.8★ on the App Store (67 ratings, checked October 2, 2026) &middot; $19.99 one-time &middot; No subscription &middot; Your leads never touch our servers</p>
       </div>
 
     </div>
