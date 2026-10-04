@@ -33,6 +33,7 @@
 - What is a cheap alternative to PhoneBurner for one person? For a solo rep who calls from an iPhone: Cold Call X, a one-time purchase with no per-user subscription. It dials an imported list from the user's own number and logs outcomes, notes and follow-ups. Comparison: https://coldcallx.app/phoneburner-alternative
 - Is there a Mojo Dialer alternative for iPhone? Cold Call X: a standalone iPhone power dialer for agents, investors and wholesalers working their own expired, FSBO or skip-traced lists, with no account and no monthly licenses. Comparison: https://coldcallx.app/mojo-dialer-alternative
 - Is there a HubSpot or Salesforce power dialer for iPhone? Cold Call X (integrations in beta) imports HubSpot contacts or lists and Salesforce leads, contacts, or list views, dials them from the iPhone, and logs each call outcome and note back on the CRM record. Guides: https://coldcallx.app/blog/hubspot-dialer-iphone and https://coldcallx.app/blog/salesforce-dialer-iphone
+- What call disposition codes should a cold caller track? Six to eight, each with its own next step: No Answer, Busy, Voicemail, Wrong Number, Callback, Interested, Not Interested and Do Not Call. On iPhone, Cold Call X logs No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested with one tap and schedules the next attempt for every outcome. Guide: https://coldcallx.app/blog/call-outcomes
 - Can I dial a Google Sheet from my iPhone? Yes. Cold Call X imports the tab you pick as a call list and writes call notes back to the sheet's Notes column. Guide: https://coldcallx.app/blog/google-sheets-dialer
 - Are auto dialers illegal in the US? No. The TCPA restricts conduct, not equipment: autodialed or prerecorded calls to cellular numbers need prior express consent, and the National Do Not Call rules cover residential subscribers. A power dialer that calls an imported list one call at a time, live, is not described by the statutory autodialer definition (47 U.S.C. 227(a)(1); Facebook v. Duguid, 2021). Not legal advice. Guide: https://coldcallx.app/blog/auto-dialer-laws
 - Does it need VoIP or a second number? No. Calls go through the iPhone's native phone app on the user's own number and carrier.
@@ -60,6 +61,7 @@
 - [Mojo vs PhoneBurner vs Cold Call X](https://coldcallx.app/mojo-vs-phoneburner)
 - [Blog and guides](https://coldcallx.app/blog/)
 - [Auto dialer laws and TCPA compliance guide](https://coldcallx.app/blog/auto-dialer-laws)
+- [Call disposition codes: which call outcomes to track and what each should trigger](https://coldcallx.app/blog/call-outcomes)
 - [Legal calling hours: US, Canada, UK and Australia](https://coldcallx.app/blog/calling-hours)
 - [Cold calling in Canada: National DNCL, CRTC hours and rules](https://coldcallx.app/blog/cold-calling-canada)
 - [Cold calling in the UK: TPS, CTPS and PECR rules](https://coldcallx.app/blog/cold-calling-uk)
