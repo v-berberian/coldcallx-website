@@ -238,4 +238,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
+  <url>
+    <loc>https://coldcallx.app/resources/lead-list-starter/</loc>
+    <lastmod>2026-10-06</lastmod>
+  </url>
 </urlset>
