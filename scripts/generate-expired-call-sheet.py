@@ -5,6 +5,10 @@ from html import escape
 from html.parser import HTMLParser
 from io import BytesIO
 from pathlib import Path
+import reportlab
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from pypdf import PdfReader, PdfWriter
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import letter
@@ -16,6 +20,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'blog/expired-listing-scripts.html'
 OUTPUT = ROOT / 'resources/expired-listing-call-sheet/expired-listing-call-sheet.pdf'
 GUIDE = 'https://coldcallx.app/blog/expired-listing-scripts'
+PRINT_SOURCE = 'coldcallx.app/blog/expired-listing-scripts'
+FONT_LICENSE = ROOT / 'resources/expired-listing-call-sheet/FONT_LICENSE.txt'
 STORE = 'https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-expired-listing-scripts&pt=128076300&mt=8'
 OPENERS = ['1. The day-one expired opener', '3. The aged expired re-approach (30–90 days)', '4. The diagnostic call']
 OBJECTIONS = ['"I\'m re-listing with my same agent."', '"We\'re taking it off the market for now."', '"What would you do differently?"', '"Your commission is too high." / "Will you cut your commission?"']
@@ -47,14 +53,17 @@ def source_scripts() -> dict[str, str]:
 
 def build() -> bytes:
     scripts = source_scripts(); output = BytesIO()
+    fonts = Path(reportlab.__file__).resolve().parent / 'fonts'
+    pdfmetrics.registerFont(TTFont('CCXVera', str(fonts / 'Vera.ttf')))
+    pdfmetrics.registerFont(TTFont('CCXVeraBold', str(fonts / 'VeraBd.ttf')))
     doc = SimpleDocTemplate(output, pagesize=letter, rightMargin=42, leftMargin=42,
                            topMargin=42, bottomMargin=47, title='Expired Listing Call Sheet',
                            author='Cold Call X', subject='Three reviewed openers and four objection responses')
     styles = {
-        'title': ParagraphStyle('title', fontName='Helvetica-Bold', fontSize=22, leading=26, textColor=colors.HexColor('#1d1d1f'), spaceAfter=12),
-        'heading': ParagraphStyle('heading', fontName='Helvetica-Bold', fontSize=12, leading=16, spaceBefore=12, spaceAfter=6),
-        'body': ParagraphStyle('body', fontName='Helvetica', fontSize=10.5, leading=14.5, spaceAfter=9, alignment=TA_LEFT),
-        'small': ParagraphStyle('small', fontName='Helvetica', fontSize=9, leading=12, spaceAfter=8, textColor=colors.HexColor('#424245')),
+        'title': ParagraphStyle('title', fontName='CCXVeraBold', fontSize=22, leading=26, textColor=colors.HexColor('#1d1d1f'), spaceAfter=12),
+        'heading': ParagraphStyle('heading', fontName='CCXVeraBold', fontSize=12, leading=16, spaceBefore=12, spaceAfter=6),
+        'body': ParagraphStyle('body', fontName='CCXVera', fontSize=10.5, leading=14.5, spaceAfter=9, alignment=TA_LEFT),
+        'small': ParagraphStyle('small', fontName='CCXVera', fontSize=9, leading=12, spaceAfter=8, textColor=colors.HexColor('#424245')),
     }
     flow = []
     def add(text: str, style: str = 'body') -> None:
@@ -72,6 +81,7 @@ def build() -> bytes:
     response(OPENERS[1], '2 / Aged expired: 30–90 days')
     response(OPENERS[2], '3 / Diagnostic conversation')
     add('The quoted scripts are reproduced from '+link(GUIDE, 'Cold Call X’s expired-listing guide')+'. The full page includes context, more scripts and calling rules.', 'small')
+    add('Printed copy? Full source: ' + link(GUIDE, PRINT_SOURCE), 'small')
     flow.append(PageBreak())
     add('Four common objections', 'title')
     add('Practice the response; do not promise anything you cannot deliver.', 'small')
@@ -82,14 +92,20 @@ def build() -> bytes:
     add('Work through your own list on iPhone', 'heading')
     add('Cold Call X is a power dialer: call one lead at a time from your own cellular line, record an outcome and keep notes. '+link('https://coldcallx.app/auto-dialer-iphone','See the workflow and tradeoffs')+' or '+link(STORE,'view the App Store listing')+' for current requirements and local pricing.', 'small')
     def page_footer(c: canvas.Canvas, _: SimpleDocTemplate) -> None:
-        c.saveState(); c.setFont('Helvetica', 8); c.setFillColor(colors.HexColor('#6e6e73'))
+        c.saveState(); c.setFont('CCXVera', 8); c.setFillColor(colors.HexColor('#6e6e73'))
         c.drawString(42, 26, 'Cold Call X | Script excerpts from the reviewed guide | October 2026')
         c.drawRightString(570, 26, str(c.getPageNumber())); c.restoreState()
     def invariant_canvas(*args: object, **kwargs: object) -> canvas.Canvas:
         kwargs['invariant'] = 1
+        kwargs['initialFontName'] = 'CCXVera'
         return canvas.Canvas(*args, **kwargs)
     doc.build(flow, onFirstPage=page_footer, onLaterPages=page_footer, canvasmaker=invariant_canvas)
-    return output.getvalue()
+    # Include the font permission/copyright notice in the PDF itself as well
+    # as its companion source file, without adding a third printed page.
+    writer = PdfWriter(clone_from=PdfReader(BytesIO(output.getvalue())))
+    writer.add_attachment('FONT_LICENSE.txt', FONT_LICENSE.read_bytes())
+    final = BytesIO(); writer.write(final)
+    return final.getvalue()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(); parser.add_argument('--check', action='store_true'); args = parser.parse_args()

@@ -18,3 +18,5 @@ node scripts/generate-privacy.mjs --check
 The generator reads the reviewed HTML without modifying it. Output is deterministic; `--check` detects a stale PDF after source or layout changes. The committed PDF is served by the existing static deployment without requiring Python on the hosting service.
 
 The file adds no forms, scripts, pricing claims or tracking. Its App Store link reuses the source guide's existing campaign parameters. File downloads, outbound links and PDF views are not app installs or purchase attribution. The PDF is text-selectable; it is not a fully tagged PDF/UA document. Readers can use the linked HTML guide for an accessible equivalent of the quoted scripts.
+
+Print reliability: the PDF embeds ReportLab’s bundled Bitstream Vera regular/bold fonts. Its permission/copyright notice is included in `FONT_LICENSE.txt` and attached inside the PDF, and a readable source URL remains on paper copies. No new font or rendering software was installed.

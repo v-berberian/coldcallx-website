@@ -14,7 +14,13 @@ assert data == generator.OUTPUT.read_bytes(), 'Committed PDF is stale'
 assert data == generator.build(), 'Build is not deterministic'
 reader = PdfReader(BytesIO(data))
 assert len(reader.pages) == 2, 'PDF must remain two pages'
+assert reader.attachments['FONT_LICENSE.txt'] == [generator.FONT_LICENSE.read_bytes()], 'Embedded font license missing'
+for page in reader.pages:
+    for ref in page['/Resources']['/Font'].values():
+        font = ref.get_object(); descriptor = font['/FontDescriptor'].get_object()
+        assert descriptor.get('/FontFile2'), 'PDF text font is not embedded'
 text = ' '.join(page.extract_text() for page in reader.pages)
+assert generator.PRINT_SOURCE in text, 'Paper-readable source URL missing'
 normalize = lambda value: re.sub(r'\s+', ' ', value).strip()
 for heading in generator.OPENERS + generator.OBJECTIONS:
     assert normalize(generator.source_scripts()[heading]) in normalize(text), 'Script changed or omitted: ' + heading
@@ -35,4 +41,4 @@ assert params['ct'] == ['blog-expired-listing-scripts']
 assert params['pt'] == ['128076300'] and params['mt'] == ['8']
 assert '$' not in text, 'Do not duplicate rollout pricing in this asset'
 assert not reader.get_fields(), 'This offline worksheet must not collect form data'
-print('PASS: deterministic two-page PDF, seven exact source excerpts, worksheet prompts, source/rules links, app ID/campaign, no duplicated prices or form fields')
+print('PASS: deterministic two-page PDF, seven exact source excerpts, worksheet prompts, source/rules links, app ID/campaign, embedded licensed fonts, paper source URL, no duplicated prices or form fields')
