@@ -4,8 +4,8 @@
 
    One look, taken from the tutorial films (video/DESIGN.md in this repo's
    video branch): a flat #FAFAFC ground, #1D1D1F ink, semibold type set
-   tight, and nothing else. No gradients, no glass, no motion that is not
-   feedback.
+   tight. The header Download button has an owner-selected gradient outline;
+   elsewhere, no gradients, no glass, no motion that is not feedback.
 
    Rules below that start with `.site` restyle the Tailwind markup on the
    long-form pages. The body class gives them the one extra step of
@@ -132,16 +132,60 @@ body.site {
 
 .nav__links .nav__cta {
   padding: 5px 14px;
-  border-radius: 980px;
-  background: var(--ink);
-  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: linear-gradient(#fafafc, #fafafc) padding-box,
+              linear-gradient(110deg, #29a9ec, #f3913a) border-box;
+  color: var(--ink);
   font-weight: 500;
+  white-space: nowrap;
 }
 
-.nav__links .nav__cta:hover { color: #fff; background: #000; }
+.nav__links .nav__cta:hover,
+.nav__links .nav__cta:active {
+  color: var(--ink);
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(110deg, #29a9ec, #f3913a) border-box;
+}
+
+.nav__links .nav__cta:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 9px;
+}
+
+@media (forced-colors: active) {
+  .nav__links .nav__cta,
+  .nav__links .nav__cta:hover,
+  .nav__links .nav__cta:active {
+    background: Canvas;
+    border-color: ButtonText;
+    color: LinkText;
+  }
+
+  .nav__links .nav__cta:focus-visible { outline-color: Highlight; }
+}
 
 @media (max-width: 520px) {
   .nav__links { gap: 18px; }
+}
+
+/* Keep the Download button and its focus ring inside very narrow headers. */
+@media (max-width: 340px) {
+  .nav__inner {
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .nav__links {
+    max-width: 100%;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
 }
 
 /* The agents guide keeps its primary links readable when the header
