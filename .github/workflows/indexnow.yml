@@ -1,6 +1,6 @@
 name: IndexNow ping
 
-# Pushes the current sitemap URL set to IndexNow (api.indexnow.org), which
+# Pushes recently changed sitemap URLs (by <lastmod>) to IndexNow (api.indexnow.org), which
 # distributes it to Bing, Seznam, Yandex, Naver and other participating
 # engines. Bing's index feeds DuckDuckGo, Yahoo, Ecosia, ChatGPT Search and
 # Copilot, so this accelerates discovery on engines that accept push
@@ -12,6 +12,11 @@ name: IndexNow ping
 
 on:
   workflow_dispatch:
+    inputs:
+      all:
+        description: "Submit every sitemap URL, not only recently changed ones"
+        type: boolean
+        default: false
   workflow_run:
     workflows: ["Deploy static content to Pages"]
     types: [completed]
@@ -32,6 +37,7 @@ jobs:
       - name: Submit sitemap URLs to IndexNow
         env:
           KEY: "b4817af99c8647949106f79c01ac3aee"
+          ALL: ${{ github.event.inputs.all }}
         run: |
           python3 - <<'PY'
           import json, os, re, urllib.request
@@ -42,9 +48,23 @@ jobs:
           xml = urllib.request.urlopen(
               f"https://{host}/sitemap.xml", timeout=30
           ).read().decode()
-          urls = re.findall(r"<loc>(.*?)</loc>", xml)
-          if not urls:
+          entries = re.findall(r"<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>", xml)
+          if not entries:
               raise SystemExit("no URLs found in live sitemap")
+          # IndexNow is for changed URLs. Re-submitting the whole sitemap on
+          # every deploy tells engines nothing and can get the host's pings
+          # discounted, so only send pages whose sitemap lastmod is from the
+          # last 2 days (UTC), unless a manual run asks for all of them.
+          from datetime import date, timedelta
+          cutoff = (date.today() - timedelta(days=2)).isoformat()
+          if os.environ.get("ALL") == "true":
+              urls = [u for u, _ in entries]
+          else:
+              urls = [u for u, m in entries if m[:10] >= cutoff]
+          if not urls:
+              print(f"No sitemap URLs with lastmod >= {cutoff}; nothing to submit")
+              raise SystemExit(0)
+          print("Submitting:", *urls, sep="\n  ")
           payload = json.dumps({
               "host": host,
               "key": key,
