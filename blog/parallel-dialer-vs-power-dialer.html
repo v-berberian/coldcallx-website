@@ -105,7 +105,7 @@
           "name": "What is a parallel dialer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A parallel dialer is cloud dialing software that rings several numbers at once for one rep, usually two to ten, and connects the rep to whichever line a live person answers first. The other lines are hung up automatically. It runs on multi-line VoIP platforms priced per user per month and cannot run on a single phone line, so no iPhone app can dial in parallel."
+            "text": "A parallel dialer is cloud dialing software that rings several numbers at once for one rep, usually two to ten, and connects the rep to whichever line a live person answers first. The other lines are hung up automatically. It uses multiple outbound call legs on a telephony platform, typically priced per user per month. Whether it can be accessed from an iPhone depends on the platform; it is different from Cold Call X's one-at-a-time carrier dialing."
           }
         },
         {
@@ -137,7 +137,7 @@
           "name": "Can you use a parallel dialer on an iPhone?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. iOS places calls through the Phone app, one at a time, with the user on the line, and it does not let third-party apps place or hold calls silently in the background. A parallel dialer's iPhone app is a remote control for calls that are actually placed by the vendor's cloud platform over VoIP. The dialer that runs natively on an iPhone is a power dialer such as Cold Call X, which dials your imported list from your own number and carrier, one call at a time."
+            "text": "Not through Cold Call X, which has no parallel mode. It dials your imported list through the iPhone's Phone app from your own number and carrier, one call at a time. iOS supports third-party VoIP calling apps, but that alone does not make an app a parallel dialer. Whether a cloud parallel-dialing platform can be used from an iPhone depends on its mobile support; those calls are separate from Cold Call X's carrier workflow."
           }
         },
         {
@@ -145,7 +145,7 @@
           "name": "Which is better for a solo rep: a parallel dialer or a power dialer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For one person working their own list, a power dialer. Parallel dialing raises dials per hour but not the share of people who answer, it drops some of the people who do answer, and it needs a per-seat cloud subscription and a VoIP number. A power dialer keeps you on every call from your own number and still removes the dead time between calls. On an iPhone that is Cold Call X: import your list, tap Call, log the outcome, and the next lead is dialed. One-time purchase, no subscription."
+            "text": "For one person working their own list, a power dialer. Parallel dialing raises dials per hour but not the share of people who answer, it drops some of the people who do answer, and it typically needs a per-seat cloud subscription. Its caller ID options depend on the provider. A power dialer keeps you on every call from your own number and still removes the dead time between calls. On an iPhone that is Cold Call X: import your list, tap Call, log the outcome, and the next lead is dialed. One-time purchase, no subscription."
           }
         }
       ]
@@ -178,7 +178,7 @@
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Dialer vendors use "parallel", "power" and "predictive" as if everyone knew the difference, then price the three very differently. The words describe <strong>how many calls the software has ringing at once</strong>, and that one fact decides everything else: how fast you get through a list, how many answered calls get dropped, what number shows on the other person's screen, which rules you run into, and whether the thing can run on a phone at all.</p>
 
-        <div class="callout"><strong>Short answer:</strong> a <strong>power dialer</strong> places one call at a time and dials the next number the moment you finish, so you are on the line for every call. A <strong>parallel dialer</strong> rings two to ten numbers at the same time for one rep and connects you to the first person who answers, hanging up on the rest. Parallel dialing raises dials per hour, not the share of people who answer, and it only runs on a multi-line cloud platform billed per seat. On an iPhone, the dialer that actually runs natively is a power dialer: <strong>Cold Call X</strong> dials your imported list one call at a time from your own number and carrier.</div>
+        <div class="callout"><strong>Short answer:</strong> a <strong>power dialer</strong> places one call at a time and dials the next number the moment you finish, so you are on the line for every call. A <strong>parallel dialer</strong> rings two to ten numbers at the same time for one rep and connects you to the first person who answers, hanging up on the rest. Parallel dialing raises dials per hour, not the share of people who answer, and it only runs on a multi-line cloud platform billed per seat. <strong>Cold Call X</strong> uses a power-dialer workflow through the iPhone's Phone app: it dials your imported list one call at a time from your own number and carrier.</div>
 
         <h2>What is a power dialer?</h2>
         <p>A power dialer works through a list <strong>one number at a time</strong>. You tap Call, the first lead is dialed, you talk, you hang up, you tap the outcome, and the next lead is dialed. There is no lookup, no copy and paste, no mistyped digit and no "where was I?" scroll between calls. The number of calls in flight is always one, and a person (you) is on every one of them from the first ring.</p>
@@ -189,7 +189,7 @@
         <ul>
           <li><strong>Some answered calls are abandoned.</strong> If two people answer within the same second, one of them gets the rep and the other hears silence, then a hang-up. Vendors reduce this with answering-machine detection and by limiting lines per rep, but it cannot be zero.</li>
           <li><strong>The answer rate does not move.</strong> How many people pick up is set by the list, the time of day and the reputation of the number on the screen. Parallel dialing puts more rings in flight per hour, so conversations per hour go up, but each individual number is no more likely to answer.</li>
-          <li><strong>It needs multiple lines.</strong> One phone line places one outgoing call. True parallel dialing runs on a cloud telephony platform with a pool of VoIP numbers, which is why it is sold per user per month and never as a standalone phone app.</li>
+          <li><strong>It needs multiple lines.</strong> Parallel dialing needs multiple outbound call legs on a telephony platform, rather than Cold Call X's one-at-a-time carrier calls. Cloud platforms are typically sold per user per month; mobile access and caller ID options depend on the platform.</li>
         </ul>
 
         <h2>And a predictive dialer?</h2>
@@ -206,7 +206,7 @@
               <tr><th scope="row">Calls ringing at once</th><td>One</td><td>2&ndash;10 per rep</td><td>Many, paced by an algorithm across a team</td></tr>
               <tr><th scope="row">Who is on the line when someone answers</th><td>You, from the first ring</td><td>You, connected after the pickup; other lines dropped</td><td>Whichever agent is free, or a recorded message if none is</td></tr>
               <tr><th scope="row">Dropped answered calls</th><td>None by design</td><td>Some, when two lines answer together</td><td>Managed to a legal cap</td></tr>
-              <tr><th scope="row">Caller ID the lead sees</th><td>Your own number, or the seat's VoIP number</td><td>A number from the platform's pool</td><td>A number from the platform's pool</td></tr>
+              <tr><th scope="row">Caller ID the lead sees</th><td>Your own number, or the seat's VoIP number</td><td>A platform number, or a verified existing number where supported</td><td>A platform number, or a verified existing number where supported</td></tr>
               <tr><th scope="row">Where it runs</th><td>Your own phone line (iPhone app) or a cloud seat</td><td>Multi-line cloud VoIP platform</td><td>Contact-center telephony</td></tr>
               <tr><th scope="row">Pricing model</th><td>One-time app, or per seat on cloud</td><td>Per user per month</td><td>Per agent per month, or by quote</td></tr>
               <tr><th scope="row">Built for</th><td>Solo reps, agents and small teams calling their own lists</td><td>SDR teams making hundreds of dials a day</td><td>Large call centers with compliance staff</td></tr>
@@ -224,13 +224,13 @@
         </ul>
         <p>This is general information, not legal advice. Which rules cover your calls depends on who you call, why, and from where.</p>
 
-        <h2>Why no iPhone app can dial in parallel</h2>
-        <p>On an iPhone, a phone call is placed by the Phone app, one at a time, with the user on the line. iOS does not let a third-party app place, hold or listen to calls silently in the background, which is exactly what parallel dialing requires. So every "parallel dialer app" in the App Store is a remote control: the calls are placed by the vendor's cloud platform over VoIP, from the vendor's numbers, and the app shows you what is happening. That is also why those apps need an account, a seat subscription and a new phone number.</p>
-        <p>A power dialer is the one model that can run natively on a phone. <a href="/">Cold Call X</a> queues your imported list and hands each call to the iPhone's Phone app over your own carrier line, so the lead sees your real number, your call history stays in the Phone app, and there is no VoIP account. Its pacing modes (Manual, Rocket, 5s, 10s, Timer) change the gap between calls, never the number of calls at once. There is no parallel or predictive mode, and that is deliberate for a tool one person holds in their hand.</p>
+        <h2>iPhone carrier calls and cloud-backed dialing</h2>
+        <p>Cold Call X places one call at a time through the iPhone's Phone app and your own carrier. That workflow is different from a cloud platform placing multiple outbound calls. iOS also supports third-party VoIP calling apps through CallKit, including call-hold actions; it does not prohibit all app-based calling. Whether a platform offers parallel dialing from an iPhone depends on that platform's mobile support. Its account, subscription and caller ID options also depend on the provider: cloud calling does not inherently require a new caller ID number.</p>
+        <p>Cold Call X uses a one-at-a-time carrier workflow. <a href="/">Cold Call X</a> queues your imported list and hands each call to the iPhone's Phone app over your own carrier line, so the lead sees your real number, your call history stays in the Phone app, and there is no VoIP account. Its pacing modes (Manual, Rocket, 5s, 10s, Timer) change the gap between calls, never the number of calls at once. There is no parallel or predictive mode, and that is deliberate for a tool one person holds in their hand.</p>
 
         <h2>Which one for a solo rep?</h2>
         <p>If you are a team lead buying seats for ten SDRs who each make 300 dials a day from a shared number pool, parallel dialing is what those platforms are built for, and the per-seat price and the compliance work come with it.</p>
-        <p>If you are one person working your own list, the trade is different. Parallel dialing would raise your dials per hour, but not the share of people who answer. It would drop some of the people who do answer, which on a list of your own leads means hanging up on your own prospects. It would show them a pool number instead of yours, and it would cost a monthly seat for a line you don't need. A power dialer gives you the part that actually matters for one caller, which is deleting the dead time between calls, while keeping you on every call from your own number. On an iPhone that is <a href="/auto-dialer-iphone">Cold Call X</a>: import a CSV, Excel export, Google Sheet, HubSpot or Salesforce list, tap Call, log the outcome with one tap, and the next lead is dialed, with the follow-up scheduled for you. One-time purchase, no subscription.</p>
+        <p>If you are one person working your own list, the trade is different. Parallel dialing would raise your dials per hour, but not the share of people who answer. It would drop some of the people who do answer, which on a list of your own leads means hanging up on your own prospects. It would use the platform's caller ID options, which may include a verified existing number, and typically a monthly seat. A power dialer gives you the part that actually matters for one caller, which is deleting the dead time between calls, while keeping you on every call from your own number. On an iPhone that is <a href="/auto-dialer-iphone">Cold Call X</a>: import a CSV, Excel export, Google Sheet, HubSpot or Salesforce list, tap Call, log the outcome with one tap, and the next lead is dialed, with the follow-up scheduled for you. One-time purchase, no subscription.</p>
 
         <h2>Related guides</h2>
         <ul>
@@ -250,7 +250,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What is a parallel dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">A parallel dialer is cloud dialing software that rings several numbers at once for one rep, usually two to ten, and connects the rep to whichever line a live person answers first. The other lines are hung up automatically. It runs on multi-line VoIP platforms priced per user per month and cannot run on a single phone line, so no iPhone app can dial in parallel.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">A parallel dialer is cloud dialing software that rings several numbers at once for one rep, usually two to ten, and connects the rep to whichever line a live person answers first. The other lines are hung up automatically. It uses multiple outbound call legs on a telephony platform, typically priced per user per month. Whether it can be accessed from an iPhone depends on the platform; it is different from Cold Call X's one-at-a-time carrier dialing.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What is a power dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -266,11 +266,11 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can you use a parallel dialer on an iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. iOS places calls through the Phone app, one at a time, with the user on the line, and it does not let third-party apps place or hold calls silently in the background. A parallel dialer's iPhone app is a remote control for calls that are actually placed by the vendor's cloud platform over VoIP. The dialer that runs natively on an iPhone is a power dialer such as Cold Call X, which dials your imported list from your own number and carrier, one call at a time.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Not through Cold Call X, which has no parallel mode. It dials your imported list through the iPhone's Phone app from your own number and carrier, one call at a time. iOS supports third-party VoIP calling apps, but that alone does not make an app a parallel dialer. Whether a cloud parallel-dialing platform can be used from an iPhone depends on its mobile support; those calls are separate from Cold Call X's carrier workflow.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Which is better for a solo rep: a parallel dialer or a power dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">For one person working their own list, a power dialer. Parallel dialing raises dials per hour but not the share of people who answer, it drops some of the people who do answer, and it needs a per-seat cloud subscription and a VoIP number. A power dialer keeps you on every call from your own number and still removes the dead time between calls. On an iPhone that is Cold Call X: import your list, tap Call, log the outcome, and the next lead is dialed. One-time purchase, no subscription.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">For one person working their own list, a power dialer. Parallel dialing raises dials per hour but not the share of people who answer, it drops some of the people who do answer, and it typically needs a per-seat cloud subscription. Its caller ID options depend on the provider. A power dialer keeps you on every call from your own number and still removes the dead time between calls. On an iPhone that is Cold Call X: import your list, tap Call, log the outcome, and the next lead is dialed. One-time purchase, no subscription.</p>
         </details>
       </div>
 
