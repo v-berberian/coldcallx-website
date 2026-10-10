@@ -98,7 +98,7 @@
           {
             "@type": "Question",
             "name": "Is there an iPhone app that logs call outcomes and schedules follow-ups?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer for iPhone with one-tap call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested. Every outcome schedules the next attempt, booked callbacks get an exact-time alert, and with HubSpot or Salesforce connected (beta) the outcome and notes sync back to the CRM. It is a one-time purchase with no subscription." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a power dialer for iPhone with one-tap call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested. No Answer, Voicemail and Interested schedule the next attempt, booked callbacks get an exact-time alert, Not Interested and Wrong Number end the sequence, and with HubSpot or Salesforce connected (beta) the outcome and notes sync back to the CRM. It is a one-time purchase with no subscription." }
           }
         ]
       }
@@ -130,7 +130,7 @@
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Every call ends with a label, whether you write it down or not. "No answer." "Left a voicemail." "Call me Thursday at 3." The label is the call disposition, and on a list of a few hundred leads it is the only thing standing between a follow-up system and a pile of numbers you half remember dialing. This guide gives you <strong>a short list of disposition codes that each trigger a different next step</strong>, the follow-up rule behind each one, and how to keep them in step with HubSpot or Salesforce.</p>
 
-        <div class="callout"><strong>Short answer:</strong> a call disposition (or call outcome) is the result you log the second a call ends. For cold calling, six to eight codes are enough: <strong>No Answer, Busy, Voicemail, Wrong Number, Callback, Interested, Not Interested and Do Not Call</strong>. Each one should decide when, or whether, the lead gets called again. On an iPhone, <strong>Cold Call X</strong> logs No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested with one tap, schedules the next attempt for every outcome, and gives booked callbacks an exact-time alert. Its Do Not Call list blocks a contact across every list.</div>
+        <div class="callout"><strong>Short answer:</strong> a call disposition (or call outcome) is the result you log the second a call ends. For cold calling, six to eight codes are enough: <strong>No Answer, Busy, Voicemail, Wrong Number, Callback, Interested, Not Interested and Do Not Call</strong>. Each one should decide when, or whether, the lead gets called again. On an iPhone, <strong>Cold Call X</strong> logs No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested with one tap, schedules the next attempt after No Answer, Voicemail and Interested, and gives booked callbacks an exact-time alert. Its Do Not Call list blocks a contact across every list.</div>
 
         <h2>What a call disposition is (and isn't)</h2>
         <p>"Disposition", "call outcome", "call result" and "call status" all mean the same thing: a standard label for what happened on one call. Call centers use short codes (NA, LVM, CB, NI, DNC), and CRMs use plain words. HubSpot calls it the call outcome, and Salesforce logs it as the call result on a completed call task.</p>
@@ -188,9 +188,9 @@
         <p>Whatever the system, the reports only work if every rep picks from the same short list. Connect rate (conversations divided by dials) and conversations per meeting are only as accurate as the dispositions behind them.</p>
 
         <h2>How Cold Call X handles call outcomes</h2>
-        <p><a href="/">Cold Call X</a> is a power dialer for iPhone built around this loop. When a call ends you tap one of six outcomes: <strong>No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested</strong>. The outcome is logged on the lead and the next attempt is scheduled for you, so the follow-up rules above run without a spreadsheet.</p>
+        <p><a href="/">Cold Call X</a> is a power dialer for iPhone built around this loop. When a call ends you tap one of six outcomes: <strong>No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested</strong>. The outcome is logged on the lead and, unless it ends the sequence, the next attempt is scheduled for you, so the follow-up rules above run without a spreadsheet.</p>
         <ul>
-          <li><strong>Automatic follow-ups:</strong> every outcome schedules the next attempt, with morning reminders, one Follow-ups list across all your call lists, and an exact-time alert for callbacks you book.</li>
+          <li><strong>Automatic follow-ups:</strong> No Answer, Voicemail and Interested schedule the next attempt, Not Interested and Wrong Number end it, with morning reminders, one Follow-ups list across all your call lists, and an exact-time alert for callbacks you book.</li>
           <li><strong>Follow-up texts:</strong> templates for after a voicemail, after no answer, and callback confirmed.</li>
           <li><strong>Stats from your outcomes:</strong> each call list shows its connect rate, call outcomes and the best time to call.</li>
           <li><strong>Callbacks you recognize:</strong> when a lead calls you back, caller ID shows their name and last outcome.</li>
@@ -237,7 +237,7 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there an iPhone app that logs call outcomes and schedules follow-ups?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer for iPhone with one-tap call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested. Every outcome schedules the next attempt, booked callbacks get an exact-time alert, and with HubSpot or Salesforce connected (beta) the outcome and notes sync back to the CRM. It is a one-time purchase with no subscription.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a power dialer for iPhone with one-tap call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested. No Answer, Voicemail and Interested schedule the next attempt, booked callbacks get an exact-time alert, Not Interested and Wrong Number end the sequence, and with HubSpot or Salesforce connected (beta) the outcome and notes sync back to the CRM. It is a one-time purchase with no subscription.</p>
         </details>
       </div>
 
