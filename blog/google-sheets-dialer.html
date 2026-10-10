@@ -52,7 +52,7 @@
         "description": "Ways to call a list kept in Google Sheets from an iPhone, and how to dial it with your own number while call notes flow back into the sheet.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-09-30",
+        "dateModified": "2026-10-10",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/google-sheets-dialer",
@@ -74,6 +74,21 @@
             "@type": "Question",
             "name": "Can I power dial a Google Sheet from my iPhone?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X connects to Google Sheets, imports the tab you pick as a call list, and dials down it one lead at a time from your own number. Call notes can be written back to the sheet's Notes column, and pulling down refreshes the list when rows change." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Google Sheets have a built-in dialer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Google Sheets stores the numbers but can't place calls, and its HYPERLINK formula doesn't accept tel: links, so there is no click-to-call column either. On an iPhone, Cold Call X turns the tab you pick into a call list, dials each lead from your own number, and writes your call notes back to the sheet's Notes column." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I call phone numbers directly from Google Sheets on my iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "One at a time, yes: copy the number from the cell and paste it into the Phone app. Nothing in Sheets dials the next row when a call ends or records what happened. For a list of any size, a power dialer that reads the sheet does that part: Cold Call X dials down the tab in order, logs the outcome, and keeps the notes in the sheet." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I dial from an Excel file or a CSV on iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X imports CSV and Excel exports with the columns mapped automatically, and dials down the list the same way. A file import is a snapshot, so later edits to the file don't flow in and call notes stay in the app; connect a Google Sheet instead when you want pull-to-refresh and notes written back to the file." }
           },
           {
             "@type": "Question",
@@ -120,14 +135,17 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Google Sheets dialer for iPhone: call down your sheet, write notes back</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; September 2026 &middot; 6 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; October 2026 &middot; 8 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">A Google Sheet is where most call lists actually live: a skip-traced export, a list your team shares, a column of numbers someone pasted in last night. Calling it from an iPhone usually means switching between the Sheets app and the phone, copying numbers, and typing notes into a cell afterwards, if you remember. <strong>Here are the ways to dial a sheet from your phone, and the one that keeps the sheet up to date for you.</strong></p>
 
+        <div class="callout"><strong>Short answer:</strong> Google Sheets has no built-in dialer, and its <code>HYPERLINK</code> formula won't make a <code>tel:</code> link, so on an iPhone the manual route is copying one number at a time into the Phone app. To call down a sheet in order, use a dialer app that reads it: <strong>Cold Call X</strong> imports the tab you pick as a call list, dials each lead from your own number, logs the outcome, and writes your call notes back to the sheet's Notes column. One-time purchase, no subscription.</div>
+
         <h2>Three ways to call a Google Sheet from an iPhone</h2>
-        <h3>1. Tap-to-call links in the sheet</h3>
-        <p>Format the phone column as <code>tel:</code> links (a <code>HYPERLINK</code> formula does it) and each number becomes tappable in the Sheets app. It's free and it works for twenty calls. For two hundred it's slow: every call means finding the row, tapping, confirming, coming back, and typing the note by hand, and nothing reminds you who needs a callback.</p>
+        <h3>1. Copy the number out of the sheet</h3>
+        <p>The route most people start with: open the tab in the Sheets app, copy the number from the cell, paste it into the Phone app, dial. It's free and it works for twenty calls. For two hundred it's slow: every call means finding the row, copying, switching apps, calling, coming back, and typing the note into a cell by hand, and nothing reminds you who needs a callback.</p>
+        <p>Can't you make the numbers tappable? Not with a formula. Google's own <a href="https://support.google.com/docs/answer/3093313" rel="noopener" target="_blank">HYPERLINK documentation</a> lists the link types Sheets allows (http, https, mailto, aim, ftp, gopher, telnet and news) and says anything else, which includes <code>tel:</code>, is shown as plain text and not linked. So a column of <code>tel:</code> formulas doesn't give you click-to-call from Google Sheets on an iPhone; it gives you a column of text.</p>
         <h3>2. A desktop dialer add-on</h3>
         <p>Several cloud dialers read Google Sheets through a browser extension or an add-on. They're built for a desk: a laptop, a headset and a VoIP number, usually on a monthly per-user plan. If you call from your phone, they don't help.</p>
         <h3>3. A dialer app that reads the sheet</h3>
@@ -138,7 +156,7 @@
           <li><strong>Connect Google.</strong> Sign in with your Google account; the app lists your spreadsheets by name so you can choose one.</li>
           <li><strong>Pick the spreadsheet and the tab.</strong> The rows become your call list. Columns are mapped automatically: name, company, phone numbers, notes.</li>
           <li><strong>Dial.</strong> Tap Call and work down the list from your own number; when a call ends, the next lead is ready. Calling Hours only dials leads during their own daytime.</li>
-          <li><strong>Tap the outcome, add a note.</strong> The outcome schedules the next attempt in the app; the note is written into the sheet's Notes column.</li>
+          <li><strong>Tap the outcome, add a note.</strong> An eligible outcome schedules the next attempt in the app; the note is written into the sheet's Notes column.</li>
           <li><strong>Pull down to refresh.</strong> When someone adds rows or fixes a number in the sheet, refresh the list instead of re-importing.</li>
         </ol>
         <p>A lead with a mobile and an office line is one lead with two numbers, not two rows to call. The <a href="/#tutorials">import and column-mapping tutorials</a> show the whole thing in under a minute.</p>
@@ -177,6 +195,14 @@
           <li><strong>Share the sheet, not the phone.</strong> Teammates see your notes in the sheet as you call; each person dials from their own iPhone and number.</li>
         </ul>
 
+        <h2>If the list is in Excel, Numbers or a CSV instead</h2>
+        <p>Not every list lives in Google Sheets. A skip-trace service sends a CSV, a list broker sends an Excel file, and a colleague keeps theirs in Numbers. Cold Call X imports CSV and Excel exports as well, with the columns mapped automatically, so the setup is the same: one file becomes one call list, you tap Call and work down it from your own number. Two differences from a connected Google Sheet are worth knowing before you choose:</p>
+        <ul>
+          <li><strong>A file import is a snapshot.</strong> Rows added to the file later don't appear in the app; import the new export as a fresh list, or paste the file into a Google Sheet and connect that so you can pull down to refresh.</li>
+          <li><strong>Notes stay in the app.</strong> Only a connected Google Sheet gets call notes written back. If the whole team needs to see your notes in a shared file, a Google Sheet is the version to connect.</li>
+        </ul>
+        <p>Either way your leads, outcomes and follow-ups stay on your iPhone, and a list from any source goes through the same Do Not Call check. The <a href="/blog/call-a-list-of-numbers-on-iphone">guide to calling a list of numbers on iPhone</a> walks through the file import step by step.</p>
+
         <h2>When a spreadsheet stops being enough</h2>
         <p>Sheets are great until two people call the same lead the same afternoon, or the list outgrows a tab. If your team already runs on a CRM, Cold Call X imports from it directly: see the <a href="/blog/hubspot-dialer-iphone">HubSpot dialer</a> and <a href="/blog/salesforce-dialer-iphone">Salesforce dialer</a> guides. If you work alone off exports, a sheet plus a dialer is still the fastest, cheapest setup there is; the <a href="/blog/free-vs-paid-power-dialer">free vs paid power dialer guide</a> does the math, and the <a href="/auto-dialer-iphone">iPhone dialer guide</a> covers the dialing modes.</p>
       </article>
@@ -187,6 +213,18 @@
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I power dial a Google Sheet from my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X connects to Google Sheets, imports the tab you pick as a call list, and dials down it one lead at a time from your own number. Call notes can be written back to the sheet's Notes column, and pulling down refreshes the list when rows change.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Google Sheets have a built-in dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. Google Sheets stores the numbers but can't place calls, and its HYPERLINK formula doesn't accept tel: links, so there is no click-to-call column either. On an iPhone, Cold Call X turns the tab you pick into a call list, dials each lead from your own number, and writes your call notes back to the sheet's Notes column.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I call phone numbers directly from Google Sheets on my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">One at a time, yes: copy the number from the cell and paste it into the Phone app. Nothing in Sheets dials the next row when a call ends or records what happened. For a list of any size, a power dialer that reads the sheet does that part: Cold Call X dials down the tab in order, logs the outcome, and keeps the notes in the sheet.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I dial from an Excel file or a CSV on iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X imports CSV and Excel exports with the columns mapped automatically, and dials down the list the same way. A file import is a snapshot, so later edits to the file don't flow in and call notes stay in the app; connect a Google Sheet instead when you want pull-to-refresh and notes written back to the file.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I call a list of phone numbers on iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
