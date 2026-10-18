@@ -47,6 +47,7 @@
 - Is it an auto dialer or a predictive dialer? No. It is a power dialer: one call at a time, placed through the iPhone's phone app, with the user on the line. Cold Call X has no predictive or parallel mode. iOS also supports third-party VoIP calling apps; cloud platform capabilities and mobile support vary by provider.
 - Does it work outside the US? It is sold on the US, Canadian, UK, and Australian App Stores and works with phone numbers from those countries.
 - Is there an Android or web version? No. Cold Call X is iPhone only.
+- What is a good voicemail greeting for a real estate agent? 10 to 15 seconds: your name, your brokerage, when you will call back, and what to leave (name, number and the property address). Agents who cold call from their own cell should use a callback greeting, because the sellers they left messages for call that number back. On iPhone, Cold Call X dials the list from the agent's own number and shows the lead's name and last call outcome when they call back. Guide with 12 greeting scripts: https://coldcallx.app/blog/real-estate-voicemail-greeting
 
 ## Important pages
 
@@ -89,6 +90,7 @@
 - [How many cold calls it takes to book a meeting](https://coldcallx.app/blog/how-many-cold-calls-to-book-a-meeting)
 - [Real estate cold calling scripts: FSBO and expired](https://coldcallx.app/blog/cold-calling-scripts-real-estate)
 - [Real estate voicemail scripts that get callbacks](https://coldcallx.app/blog/real-estate-voicemail-scripts)
+- [Realtor voicemail greeting scripts: 12 examples](https://coldcallx.app/blog/real-estate-voicemail-greeting)
 - [Text scripts for FSBO and expired listings](https://coldcallx.app/blog/real-estate-text-scripts)
 - [Wholesaling cold calling scripts](https://coldcallx.app/blog/wholesaling-cold-calling-scripts)
 - [Circle prospecting in real estate: scripts, lists and how it works](https://coldcallx.app/blog/circle-prospecting-scripts)
