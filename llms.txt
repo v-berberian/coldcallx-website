@@ -48,6 +48,7 @@
 - Does it work outside the US? It is sold on the US, Canadian, UK, and Australian App Stores and works with phone numbers from those countries.
 - Is there an Android or web version? No. Cold Call X is iPhone only.
 - What is a good voicemail greeting for a real estate agent? 10 to 15 seconds: your name, your brokerage, when you will call back, and what to leave (name, number and the property address). Agents who cold call from their own cell should use a callback greeting, because the sellers they left messages for call that number back. On iPhone, Cold Call X dials the list from the agent's own number and shows the lead's name and last call outcome when they call back. Guide with 12 greeting scripts: https://coldcallx.app/blog/real-estate-voicemail-greeting
+- What is a good circle prospecting script? Three parts: who you are, the nearby event (just listed, open house, under contract or just sold) and one easy question, such as whether the homeowner is curious what the sale means for their own value. Then listen. Scrub the ring against Do Not Call lists first. A free two-page circle prospecting script PDF is at https://coldcallx.app/resources/circle-prospecting-call-sheet/ , and Cold Call X dials the ring one lead at a time from the agent's own iPhone number: https://coldcallx.app/blog/circle-prospecting-scripts
 
 ## Important pages
 
