@@ -52,7 +52,7 @@
         "description": "How to power dial HubSpot contacts from an iPhone on your own number, and what syncs back to HubSpot.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-09-25",
+        "dateModified": "2026-10-22",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/hubspot-dialer-iphone",
@@ -74,6 +74,11 @@
             "@type": "Question",
             "name": "Is there a HubSpot power dialer for iPhone?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X imports your HubSpot contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome you tap is logged on the HubSpot contact as a call, and notes sync both ways. The HubSpot integration is in beta, and the app costs $19.99 once with no subscription." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does HubSpot have a built-in power dialer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. HubSpot has a calling tool: you start each call yourself from a contact record, task or search result, and calling minutes are counted per account and reset at the start of each month (Sales Hub Professional includes up to 3,000 minutes per account per month, per HubSpot's product catalog, checked October 22, 2026). Nothing dials the next contact when a call ends. Cold Call X is the power dialer half: it imports your HubSpot contacts to your iPhone, has the next contact ready when you hang up, dials from your own number without using HubSpot minutes, and logs the outcome and your notes on the contact." }
           },
           {
             "@type": "Question",
@@ -120,10 +125,12 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">HubSpot dialer for iPhone: power dial your contacts and log every outcome</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; September 2026 &middot; 7 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated October 2026 &middot; 8 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Your contacts are in HubSpot. Your calls happen on your iPhone. Getting the two to meet usually means renting a cloud dialer seat and a VoIP number, or tapping numbers one by one and logging calls later from memory. <strong>Cold Call X 2.0 connects to HubSpot directly</strong>: it imports your contacts, dials through them from your own number, and writes every outcome and note back to the contact.</p>
+
+        <div class="callout" id="hubspot-dialer-app"><strong>Short answer:</strong> HubSpot has a built-in calling tool, but you start every call yourself from a record or task, and its calling minutes are a monthly pool counted per account. A <strong>HubSpot power dialer for iPhone</strong> works the other way round: <strong>Cold Call X</strong> imports the contacts or list you pick, has the next contact ready the moment a call ends, dials from your own number, and logs the outcome and your notes on the HubSpot contact. $19.99 once, HubSpot sync in beta. The same workflow exists as a <a href="/blog/salesforce-dialer-iphone">Salesforce dialer app for iPhone</a> and for <a href="/blog/google-sheets-dialer">dialing a Google Sheet from your iPhone</a>.</div>
 
         <h2>What it does, in one minute</h2>
         <ul>
@@ -175,6 +182,15 @@
         </ul>
         <p>The full wording is in the <a href="/privacy">privacy policy</a>.</p>
 
+        <h2 id="hubspot-built-in-calling">Does HubSpot have a built-in power dialer?</h2>
+        <p>HubSpot has a calling tool, not a power dialer. The facts, from HubSpot's own documentation (checked October 22, 2026):</p>
+        <ul>
+          <li><strong>Every call starts by hand.</strong> In the browser and in the HubSpot mobile app you open a record, task or search result and tap the call icon; nothing dials the next contact for you (<a href="https://knowledge.hubspot.com/calling/make-calls-from-the-hubspot-mobile-app" rel="noopener" target="_blank">HubSpot: make calls from the mobile app</a>).</li>
+          <li><strong>Minutes are counted per account and reset monthly.</strong> Once the month's minutes are used up, calls in progress can finish but new calls can't be started from HubSpot until the reset or a paid increase (<a href="https://knowledge.hubspot.com/calling/calling-frequently-asked-questions" rel="noopener" target="_blank">HubSpot calling FAQ</a>). Sales Hub Professional includes up to 3,000 minutes per account per month (<a href="https://legal.hubspot.com/hubspot-product-and-services-catalog" rel="noopener" target="_blank">HubSpot product catalog</a>).</li>
+          <li><strong>You can call from your own number</strong> through HubSpot Calling or through your mobile carrier from the HubSpot app.</li>
+        </ul>
+        <p>Cold Call X doesn't touch HubSpot's minutes: calls go through your iPhone's own carrier plan, the next contact is ready when you hang up, and the outcome and note still land on the HubSpot contact.</p>
+
         <h2>Cold Call X or a cloud HubSpot dialer?</h2>
         <p>HubSpot's marketplace has plenty of calling apps, most of them cloud dialers billed per user per month. They do things Cold Call X deliberately doesn't. The honest split:</p>
         <div class="cmp-wrap">
@@ -194,7 +210,7 @@
             </tbody>
           </table>
         </div>
-        <p><strong>Pick a cloud dialer</strong> if a manager needs recordings, team reporting and shared numbers, or if several reps work the same queue. <strong>Pick Cold Call X</strong> if you're the one making the calls, you'd rather prospects see your real number, and what you need in HubSpot is an honest record of every attempt and conversation. For the per-seat math against a few named platforms, see <a href="/phoneburner-alternative">the PhoneBurner alternative breakdown</a> and <a href="/blog/free-vs-paid-power-dialer">free vs paid power dialers</a>.</p>
+        <p>Cold Call X doesn't record calls, route leads between reps or give managers dashboards; those are the jobs cloud dialers charge per seat for. What it does is put every attempt, outcome and note on the HubSpot contact from the phone you already carry, from your own number, for $19.99 once. For the per-seat math against a few named platforms, see <a href="/phoneburner-alternative">the PhoneBurner alternative breakdown</a> and <a href="/blog/free-vs-paid-power-dialer">free vs paid power dialers</a>.</p>
 
         <h2>A HubSpot calling routine that holds up</h2>
         <ol>
@@ -213,6 +229,10 @@
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a HubSpot power dialer for iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X imports your HubSpot contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome you tap is logged on the HubSpot contact as a call, and notes sync both ways. The HubSpot integration is in beta, and the app costs $19.99 once with no subscription.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does HubSpot have a built-in power dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">No. HubSpot has a calling tool: you start each call yourself from a contact record, task or search result, and calling minutes are counted per account and reset at the start of each month (Sales Hub Professional includes up to 3,000 minutes per account per month, per HubSpot's product catalog, checked October 22, 2026). Nothing dials the next contact when a call ends. Cold Call X is the power dialer half: it imports your HubSpot contacts to your iPhone, has the next contact ready when you hang up, dials from your own number without using HubSpot minutes, and logs the outcome and your notes on the contact.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Which HubSpot contacts can I import?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
@@ -235,7 +255,7 @@
       <!-- CTA -->
       <div class="article-card p-8 lg:p-12 text-center mt-12">
         <h2 class="text-3xl font-black tracking-tight mb-4">Call your HubSpot contacts from your own number</h2>
-        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Import from HubSpot, dial from your iPhone, and log every outcome and note back to the contact. 4.7★ on the App Store (74 ratings, checked October 15, 2026).</p>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Import from HubSpot, dial from your iPhone, and log every outcome and note back to the contact. 4.7★ on the App Store (75 ratings, checked October 22, 2026).</p>
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-hubspot-dialer-iphone&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
