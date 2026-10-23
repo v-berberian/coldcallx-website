@@ -52,7 +52,7 @@
         "description": "When you can legally make sales calls in the US (federal and stricter states), Canada, the UK and Australia, with the rule behind each window.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-10-06",
+        "dateModified": "2026-10-23",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/calling-hours",
@@ -72,13 +72,23 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "How late can telemarketers call?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not after 9 p.m. in the called person's local time, and not before 8 a.m., under the federal rule for telephone solicitations to residential subscribers (47 CFR 64.1200(c)(1)). Several states stop earlier: Florida, Oklahoma and Maryland cut off at 8 p.m., and Texas allows calls until 9 p.m. but not before 9 a.m. (noon on Sunday). The cut-off follows the lead's time zone, not yours: an 11 p.m. call from New York lands in Los Angeles at 8 p.m., still inside the federal window, while a 9:30 p.m. call to a lead in the same time zone is too late. General information, not legal advice. Cold Call X's Calling Hours setting stops dialing a lead once their own window closes, so the cut-off is handled per lead, not per list." }
+          },
+          {
+            "@type": "Question",
             "name": "What time can telemarketers legally call in the US?",
             "acceptedAnswer": { "@type": "Answer", "text": "Federally, a telephone solicitation to a residential subscriber must fall between 8 a.m. and 9 p.m. in the called person's local time, seven days a week (47 CFR 64.1200(c)(1)). Several states are stricter: Florida, Oklahoma and Maryland allow 8 a.m. to 8 p.m. and cap calls at three per 24 hours on the same subject, and Texas allows 9 a.m. to 9 p.m. Monday to Saturday and noon to 9 p.m. on Sunday." }
           },
           {
             "@type": "Question",
-            "name": "What are the allowed calling times for telemarketing calls on Saturday or Sunday?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It depends on where the lead is. US federal rule: 8 a.m. to 9 p.m. local time on Saturday and Sunday too, because there is no weekend exception. Florida, Oklahoma and Maryland stop at 8 p.m. every day; Texas allows 9 a.m. to 9 p.m. on Saturday and noon to 9 p.m. on Sunday. Canada: 10 a.m. to 6 p.m. on both weekend days. UK: no statutory calling hours for live sales calls. Australia: 9 a.m. to 5 p.m. on Saturday, and no telemarketing calls on Sundays or national public holidays." }
+            "name": "Can telemarketers call on Sunday? The allowed calling times for telemarketing calls on Saturday or Sunday",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Under the US federal rule, telemarketers can call on Sunday and Saturday between 8 a.m. and 9 p.m. in the called person's local time; there is no weekend exception. Florida, Oklahoma and Maryland stop at 8 p.m. every day; Texas allows 9 a.m. to 9 p.m. on Saturday and noon to 9 p.m. on Sunday. Canada: 10 a.m. to 6 p.m. on both weekend days. UK: no statutory calling hours for live sales calls. Australia: 9 a.m. to 5 p.m. on Saturday, and no telemarketing calls on Sundays or national public holidays. Cold Call X applies the window you set to each lead's own time zone, weekends included." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the do-not-call hours by state?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The federal do-not-call hours are before 8 a.m. and after 9 p.m. in the called person's local time, and that is the window in every state that has not set a tighter one. States that have: Florida, Oklahoma and Maryland (no calls after 8 p.m., and at most three calls in 24 hours on the same subject) and Texas (no calls before 9 a.m. Monday to Saturday, or before noon on Sunday). The state table on this page links the source for each. Other states publish their own windows on the attorney general's telemarketing page, so check it before calling consumers there. General information, not legal advice. A 9 a.m. to 8 p.m. block in the lead's time zone stays inside every window listed here except Sunday mornings in Texas, and Cold Call X's Calling Hours keep the dialer inside that block for every lead automatically." }
           },
           {
             "@type": "Question",
@@ -240,13 +250,21 @@
       <!-- FAQ -->
       <h2 class="text-3xl font-black tracking-tight mb-6 mt-12 text-center">Calling hours questions, answered</h2>
       <div class="space-y-4">
+        <details class="neo-glass rounded-3xl px-6 py-5 group" id="how-late">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How late can telemarketers call?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Not after 9 p.m. in the called person's local time, and not before 8 a.m., under the federal rule for telephone solicitations to residential subscribers (47 CFR 64.1200(c)(1)). Several states stop earlier: Florida, Oklahoma and Maryland cut off at 8 p.m., and Texas allows calls until 9 p.m. but not before 9 a.m. (noon on Sunday). The cut-off follows the lead's time zone, not yours: an 11 p.m. call from New York lands in Los Angeles at 8 p.m., still inside the federal window, while a 9:30 p.m. call to a lead in the same time zone is too late. General information, not legal advice. Cold Call X's Calling Hours setting stops dialing a lead once their own window closes, so the cut-off is handled per lead, not per list.</p>
+        </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What time can telemarketers legally call in the US?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Federally, a telephone solicitation to a residential subscriber must fall between 8 a.m. and 9 p.m. in the called person's local time, seven days a week (47 CFR 64.1200(c)(1)). Several states are stricter: Florida, Oklahoma and Maryland allow 8 a.m. to 8 p.m. and cap calls at three per 24 hours on the same subject, and Texas allows 9 a.m. to 9 p.m. Monday to Saturday and noon to 9 p.m. on Sunday.</p>
         </details>
-        <details class="neo-glass rounded-3xl px-6 py-5 group">
-          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What are the allowed calling times for telemarketing calls on Saturday or Sunday?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">It depends on where the lead is. US federal rule: 8 a.m. to 9 p.m. local time on Saturday and Sunday too, because there is no weekend exception. Florida, Oklahoma and Maryland stop at 8 p.m. every day; Texas allows 9 a.m. to 9 p.m. on Saturday and noon to 9 p.m. on Sunday. Canada: 10 a.m. to 6 p.m. on both weekend days. UK: no statutory calling hours for live sales calls. Australia: 9 a.m. to 5 p.m. on Saturday, and no telemarketing calls on Sundays or national public holidays.</p>
+        <details class="neo-glass rounded-3xl px-6 py-5 group" id="sunday">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can telemarketers call on Sunday? The allowed calling times for telemarketing calls on Saturday or Sunday<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Under the US federal rule, telemarketers can call on Sunday and Saturday between 8 a.m. and 9 p.m. in the called person's local time; there is no weekend exception. Florida, Oklahoma and Maryland stop at 8 p.m. every day; Texas allows 9 a.m. to 9 p.m. on Saturday and noon to 9 p.m. on Sunday. Canada: 10 a.m. to 6 p.m. on both weekend days. UK: no statutory calling hours for live sales calls. Australia: 9 a.m. to 5 p.m. on Saturday, and no telemarketing calls on Sundays or national public holidays. Cold Call X applies the window you set to each lead's own time zone, weekends included.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group" id="hours-by-state">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What are the do-not-call hours by state?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">The federal do-not-call hours are before 8 a.m. and after 9 p.m. in the called person's local time, and that is the window in every state that has not set a tighter one. States that have: Florida, Oklahoma and Maryland (no calls after 8 p.m., and at most three calls in 24 hours on the same subject) and Texas (no calls before 9 a.m. Monday to Saturday, or before noon on Sunday). The state table on this page links the source for each. Other states publish their own windows on the attorney general's telemarketing page, so check it before calling consumers there. General information, not legal advice. A 9 a.m. to 8 p.m. block in the lead's time zone stays inside every window listed here except Sunday mornings in Texas, and Cold Call X's Calling Hours keep the dialer inside that block for every lead automatically.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Do calling hours apply to B2B cold calls?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
