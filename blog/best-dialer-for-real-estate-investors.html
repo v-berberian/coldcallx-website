@@ -52,7 +52,7 @@
         "description": "The best dialer for real estate investors and wholesalers in 2026: skip-traced lists, absentee owners, DNC scrubs, and Cold Call X vs Mojo vs PhoneBurner vs BatchDialer vs CallTools on price and TCPA risk.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-08-23",
-        "dateModified": "2026-10-04",
+        "dateModified": "2026-10-24",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/best-dialer-for-real-estate-investors",
@@ -84,6 +84,16 @@
             "@type": "Question",
             "name": "How do I dial skip-traced lists with several numbers per owner?",
             "acceptedAnswer": { "@type": "Answer", "text": "Import the list with every phone column mapped to the same lead. Cold Call X keeps leads with several phone numbers, so you can mark a dead number Wrong Number and keep working the owner instead of losing the whole lead. Scrub the list against the National Do Not Call Registry before you import; the in-app Do Not Call list does not check national registries." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a skip trace dialer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A skip trace dialer is any dialer that can work a skip-traced list: several phone numbers on one owner, a fast way to retire disconnected or wrong numbers, and one call history per owner. It is not a separate product category. Cold Call X does it on an iPhone with leads that hold several numbers, a one-tap Wrong Number outcome and calling hours set by the owner's time zone. Scrub the list against the National Do Not Call Registry before you import; the in-app Do Not Call list does not check national registries." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I call absentee owners in another time zone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dial during the owner's local daytime, not yours. The federal rule allows solicitation calls from 8 a.m. to 9 p.m. where the called person is, and several states stop earlier. Cold Call X's calling hours use each lead's own time zone, so an out-of-state owner is only dialed during their day, and every number from the skip trace stays on the same lead. Not legal advice." }
           },
           {
             "@type": "Question",
@@ -130,7 +140,7 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">The best dialer for real estate investors and wholesalers (2026)</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Published August 2026 &middot; Updated October 4, 2026 &middot; 11 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Published August 2026 &middot; Updated October 24, 2026 &middot; 11 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Every "best dialer for investors" listicle you'll read this year has an agenda: the author sells one of the five dialers in the table. We sell one too, Cold Call X, a $19.99 iPhone app, so this comparison is written the only honest way left: show the real monthly math and let you decide. If you're a solo wholesaler or investor working your own list from your own number, the math says something else entirely.</p>
@@ -146,7 +156,7 @@
           <li><strong>Not burn the leads.</strong> Cloud numbers get spam-flagged; your own carrier number with local history answers more. Investor leads are expensive, answer rate is everything.</li>
         </ul>
 
-        <h2>Dialing skip-traced lists: what is different for investors</h2>
+        <h2 id="skip-trace-dialer">Skip trace dialer: what is different about calling skip-traced lists</h2>
         <p>Agents mostly call people who just listed, expired or asked about a home. Investors call owners who never raised their hand, from lists built by skip tracing. That changes what the dialer has to handle:</p>
         <ul>
           <li><strong>Several numbers per owner.</strong> A skip trace usually returns more than one phone number per owner, and some of them are disconnected or belong to someone else. You need every number on the same lead, a fast way to mark the dead ones, and one history per owner. Cold Call X keeps leads with several phone numbers and has a one-tap <em>Wrong Number</em> outcome, so a bad number doesn't burn the whole lead.</li>
@@ -156,6 +166,25 @@
           <li><strong>Lists change every week.</strong> New probate filings and pre-foreclosures arrive weekly. Keep one list per source and import the new batch as a CSV, Excel file or Google Sheet; columns map automatically.</li>
         </ul>
         <p>This is general information, not legal advice. State rules on calling hours, registries and consent vary; check with a TCPA attorney for your market.</p>
+
+        <h2 id="best-dialer-for-wholesalers">Best dialer for wholesalers: what the calling day looks like</h2>
+        <p>A wholesaler's calling day is a list, a phone and a follow-up queue: this week's skip-traced owners go into one list, every number gets marked as you reach it, and the follow-ups come back on their own. A dialer built for that job needs four things, and <strong>Cold Call X</strong> does each of them on your iPhone:</p>
+        <ul>
+          <li><strong>Import the list as it arrives.</strong> A CSV or Excel export from your skip-tracing provider, or a Google Sheet you share with a VA. Columns map automatically, and every phone column lands on the same owner.</li>
+          <li><strong>Dial one owner at a time from your own number.</strong> Manual, Rocket or a timed gap between calls; the next owner is ready when you hang up. Calls go through your own carrier, so there is no rented number to get spam-flagged and no per-minute bill.</li>
+          <li><strong>Log the outcome in one tap.</strong> No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested. Wrong Number retires the bad number without dropping the owner.</li>
+          <li><strong>Let the follow-ups find you.</strong> No Answer, Voicemail and Interested schedule the next attempt; a Callback lands at the time the seller gave you; Not Interested and Wrong Number end the sequence. The timing is in the <a href="/blog/follow-up-cadence">follow-up cadence guide</a>.</li>
+        </ul>
+        <p>Openers and objection handlers for each list type are in the <a href="/blog/wholesaling-cold-calling-scripts">wholesaling cold calling scripts</a>. Cold Call X costs $19.99 once, with no subscription and no per-seat license.</p>
+
+        <h2 id="absentee-owner-calling">Absentee owner calling: another time zone, several numbers</h2>
+        <p>Absentee owners are the list where a dialer earns its keep. The house is in your market; the owner is often in another state, with a cell number from a third. Three things matter when you call them:</p>
+        <ul>
+          <li><strong>Call in their daytime, not yours.</strong> The federal window is 8 a.m. to 9 p.m. in the called person's local time (<a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200" target="_blank" rel="noopener">47 CFR 64.1200(c)(1)</a>), and some states close earlier. Cold Call X's calling hours follow each lead's own time zone, so the Florida owner of a Phoenix rental is only dialed during Florida daytime.</li>
+          <li><strong>Work every number on the owner.</strong> A skip trace on an absentee owner often returns the mailing-address landline, a cell and sometimes a relative's number. Keep them on one lead, mark the dead ones Wrong Number and keep the owner.</li>
+          <li><strong>Open with the property, not the pitch.</strong> Name the property address, ask whether they still own it, then whether they have thought about selling. Cold Call X keeps your notes and the last outcome on the lead, and shows the lead's name and last outcome as caller ID when an owner calls you back.</li>
+        </ul>
+        <p>General information, not legal advice. State calling-hour rules are in <a href="/blog/calling-hours">the calling hours guide</a>.</p>
 
         <h2>The comparison, honestly</h2>
         <p>Prices verified August 2026. Mojo verified à la carte on mojosells.com (solo total: $10 access + $89 or $139 dialer, optional $30 voice + $25 recording + $10 caller ID). PhoneBurner verified via 2026 vendor pricing guides at $140/$165/$183 per user per month. BatchDialer's plan page loads prices dynamically, so we cite reported ranges from 2026 pricing guides (CloudTalk, July 2026: from $111/mo; REsimpli, August 2026: $139–$239/agent/mo). CallTools is custom-quoted.</p>
@@ -220,6 +249,14 @@
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I dial skip-traced lists with several numbers per owner?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Import the list with every phone column mapped to the same lead. Cold Call X keeps leads with several phone numbers, so you can mark a dead number Wrong Number and keep working the owner instead of losing the whole lead. Scrub the list against the National Do Not Call Registry before you import; the in-app Do Not Call list does not check national registries.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What is a skip trace dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">A skip trace dialer is any dialer that can work a skip-traced list: several phone numbers on one owner, a fast way to retire disconnected or wrong numbers, and one call history per owner. It is not a separate product category. Cold Call X does it on an iPhone with leads that hold several numbers, a one-tap Wrong Number outcome and calling hours set by the owner's time zone. Scrub the list against the National Do Not Call Registry before you import; the in-app Do Not Call list does not check national registries.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I call absentee owners in another time zone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Dial during the owner's local daytime, not yours. The federal rule allows solicitation calls from 8 a.m. to 9 p.m. where the called person is, and several states stop earlier. Cold Call X's calling hours use each lead's own time zone, so an out-of-state owner is only dialed during their day, and every number from the skip trace stays on the same lead. Not legal advice.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How much does a real estate investor dialer cost?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
