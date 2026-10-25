@@ -17,7 +17,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>Call Disposition Codes: Which Call Outcomes to Track (2026) | Cold Call X</title>
-  <meta name="description" content="A short list of call disposition codes for cold calling: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce." />
+  <meta name="description" content="A short list of call disposition codes for cold calling, with worked examples: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce." />
   <link rel="canonical" href="https://coldcallx.app/blog/call-outcomes" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="author" content="Vadym Berberian" />
@@ -31,12 +31,12 @@
   <meta property="og:site_name" content="Cold Call X" />
   <meta property="og:url" content="https://coldcallx.app/blog/call-outcomes" />
   <meta property="og:title" content="Call Disposition Codes: Which Call Outcomes to Track (2026)" />
-  <meta property="og:description" content="A short list of call disposition codes for cold calling: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce."/>
+  <meta property="og:description" content="A short list of call disposition codes for cold calling, with worked examples: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce."/>
   <meta property="og:image" content="https://coldcallx.app/logo.png" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Call Disposition Codes: Which Call Outcomes to Track (2026)" />
-  <meta name="twitter:description" content="A short list of call disposition codes for cold calling: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce."/>
+  <meta name="twitter:description" content="A short list of call disposition codes for cold calling, with worked examples: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce."/>
   <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
 
   <link rel="stylesheet" href="/styles.css">
@@ -49,10 +49,10 @@
       {
         "@type": "Article",
         "headline": "Call Disposition Codes: Which Call Outcomes to Track and What Each One Should Trigger",
-        "description": "A short list of call disposition codes for cold calling: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce.",
+        "description": "A short list of call disposition codes for cold calling, with worked examples: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-10-04",
-        "dateModified": "2026-10-04",
+        "dateModified": "2026-10-25",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/call-outcomes",
@@ -84,6 +84,16 @@
             "@type": "Question",
             "name": "How many call disposition codes should you use?",
             "acceptedAnswer": { "@type": "Answer", "text": "Six to eight. Each code should lead to a different next step; if two codes trigger the same follow-up, merge them. Long lists slow reps down, get picked at random under pressure, and make the reports harder to trust. Put the detail in a note instead of a new code." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are examples of call disposition codes and notes?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Three from a cold-calling block. Voicemail, with the note 'VM 1, mentioned the three Elm St sales, no permission to text' and a retry in one to two business days at another hour. Callback, Thursday 10:00, with the note 'spoke with the office manager, owner Dana is in Thursday mornings' and the call placed at exactly that time. Not Interested, with the note 'renewed in September, contract runs to March, open to a quote then' and one check-in in February. The code sets when the lead is called again, the note sets what you say. Cold Call X logs the outcome with one tap and keeps the note on the lead." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do call dispositions sync to HubSpot or Salesforce?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Use the CRM's own outcome list as the source of truth. In HubSpot a disposition is the call outcome on the logged call (the defaults are Busy, Connected, Left live message, Left voicemail, No answer and Wrong number, plus any custom outcomes); in Salesforce it is the call result on a completed call task. With HubSpot or Salesforce connected (beta), Cold Call X logs each outcome you tap as a call with that outcome on the HubSpot contact, or as a completed call task on the Salesforce lead or contact, and saves your notes on the record." }
           },
           {
             "@type": "Question",
@@ -125,12 +135,12 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Call disposition codes: which call outcomes to track, and what each one should trigger</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; October 2026 &middot; 8 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated October 25, 2026 &middot; 9 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Every call ends with a label, whether you write it down or not. "No answer." "Left a voicemail." "Call me Thursday at 3." The label is the call disposition, and on a list of a few hundred leads it is the only thing standing between a follow-up system and a pile of numbers you half remember dialing. This guide gives you <strong>a short list of disposition codes that each trigger a different next step</strong>, the follow-up rule behind each one, and how to keep them in step with HubSpot or Salesforce.</p>
 
-        <div class="callout"><strong>Short answer:</strong> a call disposition (or call outcome) is the result you log the second a call ends. For cold calling, six to eight codes are enough: <strong>No Answer, Busy, Voicemail, Wrong Number, Callback, Interested, Not Interested and Do Not Call</strong>. Each one should decide when, or whether, the lead gets called again. On an iPhone, <strong>Cold Call X</strong> logs No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested with one tap, schedules the next attempt after No Answer, Voicemail and Interested, and gives booked callbacks an exact-time alert. Its Do Not Call list blocks a contact across every list.</div>
+        <div class="callout"><strong>Short answer:</strong> a call disposition (or call outcome) is the result you log the second a call ends. For cold calling, six to eight codes are enough: <strong>No Answer, Busy, Voicemail, Wrong Number, Callback, Interested, Not Interested and Do Not Call</strong>. Each one should decide when, or whether, the lead gets called again. On an iPhone, <strong>Cold Call X</strong>, a <a href="/auto-dialer-iphone">power dialer app for iPhone</a>, logs No Answer, Voicemail, Wrong Number, Callback, Interested and Not Interested with one tap, schedules the next attempt after No Answer, Voicemail and Interested, and gives booked callbacks an exact-time alert. Its Do Not Call list blocks a contact across every list.</div>
 
         <h2>What a call disposition is (and isn't)</h2>
         <p>"Disposition", "call outcome", "call result" and "call status" all mean the same thing: a standard label for what happened on one call. Call centers use short codes (NA, LVM, CB, NI, DNC), and CRMs use plain words. HubSpot calls it the call outcome, and Salesforce logs it as the call result on a completed call task.</p>
@@ -156,6 +166,15 @@
           </table>
         </div>
         <p>Two rules keep the list honest. <strong>Every code needs its own next step</strong>: if two codes lead to the same follow-up, merge them. And <strong>avoid "Other"</strong>: whatever lands there is the call you'll never follow up on. If you need nuance (gatekeeper, wrong person but referred you, asked for an email), put it in the note.</p>
+
+        <h2 id="call-disposition-examples">Call disposition examples: three worked call notes</h2>
+        <p>A code on its own is a label. A code with a note and a dated next step is a follow-up system. Here are three calls from a typical cold-calling block, logged the way the table above asks for, each as <em>disposition, note, next step</em>:</p>
+        <ul>
+          <li><strong>Call 1: an expired listing, rang through to voicemail.</strong> Disposition: <em>Voicemail</em>. Note: "VM 1, 20 seconds, mentioned the three sales on Elm St this quarter; no permission to text." Next step: call again in one to two business days at a different hour, and no second voicemail for the next few attempts. The note records what you already said, so the second call doesn't repeat it.</li>
+          <li><strong>Call 2: a small business, the office manager answered.</strong> Disposition: <em>Callback</em>, Thursday 10:00. Note: "Spoke with Priya, office manager. Owner Dana is in Thursday mornings; ask for Dana by name." Next step: the call happens at exactly 10:00 on Thursday, not Thursday afternoon. Logged as No Answer, you would lose the time, the name and the reason the call is worth making.</li>
+          <li><strong>Call 3: a real conversation, a clear no.</strong> Disposition: <em>Not Interested</em>. Note: "Renewed with their current vendor in September; contract runs to March 2027. Open to a quote then." Next step: one check-in in February, nothing before. Without the reason in the note, "Not Interested" looks final and the February call never happens; with it, the lead is parked, not lost.</li>
+        </ul>
+        <p>The pattern holds for every code: the disposition decides <em>when</em> the lead is called again, the note decides <em>what you say</em>. If the call is logged in a CRM, the disposition becomes the call outcome on the HubSpot contact or the call result on the Salesforce task, and the note goes on the record. Cold Call X writes both for you with HubSpot or Salesforce connected (beta); see <a href="/blog/hubspot-dialer-iphone">HubSpot dialer for iPhone</a> and <a href="/blog/salesforce-dialer-iphone">Salesforce dialer for iPhone</a>.</p>
 
         <h2>Industry add-ons, without bloating the list</h2>
         <p>Most teams eventually want one or two codes for their own world. Add them only if they change what happens next:</p>
@@ -228,6 +247,14 @@
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Six to eight. Each code should lead to a different next step; if two codes trigger the same follow-up, merge them. Long lists slow reps down, get picked at random under pressure, and make the reports harder to trust. Put the detail in a note instead of a new code.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What are examples of call disposition codes and notes?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Three from a cold-calling block. Voicemail, with the note 'VM 1, mentioned the three Elm St sales, no permission to text' and a retry in one to two business days at another hour. Callback, Thursday 10:00, with the note 'spoke with the office manager, owner Dana is in Thursday mornings' and the call placed at exactly that time. Not Interested, with the note 'renewed in September, contract runs to March, open to a quote then' and one check-in in February. The code sets when the lead is called again, the note sets what you say. Cold Call X logs the outcome with one tap and keeps the note on the lead.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do call dispositions sync to HubSpot or Salesforce?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Use the CRM's own outcome list as the source of truth. In HubSpot a disposition is the call outcome on the logged call (the defaults are Busy, Connected, Left live message, Left voicemail, No answer and Wrong number, plus any custom outcomes); in Salesforce it is the call result on a completed call task. With HubSpot or Salesforce connected (beta), Cold Call X logs each outcome you tap as a call with that outcome on the HubSpot contact, or as a completed call task on the Salesforce lead or contact, and saves your notes on the record.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What should you do after a no answer on a cold call?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Try again on another day at a different time of day rather than redialing right away, and spread attempts out. Florida, Oklahoma and Maryland cap calls to consumers at three in 24 hours, so stacked same-day redials can break state rules. After several unanswered attempts over two or three weeks, move the lead to a slower cadence.</p>
         </details>
@@ -244,7 +271,7 @@
       <!-- CTA -->
       <div class="article-card p-8 lg:p-12 text-center mt-12">
         <h2 class="text-3xl font-black tracking-tight mb-4">Tap the outcome. The follow-up schedules itself.</h2>
-        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Cold Call X logs one-tap call outcomes, schedules the next attempt after No Answer, Voicemail and Interested, and alerts you at the exact time of a booked callback, from your own number on your iPhone. 4.7★ on the App Store (74 ratings, checked October 15, 2026).</p>
+        <p class="text-lg text-[var(--muted)] font-light max-w-2xl mx-auto leading-relaxed mb-7">Cold Call X logs one-tap call outcomes, schedules the next attempt after No Answer, Voicemail and Interested, and alerts you at the exact time of a booked callback, from your own number on your iPhone. 4.7★ on the App Store (77 ratings, checked October 25, 2026).</p>
         <a href="https://apps.apple.com/us/app/cold-call-x/id6751245004?uo=2&ct=blog-call-outcomes&pt=128076300&mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download Cold Call X on the App Store" class="inline-flex items-center justify-center">
           <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Cold Call X on the App Store" loading="lazy" class="h-12 sm:h-14 w-auto">
         </a>
