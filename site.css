@@ -172,6 +172,9 @@ body.site {
 
 /* Keep the Download button and its focus ring inside very narrow headers. */
 @media (max-width: 340px) {
+  /* The wrapped header is 94px tall; keep fragment headings below it. */
+  html { scroll-padding-top: 95px; }
+
   .nav__inner {
     height: auto;
     min-height: 52px;
