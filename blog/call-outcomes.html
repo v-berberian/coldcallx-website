@@ -52,7 +52,7 @@
         "description": "A short list of call disposition codes for cold calling, with worked examples: what each outcome means, what follow-up it should trigger, and how to match HubSpot and Salesforce.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-10-04",
-        "dateModified": "2026-10-25",
+        "dateModified": "2026-11-13",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/call-outcomes",
@@ -135,7 +135,7 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Call disposition codes: which call outcomes to track, and what each one should trigger</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated October 25, 2026 &middot; 9 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated November 13, 2026 &middot; 9 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
         <p class="text-lg">Every call ends with a label, whether you write it down or not. "No answer." "Left a voicemail." "Call me Thursday at 3." The label is the call disposition, and on a list of a few hundred leads it is the only thing standing between a follow-up system and a pile of numbers you half remember dialing. This guide gives you <strong>a short list of disposition codes that each trigger a different next step</strong>, the follow-up rule behind each one, and how to keep them in step with HubSpot or Salesforce.</p>
@@ -208,6 +208,7 @@
 
         <h2>How Cold Call X handles call outcomes</h2>
         <p><a href="/">Cold Call X</a> is a power dialer for iPhone built around this loop. When a call ends you tap one of six outcomes: <strong>No Answer, Voicemail, Wrong Number, Callback, Interested or Not Interested</strong>. The outcome is logged on the lead and, unless it ends the sequence, the next attempt is scheduled for you, so the follow-up rules above run without a spreadsheet.</p>
+        <p>Since version 2.1 the list is yours to change. In Settings, Calling, Call Outcomes you can rename any outcome, hide the ones you never use, or add your own dispositions, such as Appointment Set or Quoted. Each outcome you add follows up like the built-in outcome you match it to, so the next attempt is still scheduled for you. These custom call outcomes apply to CSV and Google Sheets lists; lists imported from HubSpot or Salesforce (beta) use your CRM's own outcomes.</p>
         <ul>
           <li><strong>Automatic follow-ups:</strong> No Answer, Voicemail and Interested schedule the next attempt, Not Interested and Wrong Number end it, with morning reminders, one Follow-ups list across all your call lists, and an exact-time alert for callbacks you book.</li>
           <li><strong>Follow-up texts:</strong> templates for after a voicemail, after no answer, and callback confirmed.</li>
