@@ -52,7 +52,7 @@
         "description": "How to power dial HubSpot contacts from an iPhone on your own number, and what syncs back to HubSpot.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-10-22",
+        "dateModified": "2026-11-15",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/hubspot-dialer-iphone",
@@ -89,6 +89,11 @@
             "@type": "Question",
             "name": "What does Cold Call X write back to HubSpot?",
             "acceptedAnswer": { "@type": "Answer", "text": "Only what you do in the app: each call outcome is logged on the contact as a call with that outcome, the notes you type are saved as notes on the contact, and the contact's lead status can move between HubSpot's standard statuses (never over a status a person set, and you can turn this off). Nothing else in your HubSpot account is read or changed." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I log call dispositions to my CRM from my iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, with HubSpot or Salesforce (both in beta). On a HubSpot list, Cold Call X shows your portal's own call outcomes, including any your admin added, and the one you tap after each call is logged on the contact as a call with that outcome; your notes are saved on the contact. Match outcomes in the app sets what each HubSpot outcome means for the follow-up schedule. On a Salesforce list, the outcome lands in the record's Salesforce activity. Calls go from your own number, and Cold Call X is $19.99 once, with no subscription." }
           },
           {
             "@type": "Question",
@@ -140,7 +145,7 @@
           <li><strong>HubSpot gets it</strong>: the outcome is logged on the contact as a call, your notes land on the contact as notes, and the lead status can move with it.</li>
           <li><strong>The follow-up schedules itself</strong> in the app, with a morning reminder and an exact-time alert for any callback you book.</li>
         </ul>
-        <p>The HubSpot integration is in <strong>beta</strong> in Cold Call X 2.0. The app is $19.99 once, with no subscription, no seat and no VoIP minutes.</p>
+        <p>The HubSpot integration is in <strong>beta</strong>. The app is $19.99 once, with no subscription, no seat and no VoIP minutes.</p>
 
         <h2>Exactly what syncs</h2>
         <p>"Integrates with HubSpot" can mean anything from a full two-way sync to a CSV export. Here is the whole list for Cold Call X, so you know what will and won't show up in your portal:</p>
@@ -153,7 +158,7 @@
             <tbody>
               <tr><th scope="row">HubSpot &rarr; iPhone</th><td>Contacts</td><td>All contacts, contacts assigned to you, or one HubSpot list. Fields: first and last name, phone, mobile phone, company, email, record ID. To offer those choices it also reads your list names and sizes, and the owner record that identifies you</td></tr>
               <tr><th scope="row">HubSpot &rarr; iPhone</th><td>Notes</td><td>Notes written on the contact in HubSpot show in the app</td></tr>
-              <tr><th scope="row">iPhone &rarr; HubSpot</th><td>Call outcome</td><td>Logged on the contact as a call with the outcome you chose</td></tr>
+              <tr><th scope="row">iPhone &rarr; HubSpot</th><td>Call outcome</td><td>Logged on the contact as a call with the outcome you chose, from your portal's own call outcomes (including ones your admin added)</td></tr>
               <tr><th scope="row">iPhone &rarr; HubSpot</th><td>Lead status</td><td>Can move between HubSpot's standard statuses, never over a status a person set; you can turn it off</td></tr>
               <tr><th scope="row">iPhone &rarr; HubSpot</th><td>Notes</td><td>Notes you type on a contact are saved as notes on that contact</td></tr>
               <tr><th scope="row">Neither way</th><td>Everything else</td><td>Deals, tickets, emails, sequences and other properties are not read or changed</td></tr>
@@ -242,6 +247,10 @@
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What does Cold Call X write back to HubSpot?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Only what you do in the app: each call outcome is logged on the contact as a call with that outcome, the notes you type are saved as notes on the contact, and the contact's lead status can move between HubSpot's standard statuses (never over a status a person set, and you can turn this off). Nothing else in your HubSpot account is read or changed.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group" id="crm-call-dispositions">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I log call dispositions to my CRM from my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes, with HubSpot or Salesforce (both in beta). On a HubSpot list, Cold Call X shows your portal's own call outcomes, including any your admin added, and the one you tap after each call is logged on the contact as a call with that outcome; your notes are saved on the contact. Match outcomes in the app sets what each HubSpot outcome means for the follow-up schedule. On a <a href="/blog/salesforce-dialer-iphone">Salesforce list</a>, the outcome lands in the record's Salesforce activity. Calls go from your own number, and Cold Call X is $19.99 once, with no subscription.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does my HubSpot data go through Cold Call X's servers?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
