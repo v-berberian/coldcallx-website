@@ -52,7 +52,7 @@
         "description": "Ways to call a list kept in Google Sheets from an iPhone, and how to dial it with your own number while call notes flow back into the sheet.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-10-22",
+        "dateModified": "2026-11-15",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/google-sheets-dialer",
@@ -104,6 +104,11 @@
             "@type": "Question",
             "name": "What does Cold Call X change in my spreadsheet?",
             "acceptedAnswer": { "@type": "Answer", "text": "Only the Notes column of a list you mapped one for, and only for the leads in that list. It changes no other cell, tab or file, and a list with no Notes column mapped is never written to." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use my own call outcomes on a Google Sheets list?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, since version 2.1. In Settings, Calling, Call Outcomes you can rename any outcome, hide the ones you never use, or add your own, such as Appointment Set or Quoted (up to 40 characters). Each outcome you add is matched to one of the built-in meanings and follows up like it, so a Quoted matched to Interested comes back in 2 days. Your own outcomes work on CSV and Google Sheets lists; HubSpot and Salesforce lists use the CRM's outcomes. The outcome stays in the app: only your notes are written to the sheet's Notes column. Cold Call X is a one-time $19.99 purchase." }
           },
           {
             "@type": "Question",
@@ -161,7 +166,7 @@
           <li><strong>Connect Google.</strong> Sign in with your Google account; the app lists your spreadsheets by name so you can choose one.</li>
           <li><strong>Pick the spreadsheet and the tab.</strong> The rows become your call list. Columns are mapped automatically: name, company, phone numbers, notes.</li>
           <li><strong>Dial.</strong> Tap Call and work down the list from your own number; when a call ends, the next lead is ready. Calling Hours only dials leads during their own daytime.</li>
-          <li><strong>Tap the outcome, add a note.</strong> No Answer, Voicemail and Interested schedule the next attempt in the app, and a Callback lands at the time you book; the note is written into the sheet's Notes column.</li>
+          <li><strong>Tap the outcome, add a note.</strong> No Answer, Voicemail and Interested schedule the next attempt in the app, and a Callback lands at the time you book; the note is written into the sheet's Notes column. Since 2.1 you can <a href="#custom-call-outcomes">rename the outcomes or add your own</a>.</li>
           <li><strong>Pull down to refresh.</strong> When someone adds rows or fixes a number in the sheet, refresh the list instead of re-importing.</li>
         </ol>
         <p>A lead with a mobile and an office line is one lead with two numbers, not two rows to call. The <a href="/#tutorials">import and column-mapping tutorials</a> show the whole thing in under a minute.</p>
@@ -242,6 +247,10 @@
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">What does Cold Call X change in my spreadsheet?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Only the Notes column of a list you mapped one for, and only for the leads in that list. It changes no other cell, tab or file, and a list with no Notes column mapped is never written to.</p>
+        </details>
+        <details id="custom-call-outcomes" class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I use my own call outcomes on a Google Sheets list?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes, since version 2.1. In Settings, Calling, Call Outcomes you can rename any outcome, hide the ones you never use, or add your own, such as Appointment Set or Quoted (up to 40 characters). Each outcome you add is matched to one of the built-in meanings and follows up like it, so a Quoted matched to Interested comes back in 2 days. Your own outcomes work on CSV and Google Sheets lists; HubSpot and Salesforce lists use the CRM's outcomes. The outcome stays in the app: only your notes are written to the sheet's Notes column. Cold Call X is a one-time $19.99 purchase.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Why does the app ask for permission to edit my spreadsheets?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
