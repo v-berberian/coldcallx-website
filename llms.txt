@@ -5,7 +5,7 @@
 ## Product
 
 - Cold Call X helps sales reps, SDRs, founders, real estate agents, investors, recruiters, insurance agents, loan officers, and small business owners work through their own phone lists on iPhone.
-- Current version: 2.0 (released September 25, 2026).
+- Current version: 2.2 (released November 15, 2026; version 2.0 launched September 25, 2026).
 - Core workflow: import a list, dial one lead at a time or with timed/Rocket auto-call modes, tap the call outcome, and let the next follow-up schedule itself.
 - Imports: CSV files and Excel workbooks (.xlsx, with a sheet picker; since 2.2), columns mapped automatically, Google Sheets (call notes are written back to the sheet), HubSpot and Salesforce (beta; call outcomes and notes sync back to the CRM). Pull down to refresh a linked list from its source. Columns the import does not map (up to 12 per list) stay on each lead as placeholders, e.g. {role}, in the call script, objection cards, and text and email templates (since 2.2).
 - Call outcomes: No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested. No Answer, Voicemail and Interested schedule the next attempt (an unanswered lead is retried later the same day), a Callback is set for the time you book, and Not Interested or Wrong Number ends the sequence, with morning reminders, one Follow-ups list, and exact-time alerts for booked callbacks. Since version 2.1, on CSV and Google Sheets lists you can rename any outcome, hide the ones you never use, or add your own (for example Appointment Set or Quoted) in Settings, Calling, Call Outcomes; each outcome you add follows up like the built-in outcome it is matched to. HubSpot and Salesforce lists use the CRM's own outcomes.
