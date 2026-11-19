@@ -52,7 +52,7 @@
         "description": "How to power dial Salesforce leads and contacts from an iPhone on your own number, and what gets logged in Salesforce.",
         "image": "https://coldcallx.app/logo.png",
         "datePublished": "2026-09-25",
-        "dateModified": "2026-10-22",
+        "dateModified": "2026-11-19",
         "author":{"@type":"Person","name":"Vadym Berberian"},
         "publisher": { "@id": "https://coldcallx.app/#organization" },
         "mainEntityOfPage": "https://coldcallx.app/blog/salesforce-dialer-iphone",
@@ -72,13 +72,18 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Is there a Salesforce dialer app for iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X is a Salesforce dialer app for iPhone: it imports your Salesforce leads, contacts or a list view, dials them one call at a time from your own number through your own carrier, and logs each call outcome on the lead or contact as a completed call task, with your notes. It needs no add-on license, admin install or VoIP number. The Salesforce integration is in beta, and the app costs $19.99 once with no subscription." }
+          },
+          {
+            "@type": "Question",
             "name": "Can I power dial Salesforce leads from my iPhone?",
             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X imports Salesforce leads or contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome is logged on the record as a completed call task, and notes sync both ways. The Salesforce integration is in beta, and the app costs $19.99 once with no subscription." }
           },
           {
             "@type": "Question",
             "name": "Does Salesforce have a built-in dialer?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Salesforce sells Sales Dialer as a paid add-on to Sales Cloud, starting at $5 per user per month billed annually, with click-to-dial and automatic call logging (Salesforce add-ons pricing page, checked October 22, 2026). Cold Call X is a separate iPhone power dialer: it needs no add-on license, calls go through your own carrier from your own number, the next record is ready when a call ends, and each outcome is still logged on the lead or contact as a completed call task. $19.99 once." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Salesforce sells Sales Dialer as a paid add-on to Sales Cloud, starting at $5 per user per month billed annually, with click-to-dial and automatic call logging (Salesforce add-ons pricing page, checked November 19, 2026). Cold Call X is a separate iPhone power dialer: it needs no add-on license, calls go through your own carrier from your own number, the next record is ready when a call ends, and each outcome is still logged on the lead or contact as a completed call task. $19.99 once." }
           },
           {
             "@type": "Question",
@@ -130,12 +135,12 @@
       <a href="/blog/" class="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors mb-8 text-sm font-semibold">← All guides</a>
 
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-[1.05] mb-4">Salesforce dialer for iPhone: call leads and log every call task</h1>
-      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated October 2026 &middot; 8 min read</p>
+      <p class="text-[var(--muted)] text-sm mb-10">By Vadym Berberian &middot; Cold Call X &middot; Updated November 2026 &middot; 8 min read</p>
 
       <article class="article article-card p-7 sm:p-10">
-        <p class="text-lg">Most Salesforce dialers assume you sit at a desk: a softphone in the browser, a VoIP number, a seat license. Plenty of people who live in Salesforce do their calling somewhere else, in the car between meetings, from a job site, on the phone they already carry. <strong>Cold Call X 2.0 brings the call list to that phone</strong>: it imports your Salesforce leads or contacts, dials them from your own number, and logs every outcome back as a completed call task.</p>
+        <p class="text-lg">Most Salesforce dialers assume you sit at a desk: a softphone in the browser, a VoIP number, a seat license. Plenty of people who live in Salesforce do their calling somewhere else, in the car between meetings, from a job site, on the phone they already carry. <strong>Cold Call X brings the call list to that phone</strong>: it imports your Salesforce leads or contacts, dials them from your own number, and logs every outcome back as a completed call task.</p>
 
-        <div class="callout" id="salesforce-dialer-app"><strong>Short answer:</strong> Salesforce's own Sales Dialer is a paid add-on, starting at $5 per user per month billed annually, with click-to-dial from Salesforce (<a href="https://www.salesforce.com/sales/pricing/add-ons/" rel="noopener" target="_blank">Salesforce add-ons pricing</a>, checked October 22, 2026). A <strong>Salesforce dialer app for iPhone</strong> takes the other route: <strong>Cold Call X</strong> imports the leads, contacts or list view you pick, has the next record ready when a call ends, dials from your own number through your own carrier, and logs each outcome as a completed call task with your notes. $19.99 once, Salesforce sync in beta. The same setup exists as a <a href="/blog/hubspot-dialer-iphone">HubSpot power dialer for iPhone</a> and for <a href="/blog/google-sheets-dialer">calling a Google Sheet from your iPhone</a>.</div>
+        <div class="callout" id="salesforce-dialer-app"><strong>Short answer:</strong> Yes, there is a <strong>Salesforce dialer app for iPhone</strong>: <strong>Cold Call X</strong> imports the Salesforce leads, contacts or list view you pick, dials them one call at a time from your own number, and logs each outcome on the record as a completed call task with your notes, for $19.99 once with no subscription (Salesforce sync is in beta). Calls go through your own carrier, and the next record is ready when a call ends. Salesforce's own Sales Dialer is a paid add-on, starting at $5 per user per month billed annually, with click-to-dial and automatic logging (<a href="https://www.salesforce.com/sales/pricing/add-ons/" rel="noopener" target="_blank">Salesforce add-ons pricing</a>, checked November 19, 2026). The same setup exists as a <a href="/blog/hubspot-dialer-iphone">HubSpot power dialer for iPhone</a> and for <a href="/blog/google-sheets-dialer">calling a Google Sheet from your iPhone</a>.</div>
 
         <h2>What it does, in one minute</h2>
         <ul>
@@ -146,7 +151,7 @@
           <li><strong>Lead status can follow</strong>, if you switch it on: pair each outcome with one of your org's statuses.</li>
           <li><strong>The next attempt schedules itself</strong> in the app, with morning reminders and an exact-time alert for booked callbacks.</li>
         </ul>
-        <p>The Salesforce integration is in <strong>beta</strong> in Cold Call X 2.0. The app costs $19.99 once; there's no seat to license and no VoIP number to rent.</p>
+        <p>The Salesforce integration is in <strong>beta</strong>. The app costs $19.99 once; there's no seat to license and no VoIP number to rent.</p>
 
         <h2>Exactly what gets logged</h2>
         <div class="cmp-wrap">
@@ -219,12 +224,16 @@
       <h2 class="text-3xl font-black tracking-tight mb-6 mt-12 text-center">Salesforce dialing questions, answered</h2>
       <div class="space-y-4">
         <details class="neo-glass rounded-3xl px-6 py-5 group">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Is there a Salesforce dialer app for iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X is a Salesforce dialer app for iPhone: it imports your Salesforce leads, contacts or a list view, dials them one call at a time from your own number through your own carrier, and logs each call outcome on the lead or contact as a completed call task, with your notes. It needs no add-on license, admin install or VoIP number. The Salesforce integration is in beta, and the app costs $19.99 once with no subscription.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I power dial Salesforce leads from my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
           <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X imports Salesforce leads or contacts to your iPhone and dials through them one call at a time from your own number. Each call outcome is logged on the record as a completed call task, and notes sync both ways. The Salesforce integration is in beta, and the app costs $19.99 once with no subscription.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Salesforce have a built-in dialer?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Salesforce sells Sales Dialer as a paid add-on to Sales Cloud, starting at $5 per user per month billed annually, with click-to-dial and automatic call logging (Salesforce add-ons pricing page, checked October 22, 2026). Cold Call X is a separate iPhone power dialer: it needs no add-on license, calls go through your own carrier from your own number, the next record is ready when a call ends, and each outcome is still logged on the lead or contact as a completed call task. $19.99 once.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Salesforce sells Sales Dialer as a paid add-on to Sales Cloud, starting at $5 per user per month billed annually, with click-to-dial and automatic call logging (Salesforce add-ons pricing page, checked November 19, 2026). Cold Call X is a separate iPhone power dialer: it needs no add-on license, calls go through your own carrier from your own number, the next record is ready when a call ends, and each outcome is still logged on the lead or contact as a completed call task. $19.99 once.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">How do I set up a Salesforce dialer on my iPhone?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
