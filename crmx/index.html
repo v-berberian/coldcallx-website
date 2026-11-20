@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Cookie consent. MUST stay above gtag.js: it seeds the Consent Mode
+       defaults the tag reads on boot. -->
+  <script src="/consent.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CKNY5PSV1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0CKNY5PSV1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#110E0C">
+
+  <title>CRM X Support | Follow-up CRM for iPhone</title>
+  <meta name="description" content="Help with CRM X, the follow-up CRM for iPhone: adding people, Caller ID, backups, working with Cold Call X, and how to reach us." />
+  <link rel="canonical" href="https://coldcallx.app/crmx/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- iOS / App Store -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cold Call X" />
+  <meta property="og:url" content="https://coldcallx.app/crmx/" />
+  <meta property="og:title" content="CRM X Support" />
+  <meta property="og:description" content="Help with CRM X: adding people, Caller ID, backups, working with Cold Call X, and how to reach us." />
+  <meta property="og:image" content="https://coldcallx.app/logo.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CRM X Support" />
+  <meta name="twitter:description" content="Help with CRM X: adding people, Caller ID, backups, working with Cold Call X, and how to reach us." />
+  <meta name="twitter:image" content="https://coldcallx.app/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* CRM X in dark mode: the app's own ground, lights, cards and type (Theme.swift,
+       Surface.swift in the CRM X repo). Nothing here moves: the app's field is still too. */
+    :root {
+      --ground: #110E0C;
+      --card: rgba(29, 25, 22, 0.72);
+      --ink: #F6F2EE;
+      --muted: #B9AFA6;
+      --hairline: rgba(255, 255, 255, 0.1);
+      --accent: #FF8A3D;
+      --pink: #F0506E;
+      --orange: #F7941D;
+      color-scheme: dark;
+    }
+
+    html, body { min-height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--ground);
+      color: var(--ink);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* The warm field: a pink light top right, an orange one at the left edge, a low pink one,
+       over a faint diagonal wash of the mark's colours. */
+    .warm-field {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 92% 2%, rgba(240, 80, 110, 0.32), transparent 55%),
+        radial-gradient(circle at 2% 42%, rgba(247, 148, 29, 0.22), transparent 50%),
+        radial-gradient(circle at 70% 100%, rgba(240, 80, 110, 0.15), transparent 50%),
+        linear-gradient(to bottom left, rgba(240, 80, 110, 0.09), rgba(247, 148, 29, 0.07), rgba(240, 80, 110, 0.06));
+    }
+
+    .page-title, .section-card h2, .back-link { font-family: 'Poppins', -apple-system, system-ui, sans-serif; }
+
+    .page-title {
+      font-size: clamp(2rem, 7vw, 3.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+      background: linear-gradient(90deg, var(--pink), var(--orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .page-updated { color: var(--muted); font-size: 1.0625rem; margin: 0; }
+
+    /* The app's glass controls: dark glass, a hairline rim. */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 1.25rem;
+      margin-bottom: 2.5rem;
+      border-radius: 999px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--hairline);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+    }
+    .back-link:hover { background: rgba(255, 255, 255, 0.1); }
+
+    /* The app's card: dark, slightly see-through, 24pt corners, a hairline, a soft shadow. */
+    .section-card, .note-card {
+      background: var(--card);
+      border: 1px solid var(--hairline);
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      margin-bottom: 1rem;
+    }
+    .section-card h2 { font-weight: 600; font-size: 1.375rem; letter-spacing: -0.01em; }
+    .section-card p + p, .section-card p + ul, .section-card ul + p { margin-top: 1rem; }
+    .note-card { padding: 1.5rem; text-align: center; color: var(--muted); line-height: 1.6; }
+
+    /* Links wear the app's accent, not the Cold Call X site's blue. */
+    body.crmx a.text-blue-600, .note-card a { color: var(--accent); }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://coldcallx.app/crmx/#webpage",
+    "url": "https://coldcallx.app/crmx/",
+    "name": "CRM X Support",
+    "description": "Help with CRM X: adding people, Caller ID, backups, working with Cold Call X, and how to reach us.",
+    "isPartOf": { "@id": "https://coldcallx.app/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Cold Call X", "item": "https://coldcallx.app/" },
+        { "@type": "ListItem", "position": 2, "name": "CRM X Support", "item": "https://coldcallx.app/crmx/" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="crmx antialiased">
+  <div class="warm-field"></div>
+
+  <div class="min-h-screen py-12 relative">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <a href="/" class="back-link">← Cold Call X</a>
+        <h1 class="page-title">CRM X Support</h1>
+        <p class="page-updated">The follow-up CRM for iPhone, from the makers of Cold Call X</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Contact us</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Email <a href="mailto:support@coldcallx.app" class="text-blue-600 hover:underline">support@coldcallx.app</a> and we will get back to you, usually within one business day. You can also reach us from the app: Settings, then Contact Support.</p>
+        <p class="text-[var(--muted)] leading-relaxed">It helps to say which iPhone and iOS version you use, and what you were doing when the problem came up.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">What CRM X does</h2>
+        <p class="text-[var(--muted)] leading-relaxed">CRM X keeps the people you sell to, what you said to each other, and what you owe them next. Today shows who to call now, Calendar shows what is coming, Pipeline shows every deal by stage, and People holds everyone. It works on your iPhone alone: there is no account to create and nothing to sign in to.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Adding people</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Tap + to type someone in, pick people from your iPhone's contacts, or import a contact card or a spreadsheet (CSV or Excel). You can also open such a file from Mail, Messages or Files and choose CRM X.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Tags sort people your own way. Give someone a tag on their page, then filter People or Pipeline by it with the tag button at the top.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Next steps and reminders</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Every person can have a next step with a date. When it is due they appear in Today, and after you log what happened CRM X asks for the next one. Reminders arrive as notifications if you allow them; you can change that in iOS Settings, Notifications, CRM X.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Caller ID</h2>
+        <p class="text-[var(--muted)] leading-relaxed">CRM X can label incoming calls from the people it holds with their name, company and stage. Turn it on in iOS Settings, Apps, Phone, Call Blocking &amp; Identification, then switch on CRM X Caller ID. After adding or changing people, open CRM X once so the list is refreshed.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Backups and moving to a new iPhone</h2>
+        <p class="text-[var(--muted)] leading-relaxed">CRM X keeps backups on your iPhone and, if iCloud Drive is on, in your own iCloud. To restore, open Settings in CRM X, then Backups, and choose one. On a new iPhone signed in to the same Apple Account, install CRM X and restore from there.</p>
+        <p class="text-[var(--muted)] leading-relaxed">You can also export everyone as a spreadsheet from Settings.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Working with Cold Call X</h2>
+        <p class="text-[var(--muted)] leading-relaxed">If <a href="/" class="text-blue-600 hover:underline">Cold Call X</a> is on the same iPhone, the two apps keep each other up to date: leads whose calls went somewhere appear in CRM X with their outcomes and notes, and what you log in CRM X shows on the lead card. You can send the people a tag filter shows to Cold Call X to dial through. All of it happens on your iPhone, and you can switch it off in either app's Settings.</p>
+      </div>
+
+      <div class="section-card p-6 lg:p-12">
+        <h2 class="text-2xl font-bold text-[var(--ink)] mb-6">Your data</h2>
+        <p class="text-[var(--muted)] leading-relaxed">Everything you put into CRM X stays on your iPhone. We never receive your people or notes. The app shares only anonymous usage counts, which you can turn off in Settings, Analytics &amp; Improvement, Share Analytics. The details are in the <a href="/crmx/privacy" class="text-blue-600 hover:underline">privacy policy</a>.</p>
+        <p class="text-[var(--muted)] leading-relaxed">To erase everything, use Settings, Delete Everything, or delete the app.</p>
+      </div>
+
+      <div class="note-card">
+        <p>Berberian Enterprises Inc. · <a href="mailto:support@coldcallx.app">support@coldcallx.app</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
