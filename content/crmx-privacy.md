@@ -1,12 +1,12 @@
 # Privacy Policy – CRM X
 
-Effective November 17, 2026 · Version 2026-11-17
+Effective November 19, 2026 · Version 2026-11-19
 
 This Privacy Policy explains how Berberian Enterprises Inc. (“CRM X,” “we,” “us,” or “our”) handles information when you use CRM X.
 
 ## The short version
 
-CRM X works on your iPhone, not on our servers. There is no account to create and we operate no server for it. We do not collect, receive, or store the people you add, your notes, your deals, or anything else you put into it. The App contains no advertising, no analytics, and no tracking of any kind: it sends us nothing at all.
+CRM X works on your iPhone, not on our servers. There is no account to create and we operate no server for it. We do not collect, receive, or store the people you add, your notes, your deals, or anything else you put into it. The App contains no advertising and does not track you across apps or websites. It does report app-only usage statistics — which features get used, and the state of your settings — so we know what to improve; that report never includes anything about your people, and you can turn it off in Settings.
 
 ## Information stored on your device
 
@@ -15,6 +15,10 @@ The people you add or import, their contact details, companies, tags, deal value
 Reminders for your next steps are scheduled as local notifications on your device. They are not sent through any server, and the App asks for notification permission only when you choose to turn reminders on. You can turn them off in iOS Settings.
 
 When you export your people, the App creates a spreadsheet file and hands it to the iOS share sheet, and you choose where it goes.
+
+## Apple Calendar
+
+When you schedule a step with "Also add to Calendar" switched on, the App asks iOS for access to your calendars and adds that person's upcoming steps to your default calendar, each with the person's name, company, phone number, and the step. It moves, renames, or removes those events when you change or finish the steps, and removes them if you switch it off for that person. The App needs full access so it can find its own events again; it recognises them by a link it adds to each one and does not read, change, or remove any other event. Your calendar is managed by iOS, and if it syncs through iCloud or another account, those events sync with it under that service's terms. We never receive your calendar or any event.
 
 ## Adding and importing people
 
@@ -40,6 +44,18 @@ If Cold Call X is also installed on your iPhone, the two apps can keep each othe
 
 The App keeps automatic daily backups of your on-device data so you can restore it if something goes wrong. Unless you switch it off, the App also saves a copy of each backup to your own iCloud account, so a lost or replaced iPhone loses nothing. Those copies are held in your Apple account, not ours, in the App's private iCloud storage, and are protected by Apple's iCloud security. We cannot access them. If your device is signed out of iCloud or iCloud is off for the App, backups stay on your device only. You can turn iCloud backup off in Settings at any time.
 
+## Usage statistics
+
+The App reports app-only usage statistics by default so we can see which features are used and which are not. The welcome screen says so before you start, and you can turn it off at any time in Settings → Your data → Analytics & Improvement → Share Analytics, and collection stops immediately. Unsent events are discarded and an upload in progress is cancelled; this cannot recall events the service has already received. Restoring a backup does not change your choice.
+
+**What is sent.** Product-interaction events — which controls and screens are used, settings changes, and whether operations such as imports, exports, backups, and sharing with Cold Call X complete, fail, or are cancelled — and the kind of thing you log (a call, a note, a stage change), counted, never its content. Once a day the App also sends the state of your settings and a few counts, such as how many people and tags you have, as a range like "10–24" rather than an exact number, and a short summary of how it was used on the last day you used it, also as ranges, such as how many people you added and how many calls you logged. Errors are reported as a fixed code identifying what failed, such as "a backup could not be copied to iCloud" — never the error message itself.
+
+**What is never sent.** Nothing about the people you keep. No names, phone numbers, email addresses, companies, tags, notes, deal values, next steps, or search terms, and nothing from Cold Call X. Your device's IP address is not stored and your location is not collected or derived.
+
+**How it is identified.** It is not. Every report carries the same fixed label, identical on every installation of the App, so reports cannot be grouped by device or by person. There is no installation identifier, no returning-user history, and no individual timeline of what you did: actions are combined into counters on your device before they are sent, and each carries a reporting day rather than the moment you did them. To count how many devices use a feature without identifying any of them, your device remembers which days, weeks, and months it has already been counted in; that memory stays on your device. We do not create analytics person profiles, record screens, or collect typed content. Nothing sent is your name, email, phone number, Apple ID, or your device's advertising identifier, and nothing is linked to an account, because the App has none.
+
+**Who processes it.** PostHog, acting as our processor, on servers in the United States. It is not used for advertising, is not sold, and is not shared with data brokers or combined with information from other companies to track you. If you are in the United Kingdom, the European Union, or Australia, this means the statistics described above are transferred to the United States; none of your people's information is involved in that transfer.
+
 ## Purchases
 
 Apple processes App Store purchases. We do not receive your name, Apple ID, or payment details.
@@ -50,11 +66,11 @@ If you write to us at support@coldcallx.app, we use your message and email addre
 
 ## Retention
 
-On-device information remains until you delete it or uninstall the App, subject to iOS backup behavior. While iCloud backup is on, backup copies remain in your iCloud account until they are replaced by newer ones or you remove them. Turning iCloud backup off stops new copies but keeps the ones already there.
+On-device information remains until you delete it or uninstall the App, subject to iOS backup behavior. While iCloud backup is on, backup copies remain in your iCloud account until they are replaced by newer ones or you remove them. Turning iCloud backup off stops new copies but keeps the ones already there. App-only usage statistics are kept by our analytics provider for as long as they are useful for product decisions. They contain nothing about your people and no account identity, and because every report carries the same fixed label there is nothing in them that ties one report to another, to a device, or to you.
 
 ## Deletion and choices
 
-You can delete any person, note, or step in the App, or delete everything at once in Settings. You can turn off iCloud backup and sharing with Cold Call X in Settings, and reminders and Caller ID in iOS Settings. Uninstalling the App removes its on-device data. Backup copies already in your iCloud account can be removed in iOS Settings under your Apple account's iCloud storage.
+You can delete any person, note, or step in the App, or delete everything at once in Settings. You can turn off iCloud backup, Share Analytics, and sharing with Cold Call X in Settings, and reminders, calendar access, and Caller ID in iOS Settings. Switching off "Also add to Calendar" for a person removes the events the App added for them. Uninstalling the App removes its on-device data. Backup copies already in your iCloud account can be removed in iOS Settings under your Apple account's iCloud storage.
 
 ## Your privacy rights
 
@@ -70,7 +86,7 @@ CRM X is not directed to children. You must be at least 18 years old to use the 
 
 ## International processing
 
-We are established in the United States. Because the App sends us nothing, the only information that can leave your country is support correspondence you choose to send, which we read and store in the United States.
+We are established in the United States. Because the App does not send us your people or notes, the only information that can leave your country is support correspondence you choose to send, which we read and store in the United States, and the app-only usage statistics described above, which our analytics provider processes in the United States and which you can switch off in Settings.
 
 ## Changes
 
