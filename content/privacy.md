@@ -1,6 +1,6 @@
 # Privacy Policy – Cold Call X
 
-Effective November 24, 2026 · Version 2026-11-24
+Effective November 26, 2026 · Version 2026-11-26
 
 This Privacy Policy explains how Berberian Enterprises Inc. (“Cold Call X,” “we,” “us,” or “our”) handles information when you use Cold Call X.
 
@@ -12,15 +12,11 @@ Cold Call X works on your iPhone, not on our servers. There is no account to cre
 
 Lead lists, contact details you import, notes, tags, call outcomes, follow-ups, your in-app Do Not Call suppression list, message templates, call scripts, statistics, and preferences are stored locally on your device. Nothing in that data is uploaded to us. You control the lead data you import and must have the right to use it.
 
-Follow-up reminders are scheduled as local notifications on your device. They are not sent through any server. If you choose to add a follow-up to your calendar, the App asks for calendar access and creates or updates that event in the calendar app; it does not read your other events. When you export a list, the App creates a CSV file and hands it to the iOS share sheet, and you choose where it goes.
+Follow-up reminders are scheduled as local notifications on your device. They are not sent through any server. If you choose to add a follow-up to your calendar, the App asks for calendar access and creates or updates that event in the calendar app; it does not read your other events. If you use Say What Happened after a call, the App asks for microphone and speech recognition access and turns what you say into text on your device, with speech recognition set to run on the device; the audio is not recorded, kept or sent, and only the note you choose to save is stored, like any other note. The outcome it suggests is chosen on your device by Apple's on-device model where your iPhone has one. When you export a list, the App creates a CSV file and hands it to the iOS share sheet, and you choose where it goes.
 
 If you turn on Inbound Caller ID, the App gives iOS the phone numbers, names, and companies in your lists, together with the outcome and date of your last call to each, so that an incoming call from one of them can be labelled. That list stays on your device and is managed by iOS.
 
 The App keeps automatic daily backups of your on-device data so you can restore it if something goes wrong. By default the App also writes an encrypted copy of each backup to your own iCloud Drive so you can restore it on another device. Those backups are encrypted on your device with a key stored in your iCloud Keychain, are held in your Apple account rather than ours, and are not readable by us or by Apple. The App tells you about iCloud Backup the first time you open it and does not upload anything until you have seen that notice and accepted the Terms. You can turn iCloud Backup off, or delete your backups, in Settings at any time; if you turn it off, backups stay on your device only. If your device is signed out of iCloud or iCloud Drive is off, nothing is uploaded. Your Google, HubSpot, and Salesforce sign-in credentials are deliberately excluded from backups.
-
-## Sharing with CRM X on the same iPhone
-
-CRM X is our companion app for following up with the people you reach. If it is also installed on your iPhone, the two apps can keep each other up to date. They exchange information through a private storage area on your device that only these two apps can open. Cold Call X shares the leads whose calls went somewhere, with their call outcomes, notes, and follow-up dates; CRM X shares what you log about those same people, which appears as notes on the lead. The two apps also coordinate Inbound Caller ID so a number is labelled once. All of this happens on your device. Nothing passes through a server or leaves your iPhone, and none of it happens unless both apps are installed. You can switch the sharing off in Settings → Data → CRM X.
 
 ## Calls, texts, and email
 
@@ -64,6 +60,8 @@ The imported records are stored on your device like any other list, and your Sal
 Find Leads is optional. It finds local businesses in an industry and an area you choose, and adds them to a list on your device. To do that, the App sends our Find Leads server what you chose: the industry, the name of the area and the point at the centre of the map, the radius, how many businesses you want, and whether to show only businesses without a website. So that a repeat search brings businesses you do not have yet, it also sends the phone numbers of businesses Find Leads added for you before (never a number from your own lists, CRM, or contacts). Nothing the App sends identifies you or your device. The daily free limit for each person is counted on your device itself.
 
 The server keeps one running total of businesses added by everyone that day, so it can stop when the day's overall limit is reached. It keeps a log of searches so we can see which industries and areas people look for: the industry, the area's name, the map centre rounded to about a kilometre, the radius, how many businesses were found, and the time. The log holds no device or account, and each entry is deleted after 90 days. The phone numbers sent for repeat searches are used to answer that search and are not stored. Like any web request, a search exposes your device's IP address to the server for the moment it takes; our search log does not record it. The server runs on Modal, acting as our processor, in the United States.
+
+The map you choose the area on is drawn from map tiles served by OpenFreeMap. To draw it, the App requests the tiles for the part of the map on screen directly from OpenFreeMap, which, like any web request, exposes your device's IP address and the area you are looking at to that service. The App sends it nothing else.
 
 The businesses come from published business listings: the Overture Maps Foundation's open places data, checked against Foursquare's open places data and, for health care, the US government's National Provider Identifier (NPI) Registry. What the App adds to your list is the business's name, phone number, category, address, website, and for health care the names of the licensed providers listed at that number. Once added, they are stored on your device like any other list. You must use them lawfully, including do-not-call rules.
 
