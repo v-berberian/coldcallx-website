@@ -58,7 +58,7 @@
         "@id": "https://coldcallx.app/#app",
         "name": "Cold Call X",
         "alternateName": "Cold Call X: Sales Dialer",
-        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV or Google Sheets, dial with one tap or hands-free auto-call modes, log call outcomes, take notes between calls, and schedule callbacks.",
+        "description": "Cold Call X is a power dialer and private mobile CRM for iPhone. It power dials your list through the iPhone's native phone app over your own cellular line, no VoIP account and no separate phone number. Import leads from CSV, Excel or Google Sheets, dial with one tap or hands-free auto-call modes, log call outcomes, take notes between calls, and schedule callbacks.",
         "operatingSystem": "iOS 17.6 or later",
         "applicationCategory": "BusinessApplication",
         "image": "https://coldcallx.app/logo.png",
@@ -70,7 +70,7 @@
         "featureList": [
           "Power dialing through the iPhone's own cellular line, no VoIP number",
           "Auto-call modes from manual one-tap to 0-second Rocket mode",
-          "CSV and Google Sheets lead import with auto-mapped columns, and call notes written back to your sheet",
+          "CSV, Excel and Google Sheets lead import with auto-mapped columns, and call notes written back to your Google Sheet",
           "One-tap call outcomes (No Answer, Voicemail, Wrong Number, Callback, Interested, Not Interested) with notes and last-called tracking",
           "Automatic follow-ups: No Answer, Voicemail and Interested schedule the next attempt, with morning reminders",
           "Calling Hours: leads are only dialed during their own daytime, in any time zone",
@@ -86,7 +86,7 @@
         "@type": "WebPage",
         "@id": "https://coldcallx.app/insurance#webpage",
         "url": "https://coldcallx.app/insurance",
-        "dateModified": "2026-11-14",
+        "dateModified": "2026-11-28",
         "name": "Insurance Cold Calling App for Agents & Brokers | Cold Call X",
         "description": "Dial aged leads and renewals from your own number on iPhone with Cold Call X, built for insurance agents and brokers: large CSV imports, do-not-call suppression, one-tap call outcomes, automatic follow-ups, and one-time pricing.",
         "isPartOf": { "@id": "https://coldcallx.app/#website" },
@@ -121,7 +121,12 @@
           {
             "@type": "Question",
             "name": "Can I import thousands of aged leads at once?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X handles large CSV imports, so a full batch of aged internet leads loads in one go. Keep separate lists per lead vendor or product line, and columns auto-map on import." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cold Call X handles large imports, so a full batch of aged internet leads loads in one go from a CSV, a Google Sheet, or, since version 2.2, an Excel workbook (.xlsx) as your lead vendor sent it, with a sheet picker when the workbook has several tabs. Old .xls files and password-protected workbooks need saving as .xlsx or CSV first. Keep separate lists per lead vendor or product line, and columns auto-map on import." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use my own columns, like policy type or renewal date, in my call script?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, since version 2.2. When you import a list from a CSV, an Excel workbook or Google Sheets, the columns Cold Call X doesn't map to name, phone, email or notes stay on each lead, and each one becomes a placeholder: a Policy Type column is {policy_type}, Renewal Date is {renewal_date}. Use them in the call script, objection cards, and text and email templates, so \"Hi {first_name}, your {policy_type} policy renews on {renewal_date}\" fills itself for every renewal on the list. Up to 12 columns are kept per list, and if the file has more, you choose which. The data stays on your iPhone. Cold Call X is an insurance dialer app for iPhone at $19.99 once, with no subscription." }
           },
           {
             "@type": "Question",
@@ -209,7 +214,7 @@
       <!-- Use-case cards -->
       <div class="section-card p-6 lg:p-12 mb-8">
         <h2 class="text-2xl font-bold text-[var(--ink)] mb-4">Thousands of aged leads, one import</h2>
-        <p class="text-[var(--muted)] leading-relaxed">Bought a batch of aged internet leads? Import the whole CSV at once, large lists load fast and columns auto-map. Keep separate lists per lead vendor or product line, and pin the one you're working this week.</p>
+        <p class="text-[var(--muted)] leading-relaxed">Bought a batch of aged internet leads? Import the whole file at once, a CSV or, since version 2.2, an Excel workbook (.xlsx) exactly as the vendor sent it. Large lists load fast and columns auto-map. Keep separate lists per lead vendor or product line, and pin the one you're working this week.</p>
       </div>
 
       <div class="section-card p-6 lg:p-12 mb-8">
@@ -280,7 +285,11 @@
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I import thousands of aged leads at once?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
-          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X handles large CSV imports, so a full batch of aged internet leads loads in one go. Keep separate lists per lead vendor or product line, and columns auto-map on import.</p>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes. Cold Call X handles large imports, so a full batch of aged internet leads loads in one go from a CSV, a Google Sheet, or, since version 2.2, an Excel workbook (.xlsx) as your lead vendor sent it, with a sheet picker when the workbook has several tabs. Old .xls files and password-protected workbooks need saving as .xlsx or CSV first. Keep separate lists per lead vendor or product line, and columns auto-map on import.</p>
+        </details>
+        <details class="neo-glass rounded-3xl px-6 py-5 group" id="custom-lead-fields">
+          <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Can I use my own columns, like policy type or renewal date, in my call script?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
+          <p class="pt-4 text-[var(--muted)] leading-relaxed">Yes, since version 2.2. When you import a list from a CSV, an Excel workbook or Google Sheets, the columns Cold Call X doesn&rsquo;t map to name, phone, email or notes stay on each lead, and each one becomes a placeholder: a Policy Type column is {policy_type}, Renewal Date is {renewal_date}. Use them in the call script, objection cards, and text and email templates, so &ldquo;Hi {first_name}, your {policy_type} policy renews on {renewal_date}&rdquo; fills itself for every renewal on the list. Up to 12 columns are kept per list, and if the file has more, you choose which. The data stays on your iPhone. Cold Call X is an insurance dialer app for iPhone at $19.99 once, with no subscription.</p>
         </details>
         <details class="neo-glass rounded-3xl px-6 py-5 group">
           <summary class="cursor-pointer flex items-center justify-between gap-4 text-lg font-semibold text-[var(--ink)]">Does Cold Call X dial from my own number?<span class="text-[var(--muted)] text-2xl leading-none transition-transform duration-300 group-open:rotate-45">+</span></summary>
